@@ -10,6 +10,7 @@ export const codexSettingsPlugin: Plugin = {
     name: "fcakyon",
     url: "https://github.com/fcakyon/claude-codex-settings",
   },
+  repoUrl: "https://github.com/fcakyon/claude-codex-settings",
   installCommand: "git clone https://github.com/fcakyon/claude-codex-settings.git ~/.claude-codex-settings && cp -r ~/.claude-codex-settings/.claude ~/",
   config: `# Claude Codex Settings
 

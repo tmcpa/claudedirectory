@@ -10,6 +10,7 @@ export const claudeOpusMigrationPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
+  repoUrl: "https://github.com/anthropics/claude-code-plugins",
   installCommand: "claude plugins add claude-opus-4-5-migration@claude-plugins-official",
   config: `{
   "enabledPlugins": {

@@ -10,6 +10,7 @@ export const googleDriveServer: MCPServer = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
+  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive",
   installCommand: "npm install -g @anthropic-ai/mcp-server-gdrive",
   config: `{
   "mcpServers": {

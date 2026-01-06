@@ -10,6 +10,7 @@ export const awsServer: MCPServer = {
     name: "AWS Labs",
     url: "https://github.com/awslabs",
   },
+  repoUrl: "https://github.com/awslabs/mcp",
   installCommand: "npm install -g @awslabs/mcp-server-aws",
   config: `{
   "mcpServers": {

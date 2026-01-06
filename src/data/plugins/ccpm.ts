@@ -10,6 +10,7 @@ export const ccpmPlugin: Plugin = {
     name: "automazeio",
     url: "https://github.com/automazeio/ccpm",
   },
+  repoUrl: "https://github.com/automazeio/ccpm",
   installCommand: "git clone https://github.com/automazeio/ccpm.git && cd ccpm && ./install.sh",
   config: `# Claude Code PM (CCPM)
 

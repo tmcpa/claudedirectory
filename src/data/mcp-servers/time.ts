@@ -10,6 +10,7 @@ export const timeServer: MCPServer = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
+  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
   installCommand: "npm install -g @modelcontextprotocol/server-time",
   config: `{
   "mcpServers": {

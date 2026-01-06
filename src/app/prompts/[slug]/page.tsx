@@ -8,7 +8,7 @@ import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems } from "@/components/related-items";
 import { prompts, getPromptBySlug } from "@/data/prompts";
-import { ArrowLeft, FileText, User } from "lucide-react";
+import { ArrowLeft, FileText, User, ExternalLink } from "lucide-react";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -141,6 +141,20 @@ export default async function PromptDetailPage(props: Props) {
             <li>Claude Code will automatically use this context</li>
           </ol>
         </div>
+
+        {prompt.repoUrl && (
+          <div>
+            <a
+              href={prompt.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View source on GitHub
+            </a>
+          </div>
+        )}
 
         {prompt.relatedItems && prompt.relatedItems.length > 0 && (
           <>

@@ -10,6 +10,7 @@ export const contextkitPlugin: Plugin = {
     name: "FlineDev",
     url: "https://github.com/FlineDev/ContextKit",
   },
+  repoUrl: "https://github.com/FlineDev/ContextKit",
   installCommand: "git clone https://github.com/FlineDev/ContextKit.git && cd ContextKit && ./install.sh",
   config: `# ContextKit
 

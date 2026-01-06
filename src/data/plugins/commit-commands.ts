@@ -10,6 +10,7 @@ export const commitCommandsPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
+  repoUrl: "https://github.com/anthropics/claude-code-plugins",
   installCommand: "claude plugins add commit-commands@claude-plugins-official",
   config: `{
   "enabledPlugins": {

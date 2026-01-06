@@ -9,7 +9,7 @@ import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems } from "@/components/related-items";
 import { agents, getAgentBySlug } from "@/data/agents";
 import { Agent } from "@/lib/types";
-import { ArrowLeft, Bot, User } from "lucide-react";
+import { ArrowLeft, Bot, User, ExternalLink } from "lucide-react";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -165,6 +165,20 @@ export default async function AgentDetailPage(props: Props) {
             <li>Reference the agent when delegating specialized tasks</li>
           </ol>
         </div>
+
+        {agent.repoUrl && (
+          <div>
+            <a
+              href={agent.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View source on GitHub
+            </a>
+          </div>
+        )}
 
         {agent.relatedItems && agent.relatedItems.length > 0 && (
           <>

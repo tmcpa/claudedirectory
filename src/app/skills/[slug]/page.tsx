@@ -8,7 +8,7 @@ import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems } from "@/components/related-items";
 import { skills, getSkillBySlug } from "@/data/skills";
-import { ArrowLeft, Zap, User } from "lucide-react";
+import { ArrowLeft, Zap, User, ExternalLink } from "lucide-react";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -141,6 +141,20 @@ export default async function SkillDetailPage(props: Props) {
             <li>Use /{skill.slug} in Claude Code to invoke this skill</li>
           </ol>
         </div>
+
+        {skill.repoUrl && (
+          <div>
+            <a
+              href={skill.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View source on GitHub
+            </a>
+          </div>
+        )}
 
         {skill.relatedItems && skill.relatedItems.length > 0 && (
           <>

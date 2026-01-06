@@ -10,6 +10,7 @@ export const cloudflareServer: MCPServer = {
     name: "Cloudflare",
     url: "https://github.com/cloudflare",
   },
+  repoUrl: "https://github.com/cloudflare/mcp-server-cloudflare",
   installCommand: "npm install -g @cloudflare/mcp-server-cloudflare",
   config: `{
   "mcpServers": {

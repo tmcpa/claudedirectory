@@ -10,6 +10,7 @@ export const mongodbServer: MCPServer = {
     name: "MongoDB",
     url: "https://github.com/mongodb",
   },
+  repoUrl: "https://github.com/mongodb-js/mongodb-mcp-server",
   installCommand: "npm install -g @mongodb-js/mcp-server-mongodb",
   config: `{
   "mcpServers": {

@@ -10,6 +10,7 @@ export const grafanaServer: MCPServer = {
     name: "Grafana Labs",
     url: "https://github.com/grafana",
   },
+  repoUrl: "https://github.com/grafana/mcp-grafana",
   installCommand: "npm install -g @grafana/mcp-server",
   config: `{
   "mcpServers": {

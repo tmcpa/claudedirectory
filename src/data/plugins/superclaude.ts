@@ -10,6 +10,7 @@ export const superclaudePlugin: Plugin = {
     name: "SuperClaude-Org",
     url: "https://github.com/SuperClaude-Org/SuperClaude_Framework",
   },
+  repoUrl: "https://github.com/SuperClaude-Org/SuperClaude_Framework",
   installCommand: "git clone https://github.com/SuperClaude-Org/SuperClaude_Framework.git && cd SuperClaude_Framework && ./setup.sh",
   config: `# SuperClaude Framework Configuration
 

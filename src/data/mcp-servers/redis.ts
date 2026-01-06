@@ -10,6 +10,7 @@ export const redisServer: MCPServer = {
     name: "Redis",
     url: "https://github.com/redis",
   },
+  repoUrl: "https://github.com/redis/mcp-redis",
   installCommand: "npm install -g @redis/mcp-server",
   config: `{
   "mcpServers": {

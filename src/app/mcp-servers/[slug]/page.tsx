@@ -8,7 +8,7 @@ import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems } from "@/components/related-items";
 import { mcpServers, getMCPServerBySlug } from "@/data/mcp-servers";
-import { ArrowLeft, Server, User, Terminal } from "lucide-react";
+import { ArrowLeft, Server, User, Terminal, ExternalLink } from "lucide-react";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -156,6 +156,20 @@ export default async function MCPServerDetailPage(props: Props) {
             <li>Restart Claude Code to apply changes</li>
           </ol>
         </div>
+
+        {server.repoUrl && (
+          <div>
+            <a
+              href={server.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View source on GitHub
+            </a>
+          </div>
+        )}
 
         {server.relatedItems && server.relatedItems.length > 0 && (
           <>

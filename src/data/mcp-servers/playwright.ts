@@ -10,6 +10,7 @@ export const playwrightServer: MCPServer = {
     name: "Microsoft",
     url: "https://github.com/microsoft",
   },
+  repoUrl: "https://github.com/microsoft/playwright-mcp",
   installCommand: "npm install -g @playwright/mcp",
   config: `{
   "mcpServers": {

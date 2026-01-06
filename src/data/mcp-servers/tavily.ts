@@ -10,6 +10,7 @@ export const tavilyServer: MCPServer = {
     name: "Tavily",
     url: "https://github.com/tavily-ai",
   },
+  repoUrl: "https://github.com/tavily-ai/tavily-mcp",
   installCommand: "npm install -g tavily-mcp",
   config: `{
   "mcpServers": {

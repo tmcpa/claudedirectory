@@ -8,7 +8,7 @@ import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems } from "@/components/related-items";
 import { hooks, getHookBySlug } from "@/data/hooks";
-import { ArrowLeft, Webhook, User } from "lucide-react";
+import { ArrowLeft, Webhook, User, ExternalLink } from "lucide-react";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -168,6 +168,20 @@ export default async function HookDetailPage(props: Props) {
             <li>Restart Claude Code to apply changes</li>
           </ol>
         </div>
+
+        {hook.repoUrl && (
+          <div>
+            <a
+              href={hook.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View source on GitHub
+            </a>
+          </div>
+        )}
 
         {hook.relatedItems && hook.relatedItems.length > 0 && (
           <>

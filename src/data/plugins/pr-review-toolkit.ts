@@ -10,6 +10,7 @@ export const prReviewToolkitPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
+  repoUrl: "https://github.com/anthropics/claude-code-plugins",
   installCommand: "claude plugins add pr-review-toolkit@claude-plugins-official",
   config: `{
   "enabledPlugins": {

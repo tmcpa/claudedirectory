@@ -10,6 +10,7 @@ export const fetchServer: MCPServer = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
+  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
   installCommand: "npm install -g @anthropic-ai/mcp-server-fetch",
   config: `{
   "mcpServers": {

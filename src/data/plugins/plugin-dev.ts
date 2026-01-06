@@ -10,6 +10,7 @@ export const pluginDevPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
+  repoUrl: "https://github.com/anthropics/claude-code-plugins",
   installCommand: "claude plugins add plugin-dev@claude-plugins-official",
   config: `{
   "enabledPlugins": {

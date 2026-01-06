@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems } from "@/components/related-items";
 import { howTos, getHowToBySlug } from "@/data/how-to";
-import { ArrowLeft, BookOpen, User, Clock } from "lucide-react";
+import { ArrowLeft, BookOpen, User, Clock, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ReactMarkdown from "react-markdown";
 import { CodeBlock } from "@/components/code-block";
@@ -236,6 +236,20 @@ export default async function HowToDetailPage(props: Props) {
             {howTo.content}
           </ReactMarkdown>
         </article>
+
+        {howTo.repoUrl && (
+          <div>
+            <a
+              href={howTo.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View source on GitHub
+            </a>
+          </div>
+        )}
 
         {howTo.relatedItems && howTo.relatedItems.length > 0 && (
           <>

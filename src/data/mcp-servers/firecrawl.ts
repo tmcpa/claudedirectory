@@ -10,6 +10,7 @@ export const firecrawlServer: MCPServer = {
     name: "Firecrawl",
     url: "https://github.com/mendableai",
   },
+  repoUrl: "https://github.com/mendableai/firecrawl-mcp-server",
   installCommand: "npm install -g firecrawl-mcp",
   config: `{
   "mcpServers": {

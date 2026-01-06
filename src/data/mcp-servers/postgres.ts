@@ -9,6 +9,7 @@ export const postgresServer: MCPServer = {
   author: {
     name: "MCP Community",
   },
+  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
   installCommand: "npm install -g @modelcontextprotocol/server-postgres",
   config: `{
   "mcpServers": {

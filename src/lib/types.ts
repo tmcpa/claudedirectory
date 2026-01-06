@@ -29,6 +29,7 @@ export interface Prompt {
   author: Author;
   featured?: boolean;
   relatedItems?: RelatedItem[];
+  repoUrl?: string;
 }
 
 export interface MCPServer {
@@ -41,6 +42,7 @@ export interface MCPServer {
   author: Author;
   featured?: boolean;
   relatedItems?: RelatedItem[];
+  repoUrl?: string;
 }
 
 export interface Hook {
@@ -54,6 +56,7 @@ export interface Hook {
   author: Author;
   featured?: boolean;
   relatedItems?: RelatedItem[];
+  repoUrl?: string;
 }
 
 export interface Skill {
@@ -65,6 +68,7 @@ export interface Skill {
   author: Author;
   featured?: boolean;
   relatedItems?: RelatedItem[];
+  repoUrl?: string;
 }
 
 export interface Plugin {
@@ -92,6 +96,7 @@ export interface HowTo {
   author: Author;
   featured?: boolean;
   relatedItems?: RelatedItem[];
+  repoUrl?: string;
 }
 
 export interface Agent {
@@ -104,6 +109,7 @@ export interface Agent {
   author: Author;
   featured?: boolean;
   relatedItems?: RelatedItem[];
+  repoUrl?: string;
 }
 
 export type ContentItem = Prompt | MCPServer | Hook | Skill | Plugin | HowTo | Agent;

@@ -10,6 +10,7 @@ export const exaServer: MCPServer = {
     name: "Exa",
     url: "https://github.com/exa-labs",
   },
+  repoUrl: "https://github.com/exa-labs/exa-mcp-server",
   installCommand: "npm install -g exa-mcp-server",
   config: `{
   "mcpServers": {

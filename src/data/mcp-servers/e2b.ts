@@ -10,6 +10,7 @@ export const e2bServer: MCPServer = {
     name: "E2B",
     url: "https://github.com/e2b-dev",
   },
+  repoUrl: "https://github.com/e2b-dev/mcp-server",
   installCommand: "npm install -g @e2b/mcp-server",
   config: `{
   "mcpServers": {

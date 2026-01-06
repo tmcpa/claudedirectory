@@ -10,6 +10,7 @@ export const claudekitPlugin: Plugin = {
     name: "carlrannaberg",
     url: "https://github.com/carlrannaberg/claudekit",
   },
+  repoUrl: "https://github.com/carlrannaberg/claudekit",
   installCommand: "git clone https://github.com/carlrannaberg/claudekit.git && cd claudekit && ./install.sh",
   config: `# ClaudeKit Configuration
 

@@ -10,6 +10,7 @@ export const supabaseServer: MCPServer = {
     name: "Supabase Community",
     url: "https://github.com/supabase-community",
   },
+  repoUrl: "https://github.com/supabase-community/supabase-mcp",
   installCommand: "npm install -g @supabase/mcp-server",
   config: `{
   "mcpServers": {
