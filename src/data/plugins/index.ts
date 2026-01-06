@@ -11,6 +11,11 @@ import { pluginDevPlugin } from "./plugin-dev";
 import { prReviewToolkitPlugin } from "./pr-review-toolkit";
 import { securityGuidancePlugin } from "./security-guidance";
 import { swiftLspPlugin } from "./swift-lsp";
+import { claudekitPlugin } from "./claudekit";
+import { superclaudePlugin } from "./superclaude";
+import { codexSettingsPlugin } from "./codex-settings";
+import { ccpmPlugin } from "./ccpm";
+import { contextkitPlugin } from "./contextkit";
 
 export const plugins: Plugin[] = [
   // Featured plugins first
@@ -22,11 +27,11 @@ export const plugins: Plugin[] = [
   securityGuidancePlugin,
   // Non-featured plugins
   swiftLspPlugin,
-  hookifyPlugin,
-  prReviewToolkitPlugin,
-  agentSdkDevPlugin,
-  explanatoryOutputPlugin,
-  claudeOpusMigrationPlugin,
+  claudekitPlugin,
+  superclaudePlugin,
+  codexSettingsPlugin,
+  ccpmPlugin,
+  contextkitPlugin,
 ];
 
 export function getPluginBySlug(slug: string): Plugin | undefined {

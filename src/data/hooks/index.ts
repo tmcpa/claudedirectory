@@ -2,11 +2,19 @@ import { Hook } from "@/lib/types";
 import { lintOnEditHook } from "./lint-on-edit";
 import { formatOnSaveHook } from "./format-on-save";
 import { notifyOnCompleteHook } from "./notify-on-complete";
+import { tddGuardHook } from "./tdd-guard";
+import { claudioHook } from "./claudio";
+import { britfixHook } from "./britfix";
+import { typescriptQualityHook } from "./typescript-quality";
 
 export const hooks: Hook[] = [
   lintOnEditHook,
   formatOnSaveHook,
   notifyOnCompleteHook,
+  tddGuardHook,
+  claudioHook,
+  britfixHook,
+  typescriptQualityHook,
 ];
 
 export function getHookBySlug(slug: string): Hook | undefined {
