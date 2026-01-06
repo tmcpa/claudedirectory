@@ -2,11 +2,17 @@ import { Skill } from "@/lib/types";
 import { commitSkill } from "./commit";
 import { prSkill } from "./pr";
 import { reviewSkill } from "./review";
+import { superpowersSkill } from "./superpowers";
+import { contextEngineeringSkill } from "./context-engineering";
+import { webAssetGeneratorSkill } from "./web-asset-generator";
 
 export const skills: Skill[] = [
   commitSkill,
   prSkill,
   reviewSkill,
+  superpowersSkill,
+  contextEngineeringSkill,
+  webAssetGeneratorSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

@@ -3,12 +3,22 @@ import { codeReviewPlugin } from "./code-review";
 import { featureDevPlugin } from "./feature-dev";
 import { frontendDesignPlugin } from "./frontend-design";
 import { swiftLspPlugin } from "./swift-lsp";
+import { claudekitPlugin } from "./claudekit";
+import { superclaudePlugin } from "./superclaude";
+import { codexSettingsPlugin } from "./codex-settings";
+import { ccpmPlugin } from "./ccpm";
+import { contextkitPlugin } from "./contextkit";
 
 export const plugins: Plugin[] = [
   codeReviewPlugin,
   featureDevPlugin,
   frontendDesignPlugin,
   swiftLspPlugin,
+  claudekitPlugin,
+  superclaudePlugin,
+  codexSettingsPlugin,
+  ccpmPlugin,
+  contextkitPlugin,
 ];
 
 export function getPluginBySlug(slug: string): Plugin | undefined {
