@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedItems } from "@/components/related-items";
 import { hooks, getHookBySlug } from "@/data/hooks";
 import { ArrowLeft, Webhook, User } from "lucide-react";
 
@@ -167,6 +168,13 @@ export default async function HookDetailPage(props: Props) {
             <li>Restart Claude Code to apply changes</li>
           </ol>
         </div>
+
+        {hook.relatedItems && hook.relatedItems.length > 0 && (
+          <>
+            <Separator />
+            <RelatedItems items={hook.relatedItems} />
+          </>
+        )}
       </div>
     </div>
   );

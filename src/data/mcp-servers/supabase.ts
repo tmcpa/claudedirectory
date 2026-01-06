@@ -23,4 +23,7 @@ export const supabaseServer: MCPServer = {
     }
   }
 }`,
+  relatedItems: [
+    { type: "plugin", slug: "supabase" },
+  ],
 };

@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedItems } from "@/components/related-items";
 import { agents, getAgentBySlug } from "@/data/agents";
 import { Agent } from "@/lib/types";
 import { ArrowLeft, Bot, User } from "lucide-react";
@@ -164,6 +165,13 @@ export default async function AgentDetailPage(props: Props) {
             <li>Reference the agent when delegating specialized tasks</li>
           </ol>
         </div>
+
+        {agent.relatedItems && agent.relatedItems.length > 0 && (
+          <>
+            <Separator />
+            <RelatedItems items={agent.relatedItems} />
+          </>
+        )}
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedItems } from "@/components/related-items";
 import { prompts, getPromptBySlug } from "@/data/prompts";
 import { ArrowLeft, FileText, User } from "lucide-react";
 
@@ -140,6 +141,13 @@ export default async function PromptDetailPage(props: Props) {
             <li>Claude Code will automatically use this context</li>
           </ol>
         </div>
+
+        {prompt.relatedItems && prompt.relatedItems.length > 0 && (
+          <>
+            <Separator />
+            <RelatedItems items={prompt.relatedItems} />
+          </>
+        )}
       </div>
     </div>
   );

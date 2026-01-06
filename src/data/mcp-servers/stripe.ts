@@ -22,4 +22,7 @@ export const stripeServer: MCPServer = {
     }
   }
 }`,
+  relatedItems: [
+    { type: "plugin", slug: "stripe" },
+  ],
 };

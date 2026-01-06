@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedItems } from "@/components/related-items";
 import { mcpServers, getMCPServerBySlug } from "@/data/mcp-servers";
 import { ArrowLeft, Server, User, Terminal } from "lucide-react";
 
@@ -155,6 +156,13 @@ export default async function MCPServerDetailPage(props: Props) {
             <li>Restart Claude Code to apply changes</li>
           </ol>
         </div>
+
+        {server.relatedItems && server.relatedItems.length > 0 && (
+          <>
+            <Separator />
+            <RelatedItems items={server.relatedItems} />
+          </>
+        )}
       </div>
     </div>
   );

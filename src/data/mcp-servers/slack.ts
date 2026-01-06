@@ -23,4 +23,7 @@ export const slackServer: MCPServer = {
     }
   }
 }`,
+  relatedItems: [
+    { type: "plugin", slug: "slack" },
+  ],
 };

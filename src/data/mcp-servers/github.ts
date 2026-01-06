@@ -22,4 +22,7 @@ export const githubServer: MCPServer = {
     }
   }
 }`,
+  relatedItems: [
+    { type: "plugin", slug: "github" },
+  ],
 };

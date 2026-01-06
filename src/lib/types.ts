@@ -4,6 +4,22 @@ export interface Author {
   avatar?: string;
 }
 
+export type ContentType = "prompt" | "mcp-server" | "hook" | "skill" | "plugin" | "agent" | "how-to";
+
+export type RelationshipType =
+  | "contains"      // Plugin contains agents/skills
+  | "part-of"       // Agent/skill is part of plugin
+  | "requires"      // Needs this to work
+  | "recommends"    // Works better with this
+  | "documented-by" // Has tutorial/guide
+  | "works-with";   // Complementary items
+
+export interface RelatedItem {
+  type: ContentType;
+  slug: string;
+  relationship?: RelationshipType;
+}
+
 export interface Prompt {
   slug: string;
   title: string;
@@ -12,6 +28,7 @@ export interface Prompt {
   tags: string[];
   author: Author;
   featured?: boolean;
+  relatedItems?: RelatedItem[];
 }
 
 export interface MCPServer {
@@ -23,6 +40,7 @@ export interface MCPServer {
   tags: string[];
   author: Author;
   featured?: boolean;
+  relatedItems?: RelatedItem[];
 }
 
 export interface Hook {
@@ -35,6 +53,7 @@ export interface Hook {
   tags: string[];
   author: Author;
   featured?: boolean;
+  relatedItems?: RelatedItem[];
 }
 
 export interface Skill {
@@ -45,6 +64,7 @@ export interface Skill {
   tags: string[];
   author: Author;
   featured?: boolean;
+  relatedItems?: RelatedItem[];
 }
 
 export interface Plugin {
@@ -56,6 +76,9 @@ export interface Plugin {
   tags: string[];
   author: Author;
   featured?: boolean;
+  relatedItems?: RelatedItem[];
+  commands?: { name: string; description: string }[];
+  repoUrl?: string;
 }
 
 export interface HowTo {
@@ -68,6 +91,7 @@ export interface HowTo {
   tags: string[];
   author: Author;
   featured?: boolean;
+  relatedItems?: RelatedItem[];
 }
 
 export interface Agent {
@@ -79,6 +103,7 @@ export interface Agent {
   tags: string[];
   author: Author;
   featured?: boolean;
+  relatedItems?: RelatedItem[];
 }
 
 export type ContentItem = Prompt | MCPServer | Hook | Skill | Plugin | HowTo | Agent;

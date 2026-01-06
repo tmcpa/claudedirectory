@@ -22,4 +22,7 @@ export const linearServer: MCPServer = {
     }
   }
 }`,
+  relatedItems: [
+    { type: "plugin", slug: "linear" },
+  ],
 };

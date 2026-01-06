@@ -19,4 +19,7 @@ export const playwrightServer: MCPServer = {
     }
   }
 }`,
+  relatedItems: [
+    { type: "plugin", slug: "playwright" },
+  ],
 };

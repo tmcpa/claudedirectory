@@ -17,6 +17,10 @@ import { productManagerAgent } from "./product-manager";
 import { debuggerAgent } from "./debugger";
 import { dataEngineerAgent } from "./data-engineer";
 import { deploymentEngineerAgent } from "./deployment-engineer";
+// Feature Dev Plugin Agents
+import { codeExplorerAgent } from "./code-explorer";
+import { codeArchitectAgent } from "./code-architect";
+import { fdCodeReviewerAgent } from "./fd-code-reviewer";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -37,6 +41,10 @@ export const agents: Agent[] = [
   debuggerAgent,
   dataEngineerAgent,
   deploymentEngineerAgent,
+  // Feature Dev Plugin Agents
+  codeExplorerAgent,
+  codeArchitectAgent,
+  fdCodeReviewerAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

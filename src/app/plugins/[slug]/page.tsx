@@ -6,8 +6,9 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedItems } from "@/components/related-items";
 import { plugins, getPluginBySlug } from "@/data/plugins";
-import { ArrowLeft, Puzzle, User, Terminal } from "lucide-react";
+import { ArrowLeft, Puzzle, User, Terminal, ExternalLink } from "lucide-react";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -144,6 +145,27 @@ export default async function PluginDetailPage(props: Props) {
           </div>
         )}
 
+        {plugin.commands && plugin.commands.length > 0 && (
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Commands</h2>
+            <div className="space-y-2">
+              {plugin.commands.map((command) => (
+                <div
+                  key={command.name}
+                  className="flex items-start gap-3 p-3 bg-muted rounded-lg"
+                >
+                  <code className="font-mono text-sm font-semibold text-primary">
+                    {command.name}
+                  </code>
+                  <span className="text-sm text-muted-foreground">
+                    {command.description}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="bg-accent/50 rounded-lg p-4">
           <h3 className="font-semibold mb-2">How to install</h3>
           <ol className="list-decimal list-inside space-y-1 text-sm text-muted-foreground">
@@ -153,6 +175,27 @@ export default async function PluginDetailPage(props: Props) {
             <li>Use the plugin&apos;s features in your Claude Code sessions</li>
           </ol>
         </div>
+
+        {plugin.repoUrl && (
+          <div>
+            <a
+              href={plugin.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View source on GitHub
+            </a>
+          </div>
+        )}
+
+        {plugin.relatedItems && plugin.relatedItems.length > 0 && (
+          <>
+            <Separator />
+            <RelatedItems items={plugin.relatedItems} />
+          </>
+        )}
       </div>
     </div>
   );

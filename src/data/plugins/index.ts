@@ -16,6 +16,20 @@ import { superclaudePlugin } from "./superclaude";
 import { codexSettingsPlugin } from "./codex-settings";
 import { ccpmPlugin } from "./ccpm";
 import { contextkitPlugin } from "./contextkit";
+// External plugins (official integrations)
+import { asanaPlugin } from "./asana";
+import { context7Plugin } from "./context7";
+import { firebasePlugin } from "./firebase";
+import { githubPlugin } from "./github";
+import { gitlabPlugin } from "./gitlab";
+import { greptilePlugin } from "./greptile";
+import { laravelBoostPlugin } from "./laravel-boost";
+import { linearPlugin } from "./linear";
+import { playwrightPlugin } from "./playwright";
+import { serenaPlugin } from "./serena";
+import { slackPlugin } from "./slack";
+import { stripePlugin } from "./stripe";
+import { supabasePlugin } from "./supabase";
 
 export const plugins: Plugin[] = [
   // Featured plugins first
@@ -25,6 +39,11 @@ export const plugins: Plugin[] = [
   commitCommandsPlugin,
   pluginDevPlugin,
   securityGuidancePlugin,
+  // Featured external plugins
+  githubPlugin,
+  linearPlugin,
+  supabasePlugin,
+  playwrightPlugin,
   // Non-featured plugins
   swiftLspPlugin,
   claudekitPlugin,
@@ -32,6 +51,16 @@ export const plugins: Plugin[] = [
   codexSettingsPlugin,
   ccpmPlugin,
   contextkitPlugin,
+  // External plugins
+  asanaPlugin,
+  context7Plugin,
+  firebasePlugin,
+  gitlabPlugin,
+  greptilePlugin,
+  laravelBoostPlugin,
+  serenaPlugin,
+  slackPlugin,
+  stripePlugin,
 ];
 
 export function getPluginBySlug(slug: string): Plugin | undefined {
