@@ -35,6 +35,9 @@ export function Footer() {
             Anthropic
           </Link>
         </div>
+        <p className="text-xs text-muted-foreground/70">
+          This site is not affiliated with, endorsed by, or sponsored by Anthropic.
+        </p>
       </div>
     </footer>
   );
