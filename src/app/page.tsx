@@ -7,6 +7,7 @@ import { HookCard } from "@/components/cards/hook-card";
 import { SkillCard } from "@/components/cards/skill-card";
 import { PluginCard } from "@/components/cards/plugin-card";
 import { HowToCard } from "@/components/cards/how-to-card";
+import { AgentCard } from "@/components/cards/agent-card";
 import { UniversalSearch } from "@/components/universal-search";
 import { getFeaturedPrompts } from "@/data/prompts";
 import { getFeaturedMCPServers } from "@/data/mcp-servers";
@@ -14,7 +15,8 @@ import { getFeaturedHooks } from "@/data/hooks";
 import { getFeaturedSkills } from "@/data/skills";
 import { getFeaturedPlugins } from "@/data/plugins";
 import { getFeaturedHowTos } from "@/data/how-to";
-import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, ArrowRight } from "lucide-react";
+import { getFeaturedAgents } from "@/data/agents";
+import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, ArrowRight } from "lucide-react";
 
 const categories = [
   {
@@ -48,6 +50,12 @@ const categories = [
     icon: Puzzle,
   },
   {
+    name: "Agents",
+    description: "Specialized Claude Code subagents",
+    href: "/agents",
+    icon: Bot,
+  },
+  {
     name: "How To",
     description: "Step-by-step tutorials and guides",
     href: "/how-to",
@@ -62,6 +70,7 @@ export default function Home() {
   const featuredSkills = getFeaturedSkills();
   const featuredPlugins = getFeaturedPlugins();
   const featuredHowTos = getFeaturedHowTos();
+  const featuredAgents = getFeaturedAgents();
 
   return (
     <div className="flex flex-col">
@@ -95,11 +104,11 @@ export default function Home() {
             </Button>
             <Button variant="outline" size="lg" asChild>
               <a
-                href="https://code.claude.com/docs/en/overview"
+                href="https://github.com/tmcpa/claudescodes/issues/new"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Documentation
+                Submit Resource
               </a>
             </Button>
           </div>
@@ -221,6 +230,26 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {featuredPlugins.slice(0, 3).map((plugin) => (
               <PluginCard key={plugin.slug} plugin={plugin} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Featured Agents */}
+      {featuredAgents.length > 0 && (
+        <section className="container py-12 border-t">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-bold">Featured Agents</h2>
+            <Button variant="ghost" asChild>
+              <Link href="/agents">
+                View all
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredAgents.slice(0, 3).map((agent) => (
+              <AgentCard key={agent.slug} agent={agent} />
             ))}
           </div>
         </section>

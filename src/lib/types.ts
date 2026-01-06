@@ -70,4 +70,15 @@ export interface HowTo {
   featured?: boolean;
 }
 
-export type ContentItem = Prompt | MCPServer | Hook | Skill | Plugin | HowTo;
+export interface Agent {
+  slug: string;
+  title: string;
+  description: string;
+  content: string;
+  category: "development" | "data-ai" | "infrastructure" | "quality-testing" | "security" | "business" | "specialization";
+  tags: string[];
+  author: Author;
+  featured?: boolean;
+}
+
+export type ContentItem = Prompt | MCPServer | Hook | Skill | Plugin | HowTo | Agent;

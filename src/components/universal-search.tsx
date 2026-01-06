@@ -4,17 +4,18 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, FileText, Server, Webhook, Zap, Puzzle, BookOpen } from "lucide-react";
+import { Search, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot } from "lucide-react";
 import { prompts } from "@/data/prompts";
 import { mcpServers } from "@/data/mcp-servers";
 import { hooks } from "@/data/hooks";
 import { skills } from "@/data/skills";
 import { plugins } from "@/data/plugins";
 import { howTos } from "@/data/how-to";
+import { agents } from "@/data/agents";
 import { cn } from "@/lib/utils";
 
 interface SearchResult {
-  type: "prompt" | "mcp-server" | "hook" | "skill" | "plugin" | "how-to";
+  type: "prompt" | "mcp-server" | "hook" | "skill" | "plugin" | "how-to" | "agent";
   slug: string;
   title: string;
   description: string;
@@ -28,6 +29,7 @@ const typeConfig = {
   skill: { icon: Zap, label: "Skill", href: "/skills", color: "text-purple-500" },
   plugin: { icon: Puzzle, label: "Plugin", href: "/plugins", color: "text-pink-500" },
   "how-to": { icon: BookOpen, label: "How To", href: "/how-to", color: "text-cyan-500" },
+  agent: { icon: Bot, label: "Agent", href: "/agents", color: "text-rose-500" },
 };
 
 export function UniversalSearch() {
@@ -150,6 +152,23 @@ export function UniversalSearch() {
       }
     });
 
+    // Search agents
+    agents.forEach((a) => {
+      if (
+        a.title.toLowerCase().includes(searchQuery) ||
+        a.description.toLowerCase().includes(searchQuery) ||
+        a.tags.some((t) => t.toLowerCase().includes(searchQuery))
+      ) {
+        allResults.push({
+          type: "agent",
+          slug: a.slug,
+          title: a.title,
+          description: a.description,
+          tags: a.tags,
+        });
+      }
+    });
+
     setResults(allResults.slice(0, 10));
     setIsOpen(allResults.length > 0);
     setSelectedIndex(0);
@@ -205,7 +224,7 @@ export function UniversalSearch() {
         <Input
           ref={inputRef}
           type="search"
-          placeholder="Search prompts, MCP servers, hooks, skills, plugins, guides..."
+          placeholder="Search prompts, MCP servers, hooks, skills, plugins, guides, agents..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && results.length > 0 && setIsOpen(true)}
