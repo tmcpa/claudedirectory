@@ -1,17 +1,26 @@
 import { MCPServer } from "@/lib/types";
+import { airtableServer } from "./airtable";
+import { apidogServer } from "./apidog";
+import { atlassianServer } from "./atlassian";
 import { awsServer } from "./aws";
+import { bigqueryServer } from "./bigquery";
+import { blueskyServer } from "./bluesky";
 import { braveSearchServer } from "./brave-search";
 import { cloudflareServer } from "./cloudflare";
+import { datadogServer } from "./datadog";
+import { discordServer } from "./discord";
 import { dockerServer } from "./docker";
 import { e2bServer } from "./e2b";
 import { elasticsearchServer } from "./elasticsearch";
 import { exaServer } from "./exa";
 import { fetchServer } from "./fetch";
+import { figmaServer } from "./figma";
 import { filesystemServer } from "./filesystem";
 import { firecrawlServer } from "./firecrawl";
 import { gitServer } from "./git";
 import { githubServer } from "./github";
 import { googleDriveServer } from "./google-drive";
+import { googleMapsServer } from "./google-maps";
 import { grafanaServer } from "./grafana";
 import { jiraServer } from "./jira";
 import { kubernetesServer } from "./kubernetes";
@@ -20,25 +29,32 @@ import { memoryServer } from "./memory";
 import { mongodbServer } from "./mongodb";
 import { neo4jServer } from "./neo4j";
 import { notionServer } from "./notion";
+import { obsidianServer } from "./obsidian";
 import { playwrightServer } from "./playwright";
 import { postgresServer } from "./postgres";
 import { puppeteerServer } from "./puppeteer";
+import { raygunServer } from "./raygun";
 import { redisServer } from "./redis";
 import { sentryServer } from "./sentry";
 import { sequentialThinkingServer } from "./sequential-thinking";
+import { shopifyServer } from "./shopify";
 import { slackServer } from "./slack";
+import { snowflakeServer } from "./snowflake";
 import { sqliteServer } from "./sqlite";
 import { stripeServer } from "./stripe";
 import { supabaseServer } from "./supabase";
+import { taskmasterServer } from "./taskmaster";
 import { tavilyServer } from "./tavily";
 import { terraformServer } from "./terraform";
 import { timeServer } from "./time";
 import { vercelServer } from "./vercel";
+import { youtubeServer } from "./youtube";
 
 export const mcpServers: MCPServer[] = [
   // Featured servers first
   filesystemServer,
   githubServer,
+  figmaServer,
   playwrightServer,
   supabaseServer,
   mongodbServer,
@@ -52,11 +68,14 @@ export const mcpServers: MCPServer[] = [
   slackServer,
   braveSearchServer,
   memoryServer,
+  apidogServer,
+  taskmasterServer,
   // Non-featured servers
   fetchServer,
   gitServer,
   notionServer,
   googleDriveServer,
+  googleMapsServer,
   sentryServer,
   sequentialThinkingServer,
   redisServer,
@@ -73,6 +92,20 @@ export const mcpServers: MCPServer[] = [
   elasticsearchServer,
   kubernetesServer,
   terraformServer,
+  // Data & Analytics
+  snowflakeServer,
+  bigqueryServer,
+  datadogServer,
+  // Social & Communication
+  obsidianServer,
+  blueskyServer,
+  discordServer,
+  youtubeServer,
+  // Business Tools
+  atlassianServer,
+  airtableServer,
+  shopifyServer,
+  raygunServer,
 ];
 
 export function getMCPServerBySlug(slug: string): MCPServer | undefined {
