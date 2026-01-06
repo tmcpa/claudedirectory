@@ -95,7 +95,7 @@ export default function Home() {
             </Button>
             <Button variant="outline" size="lg" asChild>
               <a
-                href="https://docs.anthropic.com/en/docs/claude-code"
+                href="https://code.claude.com/docs/en/overview"
                 target="_blank"
                 rel="noopener noreferrer"
               >
