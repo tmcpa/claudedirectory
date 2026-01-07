@@ -11,4 +11,5 @@ export const deploymentEngineerPlugin: Plugin = {
     url: "https://github.com/ccplugins/marketplace",
   },
   repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/deployment-engineer",
+  installCommand: "claude plugins:add ccplugins/marketplace/plugins/deployment-engineer",
 };

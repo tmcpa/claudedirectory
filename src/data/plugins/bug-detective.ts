@@ -11,6 +11,7 @@ export const bugDetectivePlugin: Plugin = {
     url: "https://github.com/ccplugins/marketplace",
   },
   repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/bug-detective",
+  installCommand: "claude plugins:add ccplugins/marketplace/plugins/bug-detective",
   commands: [
     { name: "/bug-detective", description: "Debug issues with step-by-step troubleshooting" },
   ],

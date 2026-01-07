@@ -11,4 +11,5 @@ export const openapiExpertPlugin: Plugin = {
     url: "https://github.com/ccplugins/marketplace",
   },
   repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/openapi-expert",
+  installCommand: "claude plugins:add ccplugins/marketplace/plugins/openapi-expert",
 };

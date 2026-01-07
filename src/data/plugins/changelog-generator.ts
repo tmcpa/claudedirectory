@@ -11,4 +11,5 @@ export const changelogGeneratorPlugin: Plugin = {
     url: "https://github.com/ccplugins/marketplace",
   },
   repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/changelog-generator",
+  installCommand: "claude plugins:add ccplugins/marketplace/plugins/changelog-generator",
 };

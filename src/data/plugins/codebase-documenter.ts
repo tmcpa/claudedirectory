@@ -11,4 +11,5 @@ export const codebaseDocumenterPlugin: Plugin = {
     url: "https://github.com/ccplugins/marketplace",
   },
   repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/codebase-documenter",
+  installCommand: "claude plugins:add ccplugins/marketplace/plugins/codebase-documenter",
 };
