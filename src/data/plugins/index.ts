@@ -21,11 +21,10 @@ import { n8nWorkflowPlugin } from "./n8n-workflow";
 import { openapiExpertPlugin } from "./openapi-expert";
 import { pluginDevPlugin } from "./plugin-dev";
 import { prReviewToolkitPlugin } from "./pr-review-toolkit";
-import { safetyNetPlugin } from "./safety-net";
 import { securityGuidancePlugin } from "./security-guidance";
 import { superclaudePlugin } from "./superclaude";
 import { swiftLspPlugin } from "./swift-lsp";
-import { testWriterPlugin } from "./test-writer";
+import { testWriterFixerPlugin } from "./test-writer-fixer";
 import { ultrathinkPlugin } from "./ultrathink";
 // LSP plugins
 import { typescriptLspPlugin } from "./typescript-lsp";
@@ -71,7 +70,6 @@ export const plugins: Plugin[] = [
   securityGuidancePlugin,
   documentSkillsPlugin,
   compoundingEngineeringPlugin,
-  safetyNetPlugin,
   // Featured external plugins
   githubPlugin,
   linearPlugin,
@@ -99,7 +97,7 @@ export const plugins: Plugin[] = [
   // Community plugins
   ultrathinkPlugin,
   bugDetectivePlugin,
-  testWriterPlugin,
+  testWriterFixerPlugin,
   codebaseDocumenterPlugin,
   changelogGeneratorPlugin,
   openapiExpertPlugin,

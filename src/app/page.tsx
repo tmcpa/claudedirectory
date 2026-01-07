@@ -16,7 +16,7 @@ import { getFeaturedSkills } from "@/data/skills";
 import { getFeaturedPlugins } from "@/data/plugins";
 import { getFeaturedHowTos } from "@/data/how-to";
 import { getFeaturedAgents } from "@/data/agents";
-import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, ArrowRight } from "lucide-react";
+import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, ArrowRight, Github } from "lucide-react";
 
 const categories = [
   {
@@ -97,8 +97,8 @@ export default function Home() {
 
           <div className="flex gap-4 mt-6">
             <Button asChild size="lg">
-              <Link href="/prompts">
-                Browse Prompts
+              <Link href="/how-to">
+                Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -108,7 +108,8 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Submit Resource
+                <Github className="mr-2 h-4 w-4" />
+                Contribute
               </a>
             </Button>
           </div>
