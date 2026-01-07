@@ -17,4 +17,13 @@ export const gitlabPlugin: Plugin = {
   }
 }`,
   repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/gitlab",
+  commands: [
+    { name: "/gl-mr", description: "Create, review, or merge GitLab merge requests" },
+    { name: "/gl-pipeline", description: "View and manage CI/CD pipelines" },
+    { name: "/gl-issue", description: "Create and manage GitLab issues" },
+    { name: "/gl-search", description: "Search across projects and code" },
+  ],
+  relatedItems: [
+    { type: "mcp-server", slug: "gitlab", relationship: "requires" },
+  ],
 };

@@ -27,20 +27,39 @@ import { superclaudePlugin } from "./superclaude";
 import { swiftLspPlugin } from "./swift-lsp";
 import { testWriterPlugin } from "./test-writer";
 import { ultrathinkPlugin } from "./ultrathink";
+// LSP plugins
+import { typescriptLspPlugin } from "./typescript-lsp";
+import { pyrightLspPlugin } from "./pyright-lsp";
+import { rustAnalyzerLspPlugin } from "./rust-analyzer-lsp";
+import { goplsLspPlugin } from "./gopls-lsp";
+import { jdtlsLspPlugin } from "./jdtls-lsp";
+import { csharpLspPlugin } from "./csharp-lsp";
+import { phpLspPlugin } from "./php-lsp";
+import { clangdLspPlugin } from "./clangd-lsp";
 // External plugins (official integrations)
 import { asanaPlugin } from "./asana";
+import { awsPlugin } from "./aws";
+import { chromeDevtoolsPlugin } from "./chrome-devtools";
 import { context7Plugin } from "./context7";
+import { datadogPlugin } from "./datadog";
+import { dockerPlugin } from "./docker";
+import { figmaPlugin } from "./figma";
 import { firebasePlugin } from "./firebase";
 import { githubPlugin } from "./github";
 import { gitlabPlugin } from "./gitlab";
 import { greptilePlugin } from "./greptile";
+import { jiraPlugin } from "./jira";
 import { laravelBoostPlugin } from "./laravel-boost";
 import { linearPlugin } from "./linear";
+import { notionPlugin } from "./notion";
 import { playwrightPlugin } from "./playwright";
+import { prismaPlugin } from "./prisma";
+import { sentryPlugin } from "./sentry";
 import { serenaPlugin } from "./serena";
 import { slackPlugin } from "./slack";
 import { stripePlugin } from "./stripe";
 import { supabasePlugin } from "./supabase";
+import { vercelPlugin } from "./vercel";
 
 export const plugins: Plugin[] = [
   // Featured plugins first
@@ -58,13 +77,25 @@ export const plugins: Plugin[] = [
   linearPlugin,
   supabasePlugin,
   playwrightPlugin,
-  // Non-featured plugins
+  vercelPlugin,
+  chromeDevtoolsPlugin,
+  // LSP plugins
+  typescriptLspPlugin,
+  pyrightLspPlugin,
+  rustAnalyzerLspPlugin,
+  goplsLspPlugin,
+  jdtlsLspPlugin,
+  csharpLspPlugin,
+  phpLspPlugin,
+  clangdLspPlugin,
   swiftLspPlugin,
+  // Non-featured plugins
   claudekitPlugin,
   superclaudePlugin,
   codexSettingsPlugin,
   ccpmPlugin,
   contextkitPlugin,
+  prReviewToolkitPlugin,
   // Community plugins
   ultrathinkPlugin,
   bugDetectivePlugin,
@@ -76,11 +107,19 @@ export const plugins: Plugin[] = [
   deploymentEngineerPlugin,
   // External plugins
   asanaPlugin,
+  awsPlugin,
   context7Plugin,
+  datadogPlugin,
+  dockerPlugin,
+  figmaPlugin,
   firebasePlugin,
   gitlabPlugin,
   greptilePlugin,
+  jiraPlugin,
   laravelBoostPlugin,
+  notionPlugin,
+  prismaPlugin,
+  sentryPlugin,
   serenaPlugin,
   slackPlugin,
   stripePlugin,

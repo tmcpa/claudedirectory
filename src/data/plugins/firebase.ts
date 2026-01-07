@@ -17,4 +17,13 @@ export const firebasePlugin: Plugin = {
   }
 }`,
   repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/firebase",
+  commands: [
+    { name: "/firebase-query", description: "Query Firestore collections and documents" },
+    { name: "/firebase-deploy", description: "Deploy to Firebase Hosting or Functions" },
+    { name: "/firebase-auth", description: "Manage Firebase Authentication users" },
+    { name: "/firebase-rules", description: "Edit and deploy security rules" },
+  ],
+  relatedItems: [
+    { type: "mcp-server", slug: "firebase", relationship: "requires" },
+  ],
 };

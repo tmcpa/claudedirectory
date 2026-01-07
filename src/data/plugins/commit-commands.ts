@@ -3,7 +3,7 @@ import { Plugin } from "@/lib/types";
 export const commitCommandsPlugin: Plugin = {
   slug: "commit-commands",
   title: "Git Commit Commands",
-  description: "Git workflow automation with /commit, /commit-push-pr, and /clean_gone commands for streamlined version control",
+  description: "Git workflow automation with intelligent commit message generation, branch management, and PR creation. Follows conventional commits and analyzes changes to generate meaningful commit messages automatically.",
   tags: ["git", "workflow", "automation", "vcs", "official"],
   featured: true,
   author: {
@@ -17,4 +17,15 @@ export const commitCommandsPlugin: Plugin = {
     "commit-commands@claude-plugins-official": true
   }
 }`,
+  commands: [
+    { name: "/commit", description: "Stage changes and create commit with AI-generated message" },
+    { name: "/commit-push-pr", description: "Commit, push, and create a pull request in one command" },
+    { name: "/clean_gone", description: "Clean up local branches that no longer exist on remote" },
+    { name: "/amend", description: "Amend the last commit with new changes" },
+    { name: "/stash", description: "Intelligently stash changes with descriptive names" },
+  ],
+  relatedItems: [
+    { type: "plugin", slug: "github", relationship: "works-with" },
+    { type: "how-to", slug: "plugins", relationship: "documented-by" },
+  ],
 };

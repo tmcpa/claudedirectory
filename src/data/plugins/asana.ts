@@ -17,4 +17,13 @@ export const asanaPlugin: Plugin = {
   }
 }`,
   repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/asana",
+  commands: [
+    { name: "/asana-task", description: "Create, view, or update Asana tasks" },
+    { name: "/asana-project", description: "Manage projects and sections" },
+    { name: "/asana-search", description: "Search tasks across workspaces" },
+    { name: "/asana-assign", description: "Assign tasks and set due dates" },
+  ],
+  relatedItems: [
+    { type: "mcp-server", slug: "asana", relationship: "requires" },
+  ],
 };

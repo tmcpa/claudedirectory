@@ -3,8 +3,8 @@ import { Plugin } from "@/lib/types";
 export const swiftLspPlugin: Plugin = {
   slug: "swift-lsp",
   title: "Swift LSP",
-  description: "Language Server Protocol support for Swift development with code intelligence",
-  tags: ["swift", "lsp", "ios", "macos", "official"],
+  description: "Language Server Protocol support for Swift development. Real-time type checking, Xcode integration, SwiftUI previews, and intelligent code completion for iOS, macOS, watchOS, and tvOS development.",
+  tags: ["swift", "lsp", "ios", "macos", "official", "xcode"],
   featured: false,
   author: {
     name: "Anthropic",
@@ -17,4 +17,9 @@ export const swiftLspPlugin: Plugin = {
     "swift-lsp@claude-plugins-official": true
   }
 }`,
+  commands: [
+    { name: "/swift-check", description: "Type check Swift files and show errors" },
+    { name: "/swift-format", description: "Format Swift code with swift-format" },
+    { name: "/swift-build", description: "Build Swift package or Xcode project" },
+  ],
 };

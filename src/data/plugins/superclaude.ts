@@ -3,9 +3,9 @@ import { Plugin } from "@/lib/types";
 export const superclaudePlugin: Plugin = {
   slug: "superclaude",
   title: "SuperClaude Framework",
-  description: "Versatile configuration framework enhancing Claude Code with commands, cognitive personas, and advanced development workflows",
-  tags: ["framework", "personas", "commands", "workflow"],
-  featured: true,
+  description: "Versatile configuration framework enhancing Claude Code with commands, cognitive personas, and advanced development workflows. Includes 4 specialized personas and extensible command system.",
+  tags: ["framework", "personas", "commands", "workflow", "community"],
+  featured: false,
   author: {
     name: "SuperClaude-Org",
     url: "https://github.com/SuperClaude-Org/SuperClaude_Framework",
@@ -32,4 +32,10 @@ SuperClaude includes personas for:
 - Test Engineer - Testing and QA focus
 - DevOps - Infrastructure and deployment
 - Security - Security review and hardening`,
+  commands: [
+    { name: "/persona", description: "Switch between cognitive personas (architect, tester, devops, security)" },
+    { name: "/architect", description: "Activate Code Architect persona for system design" },
+    { name: "/tester", description: "Activate Test Engineer persona for QA focus" },
+    { name: "/devops", description: "Activate DevOps persona for infrastructure" },
+  ],
 };
