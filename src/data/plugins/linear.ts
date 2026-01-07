@@ -17,7 +17,13 @@ export const linearPlugin: Plugin = {
   }
 }`,
   repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/linear",
+  commands: [
+    { name: "/linear-issue", description: "Create, view, or update Linear issues" },
+    { name: "/linear-project", description: "Manage Linear projects and cycles" },
+    { name: "/linear-search", description: "Search across issues and projects" },
+    { name: "/linear-status", description: "Update issue status and assignments" },
+  ],
   relatedItems: [
-    { type: "mcp-server", slug: "linear" },
+    { type: "mcp-server", slug: "linear", relationship: "requires" },
   ],
 };

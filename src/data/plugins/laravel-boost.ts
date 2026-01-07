@@ -17,4 +17,10 @@ export const laravelBoostPlugin: Plugin = {
   }
 }`,
   repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/laravel-boost",
+  commands: [
+    { name: "/artisan", description: "Run Laravel Artisan commands" },
+    { name: "/eloquent", description: "Generate Eloquent models and relationships" },
+    { name: "/migrate", description: "Create and run database migrations" },
+    { name: "/route", description: "Generate routes and controllers" },
+  ],
 };
