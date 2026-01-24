@@ -26,6 +26,13 @@ export const metadata: Metadata = {
   },
   description:
     "Find the best prompts, MCP servers, hooks, skills, and plugins for Claude Code. A community-driven directory for Claude Code configurations.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   keywords: [
     "claude code",
     "claude",
