@@ -7,10 +7,10 @@ export const bigqueryServer: MCPServer = {
   tags: ["bigquery", "google", "database", "data-warehouse", "analytics", "sql"],
   featured: false,
   author: {
-    name: "Google",
-    url: "https://github.com/googleapis",
+    name: "Community",
+    url: "https://github.com/takuya0206",
   },
-  repoUrl: "https://github.com/googleapis/bigquery-mcp-server",
+  repoUrl: "https://github.com/takuya0206/bigquery-mcp-server",
   installCommand: "pip install bigquery-mcp-server",
   config: `{
   "mcpServers": {

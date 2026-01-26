@@ -5,6 +5,11 @@ import { reviewSkill } from "./review";
 import { superpowersSkill } from "./superpowers";
 import { contextEngineeringSkill } from "./context-engineering";
 import { webAssetGeneratorSkill } from "./web-asset-generator";
+import { iosSimulatorSkill } from "./ios-simulator";
+import { playwrightSkill } from "./playwright-skill";
+import { mcpBuilderSkill } from "./mcp-builder";
+import { youtubeTranscriptSkill } from "./youtube-transcript";
+import { d3jsVisualizationSkill } from "./d3js-visualization";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -13,6 +18,12 @@ export const skills: Skill[] = [
   superpowersSkill,
   contextEngineeringSkill,
   webAssetGeneratorSkill,
+  // New community skills
+  playwrightSkill,
+  mcpBuilderSkill,
+  iosSimulatorSkill,
+  youtubeTranscriptSkill,
+  d3jsVisualizationSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

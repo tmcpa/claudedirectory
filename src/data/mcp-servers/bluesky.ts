@@ -10,7 +10,7 @@ export const blueskyServer: MCPServer = {
     name: "Community",
     url: "https://github.com/bluesky-social",
   },
-  repoUrl: "https://github.com/keturiosakys/bluesky-context-server",
+  repoUrl: "https://github.com/laulauland/bluesky-context-server",
   installCommand: "npm install -g bluesky-mcp-server",
   config: `{
   "mcpServers": {
