@@ -10,7 +10,7 @@ export const snowflakeServer: MCPServer = {
     name: "Snowflake",
     url: "https://github.com/snowflakedb",
   },
-  repoUrl: "https://github.com/snowflakedb/snowflake-mcp-server",
+  repoUrl: "https://github.com/Snowflake-Labs/sfguide-getting-started-with-snowflake-mcp-server",
   installCommand: "pip install snowflake-mcp-server",
   config: `{
   "mcpServers": {

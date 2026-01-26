@@ -10,7 +10,7 @@ export const obsidianServer: MCPServer = {
     name: "Community",
     url: "https://github.com/obsidianmd",
   },
-  repoUrl: "https://github.com/MarkusPfworr/obsidian-mcp",
+  repoUrl: "https://github.com/cyanheads/obsidian-mcp-server",
   installCommand: "npm install -g obsidian-mcp",
   config: `{
   "mcpServers": {

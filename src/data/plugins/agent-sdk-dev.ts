@@ -10,7 +10,7 @@ export const agentSdkDevPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  repoUrl: "https://github.com/anthropics/claude-code-plugins",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add agent-sdk-dev@claude-plugins-official",
   config: `{
   "enabledPlugins": {

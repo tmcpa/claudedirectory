@@ -8,9 +8,9 @@ export const frontendDesignPlugin: Plugin = {
   featured: true,
   author: {
     name: "Claude Code Plugins",
-    url: "https://github.com/anthropics/claude-code-plugins",
+    url: "https://github.com/anthropics/claude-plugins-official",
   },
-  repoUrl: "https://github.com/anthropics/claude-code-plugins",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add frontend-design@claude-code-plugins",
   config: `{
   "enabledPlugins": {

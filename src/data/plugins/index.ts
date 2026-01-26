@@ -17,7 +17,7 @@ import { explanatoryOutputPlugin } from "./explanatory-output";
 import { featureDevPlugin } from "./feature-dev";
 import { frontendDesignPlugin } from "./frontend-design";
 import { hookifyPlugin } from "./hookify";
-import { n8nWorkflowPlugin } from "./n8n-workflow";
+// n8n-workflow plugin removed - repository no longer exists
 import { openapiExpertPlugin } from "./openapi-expert";
 import { pluginDevPlugin } from "./plugin-dev";
 import { prReviewToolkitPlugin } from "./pr-review-toolkit";
@@ -25,7 +25,11 @@ import { securityGuidancePlugin } from "./security-guidance";
 import { superclaudePlugin } from "./superclaude";
 import { swiftLspPlugin } from "./swift-lsp";
 import { testWriterFixerPlugin } from "./test-writer-fixer";
-import { ultrathinkPlugin } from "./ultrathink";
+// ultrathink plugin removed - repository no longer exists
+// New community plugins
+import { flowNextPlugin } from "./flow-next";
+import { ralphPlugin } from "./ralph";
+import { skillSeekersPlugin } from "./skill-seekers";
 // LSP plugins
 import { typescriptLspPlugin } from "./typescript-lsp";
 import { pyrightLspPlugin } from "./pyright-lsp";
@@ -95,14 +99,15 @@ export const plugins: Plugin[] = [
   contextkitPlugin,
   prReviewToolkitPlugin,
   // Community plugins
-  ultrathinkPlugin,
   bugDetectivePlugin,
   testWriterFixerPlugin,
   codebaseDocumenterPlugin,
   changelogGeneratorPlugin,
   openapiExpertPlugin,
-  n8nWorkflowPlugin,
   deploymentEngineerPlugin,
+  flowNextPlugin,
+  ralphPlugin,
+  skillSeekersPlugin,
   // External plugins
   asanaPlugin,
   awsPlugin,
