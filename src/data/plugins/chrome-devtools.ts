@@ -6,6 +6,7 @@ export const chromeDevtoolsPlugin: Plugin = {
   description: "Chrome browser testing and performance analysis using Chrome DevTools Protocol (CDP). 27 professional-grade tools for web testing, performance measurement, accessibility validation, and browser automation.",
   tags: ["testing", "browser", "performance", "accessibility", "official"],
   featured: true,
+  dateAdded: "2026-01-07",
   author: {
     name: "Google",
     url: "https://developer.chrome.com/docs/devtools",

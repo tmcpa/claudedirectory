@@ -6,6 +6,7 @@ export const youtubeTranscriptSkill: Skill = {
   description: "Download transcripts and captions from YouTube videos for analysis and summarization",
   tags: ["youtube", "transcript", "captions", "video", "content"],
   featured: false,
+  dateAdded: "2026-01-26",
   author: {
     name: "michalparkola",
     url: "https://github.com/michalparkola/youtube-transcript-skill",

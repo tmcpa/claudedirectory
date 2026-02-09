@@ -28,6 +28,7 @@ export interface Prompt {
   tags: string[];
   author: Author;
   featured?: boolean;
+  dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
 }
@@ -41,6 +42,7 @@ export interface MCPServer {
   tags: string[];
   author: Author;
   featured?: boolean;
+  dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
 }
@@ -55,6 +57,7 @@ export interface Hook {
   tags: string[];
   author: Author;
   featured?: boolean;
+  dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
 }
@@ -67,6 +70,7 @@ export interface Skill {
   tags: string[];
   author: Author;
   featured?: boolean;
+  dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
 }
@@ -80,6 +84,7 @@ export interface Plugin {
   tags: string[];
   author: Author;
   featured?: boolean;
+  dateAdded?: string;
   relatedItems?: RelatedItem[];
   commands?: { name: string; description: string }[];
   repoUrl?: string;
@@ -95,6 +100,7 @@ export interface HowTo {
   tags: string[];
   author: Author;
   featured?: boolean;
+  dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
 }
@@ -108,6 +114,7 @@ export interface Agent {
   tags: string[];
   author: Author;
   featured?: boolean;
+  dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
 }

@@ -6,6 +6,7 @@ export const flowNextPlugin: Plugin = {
   description: "Plan-first development workflows with multi-model review gates, context re-anchoring to prevent drift, and receipt-based gating for reliable AI coding",
   tags: ["workflow", "planning", "review", "drift-prevention", "community"],
   featured: false,
+  dateAdded: "2026-01-26",
   author: {
     name: "gmickel",
     url: "https://github.com/gmickel",
