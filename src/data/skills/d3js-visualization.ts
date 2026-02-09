@@ -6,6 +6,7 @@ export const d3jsVisualizationSkill: Skill = {
   description: "Create interactive data visualizations using D3.js with best practices for charts and graphs",
   tags: ["d3", "visualization", "charts", "data", "javascript"],
   featured: false,
+  dateAdded: "2026-01-26",
   author: {
     name: "chrisvoncsefalvay",
     url: "https://github.com/chrisvoncsefalvay/claude-d3js-skill",

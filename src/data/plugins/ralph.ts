@@ -6,6 +6,7 @@ export const ralphPlugin: Plugin = {
   description: "Autonomous overnight coding with fresh context management. Perfect for long-running tasks that need to maintain coherence across extended sessions",
   tags: ["autonomous", "overnight", "context", "long-running", "community"],
   featured: false,
+  dateAdded: "2026-01-26",
   author: {
     name: "gmickel",
     url: "https://github.com/gmickel",

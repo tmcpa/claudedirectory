@@ -6,6 +6,7 @@ export const skillSeekersPlugin: Plugin = {
   description: "Convert documentation websites into Claude Skills automatically. Transform any docs site into an installable skill for Claude Code",
   tags: ["skills", "documentation", "converter", "automation", "community"],
   featured: false,
+  dateAdded: "2026-01-26",
   author: {
     name: "yusufkaraaslan",
     url: "https://github.com/yusufkaraaslan",

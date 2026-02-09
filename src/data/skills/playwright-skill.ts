@@ -6,6 +6,7 @@ export const playwrightSkill: Skill = {
   description: "Browser automation and testing using Playwright for web application testing and scraping",
   tags: ["playwright", "browser", "testing", "automation", "e2e"],
   featured: true,
+  dateAdded: "2026-01-26",
   author: {
     name: "lackeyjb",
     url: "https://github.com/lackeyjb/playwright-skill",

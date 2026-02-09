@@ -6,6 +6,7 @@ export const iosSimulatorSkill: Skill = {
   description: "Build, navigate, and test iOS apps via simulator automation with XcodeBuild integration",
   tags: ["ios", "xcode", "mobile", "testing", "automation"],
   featured: false,
+  dateAdded: "2026-01-26",
   author: {
     name: "conorluddy",
     url: "https://github.com/conorluddy/ios-simulator-skill",

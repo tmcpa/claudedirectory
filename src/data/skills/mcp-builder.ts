@@ -6,6 +6,7 @@ export const mcpBuilderSkill: Skill = {
   description: "Guide for creating high-quality Model Context Protocol servers with best practices",
   tags: ["mcp", "server", "development", "protocol", "official"],
   featured: true,
+  dateAdded: "2026-01-26",
   author: {
     name: "Anthropic",
     url: "https://github.com/anthropics/skills",
