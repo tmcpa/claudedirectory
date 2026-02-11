@@ -54,7 +54,7 @@ export function Header() {
           <nav className="flex items-center">
             <Button variant="ghost" size="icon" asChild className="hidden md:flex">
               <a
-                href="https://github.com/tmcpa/claudescodes"
+                href="https://github.com/tmcpa/claudedirectory"
                 target="_blank"
                 rel="noopener noreferrer"
               >

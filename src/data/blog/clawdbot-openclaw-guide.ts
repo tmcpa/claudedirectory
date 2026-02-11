@@ -17,7 +17,7 @@ export const clawdbotOpenclawGuide: BlogPost = {
   featured: true,
   author: {
     name: "Claude Directory",
-    url: "https://github.com/tmcpa/claudescodes",
+    url: "https://github.com/tmcpa/claudedirectory",
   },
   relatedItems: [
     {

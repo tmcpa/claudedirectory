@@ -8,8 +8,8 @@ export const deploymentEngineerPlugin: Plugin = {
   featured: false,
   author: {
     name: "Jure Sunic",
-    url: "https://github.com/ccplugins/marketplace",
+    url: "https://github.com/ccplugins/awesome-claude-code-plugins",
   },
-  repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/deployment-engineer",
-  installCommand: "claude plugins:add ccplugins/marketplace/plugins/deployment-engineer",
+  repoUrl: "https://github.com/ccplugins/awesome-claude-code-plugins/tree/main/plugins/deployment-engineer",
+  installCommand: "claude plugins:add ccplugins/awesome-claude-code-plugins/plugins/deployment-engineer",
 };

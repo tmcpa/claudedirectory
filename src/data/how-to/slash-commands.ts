@@ -10,7 +10,7 @@ export const slashCommandsHowTo: HowTo = {
   featured: true,
   author: {
     name: "Claude Directory",
-    url: "https://github.com/tmcpa/claudescodes",
+    url: "https://github.com/tmcpa/claudedirectory",
   },
   content: `# Creating Custom Slash Commands
 

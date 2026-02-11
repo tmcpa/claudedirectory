@@ -8,8 +8,8 @@ export const testWriterFixerPlugin: Plugin = {
   featured: false,
   author: {
     name: "Michael Galpert",
-    url: "https://github.com/ccplugins/marketplace",
+    url: "https://github.com/ccplugins/awesome-claude-code-plugins",
   },
-  repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/test-writer-fixer",
-  installCommand: "claude plugins:add ccplugins/marketplace/plugins/test-writer-fixer",
+  repoUrl: "https://github.com/ccplugins/awesome-claude-code-plugins/tree/main/plugins/test-writer-fixer",
+  installCommand: "claude plugins:add ccplugins/awesome-claude-code-plugins/plugins/test-writer-fixer",
 };

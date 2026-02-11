@@ -6,6 +6,9 @@ import { tddGuardHook } from "./tdd-guard";
 import { claudioHook } from "./claudio";
 import { britfixHook } from "./britfix";
 import { typescriptQualityHook } from "./typescript-quality";
+import { autoTestHook } from "./auto-test";
+import { securityScanHook } from "./security-scan";
+import { branchProtectHook } from "./branch-protect";
 
 export const hooks: Hook[] = [
   lintOnEditHook,
@@ -15,6 +18,9 @@ export const hooks: Hook[] = [
   claudioHook,
   britfixHook,
   typescriptQualityHook,
+  autoTestHook,
+  securityScanHook,
+  branchProtectHook,
 ];
 
 export function getHookBySlug(slug: string): Hook | undefined {

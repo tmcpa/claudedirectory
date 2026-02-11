@@ -10,7 +10,7 @@ export const gettingStartedHowTo: HowTo = {
   featured: true,
   author: {
     name: "Claude Directory",
-    url: "https://github.com/tmcpa/claudescodes",
+    url: "https://github.com/tmcpa/claudedirectory",
   },
   content: `# Getting Started with Claude Code
 

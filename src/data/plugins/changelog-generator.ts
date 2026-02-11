@@ -8,8 +8,8 @@ export const changelogGeneratorPlugin: Plugin = {
   featured: false,
   author: {
     name: "Joe Heitzeberg",
-    url: "https://github.com/ccplugins/marketplace",
+    url: "https://github.com/ccplugins/awesome-claude-code-plugins",
   },
-  repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/changelog-generator",
-  installCommand: "claude plugins:add ccplugins/marketplace/plugins/changelog-generator",
+  repoUrl: "https://github.com/ccplugins/awesome-claude-code-plugins/tree/main/plugins/changelog-generator",
+  installCommand: "claude plugins:add ccplugins/awesome-claude-code-plugins/plugins/changelog-generator",
 };

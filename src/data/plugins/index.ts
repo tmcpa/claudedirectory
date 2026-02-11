@@ -63,6 +63,10 @@ import { slackPlugin } from "./slack";
 import { stripePlugin } from "./stripe";
 import { supabasePlugin } from "./supabase";
 import { vercelPlugin } from "./vercel";
+// New plugins
+import { cursorRulesPlugin } from "./cursor-rules";
+import { turboCommitPlugin } from "./turbo-commit";
+import { monorepoNavPlugin } from "./monorepo-nav";
 
 export const plugins: Plugin[] = [
   // Featured plugins first
@@ -126,6 +130,10 @@ export const plugins: Plugin[] = [
   serenaPlugin,
   slackPlugin,
   stripePlugin,
+  // New plugins
+  cursorRulesPlugin,
+  turboCommitPlugin,
+  monorepoNavPlugin,
 ];
 
 export function getPluginBySlug(slug: string): Plugin | undefined {

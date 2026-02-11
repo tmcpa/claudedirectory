@@ -6,7 +6,9 @@ import { awsServer } from "./aws";
 import { bigqueryServer } from "./bigquery";
 import { blueskyServer } from "./bluesky";
 import { braveSearchServer } from "./brave-search";
+import { browserbaseServer } from "./browserbase";
 import { cloudflareServer } from "./cloudflare";
+import { context7Server } from "./context7";
 import { datadogServer } from "./datadog";
 import { discordServer } from "./discord";
 import { dockerServer } from "./docker";
@@ -27,6 +29,7 @@ import { kubernetesServer } from "./kubernetes";
 import { linearServer } from "./linear";
 import { memoryServer } from "./memory";
 import { mongodbServer } from "./mongodb";
+import { neonServer } from "./neon";
 import { neo4jServer } from "./neo4j";
 import { notionServer } from "./notion";
 import { obsidianServer } from "./obsidian";
@@ -35,6 +38,7 @@ import { postgresServer } from "./postgres";
 import { puppeteerServer } from "./puppeteer";
 import { raygunServer } from "./raygun";
 import { redisServer } from "./redis";
+import { resendServer } from "./resend";
 import { sentryServer } from "./sentry";
 import { sequentialThinkingServer } from "./sequential-thinking";
 import { shopifyServer } from "./shopify";
@@ -47,6 +51,8 @@ import { taskmasterServer } from "./taskmaster";
 import { tavilyServer } from "./tavily";
 import { terraformServer } from "./terraform";
 import { timeServer } from "./time";
+import { tursoServer } from "./turso";
+import { upstashServer } from "./upstash";
 import { vercelServer } from "./vercel";
 import { youtubeServer } from "./youtube";
 
@@ -106,6 +112,14 @@ export const mcpServers: MCPServer[] = [
   airtableServer,
   shopifyServer,
   raygunServer,
+  // Database & Infrastructure
+  neonServer,
+  tursoServer,
+  upstashServer,
+  // Developer Tools
+  context7Server,
+  browserbaseServer,
+  resendServer,
 ];
 
 export function getMCPServerBySlug(slug: string): MCPServer | undefined {

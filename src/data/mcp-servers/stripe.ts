@@ -10,7 +10,7 @@ export const stripeServer: MCPServer = {
     name: "Stripe Community",
     url: "https://github.com/stripe",
   },
-  repoUrl: "https://github.com/stripe/agent-toolkit",
+  repoUrl: "https://github.com/stripe/ai",
   installCommand: "npm install -g @stripe/mcp-server",
   config: `{
   "mcpServers": {
