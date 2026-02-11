@@ -10,7 +10,7 @@ export const linearServer: MCPServer = {
     name: "Linear",
     url: "https://github.com/linear",
   },
-  repoUrl: "https://github.com/linear/linear-mcp-server",
+  repoUrl: "https://github.com/modelcontextprotocol/servers",
   installCommand: "npm install -g @linear/mcp-server",
   config: `{
   "mcpServers": {

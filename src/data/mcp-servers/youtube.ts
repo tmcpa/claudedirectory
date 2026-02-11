@@ -10,7 +10,7 @@ export const youtubeServer: MCPServer = {
     name: "Community",
     url: "https://github.com/modelcontextprotocol",
   },
-  repoUrl: "https://github.com/Significant-Gravitas/youtube-mcp-server",
+
   installCommand: "npm install -g youtube-mcp-server",
   config: `{
   "mcpServers": {

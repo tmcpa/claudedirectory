@@ -4,6 +4,9 @@ import { pythonPrompt } from "./python";
 import { typescriptPrompt } from "./typescript";
 import { reactNativePrompt } from "./react-native";
 import { goPrompt } from "./go";
+import { rustPrompt } from "./rust";
+import { rubyRailsPrompt } from "./ruby-rails";
+import { javaSpringPrompt } from "./java-spring";
 
 export const prompts: Prompt[] = [
   nextjsPrompt,
@@ -11,6 +14,9 @@ export const prompts: Prompt[] = [
   typescriptPrompt,
   reactNativePrompt,
   goPrompt,
+  rustPrompt,
+  rubyRailsPrompt,
+  javaSpringPrompt,
 ];
 
 export function getPromptBySlug(slug: string): Prompt | undefined {

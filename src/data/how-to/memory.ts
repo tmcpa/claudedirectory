@@ -10,7 +10,7 @@ export const memoryHowTo: HowTo = {
   featured: true,
   author: {
     name: "Claude Directory",
-    url: "https://github.com/tmcpa/claudescodes",
+    url: "https://github.com/tmcpa/claudedirectory",
   },
   content: `# Using CLAUDE.md for Project Memory
 

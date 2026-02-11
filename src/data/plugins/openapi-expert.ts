@@ -8,8 +8,8 @@ export const openapiExpertPlugin: Plugin = {
   featured: false,
   author: {
     name: "Meiring de Wet",
-    url: "https://github.com/ccplugins/marketplace",
+    url: "https://github.com/ccplugins/awesome-claude-code-plugins",
   },
-  repoUrl: "https://github.com/ccplugins/marketplace/tree/main/plugins/openapi-expert",
-  installCommand: "claude plugins:add ccplugins/marketplace/plugins/openapi-expert",
+  repoUrl: "https://github.com/ccplugins/awesome-claude-code-plugins/tree/main/plugins/openapi-expert",
+  installCommand: "claude plugins:add ccplugins/awesome-claude-code-plugins/plugins/openapi-expert",
 };

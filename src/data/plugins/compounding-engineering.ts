@@ -10,11 +10,11 @@ export const compoundingEngineeringPlugin: Plugin = {
     name: "Every Inc",
     url: "https://github.com/EveryInc",
   },
-  repoUrl: "https://github.com/EveryInc/every-marketplace",
-  installCommand: "npx claude-plugins install @EveryInc/every-marketplace/compounding-engineering",
+  repoUrl: "https://github.com/EveryInc/compound-engineering-plugin",
+  installCommand: "npx claude-plugins install @EveryInc/compound-engineering-plugin/compounding-engineering",
   config: `{
   "enabledPlugins": {
-    "@EveryInc/every-marketplace/compounding-engineering": true
+    "@EveryInc/compound-engineering-plugin/compounding-engineering": true
   }
 }`,
   commands: [

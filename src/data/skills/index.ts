@@ -10,6 +10,9 @@ import { playwrightSkill } from "./playwright-skill";
 import { mcpBuilderSkill } from "./mcp-builder";
 import { youtubeTranscriptSkill } from "./youtube-transcript";
 import { d3jsVisualizationSkill } from "./d3js-visualization";
+import { architectureDiagramSkill } from "./architecture-diagram";
+import { apiDocsSkill } from "./api-docs";
+import { migrateDbSkill } from "./migrate-db";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -24,6 +27,9 @@ export const skills: Skill[] = [
   iosSimulatorSkill,
   youtubeTranscriptSkill,
   d3jsVisualizationSkill,
+  architectureDiagramSkill,
+  apiDocsSkill,
+  migrateDbSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

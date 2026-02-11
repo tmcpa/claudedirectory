@@ -21,8 +21,14 @@ import { deploymentEngineerAgent } from "./deployment-engineer";
 import { codeExplorerAgent } from "./code-explorer";
 import { codeArchitectAgent } from "./code-architect";
 import { fdCodeReviewerAgent } from "./fd-code-reviewer";
+// New agents
+import { apiDeveloperAgent } from "./api-developer";
+import { databaseExpertAgent } from "./database-expert";
+import { performanceOptimizerAgent } from "./performance-optimizer";
+import { accessibilityExpertAgent } from "./accessibility-expert";
 // Specialization Agents
 import { openclawAgent } from "./openclaw";
+import { directoryGrowthManagerAgent } from "./directory-growth-manager";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -47,8 +53,14 @@ export const agents: Agent[] = [
   codeExplorerAgent,
   codeArchitectAgent,
   fdCodeReviewerAgent,
+  // New agents
+  apiDeveloperAgent,
+  databaseExpertAgent,
+  performanceOptimizerAgent,
+  accessibilityExpertAgent,
   // Specialization Agents
   openclawAgent,
+  directoryGrowthManagerAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

@@ -10,7 +10,7 @@ export const pluginsHowTo: HowTo = {
   featured: false,
   author: {
     name: "Claude Directory",
-    url: "https://github.com/tmcpa/claudescodes",
+    url: "https://github.com/tmcpa/claudedirectory",
   },
   content: `# Installing and Using Plugins
 

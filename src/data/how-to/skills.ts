@@ -10,7 +10,7 @@ export const skillsHowTo: HowTo = {
   featured: false,
   author: {
     name: "Claude Directory",
-    url: "https://github.com/tmcpa/claudescodes",
+    url: "https://github.com/tmcpa/claudedirectory",
   },
   content: `# Building Custom Skills
 
