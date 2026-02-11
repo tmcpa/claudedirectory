@@ -4,7 +4,7 @@ export interface Author {
   avatar?: string;
 }
 
-export type ContentType = "prompt" | "mcp-server" | "hook" | "skill" | "plugin" | "agent" | "how-to";
+export type ContentType = "prompt" | "mcp-server" | "hook" | "skill" | "plugin" | "agent" | "how-to" | "blog";
 
 export type RelationshipType =
   | "contains"      // Plugin contains agents/skills
@@ -119,4 +119,18 @@ export interface Agent {
   repoUrl?: string;
 }
 
-export type ContentItem = Prompt | MCPServer | Hook | Skill | Plugin | HowTo | Agent;
+export interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  content: string;
+  publishedDate: string;
+  tags: string[];
+  author: Author;
+  featured?: boolean;
+  dateAdded?: string;
+  relatedItems?: RelatedItem[];
+  repoUrl?: string;
+}
+
+export type ContentItem = Prompt | MCPServer | Hook | Skill | Plugin | HowTo | Agent | BlogPost;

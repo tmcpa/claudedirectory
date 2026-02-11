@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ContentType, ContentItem } from "@/lib/types";
-import { FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot } from "lucide-react";
+import { FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper } from "lucide-react";
 
 const typeConfig: Record<ContentType, { label: string; icon: typeof FileText; href: string }> = {
   prompt: { label: "Prompt", icon: FileText, href: "/prompts" },
@@ -12,6 +12,7 @@ const typeConfig: Record<ContentType, { label: string; icon: typeof FileText; hr
   plugin: { label: "Plugin", icon: Puzzle, href: "/plugins" },
   "how-to": { label: "Guide", icon: BookOpen, href: "/how-to" },
   agent: { label: "Agent", icon: Bot, href: "/agents" },
+  blog: { label: "Blog", icon: Newspaper, href: "/blog" },
 };
 
 interface RecentItemCardProps {

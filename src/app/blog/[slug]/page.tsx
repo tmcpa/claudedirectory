@@ -5,9 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems } from "@/components/related-items";
-import { howTos, getHowToBySlug } from "@/data/how-to";
-import { ArrowLeft, BookOpen, User, Clock, ExternalLink } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { blogPosts, getBlogPostBySlug } from "@/data/blog";
+import { ArrowLeft, Newspaper, User, Calendar, ExternalLink } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CodeBlock } from "@/components/code-block";
@@ -19,32 +18,42 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  return howTos.map((howTo) => ({
-    slug: howTo.slug,
+  return blogPosts.map((post) => ({
+    slug: post.slug,
   }));
 }
 
 export async function generateMetadata(props: Props) {
   const params = await props.params;
-  const howTo = getHowToBySlug(params.slug);
-  if (!howTo) return { title: "Guide Not Found" };
+  const post = getBlogPostBySlug(params.slug);
+  if (!post) return { title: "Post Not Found" };
 
-  const url = `${BASE_URL}/how-to/${howTo.slug}`;
+  const url = `${BASE_URL}/blog/${post.slug}`;
 
   return {
-    title: `${howTo.title} - Claude Code Guide`,
-    description: howTo.description,
-    keywords: [...howTo.tags, "claude code", "guide", "tutorial", "how to"],
+    title: `${post.title} - Claude Directory Blog`,
+    description: post.description,
+    keywords: [...post.tags, "claude code", "blog", "ai development"],
     openGraph: {
-      title: `${howTo.title} - Claude Code Guide`,
-      description: howTo.description,
+      title: `${post.title} - Claude Directory Blog`,
+      description: post.description,
       url,
       type: "article",
+      publishedTime: new Date(post.publishedDate).toISOString(),
+      images: [
+        {
+          url: `${BASE_URL}/og/blog/${post.slug}.png`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
-      card: "summary",
-      title: `${howTo.title} - Claude Code Guide`,
-      description: howTo.description,
+      card: "summary_large_image",
+      title: `${post.title} - Claude Directory Blog`,
+      description: post.description,
+      images: [`${BASE_URL}/og/blog/${post.slug}.png`],
     },
     alternates: {
       canonical: url,
@@ -52,72 +61,68 @@ export async function generateMetadata(props: Props) {
   };
 }
 
-const difficultyColors = {
-  beginner: "bg-green-500/10 text-green-500 border-green-500/20",
-  intermediate: "bg-yellow-500/10 text-yellow-500 border-yellow-500/20",
-  advanced: "bg-red-500/10 text-red-500 border-red-500/20",
-};
-
-export default async function HowToDetailPage(props: Props) {
+export default async function BlogPostPage(props: Props) {
   const params = await props.params;
-  const howTo = getHowToBySlug(params.slug);
+  const post = getBlogPostBySlug(params.slug);
 
-  if (!howTo) {
+  if (!post) {
     notFound();
   }
 
-  const pageUrl = `${BASE_URL}/how-to/${howTo.slug}`;
+  const pageUrl = `${BASE_URL}/blog/${post.slug}`;
+
+  const formattedDate = new Date(post.publishedDate).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
     <div className="container py-8 max-w-4xl">
       <ItemJsonLd
-        type="HowTo"
-        name={howTo.title}
-        description={howTo.description}
+        type="Article"
+        name={post.title}
+        description={post.description}
         url={pageUrl}
-        author={howTo.author}
-        tags={howTo.tags}
+        author={post.author}
+        tags={post.tags}
+        datePublished={post.publishedDate}
+        image={`${BASE_URL}/og/blog/${post.slug}.png`}
       />
       <BreadcrumbJsonLd
         items={[
           { name: "Home", url: BASE_URL },
-          { name: "How-To Guides", url: `${BASE_URL}/how-to` },
-          { name: howTo.title, url: pageUrl },
+          { name: "Blog", url: `${BASE_URL}/blog` },
+          { name: post.title, url: pageUrl },
         ]}
       />
       <Button variant="ghost" size="sm" asChild className="mb-6">
-        <Link href="/how-to">
+        <Link href="/blog">
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Guides
+          Back to Blog
         </Link>
       </Button>
 
       <div className="space-y-6">
         <div className="flex items-start gap-4">
           <div className="p-3 rounded-lg bg-accent">
-            <BookOpen className="h-6 w-6" />
+            <Newspaper className="h-6 w-6" />
           </div>
           <div className="flex-1">
-            <h1 className="text-3xl font-bold mb-2">{howTo.title}</h1>
-            <p className="text-muted-foreground">{howTo.description}</p>
+            <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
+            <p className="text-muted-foreground">{post.description}</p>
           </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
-          <Badge
-            variant="outline"
-            className={cn("capitalize", difficultyColors[howTo.difficulty])}
-          >
-            {howTo.difficulty}
-          </Badge>
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
-            <Clock className="h-4 w-4" />
-            <span>{howTo.timeToComplete}</span>
+            <Calendar className="h-4 w-4" />
+            <span>{formattedDate}</span>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {howTo.tags.map((tag) => (
+          {post.tags.map((tag) => (
             <Badge key={tag} variant="secondary">
               {tag}
             </Badge>
@@ -128,17 +133,17 @@ export default async function HowToDetailPage(props: Props) {
           <User className="h-4 w-4" />
           <span>
             By{" "}
-            {howTo.author.url ? (
+            {post.author.url ? (
               <a
-                href={howTo.author.url}
+                href={post.author.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:underline"
               >
-                {howTo.author.name}
+                {post.author.name}
               </a>
             ) : (
-              howTo.author.name
+              post.author.name
             )}
           </span>
         </div>
@@ -235,28 +240,28 @@ export default async function HowToDetailPage(props: Props) {
               },
             }}
           >
-            {howTo.content}
+            {post.content}
           </ReactMarkdown>
         </article>
 
-        {howTo.repoUrl && (
+        {post.repoUrl && (
           <div>
             <a
-              href={howTo.repoUrl}
+              href={post.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <ExternalLink className="h-4 w-4" />
-              View source on GitHub
+              View on GitHub
             </a>
           </div>
         )}
 
-        {howTo.relatedItems && howTo.relatedItems.length > 0 && (
+        {post.relatedItems && post.relatedItems.length > 0 && (
           <>
             <Separator />
-            <RelatedItems items={howTo.relatedItems} />
+            <RelatedItems items={post.relatedItems} />
           </>
         )}
       </div>

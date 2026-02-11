@@ -16,6 +16,7 @@ const navigation = [
   { name: "Plugins", href: "/plugins" },
   { name: "Agents", href: "/agents" },
   { name: "How To", href: "/how-to" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export function Header() {

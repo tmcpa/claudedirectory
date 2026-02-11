@@ -6,6 +6,7 @@ import { skills, getSkillBySlug } from "@/data/skills";
 import { plugins, getPluginBySlug } from "@/data/plugins";
 import { howTos, getHowToBySlug } from "@/data/how-to";
 import { agents, getAgentBySlug } from "@/data/agents";
+import { blogPosts, getBlogPostBySlug } from "@/data/blog";
 
 export interface ResolvedRelatedItem {
   type: ContentType;
@@ -24,6 +25,7 @@ const typeToPath: Record<ContentType, string> = {
   "plugin": "/plugins",
   "agent": "/agents",
   "how-to": "/how-to",
+  "blog": "/blog",
 };
 
 const typeToLabel: Record<ContentType, string> = {
@@ -34,6 +36,7 @@ const typeToLabel: Record<ContentType, string> = {
   "plugin": "Plugins",
   "agent": "Agents",
   "how-to": "How To Guides",
+  "blog": "Blog",
 };
 
 const relationshipLabels: Record<string, string> = {
@@ -78,6 +81,9 @@ export function resolveRelatedItem(item: RelatedItem): ResolvedRelatedItem | nul
       break;
     case "how-to":
       resolved = getHowToBySlug(item.slug);
+      break;
+    case "blog":
+      resolved = getBlogPostBySlug(item.slug);
       break;
   }
 
