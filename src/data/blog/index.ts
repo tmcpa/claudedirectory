@@ -1,7 +1,9 @@
 import { BlogPost } from "@/lib/types";
 import { clawdbotOpenclawGuide } from "./clawdbot-openclaw-guide";
+import { claudeMdGuide } from "./claude-md-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeMdGuide,
   clawdbotOpenclawGuide,
 ];
 
