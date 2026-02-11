@@ -6,6 +6,7 @@ export const taskmasterServer: MCPServer = {
   description: "Convert PRDs into structured, prioritized, implementation-ready task lists that AI agents can read and update",
   tags: ["taskmaster", "project-management", "prd", "tasks", "planning", "community"],
   featured: true,
+  dateAdded: "2026-01-06",
   author: {
     name: "Eye of Eris",
     url: "https://github.com/eyeoferis",

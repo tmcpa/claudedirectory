@@ -6,6 +6,7 @@ export const apidogServer: MCPServer = {
   description: "Access API documentation and specifications directly for accurate API-aware code generation",
   tags: ["apidog", "api", "documentation", "openapi", "swagger"],
   featured: true,
+  dateAdded: "2026-01-06",
   author: {
     name: "Apidog",
     url: "https://github.com/Apidog",

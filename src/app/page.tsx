@@ -18,7 +18,9 @@ import { getFeaturedPlugins } from "@/data/plugins";
 import { getFeaturedHowTos } from "@/data/how-to";
 import { getFeaturedAgents } from "@/data/agents";
 import { getFeaturedBlogPosts } from "@/data/blog";
-import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github } from "lucide-react";
+import { getRecentlyAdded } from "@/data/recently-added";
+import { RecentItemCard } from "@/components/cards/recent-item-card";
+import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock } from "lucide-react";
 
 const categories = [
   {
@@ -80,6 +82,7 @@ export default function Home() {
   const featuredHowTos = getFeaturedHowTos();
   const featuredAgents = getFeaturedAgents();
   const featuredBlogPosts = getFeaturedBlogPosts();
+  const recentlyAdded = getRecentlyAdded(6);
 
   return (
     <div className="flex flex-col">
@@ -144,6 +147,28 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Recently Added */}
+      {recentlyAdded.length > 0 && (
+        <section className="container py-12 border-t">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-2">
+              <Clock className="h-5 w-5 text-muted-foreground" />
+              <h2 className="text-2xl font-bold">Recently Added</h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {recentlyAdded.map((recent) => (
+              <RecentItemCard
+                key={`${recent.type}-${recent.item.slug}`}
+                item={recent.item}
+                type={recent.type}
+                dateAdded={recent.dateAdded}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Featured Prompts */}
       {featuredPrompts.length > 0 && (
