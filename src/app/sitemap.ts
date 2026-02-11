@@ -6,6 +6,7 @@ import { skills } from "@/data/skills";
 import { plugins } from "@/data/plugins";
 import { howTos } from "@/data/how-to";
 import { agents } from "@/data/agents";
+import { blogPosts } from "@/data/blog";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -58,6 +59,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE_URL}/agents`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/blog`,
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
@@ -120,6 +127,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Dynamic pages - Blog Posts
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((item) => ({
+    url: `${BASE_URL}/blog/${item.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticPages,
     ...promptPages,
@@ -129,5 +144,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pluginPages,
     ...howToPages,
     ...agentPages,
+    ...blogPages,
   ];
 }

@@ -21,6 +21,8 @@ import { deploymentEngineerAgent } from "./deployment-engineer";
 import { codeExplorerAgent } from "./code-explorer";
 import { codeArchitectAgent } from "./code-architect";
 import { fdCodeReviewerAgent } from "./fd-code-reviewer";
+// Specialization Agents
+import { openclawAgent } from "./openclaw";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -45,6 +47,8 @@ export const agents: Agent[] = [
   codeExplorerAgent,
   codeArchitectAgent,
   fdCodeReviewerAgent,
+  // Specialization Agents
+  openclawAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

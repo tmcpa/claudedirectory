@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot } from "lucide-react";
+import { Search, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper } from "lucide-react";
 import { prompts } from "@/data/prompts";
 import { mcpServers } from "@/data/mcp-servers";
 import { hooks } from "@/data/hooks";
@@ -12,10 +12,11 @@ import { skills } from "@/data/skills";
 import { plugins } from "@/data/plugins";
 import { howTos } from "@/data/how-to";
 import { agents } from "@/data/agents";
+import { blogPosts } from "@/data/blog";
 import { cn } from "@/lib/utils";
 
 interface SearchResult {
-  type: "prompt" | "mcp-server" | "hook" | "skill" | "plugin" | "how-to" | "agent";
+  type: "prompt" | "mcp-server" | "hook" | "skill" | "plugin" | "how-to" | "agent" | "blog";
   slug: string;
   title: string;
   description: string;
@@ -30,6 +31,7 @@ const typeConfig = {
   plugin: { icon: Puzzle, label: "Plugin", href: "/plugins", color: "text-pink-500" },
   "how-to": { icon: BookOpen, label: "How To", href: "/how-to", color: "text-cyan-500" },
   agent: { icon: Bot, label: "Agent", href: "/agents", color: "text-rose-500" },
+  blog: { icon: Newspaper, label: "Blog", href: "/blog", color: "text-amber-500" },
 };
 
 export function UniversalSearch() {
@@ -169,6 +171,23 @@ export function UniversalSearch() {
       }
     });
 
+    // Search blog posts
+    blogPosts.forEach((b) => {
+      if (
+        b.title.toLowerCase().includes(searchQuery) ||
+        b.description.toLowerCase().includes(searchQuery) ||
+        b.tags.some((t) => t.toLowerCase().includes(searchQuery))
+      ) {
+        allResults.push({
+          type: "blog",
+          slug: b.slug,
+          title: b.title,
+          description: b.description,
+          tags: b.tags,
+        });
+      }
+    });
+
     setResults(allResults.slice(0, 10));
     setIsOpen(allResults.length > 0);
     setSelectedIndex(0);
@@ -224,7 +243,7 @@ export function UniversalSearch() {
         <Input
           ref={inputRef}
           type="search"
-          placeholder="Search prompts, MCP servers, hooks, skills, plugins, guides, agents..."
+          placeholder="Search prompts, MCP servers, hooks, skills, plugins, guides, agents, blog..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query.length >= 2 && results.length > 0 && setIsOpen(true)}

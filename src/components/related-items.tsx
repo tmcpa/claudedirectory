@@ -12,6 +12,7 @@ import {
   Puzzle,
   BookOpen,
   Bot,
+  Newspaper,
   ArrowRight,
 } from "lucide-react";
 
@@ -23,6 +24,7 @@ const typeIcons: Record<ContentType, React.ElementType> = {
   "plugin": Puzzle,
   "agent": Bot,
   "how-to": BookOpen,
+  "blog": Newspaper,
 };
 
 interface RelatedItemsProps {

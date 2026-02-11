@@ -8,6 +8,7 @@ import { SkillCard } from "@/components/cards/skill-card";
 import { PluginCard } from "@/components/cards/plugin-card";
 import { HowToCard } from "@/components/cards/how-to-card";
 import { AgentCard } from "@/components/cards/agent-card";
+import { BlogCard } from "@/components/cards/blog-card";
 import { UniversalSearch } from "@/components/universal-search";
 import { getFeaturedPrompts } from "@/data/prompts";
 import { getFeaturedMCPServers } from "@/data/mcp-servers";
@@ -16,7 +17,8 @@ import { getFeaturedSkills } from "@/data/skills";
 import { getFeaturedPlugins } from "@/data/plugins";
 import { getFeaturedHowTos } from "@/data/how-to";
 import { getFeaturedAgents } from "@/data/agents";
-import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, ArrowRight, Github } from "lucide-react";
+import { getFeaturedBlogPosts } from "@/data/blog";
+import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github } from "lucide-react";
 
 const categories = [
   {
@@ -61,6 +63,12 @@ const categories = [
     href: "/how-to",
     icon: BookOpen,
   },
+  {
+    name: "Blog",
+    description: "News and insights on AI development",
+    href: "/blog",
+    icon: Newspaper,
+  },
 ];
 
 export default function Home() {
@@ -71,6 +79,7 @@ export default function Home() {
   const featuredPlugins = getFeaturedPlugins();
   const featuredHowTos = getFeaturedHowTos();
   const featuredAgents = getFeaturedAgents();
+  const featuredBlogPosts = getFeaturedBlogPosts();
 
   return (
     <div className="flex flex-col">
@@ -271,6 +280,26 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {featuredHowTos.slice(0, 3).map((howTo) => (
               <HowToCard key={howTo.slug} howTo={howTo} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Featured Blog Posts */}
+      {featuredBlogPosts.length > 0 && (
+        <section className="container py-12 border-t">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-bold">From the Blog</h2>
+            <Button variant="ghost" asChild>
+              <Link href="/blog">
+                View all
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredBlogPosts.slice(0, 3).map((post) => (
+              <BlogCard key={post.slug} post={post} />
             ))}
           </div>
         </section>

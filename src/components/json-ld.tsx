@@ -39,6 +39,8 @@ interface ItemJsonLdProps {
     url?: string;
   };
   tags?: string[];
+  datePublished?: string;
+  image?: string;
 }
 
 export function ItemJsonLd({
@@ -48,6 +50,8 @@ export function ItemJsonLd({
   url,
   author,
   tags,
+  datePublished,
+  image,
 }: ItemJsonLdProps) {
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -72,6 +76,16 @@ export function ItemJsonLd({
   if (type === "SoftwareApplication") {
     jsonLd.applicationCategory = "DeveloperApplication";
     jsonLd.operatingSystem = "Cross-platform";
+  }
+
+  if (type === "Article") {
+    jsonLd.headline = name;
+    if (datePublished) {
+      jsonLd.datePublished = new Date(datePublished).toISOString();
+    }
+    if (image) {
+      jsonLd.image = image;
+    }
   }
 
   return (
