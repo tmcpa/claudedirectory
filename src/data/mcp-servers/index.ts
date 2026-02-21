@@ -55,6 +55,7 @@ import { tursoServer } from "./turso";
 import { upstashServer } from "./upstash";
 import { vercelServer } from "./vercel";
 import { youtubeServer } from "./youtube";
+import { soulSpec } from "./soul-spec";
 
 export const mcpServers: MCPServer[] = [
   // Featured servers first
@@ -120,6 +121,8 @@ export const mcpServers: MCPServer[] = [
   context7Server,
   browserbaseServer,
   resendServer,
+  // AI Persona Management
+  soulSpec,
 ];
 
 export function getMCPServerBySlug(slug: string): MCPServer | undefined {
