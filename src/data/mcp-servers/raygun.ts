@@ -10,7 +10,7 @@ export const raygunServer: MCPServer = {
     name: "Raygun",
     url: "https://github.com/MindscapeHQ",
   },
-  repoUrl: "https://github.com/MindscapeHQ/raygun-mcp-server",
+  repoUrl: "https://github.com/MindscapeHQ/mcp-server-raygun",
   installCommand: "npm install -g @anthropic-ai/mcp-server-raygun",
   config: `{
   "mcpServers": {

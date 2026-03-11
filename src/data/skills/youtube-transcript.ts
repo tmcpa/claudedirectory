@@ -8,10 +8,10 @@ export const youtubeTranscriptSkill: Skill = {
   featured: false,
   dateAdded: "2026-01-26",
   author: {
-    name: "michalparkola",
-    url: "https://github.com/michalparkola/youtube-transcript-skill",
+    name: "ZeroPointRepo",
+    url: "https://github.com/ZeroPointRepo",
   },
-  repoUrl: "https://github.com/michalparkola/youtube-transcript-skill",
+  repoUrl: "https://github.com/ZeroPointRepo/youtube-skills",
   content: `# YouTube Transcript Downloader Skill
 
 Download and process transcripts from YouTube videos.
@@ -30,7 +30,7 @@ This skill enables Claude Code to extract transcripts from YouTube videos for:
 Clone the skill to your Claude Code configuration:
 
 \`\`\`bash
-git clone https://github.com/michalparkola/youtube-transcript-skill.git ~/.claude/skills/youtube-transcript
+git clone https://github.com/ZeroPointRepo/youtube-skills.git ~/.claude/skills/youtube-transcript
 \`\`\`
 
 ## Requirements
@@ -69,7 +69,7 @@ pip install youtube-transcript-api
 
 ## Repository
 
-[github.com/michalparkola/youtube-transcript-skill](https://github.com/michalparkola/youtube-transcript-skill)
+[github.com/ZeroPointRepo/youtube-skills](https://github.com/ZeroPointRepo/youtube-skills)
 `,
   relatedItems: [
     { type: "mcp-server", slug: "youtube", relationship: "works-with" },

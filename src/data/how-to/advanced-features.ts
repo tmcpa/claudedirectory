@@ -168,9 +168,9 @@ Read src/auth/middleware.ts and explain the authentication flow
 \`\`\`json
 {
   "model": {
-    "default": "claude-sonnet-4-20250514",
-    "planning": "claude-opus-4-20250514",
-    "quickTasks": "claude-haiku-3-5-20241022"
+    "default": "claude-sonnet-4-6",
+    "planning": "claude-opus-4-6",
+    "quickTasks": "claude-haiku-4-5-20251001"
   }
 }
 \`\`\`
@@ -192,7 +192,7 @@ Read src/auth/middleware.ts and explain the authentication flow
 
 \`\`\`bash
 # Start with specific model
-claude --model claude-opus-4-20250514
+claude --model claude-opus-4-6
 
 # Start in a specific directory
 claude --cwd /path/to/project

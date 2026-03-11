@@ -10,7 +10,7 @@ export const atlassianServer: MCPServer = {
     name: "Atlassian",
     url: "https://github.com/atlassian",
   },
-  repoUrl: "https://github.com/atlassian/mcp-server-atlassian",
+  repoUrl: "https://github.com/atlassian/atlassian-mcp-server",
   installCommand: "pip install mcp-server-atlassian",
   config: `{
   "mcpServers": {

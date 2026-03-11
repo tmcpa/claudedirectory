@@ -8,10 +8,10 @@ export const taskmasterServer: MCPServer = {
   featured: true,
   dateAdded: "2026-01-06",
   author: {
-    name: "Eye of Eris",
-    url: "https://github.com/eyeoferis",
+    name: "Eyal Toledano",
+    url: "https://github.com/eyaltoledano",
   },
-  repoUrl: "https://github.com/eyeoferis/taskmaster-ai",
+  repoUrl: "https://github.com/eyaltoledano/claude-task-master",
   installCommand: "npm install -g taskmaster-ai",
   config: `{
   "mcpServers": {

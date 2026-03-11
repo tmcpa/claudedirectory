@@ -11,7 +11,7 @@ export const apidogServer: MCPServer = {
     name: "Apidog",
     url: "https://github.com/Apidog",
   },
-  repoUrl: "https://github.com/Apidog/apidog-mcp-server",
+  repoUrl: "https://docs.apidog.com/apidog-mcp-server",
   installCommand: "npm install -g @anthropic-ai/mcp-server-apidog",
   config: `{
   "mcpServers": {
