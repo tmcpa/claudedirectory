@@ -7,6 +7,11 @@ import { goPrompt } from "./go";
 import { rustPrompt } from "./rust";
 import { rubyRailsPrompt } from "./ruby-rails";
 import { javaSpringPrompt } from "./java-spring";
+import { vuePrompt } from "./vue";
+import { swiftPrompt } from "./swift";
+import { laravelPrompt } from "./laravel";
+import { csharpDotnetPrompt } from "./csharp-dotnet";
+import { kotlinAndroidPrompt } from "./kotlin-android";
 
 export const prompts: Prompt[] = [
   nextjsPrompt,
@@ -17,6 +22,11 @@ export const prompts: Prompt[] = [
   rustPrompt,
   rubyRailsPrompt,
   javaSpringPrompt,
+  vuePrompt,
+  swiftPrompt,
+  laravelPrompt,
+  csharpDotnetPrompt,
+  kotlinAndroidPrompt,
 ];
 
 export function getPromptBySlug(slug: string): Prompt | undefined {

@@ -10,7 +10,7 @@ export const tursoServer: MCPServer = {
     name: "Turso",
     url: "https://github.com/tursodatabase",
   },
-  repoUrl: "https://github.com/tursodatabase/turso-mcp",
+  repoUrl: "https://github.com/nbbaier/mcp-turso",
   installCommand: "npm install -g @tursodatabase/mcp-server",
   config: `{
   "mcpServers": {

@@ -10,7 +10,7 @@ export const figmaServer: MCPServer = {
     name: "Figma",
     url: "https://github.com/figma",
   },
-  repoUrl: "https://github.com/figma/figma-mcp-server",
+  repoUrl: "https://github.com/GLips/Figma-Context-MCP",
   installCommand: "npm install -g @anthropic-ai/mcp-server-figma",
   config: `{
   "mcpServers": {

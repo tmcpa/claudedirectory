@@ -56,6 +56,9 @@ import { upstashServer } from "./upstash";
 import { vercelServer } from "./vercel";
 import { youtubeServer } from "./youtube";
 import { soulSpec } from "./soul-spec";
+import { hubspotServer } from "./hubspot";
+import { clickhouseServer } from "./clickhouse";
+import { salesforceServer } from "./salesforce";
 
 export const mcpServers: MCPServer[] = [
   // Featured servers first
@@ -121,6 +124,11 @@ export const mcpServers: MCPServer[] = [
   context7Server,
   browserbaseServer,
   resendServer,
+  // CRM & Business
+  hubspotServer,
+  salesforceServer,
+  // Analytics
+  clickhouseServer,
   // AI Persona Management
   soulSpec,
 ];

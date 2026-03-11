@@ -10,7 +10,7 @@ export const datadogServer: MCPServer = {
     name: "Datadog",
     url: "https://github.com/DataDog",
   },
-  repoUrl: "https://github.com/DataDog/datadog-mcp-server",
+  repoUrl: "https://github.com/shelfio/datadog-mcp",
   installCommand: "pip install datadog-mcp-server",
   config: `{
   "mcpServers": {
