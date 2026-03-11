@@ -17,7 +17,6 @@ import { explanatoryOutputPlugin } from "./explanatory-output";
 import { featureDevPlugin } from "./feature-dev";
 import { frontendDesignPlugin } from "./frontend-design";
 import { hookifyPlugin } from "./hookify";
-// n8n-workflow plugin removed - repository no longer exists
 import { openapiExpertPlugin } from "./openapi-expert";
 import { pluginDevPlugin } from "./plugin-dev";
 import { prReviewToolkitPlugin } from "./pr-review-toolkit";
@@ -25,11 +24,8 @@ import { securityGuidancePlugin } from "./security-guidance";
 import { superclaudePlugin } from "./superclaude";
 import { swiftLspPlugin } from "./swift-lsp";
 import { testWriterFixerPlugin } from "./test-writer-fixer";
-// ultrathink plugin removed - repository no longer exists
-// New community plugins
 import { flowNextPlugin } from "./flow-next";
 import { ralphPlugin } from "./ralph";
-import { skillSeekersPlugin } from "./skill-seekers";
 // LSP plugins
 import { typescriptLspPlugin } from "./typescript-lsp";
 import { pyrightLspPlugin } from "./pyright-lsp";
@@ -111,7 +107,6 @@ export const plugins: Plugin[] = [
   deploymentEngineerPlugin,
   flowNextPlugin,
   ralphPlugin,
-  skillSeekersPlugin,
   // External plugins
   asanaPlugin,
   awsPlugin,
