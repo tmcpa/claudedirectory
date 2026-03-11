@@ -13,6 +13,7 @@ import { d3jsVisualizationSkill } from "./d3js-visualization";
 import { architectureDiagramSkill } from "./architecture-diagram";
 import { apiDocsSkill } from "./api-docs";
 import { migrateDbSkill } from "./migrate-db";
+import { claudeApiSkill } from "./claude-api";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -30,6 +31,7 @@ export const skills: Skill[] = [
   architectureDiagramSkill,
   apiDocsSkill,
   migrateDbSkill,
+  claudeApiSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

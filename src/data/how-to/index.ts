@@ -7,6 +7,7 @@ import { hooksHowTo } from "./hooks";
 import { skillsHowTo } from "./skills";
 import { pluginsHowTo } from "./plugins";
 import { advancedFeaturesHowTo } from "./advanced-features";
+import { agentTeamsHowTo } from "./agent-teams";
 
 export const howTos: HowTo[] = [
   gettingStartedHowTo,
@@ -17,6 +18,7 @@ export const howTos: HowTo[] = [
   skillsHowTo,
   pluginsHowTo,
   advancedFeaturesHowTo,
+  agentTeamsHowTo,
 ];
 
 export function getHowToBySlug(slug: string): HowTo | undefined {
