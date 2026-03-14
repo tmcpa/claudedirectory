@@ -1,89 +1,51 @@
-"use client";
+import type { Metadata } from "next";
+import { PluginsListing } from "./_components/plugins-listing";
 
-import { useState } from "react";
-import { PluginCard } from "@/components/cards/plugin-card";
-import { Search } from "@/components/search";
-import { Badge } from "@/components/ui/badge";
-import { plugins, getAllPluginTags } from "@/data/plugins";
-import { cn } from "@/lib/utils";
+const BASE_URL = "https://claudedirectory.org";
+
+export const metadata: Metadata = {
+  title: "Best Claude Code Plugins - Extend Your AI Assistant",
+  description:
+    "Find the best Claude Code plugins to extend your AI coding assistant. Community-built and official plugins for frontend, backend, DevOps, security, and more. Install with a single command.",
+  keywords: [
+    "claude code plugins",
+    "extend claude code",
+    "claude code extensions",
+    "best claude code plugins",
+    "ai coding plugins",
+  ],
+  openGraph: {
+    title: "Best Claude Code Plugins - Extend Your AI Assistant",
+    description:
+      "Find the best Claude Code plugins to extend your AI coding assistant with community-built and official capabilities.",
+    url: `${BASE_URL}/plugins`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Best Claude Code Plugins - Extend Your AI Assistant",
+    description:
+      "Find the best Claude Code plugins to extend your AI coding assistant with community-built and official capabilities.",
+  },
+  alternates: {
+    canonical: `${BASE_URL}/plugins`,
+  },
+};
 
 export default function PluginsPage() {
-  const [search, setSearch] = useState("");
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const allTags = getAllPluginTags();
-
-  const filteredPlugins = plugins.filter((plugin) => {
-    const matchesSearch =
-      search === "" ||
-      plugin.title.toLowerCase().includes(search.toLowerCase()) ||
-      plugin.description.toLowerCase().includes(search.toLowerCase()) ||
-      plugin.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase()));
-
-    const matchesTag = selectedTag === null || plugin.tags.includes(selectedTag);
-
-    return matchesSearch && matchesTag;
-  });
-
   return (
     <div className="container py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Plugins</h1>
-        <p className="text-muted-foreground">
-          Extend Claude Code with community and official plugins
+      <div className="mb-8 max-w-3xl">
+        <h1 className="text-3xl font-bold mb-3">Plugins</h1>
+        <p className="text-muted-foreground leading-relaxed">
+          Installable packages that bundle MCP servers, hooks, skills, and configuration
+          to add entire workflows to Claude Code in a single command. Most plugins install
+          with npm or pip and integrate automatically. Browse community-built and official
+          plugins for frontend, backend, DevOps, security, and more.
         </p>
       </div>
 
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="w-full sm:max-w-xs">
-            <Search
-              placeholder="Search plugins..."
-              value={search}
-              onChange={setSearch}
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          <Badge
-            variant={selectedTag === null ? "default" : "secondary"}
-            className={cn(
-              "cursor-pointer hover:bg-primary/80",
-              selectedTag === null && "bg-primary"
-            )}
-            onClick={() => setSelectedTag(null)}
-          >
-            All
-          </Badge>
-          {allTags.map((tag) => (
-            <Badge
-              key={tag}
-              variant={selectedTag === tag ? "default" : "secondary"}
-              className={cn(
-                "cursor-pointer",
-                selectedTag === tag
-                  ? "bg-primary hover:bg-primary/80"
-                  : "hover:bg-accent"
-              )}
-              onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredPlugins.map((plugin) => (
-            <PluginCard key={plugin.slug} plugin={plugin} />
-          ))}
-        </div>
-
-        {filteredPlugins.length === 0 && (
-          <div className="text-center py-12 text-muted-foreground">
-            No plugins found matching your criteria
-          </div>
-        )}
-      </div>
+      <PluginsListing />
     </div>
   );
 }
