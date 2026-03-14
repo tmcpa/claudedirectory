@@ -63,6 +63,16 @@ import { vercelPlugin } from "./vercel";
 import { cursorRulesPlugin } from "./cursor-rules";
 import { turboCommitPlugin } from "./turbo-commit";
 import { monorepoNavPlugin } from "./monorepo-nav";
+import { terraformPlugin } from "./terraform";
+import { kubernetesPlugin } from "./kubernetes";
+import { mongodbPlugin } from "./mongodb";
+import { redisPlugin } from "./redis";
+import { cloudflarePlugin } from "./cloudflare";
+import { storybookPlugin } from "./storybook";
+import { perfProfilerPlugin } from "./perf-profiler";
+import { i18nManagerPlugin } from "./i18n-manager";
+import { depAuditPlugin } from "./dep-audit";
+import { envManagerPlugin } from "./env-manager";
 
 export const plugins: Plugin[] = [
   // Featured plugins first
@@ -129,6 +139,18 @@ export const plugins: Plugin[] = [
   cursorRulesPlugin,
   turboCommitPlugin,
   monorepoNavPlugin,
+  // External integrations
+  terraformPlugin,
+  kubernetesPlugin,
+  mongodbPlugin,
+  redisPlugin,
+  cloudflarePlugin,
+  storybookPlugin,
+  // Community plugins
+  perfProfilerPlugin,
+  i18nManagerPlugin,
+  depAuditPlugin,
+  envManagerPlugin,
 ];
 
 export function getPluginBySlug(slug: string): Plugin | undefined {

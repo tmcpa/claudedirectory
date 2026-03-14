@@ -29,6 +29,12 @@ import { accessibilityExpertAgent } from "./accessibility-expert";
 // Specialization Agents
 import { openclawAgent } from "./openclaw";
 import { directoryGrowthManagerAgent } from "./directory-growth-manager";
+// New content agents
+import { flutterMobileAgent } from "./flutter-mobile";
+import { graphqlSpecialistAgent } from "./graphql-specialist";
+import { monorepoArchitectAgent } from "./monorepo-architect";
+import { migrationSpecialistAgent } from "./migration-specialist";
+import { mlOpsEngineerAgent } from "./ml-ops-engineer";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -61,6 +67,12 @@ export const agents: Agent[] = [
   // Specialization Agents
   openclawAgent,
   directoryGrowthManagerAgent,
+  // New content agents
+  flutterMobileAgent,
+  graphqlSpecialistAgent,
+  monorepoArchitectAgent,
+  migrationSpecialistAgent,
+  mlOpsEngineerAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

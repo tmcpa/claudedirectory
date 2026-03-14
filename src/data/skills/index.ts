@@ -14,6 +14,10 @@ import { architectureDiagramSkill } from "./architecture-diagram";
 import { apiDocsSkill } from "./api-docs";
 import { migrateDbSkill } from "./migrate-db";
 import { claudeApiSkill } from "./claude-api";
+import { refactorSkill } from "./refactor";
+import { testGenSkill } from "./test-gen";
+import { changelogSkill } from "./changelog";
+import { depsAuditSkill } from "./deps-audit";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -32,6 +36,11 @@ export const skills: Skill[] = [
   apiDocsSkill,
   migrateDbSkill,
   claudeApiSkill,
+  // New community skills
+  refactorSkill,
+  testGenSkill,
+  changelogSkill,
+  depsAuditSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {
