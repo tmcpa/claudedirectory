@@ -1,89 +1,52 @@
-"use client";
+import type { Metadata } from "next";
+import { MCPServersListing } from "./_components/mcp-servers-listing";
 
-import { useState } from "react";
-import { MCPCard } from "@/components/cards/mcp-card";
-import { Search } from "@/components/search";
-import { Badge } from "@/components/ui/badge";
-import { mcpServers, getAllMCPServerTags } from "@/data/mcp-servers";
-import { cn } from "@/lib/utils";
+const BASE_URL = "https://claudedirectory.org";
+
+export const metadata: Metadata = {
+  title: "Best MCP Servers for Claude Code",
+  description:
+    "Discover the best MCP servers for Claude Code. Connect to GitHub, databases, cloud platforms, and 60+ services with ready-to-use Model Context Protocol configurations.",
+  keywords: [
+    "mcp servers",
+    "claude code mcp",
+    "model context protocol",
+    "best mcp servers",
+    "claude code integrations",
+  ],
+  openGraph: {
+    title: "Best MCP Servers for Claude Code",
+    description:
+      "Discover the best MCP servers for Claude Code. Connect to GitHub, databases, cloud platforms, and 60+ services with ready-to-use Model Context Protocol configurations.",
+    url: `${BASE_URL}/mcp-servers`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Best MCP Servers for Claude Code",
+    description:
+      "Discover the best MCP servers for Claude Code. Connect to GitHub, databases, cloud platforms, and 60+ services.",
+  },
+  alternates: {
+    canonical: `${BASE_URL}/mcp-servers`,
+  },
+};
 
 export default function MCPServersPage() {
-  const [search, setSearch] = useState("");
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const allTags = getAllMCPServerTags();
-
-  const filteredServers = mcpServers.filter((server) => {
-    const matchesSearch =
-      search === "" ||
-      server.title.toLowerCase().includes(search.toLowerCase()) ||
-      server.description.toLowerCase().includes(search.toLowerCase()) ||
-      server.tags.some((tag) => tag.toLowerCase().includes(search.toLowerCase()));
-
-    const matchesTag = selectedTag === null || server.tags.includes(selectedTag);
-
-    return matchesSearch && matchesTag;
-  });
-
   return (
     <div className="container py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">MCP Servers</h1>
-        <p className="text-muted-foreground">
-          Model Context Protocol servers to extend Claude Code capabilities
+      <div className="mb-8 max-w-3xl">
+        <h1 className="text-3xl font-bold mb-3">MCP Servers</h1>
+        <p className="text-muted-foreground leading-relaxed">
+          Model Context Protocol servers that connect Claude Code to databases, APIs,
+          cloud platforms, and development tools. Each listing includes a ready-to-paste
+          JSON configuration — add it to your settings, restart Claude Code, and the
+          integration is live. Browse 60+ servers for GitHub, Slack, PostgreSQL, AWS,
+          and more.
         </p>
       </div>
 
-      <div className="flex flex-col gap-6">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="w-full sm:max-w-xs">
-            <Search
-              placeholder="Search MCP servers..."
-              value={search}
-              onChange={setSearch}
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          <Badge
-            variant={selectedTag === null ? "default" : "secondary"}
-            className={cn(
-              "cursor-pointer hover:bg-primary/80",
-              selectedTag === null && "bg-primary"
-            )}
-            onClick={() => setSelectedTag(null)}
-          >
-            All
-          </Badge>
-          {allTags.map((tag) => (
-            <Badge
-              key={tag}
-              variant={selectedTag === tag ? "default" : "secondary"}
-              className={cn(
-                "cursor-pointer",
-                selectedTag === tag
-                  ? "bg-primary hover:bg-primary/80"
-                  : "hover:bg-accent"
-              )}
-              onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredServers.map((server) => (
-            <MCPCard key={server.slug} server={server} />
-          ))}
-        </div>
-
-        {filteredServers.length === 0 && (
-          <div className="text-center py-12 text-muted-foreground">
-            No MCP servers found matching your criteria
-          </div>
-        )}
-      </div>
+      <MCPServersListing />
     </div>
   );
 }
