@@ -9,6 +9,9 @@ import { typescriptQualityHook } from "./typescript-quality";
 import { autoTestHook } from "./auto-test";
 import { securityScanHook } from "./security-scan";
 import { branchProtectHook } from "./branch-protect";
+import { commitLintHook } from "./commit-lint";
+import { importSortHook } from "./import-sort";
+import { bundleSizeCheckHook } from "./bundle-size-check";
 
 export const hooks: Hook[] = [
   lintOnEditHook,
@@ -21,6 +24,9 @@ export const hooks: Hook[] = [
   autoTestHook,
   securityScanHook,
   branchProtectHook,
+  commitLintHook,
+  importSortHook,
+  bundleSizeCheckHook,
 ];
 
 export function getHookBySlug(slug: string): Hook | undefined {

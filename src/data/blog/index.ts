@@ -1,4 +1,5 @@
 import { BlogPost } from "@/lib/types";
+import { claudeCodeVsCursorVsCopilot } from "./claude-code-vs-cursor-vs-copilot";
 import { claudeCodeHooksGuide } from "./claude-code-hooks-guide";
 import { claudeCodeWorkflows10xProductivity } from "./claude-code-workflows-10x-productivity";
 import { clawdbotOpenclawGuide } from "./clawdbot-openclaw-guide";
@@ -6,6 +7,7 @@ import { claudeMdGuide } from "./claude-md-guide";
 import { mcpServersGuide } from "./mcp-servers-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeVsCursorVsCopilot,
   claudeCodeHooksGuide,
   claudeCodeWorkflows10xProductivity,
   mcpServersGuide,

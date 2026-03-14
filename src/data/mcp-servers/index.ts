@@ -59,6 +59,11 @@ import { soulSpec } from "./soul-spec";
 import { hubspotServer } from "./hubspot";
 import { clickhouseServer } from "./clickhouse";
 import { salesforceServer } from "./salesforce";
+import { twilioServer } from "./twilio";
+import { pineconeServer } from "./pinecone";
+import { prismaServer } from "./prisma";
+import { openaiServer } from "./openai";
+import { pagerdutyServer } from "./pagerduty";
 
 export const mcpServers: MCPServer[] = [
   // Featured servers first
@@ -131,6 +136,15 @@ export const mcpServers: MCPServer[] = [
   clickhouseServer,
   // AI Persona Management
   soulSpec,
+  // Communications & Messaging
+  twilioServer,
+  // AI & Vector Databases
+  pineconeServer,
+  openaiServer,
+  // ORM & Database Tools
+  prismaServer,
+  // Incident Management
+  pagerdutyServer,
 ];
 
 export function getMCPServerBySlug(slug: string): MCPServer | undefined {
