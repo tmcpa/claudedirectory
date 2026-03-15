@@ -18,16 +18,27 @@ Claude Code is an agentic coding tool that lives in your terminal. This guide wi
 
 ## Prerequisites
 
-- Node.js 18 or higher
 - A terminal (macOS Terminal, iTerm2, Windows Terminal, etc.)
-- An Anthropic API key or Claude Pro/Team subscription
+- A Claude subscription or Anthropic Console account
 
 ## Installation
 
-### Using npm (Recommended)
+### macOS / Linux / WSL (Recommended)
 
 \`\`\`bash
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
+\`\`\`
+
+### Windows PowerShell
+
+\`\`\`bash
+irm https://claude.ai/install.ps1 | iex
+\`\`\`
+
+### Using Homebrew
+
+\`\`\`bash
+brew install --cask claude-code
 \`\`\`
 
 ### Verify Installation
@@ -38,16 +49,16 @@ claude --version
 
 ## Authentication
 
-### Option 1: API Key
+Start Claude Code and you'll be prompted to log in via the browser on first use.
+
+\`\`\`bash
+claude
+\`\`\`
+
+For API key authentication:
 
 \`\`\`bash
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
-\`\`\`
-
-### Option 2: Browser Login
-
-\`\`\`bash
-claude login
 \`\`\`
 
 ## First Session
@@ -152,7 +163,7 @@ Claude can:
 
 ## Resources
 
-- [Official Documentation](https://docs.anthropic.com/en/docs/claude-code)
+- [Official Documentation](https://code.claude.com/docs/en/overview)
 - [GitHub Repository](https://github.com/anthropics/claude-code)
 - [Community Discord](https://discord.gg/anthropic)
 `,

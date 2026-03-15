@@ -11,7 +11,7 @@ export const openaiServer: MCPServer = {
     name: "OpenAI Community",
     url: "https://github.com/openai",
   },
-  repoUrl: "https://github.com/openai/openai-mcp",
+  repoUrl: "https://github.com/pierrebrunelle/mcp-server-openai",
   installCommand: "npm install -g @openai/mcp-server",
   config: `{
   "mcpServers": {

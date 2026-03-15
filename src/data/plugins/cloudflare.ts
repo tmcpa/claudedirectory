@@ -11,7 +11,6 @@ export const cloudflarePlugin: Plugin = {
     url: "https://github.com/cloudflare",
   },
   installCommand: "claude plugins add @cloudflare/claude-plugin",
-  repoUrl: "https://github.com/cloudflare/claude-plugin",
   commands: [
     { name: "/cf:deploy", description: "Deploy a Worker or Pages project" },
     { name: "/cf:logs", description: "Tail real-time logs from Workers" },

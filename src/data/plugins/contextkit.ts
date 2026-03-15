@@ -3,7 +3,7 @@ import { Plugin } from "@/lib/types";
 export const contextkitPlugin: Plugin = {
   slug: "contextkit",
   title: "ContextKit",
-  description: "Systematic development framework transforming Claude Code into a proactive development partner with structured context management",
+  description: "Systematic development framework transforming Claude Code into a proactive development partner with structured context management (deprecated, see PlanKit)",
   tags: ["context", "framework", "development", "productivity"],
   featured: false,
   author: {

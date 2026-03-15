@@ -10,6 +10,7 @@ export const elasticsearchServer: MCPServer = {
     name: "Elastic Community",
     url: "https://github.com/elastic",
   },
+  repoUrl: "https://github.com/elastic/mcp-server-elasticsearch",
   installCommand: "npm install -g @elastic/mcp-server",
   config: `{
   "mcpServers": {
