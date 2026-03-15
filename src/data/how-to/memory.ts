@@ -42,7 +42,7 @@ touch CLAUDE.md
 A web application built with Next.js and TypeScript.
 
 ## Tech Stack
-- Next.js 14 with App Router
+- Next.js with App Router
 - TypeScript strict mode
 - Tailwind CSS for styling
 - PostgreSQL database

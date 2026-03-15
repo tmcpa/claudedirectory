@@ -2,11 +2,11 @@
 
 A community-driven directory for Claude Code configurations. Find and share prompts, MCP servers, hooks, skills, and settings.
 
-**[Live Site](https://claudedirectory.org)** · **[Contributing Guide](CONTRIBUTING.md)** · **[Claude Code Docs](https://docs.anthropic.com/en/docs/claude-code)**
+**[Live Site](https://claudedirectory.org)** · **[Contributing Guide](CONTRIBUTING.md)** · **[Claude Code Docs](https://code.claude.com/docs/en/overview)**
 
 ## What is Claude Code?
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) is Anthropic's official CLI tool for Claude. It allows you to interact with Claude directly from your terminal to help with software development tasks.
+[Claude Code](https://code.claude.com/docs/en/overview) is Anthropic's official CLI tool for Claude. It allows you to interact with Claude directly from your terminal to help with software development tasks.
 
 ## What's in this Directory?
 
@@ -29,8 +29,8 @@ A community-driven directory for Claude Code configurations. Find and share prom
 
 ```bash
 # Clone the repository
-git clone https://github.com/tmcpa/claudescodes.git
-cd claudescodes
+git clone https://github.com/tmcpa/claudedirectory.git
+cd claudedirectory
 
 # Install dependencies
 npm install
@@ -91,11 +91,11 @@ We welcome contributions! See our [Contributing Guide](CONTRIBUTING.md) for deta
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tmcpa/claudescodes)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/tmcpa/claudedirectory)
 
 ### Deploy to Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tmcpa/claudescodes)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tmcpa/claudedirectory)
 
 ## License
 
@@ -104,7 +104,7 @@ MIT License - feel free to use this project for your own purposes.
 ## Acknowledgments
 
 - Inspired by [cursor.directory](https://cursor.directory)
-- Built for the [Claude Code](https://docs.anthropic.com/en/docs/claude-code) community
+- Built for the [Claude Code](https://code.claude.com/docs/en/overview) community
 - UI components from [shadcn/ui](https://ui.shadcn.com/)
 
 ---

@@ -11,7 +11,7 @@ export const nextjsPrompt: Prompt = {
   },
   content: `# Next.js Project
 
-This is a Next.js 14+ project using the App Router architecture.
+This is a Next.js project using the App Router architecture.
 
 ## Tech Stack
 - Next.js with App Router

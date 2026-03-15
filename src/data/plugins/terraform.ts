@@ -11,7 +11,7 @@ export const terraformPlugin: Plugin = {
     url: "https://github.com/hashicorp",
   },
   installCommand: "claude plugins add @hashicorp/terraform",
-  repoUrl: "https://github.com/hashicorp/claude-terraform-plugin",
+  repoUrl: "https://github.com/hashicorp/terraform-mcp-server",
   commands: [
     { name: "/tf:plan", description: "Preview infrastructure changes" },
     { name: "/tf:state", description: "Inspect current Terraform state" },

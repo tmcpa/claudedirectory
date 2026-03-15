@@ -10,6 +10,7 @@ export const neo4jServer: MCPServer = {
     name: "Neo4j Community",
     url: "https://github.com/neo4j",
   },
+  repoUrl: "https://github.com/neo4j-contrib/mcp-neo4j",
   installCommand: "npm install -g @neo4j/mcp-server",
   config: `{
   "mcpServers": {

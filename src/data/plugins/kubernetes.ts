@@ -11,7 +11,6 @@ export const kubernetesPlugin: Plugin = {
     url: "https://github.com/kubernetes",
   },
   installCommand: "claude plugins add @kubernetes/claude-plugin",
-  repoUrl: "https://github.com/kubernetes/claude-plugin",
   commands: [
     { name: "/k8s:pods", description: "List and inspect pods in current context" },
     { name: "/k8s:logs", description: "Stream logs from a pod or deployment" },

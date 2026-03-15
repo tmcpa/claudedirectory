@@ -11,6 +11,7 @@ export const shopifyServer: MCPServer = {
     url: "https://github.com/Shopify",
   },
 
+  repoUrl: "https://github.com/GeLi2001/shopify-mcp",
   installCommand: "npm install -g @shopify/mcp-server",
   config: `{
   "mcpServers": {

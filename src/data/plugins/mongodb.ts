@@ -11,7 +11,6 @@ export const mongodbPlugin: Plugin = {
     url: "https://github.com/mongodb",
   },
   installCommand: "claude plugins add @mongodb/claude-plugin",
-  repoUrl: "https://github.com/mongodb/claude-plugin",
   commands: [
     { name: "/mongo:query", description: "Run queries against a MongoDB collection" },
     { name: "/mongo:schema", description: "Infer and display collection schemas" },

@@ -11,7 +11,7 @@ export const pagerdutyServer: MCPServer = {
     name: "PagerDuty Community",
     url: "https://github.com/PagerDuty",
   },
-  repoUrl: "https://github.com/PagerDuty/pagerduty-mcp",
+  repoUrl: "https://github.com/PagerDuty/pagerduty-mcp-server",
   installCommand: "npm install -g @pagerduty/mcp-server",
   config: `{
   "mcpServers": {
