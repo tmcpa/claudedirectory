@@ -5,8 +5,12 @@ import { claudeCodeWorkflows10xProductivity } from "./claude-code-workflows-10x-
 import { clawdbotOpenclawGuide } from "./clawdbot-openclaw-guide";
 import { claudeMdGuide } from "./claude-md-guide";
 import { mcpServersGuide } from "./mcp-servers-guide";
+import { bestClaudeCodePlugins } from "./best-claude-code-plugins";
+import { anthropicClaudeCertificationProgram } from "./anthropic-claude-certification-program";
 
 export const blogPosts: BlogPost[] = [
+  anthropicClaudeCertificationProgram,
+  bestClaudeCodePlugins,
   claudeCodeVsCursorVsCopilot,
   claudeCodeHooksGuide,
   claudeCodeWorkflows10xProductivity,
