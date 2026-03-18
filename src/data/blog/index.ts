@@ -7,8 +7,12 @@ import { claudeMdGuide } from "./claude-md-guide";
 import { mcpServersGuide } from "./mcp-servers-guide";
 import { bestClaudeCodePlugins } from "./best-claude-code-plugins";
 import { anthropicClaudeCertificationProgram } from "./anthropic-claude-certification-program";
+import { howToCreateClaudeSkills } from "./how-to-create-claude-skills";
+import { claudeSkillsNonCodingUseCases } from "./claude-skills-non-coding-use-cases";
 
 export const blogPosts: BlogPost[] = [
+  claudeSkillsNonCodingUseCases,
+  howToCreateClaudeSkills,
   anthropicClaudeCertificationProgram,
   bestClaudeCodePlugins,
   claudeCodeVsCursorVsCopilot,
