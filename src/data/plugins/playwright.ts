@@ -25,6 +25,6 @@ export const playwrightPlugin: Plugin = {
   ],
   relatedItems: [
     { type: "mcp-server", slug: "playwright", relationship: "requires" },
-    { type: "plugin", slug: "test-writer", relationship: "works-with" },
+    { type: "plugin", slug: "test-writer-fixer", relationship: "works-with" },
   ],
 };

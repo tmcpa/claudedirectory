@@ -58,7 +58,7 @@ This built-in skill helps you build applications that use the Claude API. It pro
 
 ## Resources
 
-- [Claude API Documentation](https://docs.anthropic.com)
+- [Claude API Documentation](https://platform.claude.com/docs/en/home)
 - [Anthropic SDK](https://github.com/anthropics/anthropic-sdk-python)
 `,
 };

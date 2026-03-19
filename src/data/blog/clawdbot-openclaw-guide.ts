@@ -76,7 +76,7 @@ One of OpenClaw's standout features is **Lobster**, its native workflow orchestr
 
 Despite its origins with Claude, OpenClaw now supports multiple LLM providers:
 
-- **Anthropic Claude** (all versions — Opus 4.5 recommended for security)
+- **Anthropic Claude** (all versions — Opus 4.6 recommended for security)
 - **OpenAI GPT** models
 - **KIMI K2.5**
 - **Local models** via Ollama (zero API cost)

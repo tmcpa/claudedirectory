@@ -154,8 +154,8 @@ The exam tests architecture decisions, not memorized syntax. The best preparatio
 
 The official Anthropic docs are the source of truth for the exam. Pay particular attention to:
 
-- The [Claude API reference](https://docs.anthropic.com/en/api) — tool use, structured outputs, prompt caching
-- The [Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code) — configuration, hooks, MCP setup
+- The [Claude API reference](https://platform.claude.com/docs/en/api/overview) — tool use, structured outputs, prompt caching
+- The [Claude Code documentation](https://code.claude.com/docs/en/overview) — configuration, hooks, MCP setup
 - The [Model Context Protocol specification](https://modelcontextprotocol.io/) — server/client architecture, tool schemas
 
 ### 4. Know the Pricing and Limits

@@ -11,7 +11,7 @@ export const twilioServer: MCPServer = {
     name: "Twilio Community",
     url: "https://github.com/twilio",
   },
-  repoUrl: "https://github.com/twilio/twilio-mcp",
+  repoUrl: "https://github.com/twilio-labs/mcp",
   installCommand: "npm install -g @twilio/mcp-server",
   config: `{
   "mcpServers": {
