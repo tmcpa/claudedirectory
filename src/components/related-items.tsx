@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { RelatedItem, ContentType } from "@/lib/types";
-import { resolveRelatedItems, getTypeLabel, ResolvedRelatedItem } from "@/lib/related-items";
+import { resolveRelatedItems, getSuggestedItems, getTypeLabel, ResolvedRelatedItem } from "@/lib/related-items";
 import {
   FileText,
   Server,
@@ -66,6 +66,37 @@ export function RelatedItems({ items, title = "Related" }: RelatedItemsProps) {
       <h2 className="text-xl font-semibold">{title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {resolved.map((item) => (
+          <RelatedItemCard key={`${item.type}-${item.slug}`} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+interface SuggestedItemsProps {
+  currentSlug: string;
+  currentType: ContentType;
+  currentTags: string[];
+  limit?: number;
+}
+
+export function SuggestedItems({
+  currentSlug,
+  currentType,
+  currentTags,
+  limit = 3,
+}: SuggestedItemsProps) {
+  const suggested = getSuggestedItems(currentSlug, currentType, currentTags, limit);
+
+  if (suggested.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="space-y-4">
+      <h2 className="text-xl font-semibold">You might also like</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        {suggested.map((item) => (
           <RelatedItemCard key={`${item.type}-${item.slug}`} item={item} />
         ))}
       </div>

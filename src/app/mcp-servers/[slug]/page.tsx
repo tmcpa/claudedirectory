@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { mcpServers, getMCPServerBySlug } from "@/data/mcp-servers";
 import { ArrowLeft, Server, User, Terminal, ExternalLink } from "lucide-react";
 
@@ -30,19 +30,19 @@ export async function generateMetadata(props: Props) {
   const url = `${BASE_URL}/mcp-servers/${server.slug}`;
 
   return {
-    title: `${server.title} MCP Server - Claude Code`,
-    description: server.description,
-    keywords: [...server.tags, "claude code", "mcp server", "model context protocol"],
+    title: `${server.title} MCP Server for Claude Code | Config & Setup`,
+    description: `${server.description} Copy-paste the JSON config into your Claude Code settings.`,
+    keywords: [...server.tags, "claude code", "mcp server", "model context protocol", server.title.toLowerCase()],
     openGraph: {
-      title: `${server.title} MCP Server - Claude Code`,
-      description: server.description,
+      title: `${server.title} MCP Server for Claude Code | Config & Setup`,
+      description: `${server.description} Copy-paste the JSON config into your Claude Code settings.`,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${server.title} MCP Server - Claude Code`,
-      description: server.description,
+      title: `${server.title} MCP Server for Claude Code | Config & Setup`,
+      description: `${server.description} Copy-paste the JSON config into your Claude Code settings.`,
     },
     alternates: {
       canonical: url,
@@ -177,6 +177,13 @@ export default async function MCPServerDetailPage(props: Props) {
             <RelatedItems items={server.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={server.slug}
+          currentType="mcp-server"
+          currentTags={server.tags}
+        />
       </div>
     </div>
   );

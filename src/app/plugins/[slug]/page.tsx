@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { plugins, getPluginBySlug } from "@/data/plugins";
 import { ArrowLeft, Puzzle, User, Terminal, ExternalLink } from "lucide-react";
 
@@ -30,19 +30,19 @@ export async function generateMetadata(props: Props) {
   const url = `${BASE_URL}/plugins/${plugin.slug}`;
 
   return {
-    title: `${plugin.title} Plugin - Claude Code`,
-    description: plugin.description,
-    keywords: [...plugin.tags, "claude code", "plugin", "extension"],
+    title: `${plugin.title} - Claude Code Plugin | Install & Setup Guide`,
+    description: `${plugin.description} One-command install for Claude Code.`,
+    keywords: [...plugin.tags, "claude code", "plugin", "extension", plugin.title.toLowerCase()],
     openGraph: {
-      title: `${plugin.title} Plugin - Claude Code`,
-      description: plugin.description,
+      title: `${plugin.title} - Claude Code Plugin | Install & Setup Guide`,
+      description: `${plugin.description} One-command install for Claude Code.`,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${plugin.title} Plugin - Claude Code`,
-      description: plugin.description,
+      title: `${plugin.title} - Claude Code Plugin | Install & Setup Guide`,
+      description: `${plugin.description} One-command install for Claude Code.`,
     },
     alternates: {
       canonical: url,
@@ -196,6 +196,13 @@ export default async function PluginDetailPage(props: Props) {
             <RelatedItems items={plugin.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={plugin.slug}
+          currentType="plugin"
+          currentTags={plugin.tags}
+        />
       </div>
     </div>
   );

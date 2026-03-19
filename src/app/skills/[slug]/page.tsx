@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { skills, getSkillBySlug } from "@/data/skills";
 import { ArrowLeft, Zap, User, ExternalLink } from "lucide-react";
 
@@ -30,19 +30,19 @@ export async function generateMetadata(props: Props) {
   const url = `${BASE_URL}/skills/${skill.slug}`;
 
   return {
-    title: `${skill.title} Skill - Claude Code`,
-    description: skill.description,
-    keywords: [...skill.tags, "claude code", "skill", "slash command"],
+    title: `${skill.title} - Claude Code Skill | Ready-to-Use Slash Command`,
+    description: `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`,
+    keywords: [...skill.tags, "claude code", "skill", "slash command", skill.title.toLowerCase()],
     openGraph: {
-      title: `${skill.title} Skill - Claude Code`,
-      description: skill.description,
+      title: `${skill.title} - Claude Code Skill | Ready-to-Use Slash Command`,
+      description: `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${skill.title} Skill - Claude Code`,
-      description: skill.description,
+      title: `${skill.title} - Claude Code Skill | Ready-to-Use Slash Command`,
+      description: `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`,
     },
     alternates: {
       canonical: url,
@@ -162,6 +162,13 @@ export default async function SkillDetailPage(props: Props) {
             <RelatedItems items={skill.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={skill.slug}
+          currentType="skill"
+          currentTags={skill.tags}
+        />
       </div>
     </div>
   );

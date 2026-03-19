@@ -21,11 +21,11 @@ const BASE_URL = "https://claudedirectory.org";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Claude Directory - Prompts, MCP Servers, Hooks & Plugins for Claude Code",
+    default: "Claude Directory - Best Prompts, MCP Servers, Skills & Plugins for Claude Code",
     template: "%s | Claude Directory",
   },
   description:
-    "Find the best prompts, MCP servers, hooks, skills, and plugins for Claude Code. A community-driven directory for Claude Code configurations.",
+    "The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -48,6 +48,10 @@ export const metadata: Metadata = {
     "mcp servers",
     "claude code hooks",
     "ai coding assistant",
+    "claude code directory",
+    "claude code configurations",
+    "CLAUDE.md",
+    "claude code agents",
   ],
   authors: [{ name: "Claude Directory" }],
   creator: "Claude Directory",
@@ -56,15 +60,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BASE_URL,
     siteName: "Claude Directory",
-    title: "Claude Directory - Prompts, MCP Servers, Hooks & Plugins for Claude Code",
+    title: "Claude Directory - Best Prompts, MCP Servers, Skills & Plugins for Claude Code",
     description:
-      "Find the best prompts, MCP servers, hooks, skills, and plugins for Claude Code. A community-driven directory for Claude Code configurations.",
+      "The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Claude Directory - Prompts, MCP Servers, Hooks & Plugins for Claude Code",
+    title: "Claude Directory - Best Prompts, MCP Servers, Skills & Plugins for Claude Code",
     description:
-      "Find the best prompts, MCP servers, hooks, skills, and plugins for Claude Code. A community-driven directory for Claude Code configurations.",
+      "The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds.",
   },
   robots: {
     index: true,
@@ -79,6 +83,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    types: {
+      "application/rss+xml": `${BASE_URL}/feed.xml`,
+    },
   },
 };
 
@@ -109,7 +116,7 @@ export default function RootLayout({
         <WebsiteJsonLd
           url={BASE_URL}
           name="Claude Directory"
-          description="Find the best prompts, MCP servers, hooks, skills, and plugins for Claude Code. A community-driven directory for Claude Code configurations."
+          description="The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds."
         />
         <Header />
         <main className="flex-1">{children}</main>

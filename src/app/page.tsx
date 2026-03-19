@@ -156,6 +156,12 @@ export default function Home() {
               <Clock className="h-5 w-5 text-muted-foreground" />
               <h2 className="text-2xl font-bold">Recently Added</h2>
             </div>
+            <Button variant="ghost" asChild>
+              <Link href="/whats-new">
+                View all
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {recentlyAdded.map((recent) => (

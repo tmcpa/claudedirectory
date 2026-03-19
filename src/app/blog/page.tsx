@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { CollectionPageJsonLd } from "@/components/json-ld";
+import { blogPosts } from "@/data/blog";
 import { BlogListing } from "./_components/blog-listing";
 
 const BASE_URL = "https://claudedirectory.org";
 
 export const metadata: Metadata = {
-  title: "Claude Code Blog - Tips, Guides & Insights",
+  title: "Claude Code Blog - Practical Guides & Developer Tips",
   description:
-    "Read the latest news, guides, and insights about Claude Code and AI-assisted development. Practical tips, productivity workflows, deep dives into hooks and MCP servers, and more.",
+    "Practical guides on Claude Code workflows, hooks, MCP servers, and AI-assisted development. Written for developers who want to ship better code faster.",
   keywords: [
     "claude code blog",
     "claude code tips",
@@ -35,6 +37,12 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div className="container py-8">
+      <CollectionPageJsonLd
+        name="Claude Code Blog"
+        description="Practical guides on Claude Code workflows, hooks, MCP servers, and AI-assisted development."
+        url={`${BASE_URL}/blog`}
+        itemCount={blogPosts.length}
+      />
       <div className="mb-8 max-w-3xl">
         <h1 className="text-3xl font-bold mb-3">Blog</h1>
         <p className="text-muted-foreground leading-relaxed">
