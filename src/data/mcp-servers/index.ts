@@ -64,6 +64,22 @@ import { pineconeServer } from "./pinecone";
 import { prismaServer } from "./prisma";
 import { openaiServer } from "./openai";
 import { pagerdutyServer } from "./pagerduty";
+// Cloud providers
+import { gcpServer } from "./gcp";
+import { azureServer } from "./azure";
+// Vector databases
+import { weaviateServer } from "./weaviate";
+import { milvusServer } from "./milvus";
+import { chromadbServer } from "./chromadb";
+// Data engineering
+import { dbtServer } from "./dbt";
+// Messaging
+import { kafkaServer } from "./kafka";
+// Deployment & hosting
+import { netlifyServer } from "./netlify";
+import { digitaloceanServer } from "./digitalocean";
+// Analytics
+import { amplitudeServer } from "./amplitude";
 
 export const mcpServers: MCPServer[] = [
   // Featured servers first
@@ -145,6 +161,22 @@ export const mcpServers: MCPServer[] = [
   prismaServer,
   // Incident Management
   pagerdutyServer,
+  // Cloud Providers
+  gcpServer,
+  azureServer,
+  // Vector Databases
+  weaviateServer,
+  milvusServer,
+  chromadbServer,
+  // Data Engineering
+  dbtServer,
+  // Messaging & Streaming
+  kafkaServer,
+  // Deployment & Hosting
+  netlifyServer,
+  digitaloceanServer,
+  // Product Analytics
+  amplitudeServer,
 ];
 
 export function getMCPServerBySlug(slug: string): MCPServer | undefined {

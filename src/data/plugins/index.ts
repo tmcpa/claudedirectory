@@ -73,6 +73,11 @@ import { perfProfilerPlugin } from "./perf-profiler";
 import { i18nManagerPlugin } from "./i18n-manager";
 import { depAuditPlugin } from "./dep-audit";
 import { envManagerPlugin } from "./env-manager";
+import { claudeMemPlugin } from "./claude-mem";
+import { claudeBrainPlugin } from "./claude-brain";
+import { claudeDiaryPlugin } from "./claude-diary";
+import { trailOfBitsSecurityPlugin } from "./trail-of-bits-security";
+import { netlifyPlugin as netlifyIntegrationPlugin } from "./netlify-plugin";
 
 export const plugins: Plugin[] = [
   // Featured plugins first
@@ -151,6 +156,14 @@ export const plugins: Plugin[] = [
   i18nManagerPlugin,
   depAuditPlugin,
   envManagerPlugin,
+  // Memory & learning plugins
+  claudeMemPlugin,
+  claudeBrainPlugin,
+  claudeDiaryPlugin,
+  // Security plugins
+  trailOfBitsSecurityPlugin,
+  // External integrations
+  netlifyIntegrationPlugin,
 ];
 
 export function getPluginBySlug(slug: string): Plugin | undefined {
