@@ -119,6 +119,45 @@ export function groupRelatedItemsByType(items: ResolvedRelatedItem[]): Record<Co
   return grouped as Record<ContentType, ResolvedRelatedItem[]>;
 }
 
+export function getSuggestedItems(
+  currentSlug: string,
+  currentType: ContentType,
+  currentTags: string[],
+  limit = 3
+): ResolvedRelatedItem[] {
+  const collections: Record<ContentType, ContentItem[]> = {
+    "prompt": prompts,
+    "mcp-server": mcpServers,
+    "hook": hooks,
+    "skill": skills,
+    "plugin": plugins,
+    "agent": agents,
+    "how-to": howTos,
+    "blog": blogPosts,
+  };
+
+  const items = collections[currentType] || [];
+  const tagSet = new Set(currentTags);
+
+  const scored = items
+    .filter((item) => item.slug !== currentSlug)
+    .map((item) => {
+      const sharedTags = item.tags.filter((t) => tagSet.has(t)).length;
+      return { item, sharedTags };
+    })
+    .filter((entry) => entry.sharedTags > 0)
+    .sort((a, b) => b.sharedTags - a.sharedTags)
+    .slice(0, limit);
+
+  return scored.map((entry) => ({
+    type: currentType,
+    slug: entry.item.slug,
+    title: entry.item.title,
+    description: entry.item.description,
+    href: `${typeToPath[currentType]}/${entry.item.slug}`,
+  }));
+}
+
 export function groupRelatedItemsByRelationship(items: ResolvedRelatedItem[]): Record<string, ResolvedRelatedItem[]> {
   const grouped: Record<string, ResolvedRelatedItem[]> = {};
 

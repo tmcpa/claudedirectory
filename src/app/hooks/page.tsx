@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { CollectionPageJsonLd } from "@/components/json-ld";
+import { hooks } from "@/data/hooks";
 import { HooksListing } from "./_components/hooks-listing";
 
 const BASE_URL = "https://claudedirectory.org";
 
 export const metadata: Metadata = {
-  title: "Claude Code Hooks Guide - Automate Your Workflow",
+  title: "Claude Code Hooks - Auto-Format, Lint & Test on Every Edit",
   description:
-    "Explore Claude Code hooks to automate tasks and enforce project standards. Pre and post tool-use automation scripts for formatting, linting, testing, notifications, and more.",
+    "Ready-to-use Claude Code hooks that auto-format, lint, test, and notify on every tool use. Copy the script and JSON config — automation runs without manual intervention.",
   keywords: [
     "claude code hooks",
     "claude code automation",
@@ -35,6 +37,12 @@ export const metadata: Metadata = {
 export default function HooksPage() {
   return (
     <div className="container py-8">
+      <CollectionPageJsonLd
+        name="Claude Code Hooks"
+        description="Shell scripts that run automatically before or after Claude Code uses a tool."
+        url={`${BASE_URL}/hooks`}
+        itemCount={hooks.length}
+      />
       <div className="mb-8 max-w-3xl">
         <h1 className="text-3xl font-bold mb-3">Hooks</h1>
         <p className="text-muted-foreground leading-relaxed">

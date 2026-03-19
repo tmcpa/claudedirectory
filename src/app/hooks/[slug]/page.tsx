@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { hooks, getHookBySlug } from "@/data/hooks";
 import { ArrowLeft, Webhook, User, ExternalLink } from "lucide-react";
 
@@ -30,19 +30,19 @@ export async function generateMetadata(props: Props) {
   const url = `${BASE_URL}/hooks/${hook.slug}`;
 
   return {
-    title: `${hook.title} Hook - Claude Code`,
-    description: hook.description,
-    keywords: [...hook.tags, "claude code", "hook", "automation", hook.event],
+    title: `${hook.title} Hook for Claude Code | Script & Config`,
+    description: `${hook.description} Runs on ${hook.event} events. Copy the script and config to start using it.`,
+    keywords: [...hook.tags, "claude code", "hook", "automation", hook.event, hook.title.toLowerCase()],
     openGraph: {
-      title: `${hook.title} Hook - Claude Code`,
-      description: hook.description,
+      title: `${hook.title} Hook for Claude Code | Script & Config`,
+      description: `${hook.description} Runs on ${hook.event} events. Copy the script and config to start using it.`,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${hook.title} Hook - Claude Code`,
-      description: hook.description,
+      title: `${hook.title} Hook for Claude Code | Script & Config`,
+      description: `${hook.description} Runs on ${hook.event} events. Copy the script and config to start using it.`,
     },
     alternates: {
       canonical: url,
@@ -189,6 +189,13 @@ export default async function HookDetailPage(props: Props) {
             <RelatedItems items={hook.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={hook.slug}
+          currentType="hook"
+          currentTags={hook.tags}
+        />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { blogPosts, getBlogPostBySlug } from "@/data/blog";
 import { ArrowLeft, Newspaper, User, Calendar, ExternalLink } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -264,6 +264,13 @@ export default async function BlogPostPage(props: Props) {
             <RelatedItems items={post.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={post.slug}
+          currentType="blog"
+          currentTags={post.tags}
+        />
       </div>
     </div>
   );

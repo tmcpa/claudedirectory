@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { prompts, getPromptBySlug } from "@/data/prompts";
 import { ArrowLeft, FileText, User, ExternalLink } from "lucide-react";
 
@@ -162,6 +162,13 @@ export default async function PromptDetailPage(props: Props) {
             <RelatedItems items={prompt.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={prompt.slug}
+          currentType="prompt"
+          currentTags={prompt.tags}
+        />
       </div>
     </div>
   );

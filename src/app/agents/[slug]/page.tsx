@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { agents, getAgentBySlug } from "@/data/agents";
 import { Agent } from "@/lib/types";
 import { ArrowLeft, Bot, User, ExternalLink } from "lucide-react";
@@ -51,19 +51,19 @@ export async function generateMetadata(props: Props) {
   const url = `${BASE_URL}/agents/${agent.slug}`;
 
   return {
-    title: `${agent.title} Agent - Claude Code`,
-    description: agent.description,
-    keywords: [...agent.tags, "claude code", "agent", "subagent", agent.category],
+    title: `${agent.title} - Claude Code Agent Configuration`,
+    description: `${agent.description} Full subagent config ready to copy into your project.`,
+    keywords: [...agent.tags, "claude code", "agent", "subagent", agent.category, agent.title.toLowerCase()],
     openGraph: {
-      title: `${agent.title} Agent - Claude Code`,
-      description: agent.description,
+      title: `${agent.title} - Claude Code Agent Configuration`,
+      description: `${agent.description} Full subagent config ready to copy into your project.`,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${agent.title} Agent - Claude Code`,
-      description: agent.description,
+      title: `${agent.title} - Claude Code Agent Configuration`,
+      description: `${agent.description} Full subagent config ready to copy into your project.`,
     },
     alternates: {
       canonical: url,
@@ -186,6 +186,13 @@ export default async function AgentDetailPage(props: Props) {
             <RelatedItems items={agent.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={agent.slug}
+          currentType="agent"
+          currentTags={agent.tags}
+        />
       </div>
     </div>
   );

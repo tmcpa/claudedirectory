@@ -96,6 +96,39 @@ export function ItemJsonLd({
   );
 }
 
+interface CollectionPageJsonLdProps {
+  name: string;
+  description: string;
+  url: string;
+  itemCount: number;
+}
+
+export function CollectionPageJsonLd({
+  name,
+  description,
+  url,
+  itemCount,
+}: CollectionPageJsonLdProps) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: itemCount,
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 interface BreadcrumbJsonLdProps {
   items: Array<{
     name: string;

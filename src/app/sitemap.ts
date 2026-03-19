@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next";
-import { prompts } from "@/data/prompts";
-import { mcpServers } from "@/data/mcp-servers";
-import { hooks } from "@/data/hooks";
-import { skills } from "@/data/skills";
-import { plugins } from "@/data/plugins";
-import { howTos } from "@/data/how-to";
-import { agents } from "@/data/agents";
-import { blogPosts } from "@/data/blog";
+import { prompts, getAllPromptTags } from "@/data/prompts";
+import { mcpServers, getAllMCPServerTags } from "@/data/mcp-servers";
+import { hooks, getAllHookTags } from "@/data/hooks";
+import { skills, getAllSkillTags } from "@/data/skills";
+import { plugins, getAllPluginTags } from "@/data/plugins";
+import { howTos, getAllHowToTags } from "@/data/how-to";
+import { agents, getAllAgentTags } from "@/data/agents";
+import { blogPosts, getAllBlogPostTags } from "@/data/blog";
 
 const BASE_URL = "https://claudedirectory.org";
 
@@ -68,6 +68,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/whats-new`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.8,
     },
   ];
 
@@ -135,6 +141,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Topic/tag pages
+  const topicPages: MetadataRoute.Sitemap = [
+    ...getAllPromptTags().map((tag) => ({ url: `${BASE_URL}/prompts/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+    ...getAllMCPServerTags().map((tag) => ({ url: `${BASE_URL}/mcp-servers/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+    ...getAllHookTags().map((tag) => ({ url: `${BASE_URL}/hooks/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+    ...getAllSkillTags().map((tag) => ({ url: `${BASE_URL}/skills/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+    ...getAllPluginTags().map((tag) => ({ url: `${BASE_URL}/plugins/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+    ...getAllHowToTags().map((tag) => ({ url: `${BASE_URL}/how-to/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+    ...getAllAgentTags().map((tag) => ({ url: `${BASE_URL}/agents/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+    ...getAllBlogPostTags().map((tag) => ({ url: `${BASE_URL}/blog/topic/${tag}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 })),
+  ];
+
   return [
     ...staticPages,
     ...promptPages,
@@ -145,5 +163,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...howToPages,
     ...agentPages,
     ...blogPages,
+    ...topicPages,
   ];
 }

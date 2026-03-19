@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
-import { RelatedItems } from "@/components/related-items";
+import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { howTos, getHowToBySlug } from "@/data/how-to";
 import { ArrowLeft, BookOpen, User, Clock, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -259,6 +259,13 @@ export default async function HowToDetailPage(props: Props) {
             <RelatedItems items={howTo.relatedItems} />
           </>
         )}
+
+        <Separator />
+        <SuggestedItems
+          currentSlug={howTo.slug}
+          currentType="how-to"
+          currentTags={howTo.tags}
+        />
       </div>
     </div>
   );

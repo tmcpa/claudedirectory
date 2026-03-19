@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { CollectionPageJsonLd } from "@/components/json-ld";
+import { howTos } from "@/data/how-to";
 import { HowToListing } from "./_components/how-to-listing";
 
 const BASE_URL = "https://claudedirectory.org";
 
 export const metadata: Metadata = {
-  title: "Claude Code Tutorials & How-To Guides",
+  title: "Claude Code Tutorials - Step-by-Step Guides for Every Level",
   description:
-    "Learn how to use Claude Code with step-by-step tutorials. From setup and configuration to advanced workflows, automation patterns, and multi-agent orchestration. Guides for every skill level.",
+    "Learn Claude Code from setup to advanced workflows. Step-by-step tutorials on hooks, MCP servers, skills, multi-agent orchestration, and more. Beginner to advanced.",
   keywords: [
     "claude code tutorials",
     "how to use claude code",
@@ -35,6 +37,12 @@ export const metadata: Metadata = {
 export default function HowToPage() {
   return (
     <div className="container py-8">
+      <CollectionPageJsonLd
+        name="Claude Code Tutorials & How-To Guides"
+        description="Step-by-step tutorials covering everything from initial setup to advanced workflows and multi-agent orchestration."
+        url={`${BASE_URL}/how-to`}
+        itemCount={howTos.length}
+      />
       <div className="mb-8 max-w-3xl">
         <h1 className="text-3xl font-bold mb-3">How To Guides</h1>
         <p className="text-muted-foreground leading-relaxed">
