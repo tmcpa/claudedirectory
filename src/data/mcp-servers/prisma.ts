@@ -11,7 +11,7 @@ export const prismaServer: MCPServer = {
     name: "Prisma Community",
     url: "https://github.com/prisma",
   },
-  repoUrl: "https://github.com/prisma/prisma-mcp",
+  repoUrl: "https://github.com/prisma/mcp",
   installCommand: "npm install -g @prisma/mcp-server",
   config: `{
   "mcpServers": {

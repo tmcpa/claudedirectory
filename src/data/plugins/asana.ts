@@ -23,7 +23,5 @@ export const asanaPlugin: Plugin = {
     { name: "/asana-search", description: "Search tasks across workspaces" },
     { name: "/asana-assign", description: "Assign tasks and set due dates" },
   ],
-  relatedItems: [
-    { type: "mcp-server", slug: "asana", relationship: "requires" },
-  ],
+  relatedItems: [],
 };

@@ -35,6 +35,12 @@ import { graphqlSpecialistAgent } from "./graphql-specialist";
 import { monorepoArchitectAgent } from "./monorepo-architect";
 import { migrationSpecialistAgent } from "./migration-specialist";
 import { mlOpsEngineerAgent } from "./ml-ops-engineer";
+// Additional agents
+import { rustProAgent } from "./rust-pro";
+import { blockchainDeveloperAgent } from "./blockchain-developer";
+import { sreEngineerAgent } from "./sre-engineer";
+import { iosDeveloperAgent } from "./ios-developer";
+import { technicalWriterAgent } from "./technical-writer";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -73,6 +79,12 @@ export const agents: Agent[] = [
   monorepoArchitectAgent,
   migrationSpecialistAgent,
   mlOpsEngineerAgent,
+  // Additional agents
+  rustProAgent,
+  blockchainDeveloperAgent,
+  sreEngineerAgent,
+  iosDeveloperAgent,
+  technicalWriterAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

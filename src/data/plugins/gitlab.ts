@@ -23,7 +23,5 @@ export const gitlabPlugin: Plugin = {
     { name: "/gl-issue", description: "Create and manage GitLab issues" },
     { name: "/gl-search", description: "Search across projects and code" },
   ],
-  relatedItems: [
-    { type: "mcp-server", slug: "gitlab", relationship: "requires" },
-  ],
+  relatedItems: [],
 };

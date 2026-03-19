@@ -39,12 +39,12 @@ export const claudeCodeVsCursorVsCopilot: BlogPost = {
     },
     {
       type: "prompt",
-      slug: "nextjs-fullstack",
+      slug: "nextjs",
       relationship: "works-with",
     },
     {
       type: "prompt",
-      slug: "python-fastapi",
+      slug: "python",
       relationship: "works-with",
     },
   ],

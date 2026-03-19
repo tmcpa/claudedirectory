@@ -18,6 +18,11 @@ import { refactorSkill } from "./refactor";
 import { testGenSkill } from "./test-gen";
 import { changelogSkill } from "./changelog";
 import { depsAuditSkill } from "./deps-audit";
+// Additional skills
+import { securityAuditSkill } from "./security-audit";
+import { dockerComposeSkill } from "./docker-compose";
+import { perfBenchmarkSkill } from "./perf-benchmark";
+import { gitBisectSkill } from "./git-bisect";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -41,6 +46,11 @@ export const skills: Skill[] = [
   testGenSkill,
   changelogSkill,
   depsAuditSkill,
+  // Additional skills
+  securityAuditSkill,
+  dockerComposeSkill,
+  perfBenchmarkSkill,
+  gitBisectSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

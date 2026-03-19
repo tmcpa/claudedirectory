@@ -24,7 +24,7 @@ export const securityGuidancePlugin: Plugin = {
     { name: "/dependency-audit", description: "Check dependencies for known vulnerabilities" },
   ],
   relatedItems: [
-    { type: "agent", slug: "security-agent", relationship: "works-with" },
+    { type: "agent", slug: "security-auditor", relationship: "works-with" },
     { type: "how-to", slug: "plugins", relationship: "documented-by" },
   ],
 };

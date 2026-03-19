@@ -23,7 +23,5 @@ export const firebasePlugin: Plugin = {
     { name: "/firebase-auth", description: "Manage Firebase Authentication users" },
     { name: "/firebase-rules", description: "Edit and deploy security rules" },
   ],
-  relatedItems: [
-    { type: "mcp-server", slug: "firebase", relationship: "requires" },
-  ],
+  relatedItems: [],
 };

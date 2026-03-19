@@ -25,11 +25,11 @@ export const claudeCodeWorkflows10xProductivity: BlogPost = {
     url: "https://github.com/tmcpa/claudedirectory",
   },
   relatedItems: [
-    { type: "hook", slug: "auto-lint-fix", relationship: "documented-by" },
-    { type: "hook", slug: "block-secrets", relationship: "documented-by" },
+    { type: "hook", slug: "lint-on-edit", relationship: "documented-by" },
+    { type: "hook", slug: "security-scan", relationship: "documented-by" },
     {
       type: "mcp-server",
-      slug: "github-mcp-server",
+      slug: "github",
       relationship: "documented-by",
     },
     { type: "agent", slug: "code-reviewer", relationship: "documented-by" },
