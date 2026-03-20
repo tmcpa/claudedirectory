@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { CollectionPageJsonLd } from "@/components/json-ld";
 import { mcpServers } from "@/data/mcp-servers";
 import { MCPServersListing } from "./_components/mcp-servers-listing";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Best MCP Servers for Claude Code (2026) - Ready-to-Paste Configs",

@@ -5,8 +5,7 @@ import { CollectionPageJsonLd } from "@/components/json-ld";
 import { RecentItemCard } from "@/components/cards/recent-item-card";
 import { getRecentlyAdded } from "@/data/recently-added";
 import { ArrowLeft, Clock, Rss } from "lucide-react";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "What's New - Latest Claude Code Configurations",

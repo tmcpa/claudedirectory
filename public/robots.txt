@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://claudedirectory.org/sitemap.xml
+Sitemap: https://www.claudedirectory.org/sitemap.xml

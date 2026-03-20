@@ -6,12 +6,18 @@ export const gettingStartedHowTo: HowTo = {
   description: "A comprehensive guide to installing and configuring Claude Code for your development workflow",
   difficulty: "beginner",
   timeToComplete: "10 min",
-  tags: ["getting-started", "installation", "setup", "beginner"],
+  tags: ["getting-started", "claude-code", "tutorial"],
   featured: true,
   author: {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "prompt", slug: "nextjs", relationship: "recommends" },
+    { type: "prompt", slug: "typescript", relationship: "recommends" },
+    { type: "prompt", slug: "python", relationship: "recommends" },
+    { type: "how-to", slug: "memory", relationship: "recommends" },
+  ],
   content: `# Getting Started with Claude Code
 
 Claude Code is an agentic coding tool that lives in your terminal. This guide will get you up and running quickly.

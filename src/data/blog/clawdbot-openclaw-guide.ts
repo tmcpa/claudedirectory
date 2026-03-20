@@ -7,12 +7,10 @@ export const clawdbotOpenclawGuide: BlogPost = {
     "A deep dive into OpenClaw (formerly Clawdbot), the open-source AI personal assistant with 147K+ GitHub stars — what it does, how it works, and how it compares to Claude Code.",
   publishedDate: "2026-02-09",
   tags: [
-    "openclaw",
-    "clawdbot",
-    "ai-assistant",
-    "personal-agent",
-    "open-source",
-    "claude",
+    "claude-code",
+    "agents",
+    "developer-tools",
+    "automation",
   ],
   featured: true,
   author: {

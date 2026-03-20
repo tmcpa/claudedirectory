@@ -13,11 +13,6 @@ export const bestClaudeCodePlugins: BlogPost = {
     "developer-tools",
     "productivity",
     "best-practices",
-    "frontend",
-    "backend",
-    "devops",
-    "integrations",
-    "workflow",
   ],
   featured: true,
   author: {

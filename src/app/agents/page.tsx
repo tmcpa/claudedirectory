@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { CollectionPageJsonLd } from "@/components/json-ld";
 import { agents } from "@/data/agents";
 import { AgentsListing } from "./_components/agents-listing";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Claude Code Agents - Specialized Subagents for Any Task",

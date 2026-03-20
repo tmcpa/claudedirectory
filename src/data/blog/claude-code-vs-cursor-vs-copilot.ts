@@ -9,15 +9,10 @@ export const claudeCodeVsCursorVsCopilot: BlogPost = {
   publishedDate: "2026-03-14",
   tags: [
     "claude-code",
-    "cursor",
-    "github-copilot",
-    "comparison",
-    "ai-coding-tools",
+    "opinion",
     "developer-tools",
     "productivity",
-    "agentic-coding",
     "best-practices",
-    "2026",
   ],
   featured: true,
   author: {

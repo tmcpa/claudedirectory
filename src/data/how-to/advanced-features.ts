@@ -6,12 +6,18 @@ export const advancedFeaturesHowTo: HowTo = {
   description: "Master planning mode, extended thinking, background tasks, and other power-user features",
   difficulty: "advanced",
   timeToComplete: "40 min",
-  tags: ["advanced", "planning", "thinking", "background-tasks"],
+  tags: ["advanced", "claude-code", "productivity"],
   featured: false,
   author: {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "agent", slug: "code-explorer", relationship: "recommends" },
+    { type: "agent", slug: "debugger", relationship: "recommends" },
+    { type: "agent", slug: "performance-optimizer", relationship: "recommends" },
+    { type: "agent", slug: "code-architect", relationship: "recommends" },
+  ],
   content: `# Advanced Claude Code Features
 
 Unlock Claude Code's full potential with these advanced features.

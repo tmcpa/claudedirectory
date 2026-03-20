@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { CollectionPageJsonLd } from "@/components/json-ld";
 import { hooks } from "@/data/hooks";
 import { HooksListing } from "./_components/hooks-listing";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Claude Code Hooks - Auto-Format, Lint & Test on Every Edit",

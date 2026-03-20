@@ -7,8 +7,7 @@ import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { getAllBlogPostTags, getBlogPostsByTag } from "@/data/blog";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 interface Props {
   params: Promise<{ tag: string }>;

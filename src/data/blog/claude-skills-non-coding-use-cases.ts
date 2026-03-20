@@ -11,11 +11,8 @@ export const claudeSkillsNonCodingUseCases: BlogPost = {
     "claude-code",
     "skills",
     "productivity",
-    "writing",
-    "research",
-    "project-management",
-    "non-coding",
-    "workflow",
+    "workflows",
+    "automation",
   ],
   featured: true,
   author: {

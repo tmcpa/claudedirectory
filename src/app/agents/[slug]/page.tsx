@@ -10,8 +10,7 @@ import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { agents, getAgentBySlug } from "@/data/agents";
 import { Agent } from "@/lib/types";
 import { ArrowLeft, Bot, User, ExternalLink } from "lucide-react";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 const categoryLabels: Record<Agent["category"], string> = {
   development: "Development",

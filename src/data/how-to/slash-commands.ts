@@ -6,12 +6,18 @@ export const slashCommandsHowTo: HowTo = {
   description: "Build your own slash commands to create reusable workflows in Claude Code",
   difficulty: "beginner",
   timeToComplete: "20 min",
-  tags: ["slash-commands", "automation", "productivity", "customization"],
+  tags: ["customization", "automation", "productivity"],
   featured: true,
   author: {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "skill", slug: "commit", relationship: "recommends" },
+    { type: "skill", slug: "review", relationship: "recommends" },
+    { type: "skill", slug: "pr", relationship: "recommends" },
+    { type: "skill", slug: "refactor", relationship: "recommends" },
+  ],
   content: `# Creating Custom Slash Commands
 
 Slash commands are user-invoked shortcuts that expand into full prompts. They're perfect for repetitive tasks.

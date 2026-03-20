@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { CollectionPageJsonLd } from "@/components/json-ld";
 import { howTos } from "@/data/how-to";
 import { HowToListing } from "./_components/how-to-listing";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Claude Code Tutorials - Step-by-Step Guides for Every Level",

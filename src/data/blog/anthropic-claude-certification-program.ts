@@ -8,15 +8,10 @@ export const anthropicClaudeCertificationProgram: BlogPost = {
     "Anthropic just launched its first official certification — the Claude Certified Architect. Here's what it covers, who it's for, and how to prepare.",
   publishedDate: "2026-03-16",
   tags: [
-    "claude",
-    "anthropic",
-    "certification",
-    "career",
     "claude-code",
-    "enterprise",
-    "architecture",
-    "mcp",
-    "prompt-engineering",
+    "developer-tools",
+    "best-practices",
+    "advanced",
   ],
   featured: true,
   author: {

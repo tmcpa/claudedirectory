@@ -6,12 +6,19 @@ export const mcpServersHowTo: HowTo = {
   description: "Connect Claude Code to external tools and services using the Model Context Protocol",
   difficulty: "intermediate",
   timeToComplete: "30 min",
-  tags: ["mcp", "integration", "tools", "servers"],
+  tags: ["mcp", "automation", "developer-tools"],
   featured: true,
   author: {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "mcp-server", slug: "github", relationship: "recommends" },
+    { type: "mcp-server", slug: "filesystem", relationship: "recommends" },
+    { type: "mcp-server", slug: "postgres", relationship: "recommends" },
+    { type: "mcp-server", slug: "puppeteer", relationship: "recommends" },
+    { type: "mcp-server", slug: "brave-search", relationship: "recommends" },
+  ],
   content: `# Setting Up MCP Servers
 
 The Model Context Protocol (MCP) lets Claude Code interact with external tools and services.

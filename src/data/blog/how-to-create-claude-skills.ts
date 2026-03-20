@@ -12,9 +12,7 @@ export const howToCreateClaudeSkills: BlogPost = {
     "skills",
     "tutorial",
     "automation",
-    "workflow",
     "customization",
-    "slash-commands",
   ],
   featured: true,
   author: {

@@ -7,14 +7,10 @@ export const isMcpDead: BlogPost = {
     "A contrarian look at whether the Model Context Protocol is dying or thriving. We examine the fragmentation, complexity, and adoption challenges -- alongside the reasons MCP might be more important than ever.",
   publishedDate: "2026-03-20",
   tags: [
-    "MCP",
-    "model-context-protocol",
+    "claude-code",
+    "mcp",
     "opinion",
     "developer-tools",
-    "AI",
-    "claude-code",
-    "interoperability",
-    "open-source",
   ],
   featured: true,
   author: {

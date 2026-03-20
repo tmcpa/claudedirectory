@@ -1,7 +1,6 @@
 import { blogPosts } from "@/data/blog";
 import { getRecentlyAdded } from "@/data/recently-added";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 function escapeXml(str: string): string {
   return str

@@ -8,9 +8,7 @@ export const mcpServersGuide: BlogPost = {
   publishedDate: "2026-03-11",
   tags: [
     "claude-code",
-    "mcp-servers",
-    "model-context-protocol",
-    "integrations",
+    "mcp",
     "tutorial",
     "developer-tools",
     "productivity",
