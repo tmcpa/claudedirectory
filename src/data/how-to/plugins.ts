@@ -6,7 +6,7 @@ export const pluginsHowTo: HowTo = {
   description: "Extend Claude Code with official and community plugins for enhanced functionality",
   difficulty: "beginner",
   timeToComplete: "15 min",
-  tags: ["plugins", "extensions", "customization", "tools"],
+  tags: ["plugins", "customization", "developer-tools"],
   featured: false,
   author: {
     name: "Claude Directory",

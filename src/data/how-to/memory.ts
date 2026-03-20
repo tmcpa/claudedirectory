@@ -6,7 +6,7 @@ export const memoryHowTo: HowTo = {
   description: "Learn how to use CLAUDE.md files to give Claude Code persistent context about your project",
   difficulty: "beginner",
   timeToComplete: "15 min",
-  tags: ["memory", "context", "CLAUDE.md", "getting-started"],
+  tags: ["configuration", "getting-started", "customization"],
   featured: true,
   author: {
     name: "Claude Directory",

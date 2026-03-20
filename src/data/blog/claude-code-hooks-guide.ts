@@ -11,13 +11,8 @@ export const claudeCodeHooksGuide: BlogPost = {
     "claude-code",
     "hooks",
     "automation",
-    "developer-tools",
     "tutorial",
-    "PreToolUse",
-    "PostToolUse",
-    "productivity",
     "best-practices",
-    "beginner-friendly",
   ],
   featured: true,
   author: {

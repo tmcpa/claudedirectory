@@ -9,15 +9,10 @@ export const claudeCodeRemoteControl: BlogPost = {
   publishedDate: "2026-03-19",
   tags: [
     "claude-code",
-    "remote-control",
-    "developer-tools",
     "tutorial",
     "productivity",
-    "mobile",
-    "MCP",
-    "best-practices",
-    "beginner-friendly",
     "workflows",
+    "getting-started",
   ],
   featured: true,
   author: {

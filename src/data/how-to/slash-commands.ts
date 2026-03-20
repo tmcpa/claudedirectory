@@ -6,7 +6,7 @@ export const slashCommandsHowTo: HowTo = {
   description: "Build your own slash commands to create reusable workflows in Claude Code",
   difficulty: "beginner",
   timeToComplete: "20 min",
-  tags: ["slash-commands", "automation", "productivity", "customization"],
+  tags: ["customization", "automation", "productivity"],
   featured: true,
   author: {
     name: "Claude Directory",

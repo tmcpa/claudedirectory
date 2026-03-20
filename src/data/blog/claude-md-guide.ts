@@ -8,12 +8,10 @@ export const claudeMdGuide: BlogPost = {
   publishedDate: "2026-02-10",
   tags: [
     "claude-code",
-    "claude-md",
     "configuration",
-    "best-practices",
     "tutorial",
-    "developer-tools",
-    "productivity",
+    "best-practices",
+    "customization",
   ],
   featured: true,
   author: {

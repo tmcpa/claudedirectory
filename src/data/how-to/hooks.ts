@@ -6,7 +6,7 @@ export const hooksHowTo: HowTo = {
   description: "Set up hooks to run scripts before and after Claude Code tool executions",
   difficulty: "intermediate",
   timeToComplete: "25 min",
-  tags: ["hooks", "automation", "events", "scripts"],
+  tags: ["hooks", "automation", "customization"],
   featured: false,
   author: {
     name: "Claude Directory",

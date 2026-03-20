@@ -6,7 +6,7 @@ export const gettingStartedHowTo: HowTo = {
   description: "A comprehensive guide to installing and configuring Claude Code for your development workflow",
   difficulty: "beginner",
   timeToComplete: "10 min",
-  tags: ["getting-started", "installation", "setup", "beginner"],
+  tags: ["getting-started", "claude-code", "tutorial"],
   featured: true,
   author: {
     name: "Claude Directory",

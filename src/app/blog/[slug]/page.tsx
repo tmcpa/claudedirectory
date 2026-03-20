@@ -6,12 +6,47 @@ import { Separator } from "@/components/ui/separator";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { blogPosts, getBlogPostBySlug } from "@/data/blog";
-import { ArrowLeft, Newspaper, User, Calendar, ExternalLink } from "lucide-react";
+import { ArrowLeft, Newspaper, User, Calendar, Clock, ExternalLink, List } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CodeBlock } from "@/components/code-block";
+import React from "react";
 
 const BASE_URL = "https://claudedirectory.org";
+
+function getReadingTime(content: string): number {
+  const words = content.trim().split(/\s+/).length;
+  return Math.ceil(words / 250);
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .trim();
+}
+
+function extractHeadings(content: string): { text: string; slug: string }[] {
+  const headingRegex = /^## (.+)$/gm;
+  const headings: { text: string; slug: string }[] = [];
+  let match;
+  while ((match = headingRegex.exec(content)) !== null) {
+    headings.push({ text: match[1], slug: slugify(match[1]) });
+  }
+  return headings;
+}
+
+function getTextContent(node: React.ReactNode): string {
+  if (typeof node === "string") return node;
+  if (typeof node === "number") return String(node);
+  if (!node) return "";
+  if (Array.isArray(node)) return node.map(getTextContent).join("");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const el = node as any;
+  if (el?.props?.children) return getTextContent(el.props.children);
+  return "";
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -77,6 +112,9 @@ export default async function BlogPostPage(props: Props) {
     day: "numeric",
   });
 
+  const readingTime = getReadingTime(post.content);
+  const headings = extractHeadings(post.content);
+
   return (
     <div className="container py-8 max-w-4xl">
       <ItemJsonLd
@@ -119,6 +157,10 @@ export default async function BlogPostPage(props: Props) {
             <Calendar className="h-4 w-4" />
             <span>{formattedDate}</span>
           </div>
+          <div className="flex items-center gap-1 text-sm text-muted-foreground">
+            <Clock className="h-4 w-4" />
+            <span>{readingTime} min read</span>
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -150,6 +192,27 @@ export default async function BlogPostPage(props: Props) {
 
         <Separator />
 
+        {headings.length > 2 && (
+          <nav className="rounded-lg border bg-card p-4">
+            <div className="flex items-center gap-2 text-sm font-medium mb-3">
+              <List className="h-4 w-4" />
+              <span>Table of Contents</span>
+            </div>
+            <ol className="space-y-1.5 text-sm text-muted-foreground list-decimal list-inside">
+              {headings.map((heading) => (
+                <li key={heading.slug}>
+                  <a
+                    href={`#${heading.slug}`}
+                    className="hover:text-foreground transition-colors"
+                  >
+                    {heading.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+
         <article className="prose prose-invert prose-sm max-w-none">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
@@ -180,7 +243,8 @@ export default async function BlogPostPage(props: Props) {
                 return <h2 className="text-2xl font-bold mt-8 mb-4">{children}</h2>;
               },
               h2({ children }) {
-                return <h2 className="text-xl font-semibold mt-6 mb-3">{children}</h2>;
+                const id = slugify(getTextContent(children));
+                return <h2 id={id} className="text-xl font-semibold mt-6 mb-3">{children}</h2>;
               },
               h3({ children }) {
                 return <h3 className="text-lg font-medium mt-4 mb-2">{children}</h3>;

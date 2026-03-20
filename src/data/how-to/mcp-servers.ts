@@ -6,7 +6,7 @@ export const mcpServersHowTo: HowTo = {
   description: "Connect Claude Code to external tools and services using the Model Context Protocol",
   difficulty: "intermediate",
   timeToComplete: "30 min",
-  tags: ["mcp", "integration", "tools", "servers"],
+  tags: ["mcp", "automation", "developer-tools"],
   featured: true,
   author: {
     name: "Claude Directory",

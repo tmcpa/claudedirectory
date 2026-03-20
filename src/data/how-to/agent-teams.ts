@@ -6,7 +6,7 @@ export const agentTeamsHowTo: HowTo = {
   description: "Learn how to use Claude Code's experimental Agent Teams feature to coordinate multiple Claude sessions working in parallel on a shared project",
   difficulty: "advanced",
   timeToComplete: "30 min",
-  tags: ["agent-teams", "multi-agent", "parallel", "experimental", "advanced"],
+  tags: ["agents", "advanced", "automation"],
   featured: true,
   dateAdded: "2026-03-11",
   author: {
