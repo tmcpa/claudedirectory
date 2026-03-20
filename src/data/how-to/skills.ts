@@ -12,6 +12,13 @@ export const skillsHowTo: HowTo = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "skill", slug: "commit", relationship: "recommends" },
+    { type: "skill", slug: "review", relationship: "recommends" },
+    { type: "skill", slug: "test-gen", relationship: "recommends" },
+    { type: "skill", slug: "api-docs", relationship: "recommends" },
+    { type: "skill", slug: "mcp-builder", relationship: "recommends" },
+  ],
   content: `# Building Custom Skills
 
 Skills are advanced automation capabilities that Claude can invoke automatically based on context.

@@ -12,6 +12,12 @@ export const pluginsHowTo: HowTo = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "plugin", slug: "code-review", relationship: "recommends" },
+    { type: "plugin", slug: "feature-dev", relationship: "recommends" },
+    { type: "plugin", slug: "frontend-design", relationship: "recommends" },
+    { type: "plugin", slug: "plugin-dev", relationship: "recommends" },
+  ],
   content: `# Installing and Using Plugins
 
 Plugins extend Claude Code with additional capabilities like code review, feature development workflows, and specialized tools.

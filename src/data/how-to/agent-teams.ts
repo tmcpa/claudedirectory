@@ -126,5 +126,8 @@ Claude will:
 `,
   relatedItems: [
     { type: "how-to", slug: "advanced-features", relationship: "works-with" },
+    { type: "agent", slug: "code-explorer", relationship: "recommends" },
+    { type: "agent", slug: "code-reviewer", relationship: "recommends" },
+    { type: "agent", slug: "code-architect", relationship: "recommends" },
   ],
 };

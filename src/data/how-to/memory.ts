@@ -12,6 +12,12 @@ export const memoryHowTo: HowTo = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "prompt", slug: "nextjs", relationship: "recommends" },
+    { type: "prompt", slug: "typescript", relationship: "recommends" },
+    { type: "prompt", slug: "python", relationship: "recommends" },
+    { type: "prompt", slug: "rust", relationship: "recommends" },
+  ],
   content: `# Using CLAUDE.md for Project Memory
 
 CLAUDE.md files provide persistent context to Claude Code across sessions. They're automatically loaded when Claude Code starts in a directory.

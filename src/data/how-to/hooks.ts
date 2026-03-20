@@ -12,6 +12,13 @@ export const hooksHowTo: HowTo = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "hook", slug: "format-on-save", relationship: "recommends" },
+    { type: "hook", slug: "lint-on-edit", relationship: "recommends" },
+    { type: "hook", slug: "notify-on-complete", relationship: "recommends" },
+    { type: "hook", slug: "auto-test", relationship: "recommends" },
+    { type: "hook", slug: "commit-lint", relationship: "recommends" },
+  ],
   content: `# Automating with Hooks
 
 Hooks let you run scripts in response to Claude Code events, enabling powerful automation workflows.

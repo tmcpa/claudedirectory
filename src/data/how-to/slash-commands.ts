@@ -12,6 +12,12 @@ export const slashCommandsHowTo: HowTo = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "skill", slug: "commit", relationship: "recommends" },
+    { type: "skill", slug: "review", relationship: "recommends" },
+    { type: "skill", slug: "pr", relationship: "recommends" },
+    { type: "skill", slug: "refactor", relationship: "recommends" },
+  ],
   content: `# Creating Custom Slash Commands
 
 Slash commands are user-invoked shortcuts that expand into full prompts. They're perfect for repetitive tasks.

@@ -12,6 +12,12 @@ export const advancedFeaturesHowTo: HowTo = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
+  relatedItems: [
+    { type: "agent", slug: "code-explorer", relationship: "recommends" },
+    { type: "agent", slug: "debugger", relationship: "recommends" },
+    { type: "agent", slug: "performance-optimizer", relationship: "recommends" },
+    { type: "agent", slug: "code-architect", relationship: "recommends" },
+  ],
   content: `# Advanced Claude Code Features
 
 Unlock Claude Code's full potential with these advanced features.
