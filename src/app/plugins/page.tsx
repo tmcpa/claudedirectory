@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { CollectionPageJsonLd } from "@/components/json-ld";
 import { plugins } from "@/data/plugins";
 import { PluginsListing } from "./_components/plugins-listing";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Best Claude Code Plugins (2026) - Install in One Command",

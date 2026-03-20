@@ -4,6 +4,7 @@ import Script from "next/script";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { WebsiteJsonLd } from "@/components/json-ld";
+import { BASE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +16,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const BASE_URL = "https://claudedirectory.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

@@ -11,8 +11,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CodeBlock } from "@/components/code-block";
 import React from "react";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 function getReadingTime(content: string): number {
   const words = content.trim().split(/\s+/).length;

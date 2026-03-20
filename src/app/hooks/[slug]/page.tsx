@@ -9,8 +9,7 @@ import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
 import { hooks, getHookBySlug } from "@/data/hooks";
 import { ArrowLeft, Webhook, User, ExternalLink } from "lucide-react";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 interface Props {
   params: Promise<{ slug: string }>;

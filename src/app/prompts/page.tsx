@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { CollectionPageJsonLd } from "@/components/json-ld";
 import { prompts } from "@/data/prompts";
 import { PromptsListing } from "./_components/prompts-listing";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Best CLAUDE.md Templates & Prompts for Every Tech Stack",

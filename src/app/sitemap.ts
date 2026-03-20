@@ -7,8 +7,7 @@ import { plugins, getAllPluginTags } from "@/data/plugins";
 import { howTos, getAllHowToTags } from "@/data/how-to";
 import { agents, getAllAgentTags } from "@/data/agents";
 import { blogPosts, getAllBlogPostTags } from "@/data/blog";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

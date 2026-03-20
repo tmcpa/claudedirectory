@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { CollectionPageJsonLd } from "@/components/json-ld";
 import { skills } from "@/data/skills";
 import { SkillsListing } from "./_components/skills-listing";
-
-const BASE_URL = "https://claudedirectory.org";
+import { BASE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Claude Code Skills - Custom Slash Commands You Can Copy Today",
