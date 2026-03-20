@@ -10,8 +10,10 @@ import { anthropicClaudeCertificationProgram } from "./anthropic-claude-certific
 import { howToCreateClaudeSkills } from "./how-to-create-claude-skills";
 import { claudeSkillsNonCodingUseCases } from "./claude-skills-non-coding-use-cases";
 import { claudeCodeRemoteControl } from "./claude-code-remote-control";
+import { isMcpDead } from "./is-mcp-dead";
 
 export const blogPosts: BlogPost[] = [
+  isMcpDead,
   claudeCodeRemoteControl,
   claudeSkillsNonCodingUseCases,
   howToCreateClaudeSkills,
