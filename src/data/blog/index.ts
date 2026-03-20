@@ -9,8 +9,10 @@ import { bestClaudeCodePlugins } from "./best-claude-code-plugins";
 import { anthropicClaudeCertificationProgram } from "./anthropic-claude-certification-program";
 import { howToCreateClaudeSkills } from "./how-to-create-claude-skills";
 import { claudeSkillsNonCodingUseCases } from "./claude-skills-non-coding-use-cases";
+import { claudeCodeRemoteControl } from "./claude-code-remote-control";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeRemoteControl,
   claudeSkillsNonCodingUseCases,
   howToCreateClaudeSkills,
   anthropicClaudeCertificationProgram,
