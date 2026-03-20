@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import { blogPosts } from "@/data/blog";
 import { getRecentlyAdded } from "@/data/recently-added";
 
