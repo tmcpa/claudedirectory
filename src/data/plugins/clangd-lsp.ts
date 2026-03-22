@@ -10,7 +10,7 @@ export const clangdLspPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/lsp_plugins/clangd-lsp",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add clangd-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {

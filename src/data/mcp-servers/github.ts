@@ -7,10 +7,10 @@ export const githubServer: MCPServer = {
   tags: ["github", "git", "vcs", "official"],
   featured: true,
   author: {
-    name: "Anthropic",
-    url: "https://github.com/anthropics",
+    name: "GitHub",
+    url: "https://github.com/github",
   },
-  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+  repoUrl: "https://github.com/github/github-mcp-server",
   installCommand: "npm install -g @anthropic-ai/mcp-server-github",
   config: `{
   "mcpServers": {

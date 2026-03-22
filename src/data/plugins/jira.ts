@@ -10,7 +10,7 @@ export const jiraPlugin: Plugin = {
     name: "Atlassian",
     url: "https://www.atlassian.com/software/jira",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/jira",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add jira@claude-plugins-official",
   config: `{
   "enabledPlugins": {

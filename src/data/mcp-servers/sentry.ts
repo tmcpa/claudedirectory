@@ -7,10 +7,10 @@ export const sentryServer: MCPServer = {
   tags: ["sentry", "errors", "monitoring", "debugging", "official"],
   featured: false,
   author: {
-    name: "Anthropic",
-    url: "https://github.com/anthropics",
+    name: "Sentry",
+    url: "https://github.com/getsentry",
   },
-  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/sentry",
+  repoUrl: "https://github.com/getsentry/sentry-mcp",
   installCommand: "npm install -g @anthropic-ai/mcp-server-sentry",
   config: `{
   "mcpServers": {

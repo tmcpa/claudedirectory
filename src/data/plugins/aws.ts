@@ -10,7 +10,7 @@ export const awsPlugin: Plugin = {
     name: "Amazon",
     url: "https://aws.amazon.com",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/aws",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add aws@claude-plugins-official",
   config: `{
   "enabledPlugins": {

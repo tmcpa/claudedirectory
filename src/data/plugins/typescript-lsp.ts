@@ -10,7 +10,7 @@ export const typescriptLspPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/lsp_plugins/typescript-lsp",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add typescript-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {

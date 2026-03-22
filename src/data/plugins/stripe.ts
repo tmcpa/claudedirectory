@@ -16,7 +16,7 @@ export const stripePlugin: Plugin = {
     "stripe@claude-plugins-official": true
   }
 }`,
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/stripe",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   commands: [
     { name: "/stripe-test", description: "Test Stripe integration with test mode" },
     { name: "/stripe-webhook", description: "Set up and verify webhook handlers" },
