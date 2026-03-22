@@ -10,7 +10,7 @@ export const resendServer: MCPServer = {
     name: "Resend",
     url: "https://github.com/resend",
   },
-  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/resend",
+  repoUrl: "https://github.com/resend/resend-mcp",
   installCommand: "npm install -g @anthropic-ai/mcp-server-resend",
   config: `{
   "mcpServers": {

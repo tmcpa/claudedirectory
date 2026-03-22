@@ -11,7 +11,7 @@ export const chromeDevtoolsPlugin: Plugin = {
     name: "Google",
     url: "https://developer.chrome.com/docs/devtools",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/chrome-devtools",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add chrome-devtools@claude-plugins-official",
   config: `{
   "enabledPlugins": {

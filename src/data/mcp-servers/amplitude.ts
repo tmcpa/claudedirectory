@@ -11,7 +11,7 @@ export const amplitudeServer: MCPServer = {
     name: "Amplitude",
     url: "https://amplitude.com",
   },
-  repoUrl: "https://github.com/amplitude/amplitude-mcp",
+  repoUrl: "https://amplitude.com/docs/apis",
   installCommand: "npm install -g @amplitude/mcp-server",
   config: `{
   "mcpServers": {

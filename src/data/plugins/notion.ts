@@ -10,7 +10,7 @@ export const notionPlugin: Plugin = {
     name: "Notion",
     url: "https://notion.so",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/notion",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add notion@claude-plugins-official",
   config: `{
   "enabledPlugins": {

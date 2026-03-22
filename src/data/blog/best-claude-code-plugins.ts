@@ -437,5 +437,5 @@ The Claude Code plugin ecosystem is growing fast. A year ago there were a handfu
 
 The best way to stay current is to browse the [plugins directory](/plugins) and experiment. Install something, use it for a week, and keep what sticks. The plugins that save you time on day one will save you hundreds of hours over a year.
 
-If you're building your own plugin, check out the [Plugin Dev plugin](https://claudedirectory.com/plugins/plugin-dev) — yes, there's a plugin for building plugins. That's the ecosystem we're in now, and honestly, it's great.`,
+If you're building your own plugin, check out the [Plugin Dev plugin](https://www.claudedirectory.org/plugins/plugin-dev) — yes, there's a plugin for building plugins. That's the ecosystem we're in now, and honestly, it's great.`,
 };

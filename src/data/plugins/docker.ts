@@ -10,7 +10,7 @@ export const dockerPlugin: Plugin = {
     name: "Docker",
     url: "https://docker.com",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/docker",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add docker@claude-plugins-official",
   config: `{
   "enabledPlugins": {

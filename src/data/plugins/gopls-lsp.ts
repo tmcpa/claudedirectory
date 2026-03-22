@@ -10,7 +10,7 @@ export const goplsLspPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/lsp_plugins/gopls-lsp",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add gopls-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {

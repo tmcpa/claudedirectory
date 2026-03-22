@@ -11,7 +11,7 @@ export const azureServer: MCPServer = {
     name: "Microsoft",
     url: "https://github.com/microsoft",
   },
-  repoUrl: "https://github.com/microsoft/azure-mcp",
+  repoUrl: "https://github.com/Azure/azure-mcp",
   installCommand: "npm install -g @azure/mcp-server",
   config: `{
   "mcpServers": {

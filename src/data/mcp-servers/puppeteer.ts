@@ -8,7 +8,7 @@ export const puppeteerServer: MCPServer = {
   author: {
     name: "MCP Community",
   },
-  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+  repoUrl: "https://github.com/modelcontextprotocol/servers",
   installCommand: "npm install -g @anthropic-ai/mcp-server-puppeteer",
   config: `{
   "mcpServers": {

@@ -10,7 +10,7 @@ export const figmaPlugin: Plugin = {
     name: "Figma",
     url: "https://figma.com",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/figma",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add figma@claude-plugins-official",
   config: `{
   "enabledPlugins": {

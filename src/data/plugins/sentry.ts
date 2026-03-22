@@ -10,7 +10,7 @@ export const sentryPlugin: Plugin = {
     name: "Sentry",
     url: "https://sentry.io",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/sentry",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add sentry@claude-plugins-official",
   config: `{
   "enabledPlugins": {

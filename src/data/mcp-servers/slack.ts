@@ -10,7 +10,7 @@ export const slackServer: MCPServer = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+  repoUrl: "https://github.com/modelcontextprotocol/servers",
   installCommand: "npm install -g @anthropic-ai/mcp-server-slack",
   config: `{
   "mcpServers": {

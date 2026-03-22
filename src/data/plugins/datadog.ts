@@ -10,7 +10,7 @@ export const datadogPlugin: Plugin = {
     name: "Datadog",
     url: "https://datadoghq.com",
   },
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/datadog",
+  repoUrl: "https://github.com/anthropics/claude-plugins-official",
   installCommand: "claude plugins add datadog@claude-plugins-official",
   config: `{
   "enabledPlugins": {

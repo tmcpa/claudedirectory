@@ -12,6 +12,11 @@ import { swiftPrompt } from "./swift";
 import { laravelPrompt } from "./laravel";
 import { csharpDotnetPrompt } from "./csharp-dotnet";
 import { kotlinAndroidPrompt } from "./kotlin-android";
+import { flutterPrompt } from "./flutter";
+import { angularPrompt } from "./angular";
+import { djangoPrompt } from "./django";
+import { sveltekitPrompt } from "./sveltekit";
+import { astroPrompt } from "./astro";
 
 export const prompts: Prompt[] = [
   nextjsPrompt,
@@ -27,6 +32,11 @@ export const prompts: Prompt[] = [
   laravelPrompt,
   csharpDotnetPrompt,
   kotlinAndroidPrompt,
+  flutterPrompt,
+  angularPrompt,
+  djangoPrompt,
+  sveltekitPrompt,
+  astroPrompt,
 ];
 
 export function getPromptBySlug(slug: string): Prompt | undefined {

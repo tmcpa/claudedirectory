@@ -80,6 +80,18 @@ import { netlifyServer } from "./netlify";
 import { digitaloceanServer } from "./digitalocean";
 // Analytics
 import { amplitudeServer } from "./amplitude";
+// New additions
+import { mysqlServer } from "./mysql";
+import { gitlabServer } from "./gitlab";
+import { circleciServer } from "./circleci";
+import { qdrantServer } from "./qdrant";
+import { semgrepServer } from "./semgrep";
+import { tinybirdServer } from "./tinybird";
+import { axiomServer } from "./axiom";
+import { newrelicServer } from "./newrelic";
+import { trelloServer } from "./trello";
+import { googleColabServer } from "./google-colab";
+import { apifyServer } from "./apify";
 
 export const mcpServers: MCPServer[] = [
   // Featured servers first
@@ -177,6 +189,18 @@ export const mcpServers: MCPServer[] = [
   digitaloceanServer,
   // Product Analytics
   amplitudeServer,
+  // New additions
+  mysqlServer,
+  gitlabServer,
+  circleciServer,
+  qdrantServer,
+  semgrepServer,
+  tinybirdServer,
+  axiomServer,
+  newrelicServer,
+  trelloServer,
+  googleColabServer,
+  apifyServer,
 ];
 
 export function getMCPServerBySlug(slug: string): MCPServer | undefined {

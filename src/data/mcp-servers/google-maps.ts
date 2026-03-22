@@ -10,7 +10,7 @@ export const googleMapsServer: MCPServer = {
     name: "Google",
     url: "https://github.com/googleapis",
   },
-  repoUrl: "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
+  repoUrl: "https://github.com/modelcontextprotocol/servers",
   installCommand: "npm install -g @anthropic-ai/mcp-server-google-maps",
   config: `{
   "mcpServers": {
