@@ -11,8 +11,10 @@ import { howToCreateClaudeSkills } from "./how-to-create-claude-skills";
 import { claudeSkillsNonCodingUseCases } from "./claude-skills-non-coding-use-cases";
 import { claudeCodeRemoteControl } from "./claude-code-remote-control";
 import { isMcpDead } from "./is-mcp-dead";
+import { claudeCodeAgentsGuide } from "./claude-code-agents-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeAgentsGuide,
   isMcpDead,
   claudeCodeRemoteControl,
   claudeSkillsNonCodingUseCases,
