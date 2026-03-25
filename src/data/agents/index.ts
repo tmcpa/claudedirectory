@@ -41,6 +41,8 @@ import { blockchainDeveloperAgent } from "./blockchain-developer";
 import { sreEngineerAgent } from "./sre-engineer";
 import { iosDeveloperAgent } from "./ios-developer";
 import { technicalWriterAgent } from "./technical-writer";
+import { vibeCoderAgent } from "./vibe-coder";
+import { designSystemEngineerAgent } from "./design-system-engineer";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -85,6 +87,8 @@ export const agents: Agent[] = [
   sreEngineerAgent,
   iosDeveloperAgent,
   technicalWriterAgent,
+  vibeCoderAgent,
+  designSystemEngineerAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

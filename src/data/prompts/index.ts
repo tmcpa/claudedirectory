@@ -17,6 +17,8 @@ import { angularPrompt } from "./angular";
 import { djangoPrompt } from "./django";
 import { sveltekitPrompt } from "./sveltekit";
 import { astroPrompt } from "./astro";
+import { elixirPhoenixPrompt } from "./elixir-phoenix";
+import { remixPrompt } from "./remix";
 
 export const prompts: Prompt[] = [
   nextjsPrompt,
@@ -37,6 +39,8 @@ export const prompts: Prompt[] = [
   djangoPrompt,
   sveltekitPrompt,
   astroPrompt,
+  elixirPhoenixPrompt,
+  remixPrompt,
 ];
 
 export function getPromptBySlug(slug: string): Prompt | undefined {
