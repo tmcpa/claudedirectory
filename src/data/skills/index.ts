@@ -23,6 +23,8 @@ import { securityAuditSkill } from "./security-audit";
 import { dockerComposeSkill } from "./docker-compose";
 import { perfBenchmarkSkill } from "./perf-benchmark";
 import { gitBisectSkill } from "./git-bisect";
+import { vibeCodeSkill } from "./vibe-code";
+import { monorepoManagerSkill } from "./monorepo-manager";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -51,6 +53,8 @@ export const skills: Skill[] = [
   dockerComposeSkill,
   perfBenchmarkSkill,
   gitBisectSkill,
+  vibeCodeSkill,
+  monorepoManagerSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

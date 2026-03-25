@@ -12,8 +12,12 @@ import { claudeSkillsNonCodingUseCases } from "./claude-skills-non-coding-use-ca
 import { claudeCodeRemoteControl } from "./claude-code-remote-control";
 import { isMcpDead } from "./is-mcp-dead";
 import { claudeCodeAgentsGuide } from "./claude-code-agents-guide";
+import { vibeCodingClaudeCode } from "./vibe-coding-claude-code";
+import { claudeCodeSubagentsGuide } from "./claude-code-subagents-guide";
 
 export const blogPosts: BlogPost[] = [
+  vibeCodingClaudeCode,
+  claudeCodeSubagentsGuide,
   claudeCodeAgentsGuide,
   isMcpDead,
   claudeCodeRemoteControl,

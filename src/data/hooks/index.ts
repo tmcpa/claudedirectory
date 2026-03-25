@@ -15,6 +15,8 @@ import { bundleSizeCheckHook } from "./bundle-size-check";
 import { promptInjectionDefenseHook } from "./prompt-injection-defense";
 import { safeCommandApprovalHook } from "./safe-command-approval";
 import { fileSizeGuardHook } from "./file-size-guard";
+import { autoChangelogHook } from "./auto-changelog";
+import { deadCodeDetectorHook } from "./dead-code-detector";
 
 export const hooks: Hook[] = [
   lintOnEditHook,
@@ -33,6 +35,8 @@ export const hooks: Hook[] = [
   promptInjectionDefenseHook,
   safeCommandApprovalHook,
   fileSizeGuardHook,
+  autoChangelogHook,
+  deadCodeDetectorHook,
 ];
 
 export function getHookBySlug(slug: string): Hook | undefined {
