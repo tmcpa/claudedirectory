@@ -160,9 +160,9 @@ export default async function HookDetailPage(props: Props) {
         <div className="bg-accent/50 rounded-lg p-4">
           <h3 className="font-semibold mb-2">How to use</h3>
           <ol className="list-decimal list-inside space-y-1 text-sm text-muted-foreground">
-            <li>Create a hooks directory in your project: mkdir hooks</li>
-            <li>Save the hook script as hooks/{hook.slug}.sh</li>
-            <li>Make it executable: chmod +x hooks/{hook.slug}.sh</li>
+            <li>Create a hooks directory in your project: <code className="bg-muted px-1.5 py-0.5 rounded text-xs">mkdir hooks</code></li>
+            <li>Save the hook script as <code className="bg-muted px-1.5 py-0.5 rounded text-xs">hooks/{hook.slug}.sh</code></li>
+            <li>Make it executable: <code className="bg-muted px-1.5 py-0.5 rounded text-xs">chmod +x hooks/{hook.slug}.sh</code></li>
             <li>Add the configuration to your Claude Code settings</li>
             <li>Restart Claude Code to apply changes</li>
           </ol>
