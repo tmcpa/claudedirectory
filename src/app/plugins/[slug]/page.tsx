@@ -153,8 +153,8 @@ export default async function PluginDetailPage(props: Props) {
                   key={command.name}
                   className="flex items-start gap-3 p-3 bg-muted rounded-lg"
                 >
-                  <code className="font-mono text-sm font-semibold text-primary">
-                    {command.name}
+                  <code className="font-mono text-sm font-semibold text-primary whitespace-nowrap before:content-['/']">
+                    {command.name.replace(/^\//, "")}
                   </code>
                   <span className="text-sm text-muted-foreground">
                     {command.description}

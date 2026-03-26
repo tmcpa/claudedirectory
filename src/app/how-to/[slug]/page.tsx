@@ -167,7 +167,25 @@ export default async function HowToDetailPage(props: Props) {
                   />
                 );
               },
-              pre({ children }) {
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              pre({ children, node }: any) {
+                const codeChild = node?.children?.find(
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  (child: any) => child.type === "element" && child.tagName === "code"
+                );
+                if (codeChild) {
+                  const cls = (codeChild.properties?.className as string[] | undefined)?.[0] || "";
+                  const langMatch = /language-(\w+)/.exec(cls);
+                  if (!langMatch) {
+                    const text = codeChild.children
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      ?.filter((c: any) => c.type === "text")
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      .map((c: any) => c.value)
+                      .join("") || "";
+                    return <CodeBlock code={text.replace(/\n$/, "")} language="text" />;
+                  }
+                }
                 return <>{children}</>;
               },
               h1({ children }) {
