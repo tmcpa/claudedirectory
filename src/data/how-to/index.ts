@@ -9,6 +9,7 @@ import { pluginsHowTo } from "./plugins";
 import { advancedFeaturesHowTo } from "./advanced-features";
 import { agentTeamsHowTo } from "./agent-teams";
 import { contextWindowHowTo } from "./context-window";
+import { removeCoAuthoredByHowTo } from "./remove-co-authored-by";
 
 export const howTos: HowTo[] = [
   gettingStartedHowTo,
@@ -21,6 +22,7 @@ export const howTos: HowTo[] = [
   advancedFeaturesHowTo,
   agentTeamsHowTo,
   contextWindowHowTo,
+  removeCoAuthoredByHowTo,
 ];
 
 export function getHowToBySlug(slug: string): HowTo | undefined {
