@@ -14,8 +14,10 @@ import { isMcpDead } from "./is-mcp-dead";
 import { claudeCodeAgentsGuide } from "./claude-code-agents-guide";
 import { vibeCodingClaudeCode } from "./vibe-coding-claude-code";
 import { claudeCodeSubagentsGuide } from "./claude-code-subagents-guide";
+import { claudeDispatchGuide } from "./claude-dispatch-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeDispatchGuide,
   vibeCodingClaudeCode,
   claudeCodeSubagentsGuide,
   claudeCodeAgentsGuide,
