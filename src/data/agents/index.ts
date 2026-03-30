@@ -43,6 +43,9 @@ import { iosDeveloperAgent } from "./ios-developer";
 import { technicalWriterAgent } from "./technical-writer";
 import { vibeCoderAgent } from "./vibe-coder";
 import { designSystemEngineerAgent } from "./design-system-engineer";
+import { gameDeveloperAgent } from "./game-developer";
+import { embeddedSystemsAgent } from "./embedded-systems";
+import { devrelEngineerAgent } from "./devrel-engineer";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -89,6 +92,9 @@ export const agents: Agent[] = [
   technicalWriterAgent,
   vibeCoderAgent,
   designSystemEngineerAgent,
+  gameDeveloperAgent,
+  embeddedSystemsAgent,
+  devrelEngineerAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {

@@ -19,6 +19,8 @@ import { sveltekitPrompt } from "./sveltekit";
 import { astroPrompt } from "./astro";
 import { elixirPhoenixPrompt } from "./elixir-phoenix";
 import { remixPrompt } from "./remix";
+import { terraformPrompt } from "./terraform";
+import { haskellPrompt } from "./haskell";
 
 export const prompts: Prompt[] = [
   nextjsPrompt,
@@ -41,6 +43,8 @@ export const prompts: Prompt[] = [
   astroPrompt,
   elixirPhoenixPrompt,
   remixPrompt,
+  terraformPrompt,
+  haskellPrompt,
 ];
 
 export function getPromptBySlug(slug: string): Prompt | undefined {
