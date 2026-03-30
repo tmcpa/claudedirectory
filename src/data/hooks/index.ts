@@ -17,6 +17,8 @@ import { safeCommandApprovalHook } from "./safe-command-approval";
 import { fileSizeGuardHook } from "./file-size-guard";
 import { autoChangelogHook } from "./auto-changelog";
 import { deadCodeDetectorHook } from "./dead-code-detector";
+import { testCoverageGuardHook } from "./test-coverage-guard";
+import { autoPrDescriptionHook } from "./auto-pr-description";
 
 export const hooks: Hook[] = [
   lintOnEditHook,
@@ -37,6 +39,8 @@ export const hooks: Hook[] = [
   fileSizeGuardHook,
   autoChangelogHook,
   deadCodeDetectorHook,
+  testCoverageGuardHook,
+  autoPrDescriptionHook,
 ];
 
 export function getHookBySlug(slug: string): Hook | undefined {

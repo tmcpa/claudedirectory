@@ -10,6 +10,8 @@ import { advancedFeaturesHowTo } from "./advanced-features";
 import { agentTeamsHowTo } from "./agent-teams";
 import { contextWindowHowTo } from "./context-window";
 import { removeCoAuthoredByHowTo } from "./remove-co-authored-by";
+import { debuggingHowTo } from "./debugging";
+import { cicdIntegrationHowTo } from "./cicd-integration";
 
 export const howTos: HowTo[] = [
   gettingStartedHowTo,
@@ -23,6 +25,8 @@ export const howTos: HowTo[] = [
   agentTeamsHowTo,
   contextWindowHowTo,
   removeCoAuthoredByHowTo,
+  debuggingHowTo,
+  cicdIntegrationHowTo,
 ];
 
 export function getHowToBySlug(slug: string): HowTo | undefined {

@@ -25,6 +25,8 @@ import { perfBenchmarkSkill } from "./perf-benchmark";
 import { gitBisectSkill } from "./git-bisect";
 import { vibeCodeSkill } from "./vibe-code";
 import { monorepoManagerSkill } from "./monorepo-manager";
+import { regexBuilderSkill } from "./regex-builder";
+import { envSetupSkill } from "./env-setup";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -55,6 +57,8 @@ export const skills: Skill[] = [
   gitBisectSkill,
   vibeCodeSkill,
   monorepoManagerSkill,
+  regexBuilderSkill,
+  envSetupSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {
