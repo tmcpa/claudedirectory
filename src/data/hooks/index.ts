@@ -19,6 +19,7 @@ import { autoChangelogHook } from "./auto-changelog";
 import { deadCodeDetectorHook } from "./dead-code-detector";
 import { testCoverageGuardHook } from "./test-coverage-guard";
 import { autoPrDescriptionHook } from "./auto-pr-description";
+import { envLeakDetectorHook } from "./env-leak-detector";
 
 export const hooks: Hook[] = [
   lintOnEditHook,
@@ -41,6 +42,7 @@ export const hooks: Hook[] = [
   deadCodeDetectorHook,
   testCoverageGuardHook,
   autoPrDescriptionHook,
+  envLeakDetectorHook,
 ];
 
 export function getHookBySlug(slug: string): Hook | undefined {

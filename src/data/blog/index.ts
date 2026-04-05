@@ -16,8 +16,10 @@ import { vibeCodingClaudeCode } from "./vibe-coding-claude-code";
 import { claudeCodeSubagentsGuide } from "./claude-code-subagents-guide";
 import { contextEngineeringClaudeCode } from "./context-engineering-claude-code";
 import { claudeDispatchGuide } from "./claude-dispatch-guide";
+import { claudeOpus4MillionTokenEra } from "./claude-opus-4-million-token-era";
 
 export const blogPosts: BlogPost[] = [
+  claudeOpus4MillionTokenEra,
   contextEngineeringClaudeCode,
   claudeDispatchGuide,
   vibeCodingClaudeCode,
