@@ -12,6 +12,7 @@ import { contextWindowHowTo } from "./context-window";
 import { removeCoAuthoredByHowTo } from "./remove-co-authored-by";
 import { debuggingHowTo } from "./debugging";
 import { cicdIntegrationHowTo } from "./cicd-integration";
+import { multiPlatformSetupHowTo } from "./multi-platform-setup";
 
 export const howTos: HowTo[] = [
   gettingStartedHowTo,
@@ -27,6 +28,7 @@ export const howTos: HowTo[] = [
   removeCoAuthoredByHowTo,
   debuggingHowTo,
   cicdIntegrationHowTo,
+  multiPlatformSetupHowTo,
 ];
 
 export function getHowToBySlug(slug: string): HowTo | undefined {

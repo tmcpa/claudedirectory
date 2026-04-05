@@ -27,6 +27,7 @@ import { vibeCodeSkill } from "./vibe-code";
 import { monorepoManagerSkill } from "./monorepo-manager";
 import { regexBuilderSkill } from "./regex-builder";
 import { envSetupSkill } from "./env-setup";
+import { codeWalkthroughSkill } from "./code-walkthrough";
 
 export const skills: Skill[] = [
   commitSkill,
@@ -59,6 +60,7 @@ export const skills: Skill[] = [
   monorepoManagerSkill,
   regexBuilderSkill,
   envSetupSkill,
+  codeWalkthroughSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {

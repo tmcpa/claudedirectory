@@ -21,6 +21,7 @@ import { elixirPhoenixPrompt } from "./elixir-phoenix";
 import { remixPrompt } from "./remix";
 import { terraformPrompt } from "./terraform";
 import { haskellPrompt } from "./haskell";
+import { fastapiPrompt } from "./fastapi";
 
 export const prompts: Prompt[] = [
   nextjsPrompt,
@@ -45,6 +46,7 @@ export const prompts: Prompt[] = [
   remixPrompt,
   terraformPrompt,
   haskellPrompt,
+  fastapiPrompt,
 ];
 
 export function getPromptBySlug(slug: string): Prompt | undefined {
