@@ -17,8 +17,10 @@ import { claudeCodeSubagentsGuide } from "./claude-code-subagents-guide";
 import { contextEngineeringClaudeCode } from "./context-engineering-claude-code";
 import { claudeDispatchGuide } from "./claude-dispatch-guide";
 import { claudeOpus4MillionTokenEra } from "./claude-opus-4-million-token-era";
+import { blogClaudeManagedAgents } from "./blog-claude-managed-agents";
 
 export const blogPosts: BlogPost[] = [
+  blogClaudeManagedAgents,
   claudeOpus4MillionTokenEra,
   contextEngineeringClaudeCode,
   claudeDispatchGuide,
