@@ -22,8 +22,10 @@ import { remixPrompt } from "./remix";
 import { terraformPrompt } from "./terraform";
 import { haskellPrompt } from "./haskell";
 import { fastapiPrompt } from "./fastapi";
+import { bunHonoPrompt } from "./bun-hono";
 
 export const prompts: Prompt[] = [
+  bunHonoPrompt,
   nextjsPrompt,
   pythonPrompt,
   typescriptPrompt,

@@ -47,6 +47,7 @@ import { gameDeveloperAgent } from "./game-developer";
 import { embeddedSystemsAgent } from "./embedded-systems";
 import { devrelEngineerAgent } from "./devrel-engineer";
 import { fullStackDeveloperAgent } from "./full-stack-developer";
+import { observabilityEngineerAgent } from "./observability-engineer";
 
 export const agents: Agent[] = [
   typescriptProAgent,
@@ -97,6 +98,7 @@ export const agents: Agent[] = [
   embeddedSystemsAgent,
   devrelEngineerAgent,
   fullStackDeveloperAgent,
+  observabilityEngineerAgent,
 ];
 
 export function getAgentBySlug(slug: string): Agent | undefined {
