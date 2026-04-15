@@ -28,8 +28,10 @@ import { monorepoManagerSkill } from "./monorepo-manager";
 import { regexBuilderSkill } from "./regex-builder";
 import { envSetupSkill } from "./env-setup";
 import { codeWalkthroughSkill } from "./code-walkthrough";
+import { sqlOptimizerSkill } from "./sql-optimizer";
 
 export const skills: Skill[] = [
+  sqlOptimizerSkill,
   commitSkill,
   prSkill,
   reviewSkill,

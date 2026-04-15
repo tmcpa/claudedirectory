@@ -20,8 +20,10 @@ import { deadCodeDetectorHook } from "./dead-code-detector";
 import { testCoverageGuardHook } from "./test-coverage-guard";
 import { autoPrDescriptionHook } from "./auto-pr-description";
 import { envLeakDetectorHook } from "./env-leak-detector";
+import { dependencyVulnCheckHook } from "./dependency-vuln-check";
 
 export const hooks: Hook[] = [
+  dependencyVulnCheckHook,
   lintOnEditHook,
   formatOnSaveHook,
   notifyOnCompleteHook,
