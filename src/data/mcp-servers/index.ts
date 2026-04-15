@@ -7,6 +7,7 @@ import { bigqueryServer } from "./bigquery";
 import { blueskyServer } from "./bluesky";
 import { braveSearchServer } from "./brave-search";
 import { browserbaseServer } from "./browserbase";
+import { skyvernServer } from "./skyvern";
 import { cloudflareServer } from "./cloudflare";
 import { context7Server } from "./context7";
 import { datadogServer } from "./datadog";
@@ -156,6 +157,7 @@ export const mcpServers: MCPServer[] = [
   // Developer Tools
   context7Server,
   browserbaseServer,
+  skyvernServer,
   resendServer,
   // CRM & Business
   hubspotServer,
