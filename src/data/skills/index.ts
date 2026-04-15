@@ -29,6 +29,7 @@ import { regexBuilderSkill } from "./regex-builder";
 import { envSetupSkill } from "./env-setup";
 import { codeWalkthroughSkill } from "./code-walkthrough";
 import { sqlOptimizerSkill } from "./sql-optimizer";
+import { skyvernSkill } from "./skyvern-skill";
 
 export const skills: Skill[] = [
   sqlOptimizerSkill,
@@ -63,6 +64,7 @@ export const skills: Skill[] = [
   regexBuilderSkill,
   envSetupSkill,
   codeWalkthroughSkill,
+  skyvernSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {
