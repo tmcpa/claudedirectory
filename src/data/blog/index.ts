@@ -19,8 +19,10 @@ import { claudeDispatchGuide } from "./claude-dispatch-guide";
 import { claudeOpus4MillionTokenEra } from "./claude-opus-4-million-token-era";
 import { blogClaudeManagedAgents } from "./blog-claude-managed-agents";
 import { claudeCodeAutoMemoryGuide } from "./claude-code-auto-memory-guide";
+import { claudeOpus47DeepReasoning } from "./claude-opus-4-7-deep-reasoning";
 
 export const blogPosts: BlogPost[] = [
+  claudeOpus47DeepReasoning,
   claudeCodeAutoMemoryGuide,
   blogClaudeManagedAgents,
   claudeOpus4MillionTokenEra,
