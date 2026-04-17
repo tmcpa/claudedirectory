@@ -3,19 +3,19 @@ import { BlogPost } from "@/lib/types";
 export const designingWithClaude: BlogPost = {
   slug: "designing-with-claude",
   title:
-    "Designing with Claude: A Practical Guide to AI-Assisted UI, UX, and System Design",
+    "Claude Design Is Here: Anthropic Labs Launches a Prototype, Slide, and One-Pager Generator",
   description:
-    "How to use Claude for real design work — from wireframes and component systems to product flows and architecture diagrams. A hands-on guide to making Claude a genuine design collaborator, not just a code generator.",
+    "Anthropic Labs just launched Claude Design — a new research preview that turns prompts into prototypes, slides, and one-pagers, powered by Opus 4.7. Here's what it is, how it works, and how to use it alongside Claude Code for real design workflows.",
   publishedDate: "2026-04-17",
   tags: [
     "claude-design",
+    "anthropic-labs",
     "ui-design",
     "ux-design",
-    "system-design",
-    "design-workflow",
-    "claude-code",
-    "ai-design",
     "product-design",
+    "claude-opus-4-7",
+    "claude-code",
+    "design-workflow",
   ],
   featured: true,
   author: {
@@ -23,6 +23,11 @@ export const designingWithClaude: BlogPost = {
     url: "https://github.com/tmcpa/claudedirectory",
   },
   relatedItems: [
+    {
+      type: "blog",
+      slug: "claude-opus-4-7-deep-reasoning",
+      relationship: "recommends",
+    },
     {
       type: "blog",
       slug: "vibe-coding-claude-code",
@@ -38,229 +43,183 @@ export const designingWithClaude: BlogPost = {
       slug: "claude-code-workflows-10x-productivity",
       relationship: "recommends",
     },
-    {
-      type: "blog",
-      slug: "claude-opus-4-7-deep-reasoning",
-      relationship: "recommends",
-    },
   ],
-  content: `# Designing with Claude: A Practical Guide to AI-Assisted UI, UX, and System Design
+  content: `# Claude Design Is Here: Anthropic Labs Launches a Prototype, Slide, and One-Pager Generator
 
-Most of the conversation about Claude happens in the coding lane: generate this function, refactor that module, fix this bug. That's a fair framing — Claude Code is very good at code. But it undersells what the model can actually do.
+Anthropic Labs dropped **Claude Design** today — a research-preview product that lets you make prototypes, slides, and one-pagers by talking to Claude. Powered by Opus 4.7, it's Anthropic's most direct move yet into the design tool space, and it lands on the same stage as Figma, Canva, and the long tail of AI slide generators.
 
-Design is where Claude quietly shines. Not because it replaces designers, but because it collapses the distance between an idea and something you can react to. A rough UX sketch, a component API, a system diagram, a critique of your information architecture — all ten minutes away instead of an afternoon.
+Short version: you describe what you want, Claude builds a visual artifact, and you refine it through conversation, inline comments, or purpose-built sliders. It reads your design system and codebase so the output matches your brand. You export to PDF, PPTX, a live URL, or push it straight to Canva for collaborative editing.
 
-This post is a field guide to using Claude for real design work. UI, UX, product, and system design. What works, what doesn't, and the specific workflows that make Claude a design collaborator instead of a code machine with a design costume on.
-
----
-
-## Why "Claude Design" Is Actually A Thing
-
-Design is a pipeline of decisions under ambiguity. You start with a vague goal ("users can't find settings"), you generate options, you reason about tradeoffs, you converge on something, and you externalize it as an artifact — a wireframe, a flow, a doc, a Figma frame, a spec.
-
-Claude is good at every step of that pipeline except the final Figma-rendering one:
-
-- **Reframing the problem.** You describe the symptom; Claude helps you name the underlying job-to-be-done.
-- **Generating options.** Three layouts, five microcopy variants, four information hierarchies — in seconds.
-- **Reasoning about tradeoffs.** Density vs. scannability, consistency vs. discoverability, onboarding vs. power-user ergonomics.
-- **Externalizing artifacts.** ASCII wireframes, Mermaid diagrams, Markdown specs, JSON design tokens, Tailwind-ready JSX, Storybook stubs.
-
-What it can't do is pixel-polish a final comp. But the 80% of design that isn't pixel polish — the thinking, the options, the specs, the code scaffolding — is exactly where Claude earns its keep.
+Here's what it actually is, how it fits next to Claude Code, and what "designing with Claude" now means in practice.
 
 ---
 
-## The Three Levels of Designing With Claude
+## What Claude Design Actually Is
 
-It helps to separate three different kinds of design work, because the right workflow is different for each.
+Claude Design is a **standalone product** from Anthropic Labs — the experimental arm that ships new surfaces for what Claude can do. It's not a Claude Code feature, not a Figma plugin, not an API. It's a new design tool that happens to be built on Claude.
 
-### Level 1: Visual and component design
+The core loop:
 
-This is "make me a dashboard card," "design a settings page," "give me a pricing table." UI-level decisions, usually inside an existing design system.
+1. **Describe** the thing you want — a prototype screen, a pitch deck, a one-pager, a pricing page.
+2. **Claude generates** the visual artifact directly.
+3. **You refine** through conversation ("make it denser, warmer tone"), inline comments, direct edits, or sliders Claude creates on the fly for tuning color, spacing, and layout.
+4. **Export** to PDF, PPTX, a hosted URL, or into Canva for team editing.
 
-Claude's sweet spot here is **generating JSX (or Vue, or Svelte) that already speaks your design system**. You don't describe the component in the abstract — you point Claude at your existing \`components/ui\` folder and ask it to follow the patterns. The output is tight code that drops into Storybook, not an image you have to reinterpret.
-
-### Level 2: Flow and interaction design
-
-This is "how should the onboarding work," "what are the states for this form," "how do we handle the empty state." Structure over surface.
-
-Here Claude earns its keep through **diagramming and state enumeration**. Mermaid flowcharts for user journeys, state machines for form validation, lists of edge cases you hadn't thought of. The model is very good at "what could go wrong here?" — a question designers chronically under-ask.
-
-### Level 3: System and information architecture
-
-This is the big-picture work: IA, navigation structure, naming, taxonomies, cross-flow consistency. The stuff that's hardest to fix later because it's load-bearing.
-
-This is where long-context models shine. Paste your entire nav, all your route names, your existing IA doc — and ask Claude to find inconsistencies, propose reorganizations, and flag the places where two flows use different words for the same thing. Opus 4.7's cross-file synthesis makes this genuinely useful instead of surface-level.
-
-Each level uses Claude differently. Mixing them up — asking Claude to pixel-design while you're still figuring out the IA — is how design sessions get stuck.
+It's powered by Opus 4.7, which Anthropic is calling its most capable vision model. That matters: Claude Design isn't a text-to-slides gimmick. It's reading images, layouts, and design systems as first-class inputs.
 
 ---
 
-## Workflow 1: The Wireframe-Before-Code Loop
+## The Inputs That Make It Interesting
 
-The fastest way to use Claude for UI design is to separate "structure" from "styling" and do them in that order, with ASCII wireframes as the intermediate artifact.
+Most "AI design" tools accept a text prompt and little else. Claude Design takes a wider range of inputs, and that's where it starts to look like a real design collaborator instead of a toy:
 
-Step one: describe the screen.
+- **Text prompts** for the obvious case.
+- **Image uploads** to reference a look or extract elements.
+- **Document uploads** — DOCX, PPTX, XLSX — so you can hand it a draft deck or a spreadsheet of content and get a designed version back.
+- **Web capture** that pulls elements from your company's website, so your brand comes along automatically.
+- **Design system integration** that reads your codebase and design files and applies your tokens, spacing, and component patterns to every output.
 
-> "I need a project settings page. It has three sections: general (name, description, visibility), members (list of users with roles and a remove action), and danger zone (delete project). Give me three ASCII wireframes with different information hierarchies."
-
-Claude will produce three distinct layouts — tabs, accordion, single scroll — with reasoning for each. You pick one, possibly after asking for tweaks. Then:
-
-> "Good, go with layout B. Now implement it as a React component using our existing \`Card\`, \`Button\`, and \`Input\` components from \`src/components/ui\`. Match the conventions in \`src/components/ui/card.tsx\`."
-
-What you get back is code that fits the codebase because Claude read the codebase. It's not guessing at Tailwind classes — it's copying the patterns it just read.
-
-This loop works because ASCII wireframes are **fast to generate, fast to read, and fast to iterate on**. You're not committing to CSS until the structure is right. Most bad Claude-generated UIs are bad because someone skipped the structure step and went straight to "make it pretty."
+That last one is the quiet unlock. A lot of AI design tools produce generic-looking artifacts because they don't know your brand. Claude Design hooks into the thing your brand already lives in — your repo and your design files — and uses that as the style source.
 
 ---
 
-## Workflow 2: The Design System Conversation
+## How Refinement Works
 
-If you have a design system — even a half-built one — put it in context and keep it there.
+The refinement model is what separates Claude Design from "generate a slide, regenerate, regenerate, give up." You have four ways to push the output toward what you want:
 
-Create a \`DESIGN.md\` (or extend your \`CLAUDE.md\`) that describes:
+1. **Conversation.** "Make the hero more spacious, move the CTA up, cut the third bullet." Ordinary chat-style edits.
+2. **Inline comments.** Point at a specific element and comment on it — closer to how a human design review actually works.
+3. **Direct edits.** When you already know exactly what you want, you just change it.
+4. **Purpose-built sliders.** Claude creates sliders for the specific adjustable properties of an element — a color slider for a button, a spacing slider for a section, a layout slider for a grid. You drag, the design updates.
 
-- Your spacing scale, color tokens, typography ramp
-- The components you have and their intended use
-- The patterns you've standardized on (modal vs. drawer, toast vs. inline error, etc.)
-- Anti-patterns you've decided against
-- Voice and tone guidelines for microcopy
-
-Now every Claude session starts aware of your system. When you ask for a new component, it proposes one that composes existing primitives instead of reinventing them. When you ask for copy, it matches your tone. When it deviates, you can ask it to point at the rule it's following and that's a design-system bug worth fixing.
-
-The design system doc is doing double duty: it's your reference for humans *and* your reference for Claude. Anywhere the doc is vague, Claude will confabulate — which is a useful signal that humans are probably also confused there.
+The sliders are the most novel part. Instead of prompting "make the button a little less blue," you get a blue-ness slider for that specific button that Claude generated because the button has a color that's tunable. It's a small detail that changes the feel of the tool from "give instructions to an assistant" to "directly manipulate a design that an assistant is maintaining for you."
 
 ---
 
-## Workflow 3: State Enumeration For Any Interactive Surface
+## Export and the Canva Partnership
 
-The single most underused Claude prompt in design work is some version of:
+The thing Claude Design gets right that a lot of AI design tools get wrong: **output is useful in other tools**.
 
-> "List every state this component can be in, including loading, error, empty, partial-data, permission-denied, rate-limited, offline, and any edge cases specific to this flow."
+Exports supported on launch:
 
-You will always get more states than you had in your spec. Usually half of them are states your current implementation handles incorrectly or not at all. Walking through them with Claude — "what should the UI show when the user has access to list but not to edit?" — is the cheapest design review you can run.
+- **PDF** for anything print-shaped
+- **PPTX** for slide decks that need to live in PowerPoint or Google Slides
+- **URL** for a hosted, shareable version of a prototype
+- **Canva** — send the artifact directly to Canva, fully editable and collaborative
 
-This works especially well for forms, which are the single worst-specified artifact in most products. Claude will cheerfully enumerate: submission pending, submission failed with recoverable error, submission failed with unrecoverable error, partial validation, field-level async validation pending, conflicting fields, optimistic UI rollback, draft autosave in progress, draft conflict with server version. Your spec had "submit button shows spinner."
+The Canva integration is notable because it's a real partnership, not just an export format. Canva posted its own announcement the same day. The read there: Anthropic isn't pretending Claude Design replaces the whole design stack. It's making the fast-to-first-draft step dramatically better, then handing off to tools designers already use for polish and collaboration.
 
----
-
-## Workflow 4: Diagrams Are Specs
-
-Claude is excellent at Mermaid diagrams, and Mermaid diagrams are specs you can paste into any doc.
-
-- **Sequence diagrams** for any interaction that crosses a boundary (client ↔ server, user ↔ system, service ↔ service)
-- **State diagrams** for any UI with non-trivial state (forms, wizards, async flows)
-- **Flowcharts** for user journeys and decision trees
-- **ER diagrams** when the UX depends on data shape
-
-The workflow: describe the flow in prose, ask Claude for a Mermaid diagram, iterate on the diagram, then ask Claude to implement it. The diagram becomes the source of truth. When someone asks "why does it work this way?", you have a generated, re-generable, reviewable artifact instead of tribal knowledge.
-
-This is where "Claude design" and "Claude code" stop being separate activities. The diagram isn't a deliverable you throw away — it's the spec Claude uses to generate the implementation.
+For teams, that's the right boundary. Claude Design generates. Canva (or Figma, or whatever you use) finishes.
 
 ---
 
-## Workflow 5: Copy, Microcopy, and Voice
+## Who It's Actually For
 
-Most product copy is written twice: once by someone in a hurry, then again by the designer or PM who noticed it's terrible. Claude can collapse that into one pass, if you give it the right context.
+From the launch materials, the target user isn't a full-time designer — it's everyone who needs a visual artifact but doesn't start in a design tool:
 
-What to include in context:
+- **Founders** making pitch decks at midnight
+- **PMs** turning a Notion spec into a one-pager for stakeholders
+- **Engineers** prototyping a UI before there's a designer to own it
+- **Marketers** producing campaign assets inside brand guidelines
+- **Sales** building custom decks per-prospect without hijacking design's time
 
-- **Audience**: developers? first-time users? enterprise admins?
-- **Voice reference**: three example sentences in the tone you want. "Stripe-like" isn't enough; paste actual Stripe copy.
-- **Constraints**: character limits, must-avoid words, must-include terms
-- **State-specific framing**: empty states warm, error states calm, success states brief
+The common thread: these people currently default to "suffer in PowerPoint" or "bug the design team." Claude Design is trying to be the third option.
 
-Then ask for variants: "Give me five versions of the empty state copy for the Projects list, for a user who has just signed up and has no projects. Constraint: under 80 characters for the heading, under 140 for the body. Tone: encouraging but not cute."
-
-You get five options. You pick one or combine two. What you don't do is spend forty minutes writing five options yourself.
-
----
-
-## Workflow 6: IA Review With Long Context
-
-If your app has more than ten screens, your information architecture has drift. Two flows that should share a mental model don't. One feature uses "workspace," another uses "project," a third uses "team," and they all mean approximately the same thing.
-
-Dump the following into a single context and ask Claude to find the inconsistencies:
-
-- Your full navigation structure (all routes, labels, groupings)
-- Any existing IA or taxonomy docs
-- Top-level page titles across the app
-- Key nouns from your onboarding and empty states
-
-Then prompt: "Find inconsistencies in naming, hierarchy, and categorization. Specifically: places where the same concept has different names, places where different concepts have the same name, and places where the hierarchy disagrees with itself."
-
-The output is a punch list. Some items will be "we decided that on purpose." Most will be drift — and drift is expensive to leave in place.
+Full-time designers will still live in Figma. But the volume of design-adjacent work happening outside design teams is enormous, and that's the surface area Claude Design is going after.
 
 ---
 
-## What Claude Is Bad At (And What To Do About It)
+## Availability and Pricing
 
-Being honest about the edges:
+- **Who gets it:** Claude Pro, Max, Team, and Enterprise subscribers.
+- **When:** Rolling out throughout April 17, 2026. You may not see it immediately even on an eligible plan — rollout is gradual.
+- **Enterprise note:** Off by default for Enterprise. Admins have to turn it on. If your org is on Enterprise and you want access, talk to your admin.
+- **Research preview:** Expect rough edges. Anthropic Labs ships experimentally and iterates.
 
-**Visual aesthetics and pixel polish.** Claude can describe a good visual design. It cannot produce one. The actual pixel-pushing still lives in Figma or in your hands.
-
-**Novel interaction patterns.** Claude is a strong executor of known patterns. If you're inventing something genuinely new — a new gesture, a new navigation metaphor, a new mental model — the model will quietly steer you back toward familiar ground unless you push. Use it to pressure-test novelty, not to generate it.
-
-**Knowing your users.** The model doesn't know your users. Everything it produces is informed by general patterns, not your specific audience. User research is still human work. Claude is good at helping you *design from* research, not substitute for it.
-
-**Taste.** Two mocks can be equally valid and one can be obviously better. Claude cannot always tell you which. That's where you come in.
-
-The pattern is the same each time: Claude accelerates the parts of design that are generation, enumeration, and analysis. It does not replace judgment, research, or craft.
+No separate pricing tier. If you're already paying for Claude, this is included.
 
 ---
 
-## A Starter Design Prompt Kit
+## Claude Design vs. Claude Code: How They Fit Together
 
-If you want to try this today, here are prompts that get useful output on the first try. Adapt them to your stack.
+If you're deep in Claude Code, the natural question is "does this replace anything I do?" Short answer: no. They're complementary.
 
-**For a new screen:**
+- **Claude Code** is for code. Agentic workflows, refactors, test runs, git operations, long-horizon engineering tasks.
+- **Claude Design** is for visual artifacts. Slides, prototypes, one-pagers, decks.
 
-> Describe the purpose, primary user action, and three secondary actions for a [screen name]. Then produce three ASCII wireframes with different information hierarchies, and recommend one with reasoning.
+Where they overlap is interesting: **front-end UI work**. If you're building a React component, Claude Code is still the right tool — it operates on your actual codebase. But if you're exploring what a screen should *look* like before you commit to the code, Claude Design gets you to a visual faster, and a Claude Code session can pick up from there.
 
-**For a component:**
+A workflow that makes sense today:
 
-> Implement a [component name] using the existing primitives in \`src/components/ui\`. Match the patterns in [example file]. List all props, all states, and how it handles loading, error, and empty cases.
+1. **Sketch in Claude Design.** Describe the screen, generate a prototype, iterate until the layout is right.
+2. **Hand off to Claude Code.** Point Claude Code at the prototype (or at a screenshot of it) and ask it to implement it against your actual component library.
+3. **Review and refine.** The implementation uses your real primitives, typings, and state management — things Claude Design doesn't touch.
 
-**For a flow:**
-
-> Draw a Mermaid sequence diagram for [user flow]. Include the happy path and at least three failure modes. Then list the UI states the user sees at each step.
-
-**For a review:**
-
-> Review this design [paste mock description or component code] against our design system in \`DESIGN.md\`. Flag inconsistencies, missing states, accessibility gaps, and any naming that conflicts with the rest of the app.
-
-**For microcopy:**
-
-> Give me five variants of [copy slot]. Audience: [audience]. Tone: [tone reference]. Constraint: [constraint]. Rank them and say why.
-
-None of these are magic. They just front-load context and ask for a specific artifact instead of vague "help."
+The seam between the two tools is narrower than the seam between Figma and hand-coding, because the same model family is on both ends.
 
 ---
 
-## Where Design Ends and Code Begins (Hint: Nowhere)
+## Where Claude Design Fits in the Market
 
-The old handoff model — designer makes a Figma, developer builds it — has a seam in the middle where intent gets lost. Every design system team has war stories about shipped UI that quietly diverges from the mocks.
+The obvious comparisons:
 
-When you design with Claude, the artifact and the implementation share a source. The Mermaid diagram becomes the state machine. The ASCII wireframe becomes the JSX tree. The design system doc becomes the prompt context. The handoff shrinks.
+**vs. Figma.** Figma is a design tool; Claude Design is a generator with a design-tool-ish frontend. For full fidelity design work — components, auto-layout, variants, prototyping with micro-interactions — Figma remains the tool. Claude Design is for the zero-to-draft phase Figma has never been great at.
 
-That's worth saying plainly: **the biggest win from designing with Claude isn't speed, it's coherence.** Fewer artifacts to keep in sync. Fewer places where design intent and implementation disagree. A design process that outputs running code, not a PDF of mocks nobody reads.
+**vs. Canva.** Canva is a template-driven visual editor for non-designers. Claude Design is similar in audience but different in kind: generation-first instead of template-first. The Canva integration suggests the two companies see them as adjacent rather than competitive.
+
+**vs. AI slide generators (Gamma, Tome, Beautiful.ai).** This is the direct competitive set. The differentiator is Opus 4.7's vision capability and the design-system-as-input model — the output can actually match your brand instead of pulling from a generic template library.
+
+**vs. ChatGPT-with-an-image-tool.** Claude Design is a real surface with real refinement controls. Generating an image with a chatbot and calling it "design" was always a stretch; Claude Design is a dedicated product built for the job.
 
 ---
 
-## The Takeaway
+## The Bigger Picture: Anthropic Labs as a Shipping Cadence
 
-Design work is a pipeline of ambiguity reduction, and Claude is very good at reducing ambiguity. Not by being a better designer than you, but by being an infinitely patient collaborator who will enumerate states, generate options, diagram flows, and pressure-test your information architecture at any hour.
+Claude Design is the second major product out of Anthropic Labs, and it lands the same week as Opus 4.7. That's not accidental — Labs products showcase the capabilities the latest model makes newly possible. Opus 4.7's vision improvements and long-context reasoning are what make a design product from a foundation-model company plausible at all.
 
-The developers who get the most out of Claude are the ones who learned to treat it as a thinking partner, not a code vending machine. Designers have the same move available. Describe the problem. Ask for options. Ask for tradeoffs. Ask for the diagram, the spec, the code scaffold. Iterate in minutes instead of days.
+If you're tracking the shape of Anthropic's strategy: Claude Code went after developers, Claude Design is going after the broader "everyone who needs to make things visually" market. The pattern is the model plus a purpose-built surface, rather than expecting everyone to compose their own tooling through the API.
 
-If you've been using Claude only for code, try pushing up the stack. The design work is where the compounding happens.
+Expect more Labs products. This is the operating mode now.
+
+---
+
+## Beyond Claude Design: Practical Workflows for Designing With Claude
+
+Claude Design is new and impressive, but not every design task needs a dedicated product. A lot of the highest-leverage "designing with Claude" work still happens in a normal Claude Code session or a regular chat. Some patterns worth stealing:
+
+**ASCII wireframes before code.** Ask Claude for three wireframes as ASCII layouts before it touches CSS. Pick one, then ask for the implementation. Cheaper iteration than starting from pixels.
+
+**State enumeration.** For any component or flow: "List every state this can be in — loading, error, empty, partial-data, permission-denied, rate-limited, offline." You'll always get states your spec missed.
+
+**Diagrams as specs.** Mermaid sequence and state diagrams, generated from a prose description, serve as both a design artifact and a source of truth the implementation can follow.
+
+**Design system context.** A \`DESIGN.md\` alongside your \`CLAUDE.md\` describing your spacing scale, tokens, and conventions turns every future Claude session into a design-system-aware one.
+
+**IA review with long context.** Dump your nav structure, route names, and IA docs into a single context and ask Claude to find inconsistencies in naming and hierarchy. Opus 4.7's long-context synthesis is genuinely useful here.
+
+**Microcopy variants.** Give a tone reference, character constraints, and state-specific framing, then ask for five variants. You pick one, combine two, discard three. Faster than writing alone.
+
+These all work without Claude Design. Where Claude Design changes the game is when the artifact itself needs to be visual — a slide, a deck, a prototype, a one-pager. For that class of work, you now have a first-party tool.
+
+---
+
+## Should You Try It Today?
+
+If you're on a paid Claude plan and you've ever thought "ugh, I need to make a deck":
+
+Yes. Try it. The rollout is gradual, so check back if it's not live for you yet. The first thing to test is the design-system import — point it at your codebase and see how well it picks up your brand. That's the feature that determines whether this is a novelty or a real part of your workflow.
+
+If you're a full-time designer: this isn't aimed at you, but it's worth looking at anyway to understand what your PM and eng counterparts will start producing on their own. The floor for "visual artifact from someone who isn't a designer" is about to move up.
+
+If you're building with Claude Code: this expands what "designing with Claude" means. The ASCII-wireframe-then-code loop is still useful for in-codebase UI work, but for decks, prototypes, and pitch material, Claude Design collapses hours into minutes.
 
 ---
 
 ## Further Reading
 
-- [Vibe Coding with Claude Code](/blog/vibe-coding-claude-code) — Natural-language development for rapid prototyping
-- [Context Engineering for Claude Code](/blog/context-engineering-claude-code) — Getting the most from your design system docs in context
-- [10x Productivity Workflows with Claude Code](/blog/claude-code-workflows-10x-productivity) — Day-to-day patterns that stack with design work
-- [Claude Opus 4.7: What's Actually New](/blog/claude-opus-4-7-deep-reasoning) — Why long-context synthesis matters for IA review
+- [Claude Opus 4.7: What's Actually New](/blog/claude-opus-4-7-deep-reasoning) — The model powering Claude Design
+- [Vibe Coding with Claude Code](/blog/vibe-coding-claude-code) — Natural-language development, now extended to visual artifacts
+- [Context Engineering for Claude Code](/blog/context-engineering-claude-code) — Why design-system context matters for quality output
+- [10x Productivity Workflows with Claude Code](/blog/claude-code-workflows-10x-productivity) — Day-to-day patterns that now extend into design work
 `,
 };
