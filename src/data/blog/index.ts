@@ -22,8 +22,10 @@ import { claudeCodeAutoMemoryGuide } from "./claude-code-auto-memory-guide";
 import { claudeOpus47DeepReasoning } from "./claude-opus-4-7-deep-reasoning";
 import { designingWithClaude } from "./designing-with-claude";
 import { claudeCodeCheatSheet } from "./claude-code-cheat-sheet";
+import { ultrareviewClaudeCodeGuide } from "./ultrareview-claude-code-guide";
 
 export const blogPosts: BlogPost[] = [
+  ultrareviewClaudeCodeGuide,
   claudeCodeCheatSheet,
   designingWithClaude,
   claudeOpus47DeepReasoning,
