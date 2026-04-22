@@ -6,7 +6,7 @@ export const backendArchitectAgent: Agent = {
   description: "Senior backend engineer specializing in scalable API design, microservices, and distributed systems",
   category: "development",
   tags: ["backend", "api", "microservices", "distributed-systems", "architecture"],
-  featured: false,
+  featured: true,
   author: {
     name: "lst97",
     url: "https://github.com/lst97/claude-code-sub-agents",

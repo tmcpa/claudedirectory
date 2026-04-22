@@ -6,7 +6,7 @@ export const debuggerAgent: Agent = {
   description: "Systematic debugging specialist for identifying and resolving complex software bugs",
   category: "quality-testing",
   tags: ["debugging", "troubleshooting", "root-cause-analysis", "problem-solving"],
-  featured: false,
+  featured: true,
   author: {
     name: "lst97",
     url: "https://github.com/lst97/claude-code-sub-agents",

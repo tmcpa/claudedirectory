@@ -5,7 +5,7 @@ export const serenaPlugin: Plugin = {
   title: "Serena",
   description: "Semantic code analysis beyond syntax. Intelligent code understanding, refactoring suggestions, and codebase navigation through deep language analysis. Understands code meaning, not just structure.",
   tags: ["code-analysis", "refactoring", "semantic", "official"],
-  featured: false,
+  featured: true,
   author: {
     name: "Oraios",
     url: "https://github.com/oraios",
