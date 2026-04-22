@@ -27,11 +27,35 @@ function slugify(text: string): string {
 }
 
 function extractHeadings(content: string): { text: string; slug: string }[] {
-  const headingRegex = /^## (.+)$/gm;
   const headings: { text: string; slug: string }[] = [];
-  let match;
-  while ((match = headingRegex.exec(content)) !== null) {
-    headings.push({ text: match[1], slug: slugify(match[1]) });
+  const seen = new Set<string>();
+  let inFence = false;
+  let fenceMarker = "";
+  for (const line of content.split("\n")) {
+    const fenceMatch = /^(\s*)(`{3,}|~{3,})/.exec(line);
+    if (fenceMatch) {
+      const marker = fenceMatch[2];
+      if (!inFence) {
+        inFence = true;
+        fenceMarker = marker[0];
+      } else if (marker[0] === fenceMarker) {
+        inFence = false;
+        fenceMarker = "";
+      }
+      continue;
+    }
+    if (inFence) continue;
+    const headingMatch = /^## (.+)$/.exec(line);
+    if (!headingMatch) continue;
+    const text = headingMatch[1];
+    let slug = slugify(text);
+    if (seen.has(slug)) {
+      let n = 2;
+      while (seen.has(`${slug}-${n}`)) n++;
+      slug = `${slug}-${n}`;
+    }
+    seen.add(slug);
+    headings.push({ text, slug });
   }
   return headings;
 }
