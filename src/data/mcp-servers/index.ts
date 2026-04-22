@@ -92,7 +92,7 @@ import { newrelicServer } from "./newrelic";
 import { trelloServer } from "./trello";
 import { googleColabServer } from "./google-colab";
 import { apifyServer } from "./apify";
-import { rnwyServer } from "./rnwy";
+import { rnwy } from "./rnwy";
 
 export const mcpServers: MCPServer[] = [
   // Featured servers first
@@ -202,7 +202,7 @@ export const mcpServers: MCPServer[] = [
   trelloServer,
   googleColabServer,
   apifyServer,
-  rnwyServer,
+  rnwy,
 ];
 
 export function getMCPServerBySlug(slug: string): MCPServer | undefined {
