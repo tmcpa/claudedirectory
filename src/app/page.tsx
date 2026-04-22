@@ -10,6 +10,7 @@ import { HowToCard } from "@/components/cards/how-to-card";
 import { AgentCard } from "@/components/cards/agent-card";
 import { BlogCard } from "@/components/cards/blog-card";
 import { UniversalSearch } from "@/components/universal-search";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import { getFeaturedPrompts } from "@/data/prompts";
 import { getFeaturedMCPServers } from "@/data/mcp-servers";
 import { getFeaturedHooks } from "@/data/hooks";
@@ -20,7 +21,7 @@ import { getFeaturedAgents } from "@/data/agents";
 import { getFeaturedBlogPosts } from "@/data/blog";
 import { getRecentlyAdded } from "@/data/recently-added";
 import { RecentItemCard } from "@/components/cards/recent-item-card";
-import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock } from "lucide-react";
+import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock, Mail } from "lucide-react";
 
 const categories = [
   {
@@ -124,6 +125,17 @@ export default function Home() {
                 Contribute
               </a>
             </Button>
+          </div>
+
+          <div className="mt-10 w-full max-w-xl rounded-lg border bg-card/40 p-4 text-left">
+            <div className="mb-2 flex items-center gap-2 text-sm font-medium">
+              <Mail className="h-4 w-4 text-muted-foreground" />
+              <span>The Claude Code weekly</span>
+            </div>
+            <p className="mb-3 text-sm text-muted-foreground">
+              New prompts, MCP servers, and skills — one short email each week. No spam, unsubscribe anytime.
+            </p>
+            <NewsletterSignup source="home_hero" />
           </div>
         </div>
       </section>
@@ -335,6 +347,20 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Newsletter CTA */}
+      <section className="container py-16 border-t">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 rounded-xl border bg-card/50 p-8 text-center">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full border bg-background">
+            <Mail className="h-5 w-5 text-muted-foreground" />
+          </div>
+          <h2 className="text-2xl font-bold tracking-tight">Stay ahead on Claude Code</h2>
+          <p className="max-w-md text-sm text-muted-foreground">
+            Get the best new prompts, MCP servers, hooks, and skills delivered every week. Free, short, no spam.
+          </p>
+          <NewsletterSignup source="home_footer_cta" className="max-w-md" />
+        </div>
+      </section>
     </div>
   );
 }
