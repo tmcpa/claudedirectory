@@ -21,6 +21,7 @@
     "react-dom": "19.2.3",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1",
+    "resend": "^6.12.2",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
