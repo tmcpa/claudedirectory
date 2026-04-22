@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { blogPosts, getBlogPostBySlug } from "@/data/blog";
 import { ArrowLeft, Newspaper, User, Calendar, Clock, ExternalLink, List } from "lucide-react";
 import ReactMarkdown from "react-markdown";
@@ -338,6 +339,14 @@ export default async function BlogPostPage(props: Props) {
             </a>
           </div>
         )}
+
+        <Separator />
+        <NewsletterForm
+          variant="inline"
+          source={`blog:${post.slug}`}
+          title="Like this post? Get more like it."
+          description="Weekly roundup of the best Claude Code prompts, MCP servers, and posts. One email, Sundays."
+        />
 
         {post.relatedItems && post.relatedItems.length > 0 && (
           <>

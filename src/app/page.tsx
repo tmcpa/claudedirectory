@@ -20,6 +20,7 @@ import { getFeaturedAgents } from "@/data/agents";
 import { getFeaturedBlogPosts } from "@/data/blog";
 import { getRecentlyAdded } from "@/data/recently-added";
 import { RecentItemCard } from "@/components/cards/recent-item-card";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock } from "lucide-react";
 
 const categories = [
@@ -175,6 +176,11 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Newsletter */}
+      <section className="container py-12 border-t">
+        <NewsletterForm variant="card" source="homepage" />
+      </section>
 
       {/* Featured Prompts */}
       {featuredPrompts.length > 0 && (

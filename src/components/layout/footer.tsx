@@ -1,10 +1,24 @@
 import Link from "next/link";
 import { Terminal, Rss } from "lucide-react";
+import { NewsletterForm } from "@/components/newsletter-form";
 
 export function Footer() {
   return (
     <footer className="border-t border-border/40 py-8">
       <div className="container">
+        <div className="mb-10 rounded-lg border bg-card/50 p-5 md:p-6">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+            <div className="md:max-w-md">
+              <h3 className="font-semibold text-sm">The Claude Code weekly</h3>
+              <p className="text-xs text-muted-foreground mt-1">
+                New prompts, MCP servers, and the best posts — every Sunday.
+              </p>
+            </div>
+            <div className="md:min-w-[320px]">
+              <NewsletterForm variant="footer" source="footer" />
+            </div>
+          </div>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-semibold text-sm mb-3">Browse</h3>
