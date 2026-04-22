@@ -6,7 +6,7 @@ export const refactorSkill: Skill = {
   description:
     "Systematically refactor code for improved readability, maintainability, and performance",
   tags: ["refactoring", "code-quality", "cleanup", "patterns"],
-  featured: false,
+  featured: true,
   author: {
     name: "Claude Code Community",
   },

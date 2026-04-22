@@ -5,7 +5,7 @@ export const superclaudePlugin: Plugin = {
   title: "SuperClaude Framework",
   description: "Versatile configuration framework enhancing Claude Code with commands, cognitive personas, and advanced development workflows. Includes 4 specialized personas and extensible command system.",
   tags: ["framework", "personas", "commands", "workflow", "community"],
-  featured: false,
+  featured: true,
   author: {
     name: "SuperClaude-Org",
     url: "https://github.com/SuperClaude-Org/SuperClaude_Framework",

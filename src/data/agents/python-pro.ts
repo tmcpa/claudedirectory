@@ -6,7 +6,7 @@ export const pythonProAgent: Agent = {
   description: "Expert Python developer for web applications, data processing, automation, and API development",
   category: "development",
   tags: ["python", "django", "fastapi", "automation", "data-processing"],
-  featured: false,
+  featured: true,
   author: {
     name: "lst97",
     url: "https://github.com/lst97/claude-code-sub-agents",

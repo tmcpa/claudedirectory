@@ -5,7 +5,7 @@ export const sentryServer: MCPServer = {
   title: "Sentry Server",
   description: "Retrieve and analyze issues, errors, and stacktraces from Sentry",
   tags: ["sentry", "errors", "monitoring", "debugging", "official"],
-  featured: false,
+  featured: true,
   author: {
     name: "Sentry",
     url: "https://github.com/getsentry",

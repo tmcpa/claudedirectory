@@ -5,7 +5,7 @@ export const stripeServer: MCPServer = {
   title: "Stripe Server",
   description: "Manage Stripe payments, customers, subscriptions, and financial operations through natural language",
   tags: ["payments", "stripe", "finance", "e-commerce", "community"],
-  featured: false,
+  featured: true,
   author: {
     name: "Stripe Community",
     url: "https://github.com/stripe",

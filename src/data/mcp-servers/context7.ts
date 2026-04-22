@@ -5,7 +5,7 @@ export const context7Server: MCPServer = {
   title: "Context7 Server",
   description: "Provide up-to-date, version-specific library documentation directly in your prompts instead of outdated training data",
   tags: ["documentation", "context", "libraries", "community"],
-  featured: false,
+  featured: true,
   author: {
     name: "Upstash",
     url: "https://github.com/upstash",

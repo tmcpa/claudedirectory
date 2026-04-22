@@ -6,7 +6,7 @@ export const frontendDeveloperAgent: Agent = {
   description: "Modern frontend specialist with expertise in HTML, CSS, JavaScript, and component frameworks",
   category: "development",
   tags: ["frontend", "html", "css", "javascript", "accessibility", "responsive"],
-  featured: false,
+  featured: true,
   author: {
     name: "lst97",
     url: "https://github.com/lst97/claude-code-sub-agents",

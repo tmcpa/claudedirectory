@@ -5,7 +5,7 @@ export const sequentialThinkingServer: MCPServer = {
   title: "Sequential Thinking Server",
   description: "Dynamic problem-solving through iterative thought chains with branching and revision",
   tags: ["thinking", "reasoning", "problem-solving", "official"],
-  featured: false,
+  featured: true,
   author: {
     name: "Anthropic",
     url: "https://github.com/anthropics",
