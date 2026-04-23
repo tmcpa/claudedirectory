@@ -23,8 +23,10 @@ import { claudeOpus47DeepReasoning } from "./claude-opus-4-7-deep-reasoning";
 import { designingWithClaude } from "./designing-with-claude";
 import { claudeCodeCheatSheet } from "./claude-code-cheat-sheet";
 import { ultrareviewClaudeCodeGuide } from "./ultrareview-claude-code-guide";
+import { claudeCoworkForBusinessUsers } from "./claude-cowork-for-business-users";
 
 export const blogPosts: BlogPost[] = [
+  claudeCoworkForBusinessUsers,
   ultrareviewClaudeCodeGuide,
   claudeCodeCheatSheet,
   designingWithClaude,
