@@ -28,20 +28,27 @@ export async function generateMetadata(props: Props) {
 
   const url = `${BASE_URL}/plugins/${plugin.slug}`;
 
+  const title =
+    plugin.seoTitle ??
+    `Install ${plugin.title} – Claude Code Plugin Setup Guide (2026)`;
+  const description =
+    plugin.seoDescription ??
+    `Install with \`${plugin.installCommand}\`. ${plugin.description}`;
+
   return {
-    title: `${plugin.title} - Claude Code Plugin | Install & Setup Guide`,
-    description: `${plugin.description} One-command install for Claude Code.`,
+    title,
+    description,
     keywords: [...plugin.tags, "claude code", "plugin", "extension", plugin.title.toLowerCase()],
     openGraph: {
-      title: `${plugin.title} - Claude Code Plugin | Install & Setup Guide`,
-      description: `${plugin.description} One-command install for Claude Code.`,
+      title,
+      description,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${plugin.title} - Claude Code Plugin | Install & Setup Guide`,
-      description: `${plugin.description} One-command install for Claude Code.`,
+      title,
+      description,
     },
     alternates: {
       canonical: url,

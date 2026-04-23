@@ -14,9 +14,11 @@ import { debuggingHowTo } from "./debugging";
 import { cicdIntegrationHowTo } from "./cicd-integration";
 import { multiPlatformSetupHowTo } from "./multi-platform-setup";
 import { backgroundAgentsWorktreesHowTo } from "./background-agents-worktrees";
+import { claudeFolderHowTo } from "./claude-folder";
 
 export const howTos: HowTo[] = [
   backgroundAgentsWorktreesHowTo,
+  claudeFolderHowTo,
   gettingStartedHowTo,
   memoryHowTo,
   slashCommandsHowTo,

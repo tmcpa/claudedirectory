@@ -4,6 +4,8 @@ export const frontendDesignPlugin: Plugin = {
   slug: "frontend-design",
   title: "Frontend Design",
   description: "Create distinctive, production-grade frontend interfaces with high design quality. UI/UX specialist plugin that generates polished, creative code avoiding generic AI aesthetics. Supports React, Vue, Svelte, and vanilla HTML/CSS with modern design patterns.",
+  seoTitle: "Install Frontend Design Plugin for Claude Code – frontend-design@claude-plugins-official (2026)",
+  seoDescription: "Step-by-step install guide for the frontend-design plugin. Run `claude plugins add frontend-design@claude-code-plugins` in Claude Code to generate production-grade React, Vue, and Svelte UIs — setup in under a minute.",
   tags: ["frontend", "design", "ui", "ux", "react", "official"],
   featured: true,
   author: {

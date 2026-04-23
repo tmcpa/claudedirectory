@@ -30,20 +30,23 @@ export async function generateMetadata(props: Props) {
 
   const url = `${BASE_URL}/how-to/${howTo.slug}`;
 
+  const title = howTo.seoTitle ?? `${howTo.title} - Claude Code Guide`;
+  const description = howTo.seoDescription ?? howTo.description;
+
   return {
-    title: `${howTo.title} - Claude Code Guide`,
-    description: howTo.description,
+    title,
+    description,
     keywords: [...howTo.tags, "claude code", "guide", "tutorial", "how to"],
     openGraph: {
-      title: `${howTo.title} - Claude Code Guide`,
-      description: howTo.description,
+      title,
+      description,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${howTo.title} - Claude Code Guide`,
-      description: howTo.description,
+      title,
+      description,
     },
     alternates: {
       canonical: url,

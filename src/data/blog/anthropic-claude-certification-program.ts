@@ -6,6 +6,10 @@ export const anthropicClaudeCertificationProgram: BlogPost = {
     "The Anthropic Claude Certification Program: Everything You Need to Know",
   description:
     "Anthropic just launched its first official certification — the Claude Certified Architect. Here's what it covers, who it's for, and how to prepare.",
+  seoTitle:
+    "Claude Certified Architect (CCA) Exam – Anthropic's Proctored Skilljar Certification Guide",
+  seoDescription:
+    "Complete guide to Anthropic's Claude Certification Program and the Claude Certified Architect (CCA) exam. Skilljar-proctored, 60 questions — topics, format, cost, and how to prepare.",
   publishedDate: "2026-03-16",
   tags: [
     "claude-code",

@@ -4,6 +4,8 @@ export const figmaPlugin: Plugin = {
   slug: "figma",
   title: "Figma",
   description: "Figma design tool integration. Extract design specs, generate code from designs, access component libraries, and bridge the gap between design and development.",
+  seoTitle: "Install figma@claude-plugins-official – Claude Code Figma Plugin Setup (2026)",
+  seoDescription: "Install with `claude plugins add figma@claude-plugins-official`. Extract design specs, generate code from Figma components, and export design tokens — complete setup guide.",
   tags: ["design", "ui", "collaboration", "official"],
   featured: false,
   author: {

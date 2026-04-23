@@ -45,6 +45,8 @@ export interface MCPServer {
   dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export interface Hook {
@@ -73,6 +75,8 @@ export interface Skill {
   dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export interface Plugin {
@@ -88,6 +92,8 @@ export interface Plugin {
   relatedItems?: RelatedItem[];
   commands?: { name: string; description: string }[];
   repoUrl?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export interface HowTo {
@@ -103,6 +109,8 @@ export interface HowTo {
   dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export interface Agent {
@@ -131,6 +139,8 @@ export interface BlogPost {
   dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export type ContentItem = Prompt | MCPServer | Hook | Skill | Plugin | HowTo | Agent | BlogPost;
