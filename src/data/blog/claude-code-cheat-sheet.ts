@@ -459,6 +459,7 @@ Short description of what this codebase does.
 - [MCP Servers Guide](/blog/mcp-servers-guide)
 - [10x Productivity Workflows with Claude Code](/blog/claude-code-workflows-10x-productivity)
 - [Best Claude Code Plugins](/blog/best-claude-code-plugins)
+- [anthropic certification](/blog/anthropic-claude-certification-program) — the Claude Certified Architect (CCA) exam and how to prepare
 
 ---
 

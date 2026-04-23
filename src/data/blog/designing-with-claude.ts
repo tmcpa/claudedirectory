@@ -221,5 +221,6 @@ If you're building with Claude Code: this expands what "designing with Claude" m
 - [Vibe Coding with Claude Code](/blog/vibe-coding-claude-code) — Natural-language development, now extended to visual artifacts
 - [Context Engineering for Claude Code](/blog/context-engineering-claude-code) — Why design-system context matters for quality output
 - [10x Productivity Workflows with Claude Code](/blog/claude-code-workflows-10x-productivity) — Day-to-day patterns that now extend into design work
+- [anthropic certification](/blog/anthropic-claude-certification-program) — The Claude Certified Architect exam, for teams formalizing design + engineering workflows
 `,
 };

@@ -88,13 +88,16 @@ export async function generateMetadata(props: Props) {
 
   const url = `${BASE_URL}/blog/${post.slug}`;
 
+  const title = post.seoTitle ?? `${post.title} - Claude Directory Blog`;
+  const description = post.seoDescription ?? post.description;
+
   return {
-    title: `${post.title} - Claude Directory Blog`,
-    description: post.description,
+    title,
+    description,
     keywords: [...post.tags, "claude code", "blog", "ai development"],
     openGraph: {
-      title: `${post.title} - Claude Directory Blog`,
-      description: post.description,
+      title,
+      description,
       url,
       type: "article",
       publishedTime: new Date(post.publishedDate).toISOString(),
@@ -109,8 +112,8 @@ export async function generateMetadata(props: Props) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} - Claude Directory Blog`,
-      description: post.description,
+      title,
+      description,
       images: [`${BASE_URL}/og/blog/${post.slug}.png`],
     },
     alternates: {

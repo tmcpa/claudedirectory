@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -22,6 +23,24 @@ import { getFeaturedBlogPosts } from "@/data/blog";
 import { getRecentlyAdded } from "@/data/recently-added";
 import { RecentItemCard } from "@/components/cards/recent-item-card";
 import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock, Mail } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Claude Directory – Community Alternative to claude.ai/directory",
+  },
+  description:
+    "The community-curated Claude AI directory. Browse 100+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
+  openGraph: {
+    title: "Claude Directory – Community Alternative to claude.ai/directory",
+    description:
+      "The community-curated Claude AI directory. Browse 100+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
+  },
+  twitter: {
+    title: "Claude Directory – Community Alternative to claude.ai/directory",
+    description:
+      "The community-curated Claude AI directory. Browse 100+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
+  },
+};
 
 const categories = [
   {

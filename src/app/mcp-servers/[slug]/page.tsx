@@ -28,20 +28,27 @@ export async function generateMetadata(props: Props) {
 
   const url = `${BASE_URL}/mcp-servers/${server.slug}`;
 
+  const title =
+    server.seoTitle ??
+    `Add ${server.title} to Claude Code – MCP Setup Guide (2026)`;
+  const description =
+    server.seoDescription ??
+    `${server.description} Copy-paste the JSON config into your Claude Code settings.`;
+
   return {
-    title: `${server.title} MCP Server for Claude Code | Config & Setup`,
-    description: `${server.description} Copy-paste the JSON config into your Claude Code settings.`,
+    title,
+    description,
     keywords: [...server.tags, "claude code", "mcp server", "model context protocol", server.title.toLowerCase()],
     openGraph: {
-      title: `${server.title} MCP Server for Claude Code | Config & Setup`,
-      description: `${server.description} Copy-paste the JSON config into your Claude Code settings.`,
+      title,
+      description,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${server.title} MCP Server for Claude Code | Config & Setup`,
-      description: `${server.description} Copy-paste the JSON config into your Claude Code settings.`,
+      title,
+      description,
     },
     alternates: {
       canonical: url,

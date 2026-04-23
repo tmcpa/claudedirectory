@@ -4,6 +4,8 @@ export const prSkill: Skill = {
   slug: "pr",
   title: "Create Pull Request",
   description: "Generate comprehensive pull request descriptions and create PRs via GitHub CLI",
+  seoTitle: "Claude Create PR – /pr Slash Command to Open GitHub Pull Requests (2026)",
+  seoDescription: "Use Claude Code to create a pull request automatically. The /pr skill analyzes your branch, writes a descriptive PR title and body, and opens it via `gh pr create` — copy-paste setup.",
   tags: ["git", "github", "pr", "workflow"],
   featured: true,
   author: {

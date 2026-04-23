@@ -372,7 +372,7 @@ If you're new to Claude Code workflows, start with these three:
 2. **Lint Fixer** (#5) — Immediate quality-of-life improvement
 3. **PR Machine** (#2) — The biggest time savings for most developers
 
-Then explore the rest as your workflow matures. Browse our full collection of [hooks](/hooks), [MCP servers](/mcp-servers), [agents](/agents), and [skills](/skills) to build your own custom workflows.
+Then explore the rest as your workflow matures. Browse our full collection of [hooks](/hooks), [MCP servers](/mcp-servers), [agents](/agents), and [skills](/skills) to build your own custom workflows. If you want to formalize what you've learned, Anthropic now offers an official [anthropic certification](/blog/anthropic-claude-certification-program) — the Claude Certified Architect exam covers workflow design, tool integration, and enterprise rollout.
 
 ---
 

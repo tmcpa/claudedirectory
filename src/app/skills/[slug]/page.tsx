@@ -28,20 +28,27 @@ export async function generateMetadata(props: Props) {
 
   const url = `${BASE_URL}/skills/${skill.slug}`;
 
+  const title =
+    skill.seoTitle ??
+    `${skill.title} – Claude Code Skill & Slash Command (2026)`;
+  const description =
+    skill.seoDescription ??
+    `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`;
+
   return {
-    title: `${skill.title} - Claude Code Skill | Ready-to-Use Slash Command`,
-    description: `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`,
+    title,
+    description,
     keywords: [...skill.tags, "claude code", "skill", "slash command", skill.title.toLowerCase()],
     openGraph: {
-      title: `${skill.title} - Claude Code Skill | Ready-to-Use Slash Command`,
-      description: `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`,
+      title,
+      description,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${skill.title} - Claude Code Skill | Ready-to-Use Slash Command`,
-      description: `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`,
+      title,
+      description,
     },
     alternates: {
       canonical: url,
