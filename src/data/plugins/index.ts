@@ -78,6 +78,16 @@ import { claudeBrainPlugin } from "./claude-brain";
 import { claudeDiaryPlugin } from "./claude-diary";
 import { trailOfBitsSecurityPlugin } from "./trail-of-bits-security";
 import { netlifyPlugin as netlifyIntegrationPlugin } from "./netlify-plugin";
+// Official Anthropic plugins
+import { anthropicSkillsPlugin } from "./anthropic-skills";
+import { claudePreviewPlugin } from "./claude-preview";
+import { claudeInChromePlugin } from "./claude-in-chrome";
+import { scheduledTasksPlugin } from "./scheduled-tasks";
+import { mcpRegistryPlugin } from "./mcp-registry";
+// Community framework plugins
+import { shadcnPlugin } from "./shadcn";
+import { bunPlugin } from "./bun";
+import { astroPlugin } from "./astro";
 
 export const plugins: Plugin[] = [
   // Featured plugins first
@@ -164,6 +174,16 @@ export const plugins: Plugin[] = [
   trailOfBitsSecurityPlugin,
   // External integrations
   netlifyIntegrationPlugin,
+  // Official Anthropic plugins
+  anthropicSkillsPlugin,
+  claudePreviewPlugin,
+  claudeInChromePlugin,
+  scheduledTasksPlugin,
+  mcpRegistryPlugin,
+  // Community framework plugins
+  shadcnPlugin,
+  bunPlugin,
+  astroPlugin,
 ];
 
 export function getPluginBySlug(slug: string): Plugin | undefined {
