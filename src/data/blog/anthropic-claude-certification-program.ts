@@ -21,7 +21,17 @@ export const anthropicClaudeCertificationProgram: BlogPost = {
   relatedItems: [
     {
       type: "blog",
+      slug: "claude-code-subagents-guide",
+      relationship: "recommends",
+    },
+    {
+      type: "blog",
       slug: "mcp-servers-guide",
+      relationship: "recommends",
+    },
+    {
+      type: "blog",
+      slug: "claude-md-guide",
       relationship: "recommends",
     },
     {
@@ -31,7 +41,7 @@ export const anthropicClaudeCertificationProgram: BlogPost = {
     },
     {
       type: "blog",
-      slug: "claude-md-guide",
+      slug: "context-engineering-claude-code",
       relationship: "recommends",
     },
   ],

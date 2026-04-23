@@ -24,6 +24,26 @@ export const claudeMdGuide: BlogPost = {
       slug: "nextjs",
       relationship: "works-with",
     },
+    {
+      type: "prompt",
+      slug: "python",
+      relationship: "works-with",
+    },
+    {
+      type: "skill",
+      slug: "context-engineering",
+      relationship: "works-with",
+    },
+    {
+      type: "blog",
+      slug: "claude-code-hooks-guide",
+      relationship: "recommends",
+    },
+    {
+      type: "blog",
+      slug: "best-claude-code-plugins",
+      relationship: "recommends",
+    },
   ],
   content: `# The Complete Guide to CLAUDE.md: How to Configure Claude Code for Any Project
 
