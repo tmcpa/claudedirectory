@@ -30,6 +30,14 @@ import { envSetupSkill } from "./env-setup";
 import { codeWalkthroughSkill } from "./code-walkthrough";
 import { sqlOptimizerSkill } from "./sql-optimizer";
 import { skyvernSkill } from "./skyvern-skill";
+// Official Anthropic skills
+import { skillCreatorSkill } from "./skill-creator";
+import { pdfSkill } from "./pdf";
+import { pptxSkill } from "./pptx";
+import { xlsxSkill } from "./xlsx";
+import { docxSkill } from "./docx";
+import { consolidateMemorySkill } from "./consolidate-memory";
+import { webappTestingSkill } from "./webapp-testing";
 
 export const skills: Skill[] = [
   sqlOptimizerSkill,
@@ -65,6 +73,14 @@ export const skills: Skill[] = [
   envSetupSkill,
   codeWalkthroughSkill,
   skyvernSkill,
+  // Official Anthropic skills
+  skillCreatorSkill,
+  pdfSkill,
+  pptxSkill,
+  xlsxSkill,
+  docxSkill,
+  consolidateMemorySkill,
+  webappTestingSkill,
 ];
 
 export function getSkillBySlug(slug: string): Skill | undefined {
