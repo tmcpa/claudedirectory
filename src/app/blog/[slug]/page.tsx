@@ -137,6 +137,7 @@ export default async function BlogPostPage(props: Props) {
 
   const readingTime = getReadingTime(post.content);
   const headings = extractHeadings(post.content);
+  const hasTopRelatedModule = (post.relatedItems?.length ?? 0) >= 3;
 
   return (
     <div className="container py-8 max-w-4xl">
@@ -214,6 +215,12 @@ export default async function BlogPostPage(props: Props) {
         </div>
 
         <Separator />
+
+        {hasTopRelatedModule && post.relatedItems && (
+          <div className="rounded-lg border-2 border-primary/20 bg-primary/5 p-5">
+            <RelatedItems items={post.relatedItems} title="Keep exploring" />
+          </div>
+        )}
 
         {headings.length > 2 && (
           <nav className="rounded-lg border bg-card p-4">
@@ -363,7 +370,7 @@ export default async function BlogPostPage(props: Props) {
           </div>
         )}
 
-        {post.relatedItems && post.relatedItems.length > 0 && (
+        {!hasTopRelatedModule && post.relatedItems && post.relatedItems.length > 0 && (
           <>
             <Separator />
             <RelatedItems items={post.relatedItems} />
