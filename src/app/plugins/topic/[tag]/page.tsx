@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PluginCard } from "@/components/cards/plugin-card";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedUseCases } from "@/components/related-use-cases";
 import { getAllPluginTags, getPluginsByTag } from "@/data/plugins";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
@@ -91,6 +92,8 @@ export default async function PluginTopicPage(props: Props) {
           <PluginCard key={plugin.slug} plugin={plugin} />
         ))}
       </div>
+
+      <RelatedUseCases tag={tag} />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">

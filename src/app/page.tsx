@@ -21,7 +21,9 @@ import { getFeaturedAgents } from "@/data/agents";
 import { getFeaturedBlogPosts } from "@/data/blog";
 import { getRecentlyAdded } from "@/data/recently-added";
 import { RecentItemCard } from "@/components/cards/recent-item-card";
-import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock, Mail } from "lucide-react";
+import { useCases } from "@/data/use-cases";
+import { getUseCaseCounts } from "@/lib/use-cases";
+import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock, Mail, Compass } from "lucide-react";
 
 const categories = [
   {
@@ -84,6 +86,7 @@ export default function Home() {
   const featuredAgents = getFeaturedAgents();
   const featuredBlogPosts = getFeaturedBlogPosts();
   const recentlyAdded = getRecentlyAdded(6);
+  const useCaseCounts = getUseCaseCounts();
 
   return (
     <div className="flex flex-col">
@@ -137,6 +140,39 @@ export default function Home() {
             </p>
             <NewsletterSignup source="home_hero" />
           </div>
+        </div>
+      </section>
+
+      {/* Browse by Use Case */}
+      <section className="container py-12 border-t">
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-2">
+            <Compass className="h-5 w-5 text-muted-foreground" />
+            <h2 className="text-2xl font-bold">Browse by Use Case</h2>
+          </div>
+          <Button variant="ghost" asChild>
+            <Link href="/for">
+              View all
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+        <p className="text-muted-foreground mb-6 max-w-3xl">
+          Skills, agents, plugins, MCP servers, prompts, hooks, and guides — grouped by what you&apos;re trying to do.
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          {useCases.map((useCase) => (
+            <Link key={useCase.slug} href={`/for/${useCase.slug}`}>
+              <Card className="h-full hover:bg-accent/50 transition-colors cursor-pointer">
+                <CardHeader className="p-4">
+                  <CardTitle className="text-sm">{useCase.title}</CardTitle>
+                  <CardDescription className="text-xs">
+                    {useCaseCounts[useCase.slug] ?? 0} items
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
+          ))}
         </div>
       </section>
 

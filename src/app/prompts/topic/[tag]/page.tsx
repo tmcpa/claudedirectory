@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PromptCard } from "@/components/cards/prompt-card";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedUseCases } from "@/components/related-use-cases";
 import { prompts, getAllPromptTags, getPromptsByTag } from "@/data/prompts";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
@@ -91,6 +92,8 @@ export default async function PromptTopicPage(props: Props) {
           <PromptCard key={prompt.slug} prompt={prompt} />
         ))}
       </div>
+
+      <RelatedUseCases tag={tag} />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">

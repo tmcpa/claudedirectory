@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Terminal, Rss } from "lucide-react";
 import { NewsletterSignup } from "@/components/newsletter-signup";
+import { useCases } from "@/data/use-cases";
 
 export function Footer() {
   return (
@@ -18,6 +19,28 @@ export function Footer() {
             className="md:w-[420px]"
             buttonLabel="Subscribe"
           />
+        </div>
+        <div className="mb-8 rounded-lg border bg-card/40 p-5">
+          <div className="mb-3 flex items-center justify-between">
+            <h3 className="font-semibold text-sm">Browse by Use Case</h3>
+            <Link
+              href="/for"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              See all
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-muted-foreground">
+            {useCases.map((u) => (
+              <Link
+                key={u.slug}
+                href={`/for/${u.slug}`}
+                className="hover:text-foreground transition-colors"
+              >
+                {u.title}
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
