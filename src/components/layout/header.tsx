@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const navigation = [
+  { name: "Use Cases", href: "/for" },
   { name: "Prompts", href: "/prompts" },
   { name: "MCP Servers", href: "/mcp-servers" },
   { name: "Hooks", href: "/hooks" },

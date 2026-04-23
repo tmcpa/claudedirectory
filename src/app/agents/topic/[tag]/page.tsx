@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { AgentCard } from "@/components/cards/agent-card";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
+import { RelatedUseCases } from "@/components/related-use-cases";
 import { getAllAgentTags, getAgentsByTag } from "@/data/agents";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
@@ -91,6 +92,8 @@ export default async function AgentTopicPage(props: Props) {
           <AgentCard key={agent.slug} agent={agent} />
         ))}
       </div>
+
+      <RelatedUseCases tag={tag} />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">

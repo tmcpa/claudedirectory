@@ -7,6 +7,7 @@ import { plugins, getAllPluginTags } from "@/data/plugins";
 import { howTos, getAllHowToTags } from "@/data/how-to";
 import { agents, getAllAgentTags } from "@/data/agents";
 import { blogPosts, getAllBlogPostTags } from "@/data/blog";
+import { useCases } from "@/data/use-cases";
 import { BASE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -74,7 +75,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.8,
     },
+    {
+      url: `${BASE_URL}/for`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
+
+  // Use-case directory pages
+  const useCasePages: MetadataRoute.Sitemap = useCases.map((u) => ({
+    url: `${BASE_URL}/for/${u.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
 
   // Dynamic pages - Prompts
   const promptPages: MetadataRoute.Sitemap = prompts.map((item) => ({
@@ -163,5 +178,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...agentPages,
     ...blogPages,
     ...topicPages,
+    ...useCasePages,
   ];
 }
