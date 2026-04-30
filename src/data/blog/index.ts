@@ -25,8 +25,10 @@ import { claudeCodeCheatSheet } from "./claude-code-cheat-sheet";
 import { ultrareviewClaudeCodeGuide } from "./ultrareview-claude-code-guide";
 import { claudeCoworkForBusinessUsers } from "./claude-cowork-for-business-users";
 import { claudeCodeForNonEngineersInEngineeringCodebases } from "./claude-code-for-non-engineers-in-engineering-codebases";
+import { claudeCodeWorktreesGuide } from "./claude-code-worktrees-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeWorktreesGuide,
   claudeCodeForNonEngineersInEngineeringCodebases,
   claudeCoworkForBusinessUsers,
   ultrareviewClaudeCodeGuide,
