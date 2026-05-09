@@ -28,8 +28,10 @@ import { claudeCodeForNonEngineersInEngineeringCodebases } from "./claude-code-f
 import { claudeCodeWorktreesGuide } from "./claude-code-worktrees-guide";
 import { claudeCodePlanModeGuide } from "./claude-code-plan-mode-guide";
 import { claudeCodeStatuslineGuide } from "./claude-code-statusline-guide";
+import { claudeCodeRoutinesGuide } from "./claude-code-routines-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeRoutinesGuide,
   claudeCodeStatuslineGuide,
   claudeCodePlanModeGuide,
   claudeCodeWorktreesGuide,
