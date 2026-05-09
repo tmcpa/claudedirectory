@@ -11,7 +11,7 @@ export const docxSkill: Skill = {
     name: "Anthropic",
     url: "https://github.com/anthropics/skills",
   },
-  repoUrl: "https://github.com/anthropics/skills/tree/main/docx",
+  repoUrl: "https://github.com/anthropics/skills/tree/main/skills/docx",
   content: `# Word Document Skill
 
 Official Anthropic skill for creating, reading, editing, and manipulating Word documents (.docx).

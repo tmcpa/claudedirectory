@@ -16,7 +16,6 @@ export const supabasePlugin: Plugin = {
     "supabase@claude-plugins-official": true
   }
 }`,
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/supabase",
   commands: [
     { name: "/supabase-query", description: "Execute SQL queries on your Supabase database" },
     { name: "/supabase-migrate", description: "Create and run database migrations" },

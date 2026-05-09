@@ -11,7 +11,7 @@ export const skillCreatorSkill: Skill = {
     name: "Anthropic",
     url: "https://github.com/anthropics/skills",
   },
-  repoUrl: "https://github.com/anthropics/skills/tree/main/skill-creator",
+  repoUrl: "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
   content: `# Skill Creator
 
 Official Anthropic skill for building, editing, and optimizing your own Claude Code skills. Includes evaluation workflows for measuring skill trigger accuracy and variance.

@@ -11,7 +11,7 @@ export const pptxSkill: Skill = {
     name: "Anthropic",
     url: "https://github.com/anthropics/skills",
   },
-  repoUrl: "https://github.com/anthropics/skills/tree/main/pptx",
+  repoUrl: "https://github.com/anthropics/skills/tree/main/skills/pptx",
   content: `# PowerPoint Skill
 
 Official Anthropic skill for creating and editing .pptx files.
