@@ -16,7 +16,6 @@ export const slackPlugin: Plugin = {
     "slack@claude-plugins-official": true
   }
 }`,
-  repoUrl: "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/slack",
   commands: [
     { name: "/slack-search", description: "Search messages across channels and threads" },
     { name: "/slack-channel", description: "Read recent messages from a channel" },

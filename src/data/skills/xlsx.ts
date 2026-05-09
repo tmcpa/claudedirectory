@@ -11,7 +11,7 @@ export const xlsxSkill: Skill = {
     name: "Anthropic",
     url: "https://github.com/anthropics/skills",
   },
-  repoUrl: "https://github.com/anthropics/skills/tree/main/xlsx",
+  repoUrl: "https://github.com/anthropics/skills/tree/main/skills/xlsx",
   content: `# Spreadsheet Skill
 
 Official Anthropic skill for working with spreadsheet files (.xlsx, .xlsm, .csv, .tsv).

@@ -27,8 +27,10 @@ import { claudeCoworkForBusinessUsers } from "./claude-cowork-for-business-users
 import { claudeCodeForNonEngineersInEngineeringCodebases } from "./claude-code-for-non-engineers-in-engineering-codebases";
 import { claudeCodeWorktreesGuide } from "./claude-code-worktrees-guide";
 import { claudeCodePlanModeGuide } from "./claude-code-plan-mode-guide";
+import { claudeCodeStatuslineGuide } from "./claude-code-statusline-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeStatuslineGuide,
   claudeCodePlanModeGuide,
   claudeCodeWorktreesGuide,
   claudeCodeForNonEngineersInEngineeringCodebases,

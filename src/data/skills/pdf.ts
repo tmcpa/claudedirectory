@@ -11,7 +11,7 @@ export const pdfSkill: Skill = {
     name: "Anthropic",
     url: "https://github.com/anthropics/skills",
   },
-  repoUrl: "https://github.com/anthropics/skills/tree/main/pdf",
+  repoUrl: "https://github.com/anthropics/skills/tree/main/skills/pdf",
   content: `# PDF Tools Skill
 
 Official Anthropic skill for working with PDF files. Triggers whenever a .pdf file is mentioned as input or output.
