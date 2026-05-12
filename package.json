@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ingest": "node scripts/ingest/all.mjs",
+    "ingest:plugins": "node scripts/ingest/marketplaces.mjs",
+    "ingest:mcp": "node scripts/ingest/awesome-mcp.mjs",
+    "ingest:skills": "node scripts/ingest/skills.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
