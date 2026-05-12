@@ -33,6 +33,8 @@ export interface Prompt {
   repoUrl?: string;
 }
 
+export type ItemSource = "curated" | "ingested";
+
 export interface MCPServer {
   slug: string;
   title: string;
@@ -47,6 +49,9 @@ export interface MCPServer {
   repoUrl?: string;
   seoTitle?: string;
   seoDescription?: string;
+  stars?: number;
+  lastUpdated?: string;
+  source?: ItemSource;
 }
 
 export interface Hook {
@@ -77,6 +82,9 @@ export interface Skill {
   repoUrl?: string;
   seoTitle?: string;
   seoDescription?: string;
+  stars?: number;
+  lastUpdated?: string;
+  source?: ItemSource;
 }
 
 export interface Plugin {
@@ -94,6 +102,9 @@ export interface Plugin {
   repoUrl?: string;
   seoTitle?: string;
   seoDescription?: string;
+  stars?: number;
+  lastUpdated?: string;
+  source?: ItemSource;
 }
 
 export interface HowTo {
