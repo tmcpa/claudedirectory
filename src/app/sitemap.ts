@@ -9,6 +9,7 @@ import { agents, getAllAgentTags } from "@/data/agents";
 import { blogPosts, getAllBlogPostTags } from "@/data/blog";
 import { useCases } from "@/data/use-cases";
 import { getCrossPageParams } from "@/lib/use-cases";
+import { getAllComparisonParams } from "@/lib/comparisons";
 import { BASE_URL } from "@/lib/constants";
 
 type SitemapId =
@@ -23,7 +24,8 @@ type SitemapId =
   | "blog"
   | "topics"
   | "use-cases"
-  | "cross";
+  | "cross"
+  | "compare";
 
 export async function generateSitemaps(): Promise<{ id: SitemapId }[]> {
   return [
@@ -39,6 +41,7 @@ export async function generateSitemaps(): Promise<{ id: SitemapId }[]> {
     { id: "topics" },
     { id: "use-cases" },
     { id: "cross" },
+    { id: "compare" },
   ];
 }
 
@@ -234,6 +237,14 @@ export default async function sitemap({
         })),
       );
     }
+
+    case "compare":
+      return getAllComparisonParams().map(({ type, pair, useCase }) => ({
+        url: `${BASE_URL}/compare/${type}/${pair}/for/${useCase}`,
+        lastModified: now,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      }));
 
     default:
       return [];
