@@ -11,7 +11,7 @@ export const phpLspPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add php-lsp@claude-plugins-official",
+  installCommand: "/plugin install php-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "php-lsp@claude-plugins-official": true

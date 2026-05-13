@@ -11,7 +11,7 @@ export const claudeOpusMigrationPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add claude-opus-4-6-migration@claude-plugins-official",
+  installCommand: "/plugin install claude-opus-4-6-migration@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "claude-opus-4-6-migration@claude-plugins-official": true

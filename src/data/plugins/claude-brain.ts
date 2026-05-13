@@ -12,7 +12,7 @@ export const claudeBrainPlugin: Plugin = {
     url: "https://github.com/memvid",
   },
   repoUrl: "https://github.com/memvid/claude-brain",
-  installCommand: "claude plugins add claude-brain",
+  installCommand: "/plugin marketplace add memvid/claude-brain && /plugin install mind@memvid",
   commands: [
     {
       name: "/brain:save",

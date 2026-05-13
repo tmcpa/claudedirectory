@@ -11,7 +11,7 @@ export const mcpRegistryPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  installCommand: "claude plugins add mcp-registry@claude-plugins-official",
+  installCommand: "/plugin install mcp-registry@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "mcp-registry@claude-plugins-official": true

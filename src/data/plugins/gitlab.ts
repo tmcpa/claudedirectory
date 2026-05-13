@@ -10,7 +10,7 @@ export const gitlabPlugin: Plugin = {
     name: "GitLab",
     url: "https://gitlab.com",
   },
-  installCommand: "claude plugins add gitlab@claude-plugins-official",
+  installCommand: "/plugin install gitlab@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "gitlab@claude-plugins-official": true

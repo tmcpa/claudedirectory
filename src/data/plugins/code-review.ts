@@ -11,7 +11,7 @@ export const codeReviewPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add code-review@claude-plugins-official",
+  installCommand: "/plugin install code-review@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "code-review@claude-plugins-official": true

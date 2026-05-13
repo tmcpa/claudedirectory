@@ -11,7 +11,7 @@ export const dockerPlugin: Plugin = {
     url: "https://docker.com",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add docker@claude-plugins-official",
+  installCommand: "/plugin install docker@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "docker@claude-plugins-official": true

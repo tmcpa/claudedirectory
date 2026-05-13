@@ -11,7 +11,7 @@ export const awsPlugin: Plugin = {
     url: "https://aws.amazon.com",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add aws@claude-plugins-official",
+  installCommand: "/plugin install aws@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "aws@claude-plugins-official": true

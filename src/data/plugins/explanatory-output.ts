@@ -11,7 +11,7 @@ export const explanatoryOutputPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add explanatory-output-style@claude-plugins-official",
+  installCommand: "/plugin install explanatory-output-style@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "explanatory-output-style@claude-plugins-official": true

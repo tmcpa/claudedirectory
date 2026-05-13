@@ -11,7 +11,7 @@ export const csharpLspPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add csharp-lsp@claude-plugins-official",
+  installCommand: "/plugin install csharp-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "csharp-lsp@claude-plugins-official": true

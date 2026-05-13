@@ -10,7 +10,7 @@ export const supabasePlugin: Plugin = {
     name: "Supabase",
     url: "https://supabase.com",
   },
-  installCommand: "claude plugins add supabase@claude-plugins-official",
+  installCommand: "/plugin install supabase@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "supabase@claude-plugins-official": true

@@ -5,14 +5,14 @@ export const featureDevPlugin: Plugin = {
   title: "Feature Development",
   description: "Guided feature development with codebase understanding and architecture focus. A comprehensive 7-phase workflow for building features systematically with specialized agents for exploration, architecture, and review.",
   seoTitle: "Install feature-dev@claude-plugins-official – Claude Code Plugin Setup (2026)",
-  seoDescription: "Complete 2026 guide to installing feature-dev. Run `claude plugins add feature-dev@claude-plugins-official` for a 7-phase guided workflow: discovery, exploration, architecture, implementation, and review.",
+  seoDescription: "Complete 2026 guide to installing feature-dev. Run `/plugin install feature-dev@claude-plugins-official` for a 7-phase guided workflow: discovery, exploration, architecture, implementation, and review.",
   tags: ["feature", "development", "architecture", "official", "workflow"],
   featured: true,
   author: {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  installCommand: "claude plugins add feature-dev@claude-plugins-official",
+  installCommand: "/plugin install feature-dev@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "feature-dev@claude-plugins-official": true

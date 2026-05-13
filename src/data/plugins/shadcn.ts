@@ -12,7 +12,7 @@ export const shadcnPlugin: Plugin = {
     url: "https://ui.shadcn.com",
   },
   repoUrl: "https://github.com/shadcn-ui/ui",
-  installCommand: "claude plugins add shadcn@community",
+  installCommand: "/plugin install shadcn@community",
   commands: [
     { name: "/shadcn add", description: "Add a shadcn/ui component to the project" },
     { name: "/shadcn list", description: "List available components in the registry" },

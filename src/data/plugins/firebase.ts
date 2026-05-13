@@ -10,7 +10,7 @@ export const firebasePlugin: Plugin = {
     name: "Google",
     url: "https://firebase.google.com",
   },
-  installCommand: "claude plugins add firebase@claude-plugins-official",
+  installCommand: "/plugin install firebase@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "firebase@claude-plugins-official": true

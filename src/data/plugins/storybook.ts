@@ -10,7 +10,7 @@ export const storybookPlugin: Plugin = {
     name: "Storybook",
     url: "https://github.com/storybookjs",
   },
-  installCommand: "claude plugins add @storybook/claude-plugin",
+  installCommand: "/plugin install @storybook/claude-plugin",
   commands: [
     { name: "/story:gen", description: "Generate stories for a component file" },
     { name: "/story:list", description: "List all stories in the project" },

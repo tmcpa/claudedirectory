@@ -12,10 +12,10 @@ export const anthropicSkillsPlugin: Plugin = {
     url: "https://github.com/anthropics/skills",
   },
   repoUrl: "https://github.com/anthropics/skills",
-  installCommand: "claude plugins add anthropic-skills@anthropic-skills",
+  installCommand: "/plugin marketplace add anthropics/skills && /plugin install document-skills@anthropic-agent-skills",
   config: `{
   "enabledPlugins": {
-    "anthropic-skills@anthropic-skills": true
+    "document-skills@anthropic-agent-skills": true
   }
 }`,
   commands: [

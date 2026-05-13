@@ -10,7 +10,7 @@ export const linearPlugin: Plugin = {
     name: "Linear",
     url: "https://linear.app",
   },
-  installCommand: "claude plugins add linear@claude-plugins-official",
+  installCommand: "/plugin install linear@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "linear@claude-plugins-official": true

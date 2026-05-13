@@ -11,7 +11,7 @@ export const prismaPlugin: Plugin = {
     url: "https://prisma.io",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add prisma@claude-plugins-official",
+  installCommand: "/plugin install prisma@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "prisma@claude-plugins-official": true

@@ -32,73 +32,65 @@ Plugins are bundles that can include:
 
 ## Finding Plugins
 
-### Official Plugins
+Plugins live in **marketplaces**. The official Anthropic marketplace (\`claude-plugins-official\`) is built in and available the moment you start Claude Code — you don't have to add it.
 
-\`\`\`bash
-# List official plugins
-claude plugins list --official
-\`\`\`
+Run \`/plugin\` to open the plugin manager. It has four tabs:
 
-### Community Plugins
-
-\`\`\`bash
-# Search all plugins
-claude plugins search <keyword>
-\`\`\`
+- **Discover** — browse plugins from all your marketplaces
+- **Installed** — view, enable, disable, or uninstall plugins
+- **Marketplaces** — add or remove marketplaces
+- **Errors** — view plugin load errors
 
 ## Installing Plugins
 
-### From Official Registry
+### From the official marketplace
 
-\`\`\`bash
-# Install an official plugin
-claude plugins add code-review@claude-plugins-official
+\`\`\`shell
+# Inside Claude Code
+/plugin install code-review@claude-plugins-official
 \`\`\`
 
-### From GitHub
+### From another marketplace
 
-\`\`\`bash
-# Install from a GitHub repository
-claude plugins add username/plugin-name
+You need two steps: register the marketplace, then install:
+
+\`\`\`shell
+# Add a GitHub marketplace using owner/repo
+/plugin marketplace add anthropics/claude-code
+
+# Now install plugins from it
+/plugin install commit-commands@anthropics-claude-code
 \`\`\`
 
-### From Local Path
-
-\`\`\`bash
-# Install a local plugin
-claude plugins add ./my-plugin
-\`\`\`
+You can also point at a Git URL (GitLab, Bitbucket, self-hosted), a local directory containing \`.claude-plugin/marketplace.json\`, or a remote URL.
 
 ## Managing Plugins
 
-### List Installed Plugins
+Most management happens in the interactive \`/plugin\` UI, but there are direct commands too:
 
-\`\`\`bash
-claude plugins list
-\`\`\`
+\`\`\`shell
+# Disable without uninstalling
+/plugin disable code-review@claude-plugins-official
 
-### Update Plugins
+# Re-enable
+/plugin enable code-review@claude-plugins-official
 
-\`\`\`bash
-# Update all plugins
-claude plugins update
+# Uninstall
+/plugin uninstall code-review@claude-plugins-official
 
-# Update specific plugin
-claude plugins update code-review@claude-plugins-official
-\`\`\`
+# Refresh a marketplace's catalog
+/plugin marketplace update claude-plugins-official
 
-### Remove Plugins
-
-\`\`\`bash
-claude plugins remove code-review@claude-plugins-official
+# Reload after install/enable/disable changes
+/reload-plugins
 \`\`\`
 
 ## Popular Plugins
 
 ### Code Review
 
-\`\`\`bash
-claude plugins add code-review@claude-plugins-official
+\`\`\`shell
+/plugin install code-review@claude-plugins-official
 \`\`\`
 
 Provides:
@@ -108,8 +100,8 @@ Provides:
 
 ### Feature Development
 
-\`\`\`bash
-claude plugins add feature-dev@claude-plugins-official
+\`\`\`shell
+/plugin install feature-dev@claude-plugins-official
 \`\`\`
 
 Provides:
@@ -119,8 +111,8 @@ Provides:
 
 ### Frontend Design
 
-\`\`\`bash
-claude plugins add frontend-design@claude-code-plugins
+\`\`\`shell
+/plugin install frontend-design@claude-plugins-official
 \`\`\`
 
 Provides:
@@ -201,13 +193,18 @@ my-plugin/
 
 ### Plugin Not Loading
 
-\`\`\`bash
-# Check plugin status
-claude plugins status code-review@claude-plugins-official
+Open the \`/plugin\` UI and check the **Errors** tab for load failures. To force a reinstall:
 
-# Reinstall
-claude plugins remove code-review@claude-plugins-official
-claude plugins add code-review@claude-plugins-official
+\`\`\`shell
+/plugin uninstall code-review@claude-plugins-official
+/plugin install code-review@claude-plugins-official
+/reload-plugins
+\`\`\`
+
+If the plugin still doesn't show up, clear the plugin cache and restart Claude Code:
+
+\`\`\`bash
+rm -rf ~/.claude/plugins/cache
 \`\`\`
 
 ### Conflicts Between Plugins

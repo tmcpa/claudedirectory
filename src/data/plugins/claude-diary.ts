@@ -12,7 +12,7 @@ export const claudeDiaryPlugin: Plugin = {
     url: "https://github.com/rlancemartin",
   },
   repoUrl: "https://github.com/rlancemartin/claude-diary",
-  installCommand: "claude plugins add claude-diary",
+  installCommand: "/plugin install claude-diary",
   commands: [
     {
       name: "/diary:review",

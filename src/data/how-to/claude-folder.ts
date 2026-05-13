@@ -80,7 +80,7 @@ Scripts executed on tool events — block dangerous commands, auto-format on wri
 Reusable multi-step workflows. Each skill is a folder containing a \`SKILL.md\` with metadata and instructions. Claude loads the index on startup and invokes skills when the user's request matches.
 
 ### \`plugins/\`
-Manifests for plugins installed via \`claude plugins add …\`. Usually not edited by hand.
+Manifests for plugins installed via \`/plugin install …\`. Usually not edited by hand.
 
 ### \`projects/\`
 Per-session history and state. Safe to delete if you want a clean slate; Claude Code will rebuild it.

@@ -10,7 +10,7 @@ export const cursorRulesPlugin: Plugin = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
-  installCommand: "claude plugins add cursor-rules",
+  installCommand: "/plugin install cursor-rules",
   commands: [
     { name: "/cursor-import", description: "Convert .cursorrules to CLAUDE.md format" },
     { name: "/cursor-diff", description: "Show differences between .cursorrules and CLAUDE.md" },

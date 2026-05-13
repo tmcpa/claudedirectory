@@ -12,7 +12,7 @@ export const claudeMemPlugin: Plugin = {
     url: "https://github.com/thedotmack",
   },
   repoUrl: "https://github.com/thedotmack/claude-mem",
-  installCommand: "claude plugins add claude-mem",
+  installCommand: "/plugin marketplace add thedotmack/claude-mem && /plugin install claude-mem@thedotmack",
   commands: [
     {
       name: "/mem:search",

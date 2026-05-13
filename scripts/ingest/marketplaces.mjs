@@ -38,12 +38,18 @@ function parseSourceRepo(source, hostRepo) {
   return { repoUrl: `https://github.com/${m[1]}/${m[2]}`, sourceRepo: `${m[1]}/${m[2]}` };
 }
 
-function pluginToListing(plugin, hostRepo, hostMeta) {
+function pluginToListing(plugin, hostRepo, hostMeta, marketplaceName) {
   const { repoUrl, sourceRepo } = parseSourceRepo(plugin.source, hostRepo);
   const slug = slugify(plugin.name || plugin.title);
   if (!slug) return null;
   const description = truncate(plugin.description || hostMeta?.description || "", 280);
-  const installCommand = `claude plugins add ${plugin.name}@${hostRepo.split("/").pop()}`;
+  const marketplace = marketplaceName || hostRepo.split("/").pop();
+  // The official Anthropic marketplace is auto-registered, so no `marketplace add`
+  // step is needed for it. All other marketplaces must be added first.
+  const installCommand =
+    marketplace === "claude-plugins-official"
+      ? `/plugin install ${plugin.name}@${marketplace}`
+      : `/plugin marketplace add ${hostRepo} && /plugin install ${plugin.name}@${marketplace}`;
   const tags = deriveTags(plugin.name, description, [plugin.category].filter(Boolean));
   return {
     slug,
@@ -95,9 +101,10 @@ async function ingestMarketplace(repo) {
   catch (e) { log(`  invalid JSON in ${usedPath}: ${e.message}`); return []; }
   const plugins = parsed.plugins || parsed.items || [];
   log(`  found ${plugins.length} entries in ${usedPath}`);
+  const marketplaceName = typeof parsed.name === "string" ? parsed.name : null;
   const out = [];
   for (const p of plugins) {
-    const listing = pluginToListing(p, repo, meta);
+    const listing = pluginToListing(p, repo, meta, marketplaceName);
     if (listing) out.push(listing);
   }
   return out;

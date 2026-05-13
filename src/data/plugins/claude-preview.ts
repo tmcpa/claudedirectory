@@ -11,7 +11,7 @@ export const claudePreviewPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  installCommand: "claude plugins add claude-preview@claude-plugins-official",
+  installCommand: "/plugin install claude-preview@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "claude-preview@claude-plugins-official": true

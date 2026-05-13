@@ -12,7 +12,7 @@ export const netlifyPlugin: Plugin = {
     url: "https://github.com/netlify",
   },
   repoUrl: "https://github.com/netlify/netlify-mcp",
-  installCommand: "claude plugins add netlify",
+  installCommand: "/plugin install netlify",
   commands: [
     {
       name: "/netlify:deploy",

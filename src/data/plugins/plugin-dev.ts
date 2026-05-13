@@ -11,7 +11,7 @@ export const pluginDevPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add plugin-dev@claude-plugins-official",
+  installCommand: "/plugin install plugin-dev@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "plugin-dev@claude-plugins-official": true

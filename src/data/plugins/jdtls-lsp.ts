@@ -11,7 +11,7 @@ export const jdtlsLspPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add jdtls-lsp@claude-plugins-official",
+  installCommand: "/plugin install jdtls-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "jdtls-lsp@claude-plugins-official": true

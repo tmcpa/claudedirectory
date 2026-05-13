@@ -10,7 +10,7 @@ export const depAuditPlugin: Plugin = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
-  installCommand: "claude plugins add dep-audit",
+  installCommand: "/plugin install dep-audit",
   commands: [
     { name: "/deps:audit", description: "Scan dependencies for known vulnerabilities" },
     { name: "/deps:outdated", description: "List outdated packages with upgrade paths" },

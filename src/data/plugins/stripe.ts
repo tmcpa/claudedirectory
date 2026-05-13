@@ -10,7 +10,7 @@ export const stripePlugin: Plugin = {
     name: "Stripe",
     url: "https://stripe.com",
   },
-  installCommand: "claude plugins add stripe@claude-plugins-official",
+  installCommand: "/plugin install stripe@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "stripe@claude-plugins-official": true

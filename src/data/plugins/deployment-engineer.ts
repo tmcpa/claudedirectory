@@ -11,5 +11,5 @@ export const deploymentEngineerPlugin: Plugin = {
     url: "https://github.com/ccplugins/awesome-claude-code-plugins",
   },
   repoUrl: "https://github.com/ccplugins/awesome-claude-code-plugins/tree/main/plugins/deployment-engineer",
-  installCommand: "claude plugins:add ccplugins/awesome-claude-code-plugins/plugins/deployment-engineer",
+  installCommand: "/plugin marketplace add ccplugins/awesome-claude-code-plugins && /plugin install deployment-engineer@awesome-claude-code-plugins",
 };

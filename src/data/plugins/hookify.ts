@@ -11,7 +11,7 @@ export const hookifyPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add hookify@claude-plugins-official",
+  installCommand: "/plugin install hookify@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "hookify@claude-plugins-official": true

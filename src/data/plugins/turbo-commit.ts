@@ -10,7 +10,7 @@ export const turboCommitPlugin: Plugin = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
-  installCommand: "claude plugins add turbo-commit",
+  installCommand: "/plugin install turbo-commit",
   commands: [
     { name: "/tc", description: "Generate a conventional commit for staged changes" },
     { name: "/tc:amend", description: "Amend the last commit message" },

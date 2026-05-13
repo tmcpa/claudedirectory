@@ -11,7 +11,7 @@ export const pyrightLspPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add pyright-lsp@claude-plugins-official",
+  installCommand: "/plugin install pyright-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "pyright-lsp@claude-plugins-official": true

@@ -11,7 +11,7 @@ export const notionPlugin: Plugin = {
     url: "https://notion.so",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add notion@claude-plugins-official",
+  installCommand: "/plugin install notion@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "notion@claude-plugins-official": true

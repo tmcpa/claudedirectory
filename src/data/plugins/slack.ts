@@ -10,7 +10,7 @@ export const slackPlugin: Plugin = {
     name: "Slack",
     url: "https://slack.com",
   },
-  installCommand: "claude plugins add slack@claude-plugins-official",
+  installCommand: "/plugin install slack@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "slack@claude-plugins-official": true
