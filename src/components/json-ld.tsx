@@ -40,7 +40,14 @@ interface ItemJsonLdProps {
   };
   tags?: string[];
   datePublished?: string;
+  dateModified?: string;
   image?: string;
+  repoUrl?: string;
+  installCommand?: string;
+  stars?: number;
+  programmingLanguage?: string;
+  license?: string;
+  applicationSubCategory?: string;
 }
 
 export function ItemJsonLd({
@@ -51,7 +58,14 @@ export function ItemJsonLd({
   author,
   tags,
   datePublished,
+  dateModified,
   image,
+  repoUrl,
+  installCommand,
+  stars,
+  programmingLanguage,
+  license,
+  applicationSubCategory,
 }: ItemJsonLdProps) {
   const jsonLd: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -73,9 +87,48 @@ export function ItemJsonLd({
     jsonLd.keywords = tags.join(", ");
   }
 
+  if (dateModified) {
+    jsonLd.dateModified = new Date(dateModified).toISOString();
+  }
+
   if (type === "SoftwareApplication") {
     jsonLd.applicationCategory = "DeveloperApplication";
+    if (applicationSubCategory) {
+      jsonLd.applicationSubCategory = applicationSubCategory;
+    }
     jsonLd.operatingSystem = "Cross-platform";
+    jsonLd.offers = {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    };
+    if (repoUrl) {
+      jsonLd.codeRepository = repoUrl;
+      jsonLd.sameAs = repoUrl;
+    }
+    if (installCommand) {
+      jsonLd.installUrl = installCommand;
+    }
+    if (programmingLanguage) {
+      jsonLd.programmingLanguage = programmingLanguage;
+    }
+    if (license) {
+      jsonLd.license = license;
+    }
+    if (typeof stars === "number" && stars > 0) {
+      jsonLd.aggregateRating = {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        ratingCount: stars,
+        bestRating: "5",
+        worstRating: "1",
+      };
+      jsonLd.interactionStatistic = {
+        "@type": "InteractionCounter",
+        interactionType: "https://schema.org/LikeAction",
+        userInteractionCount: stars,
+      };
+    }
   }
 
   if (type === "Article") {
@@ -83,6 +136,12 @@ export function ItemJsonLd({
     if (datePublished) {
       jsonLd.datePublished = new Date(datePublished).toISOString();
     }
+    if (image) {
+      jsonLd.image = image;
+    }
+  }
+
+  if (type === "HowTo") {
     if (image) {
       jsonLd.image = image;
     }

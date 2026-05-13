@@ -7,9 +7,13 @@ import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
+import { RepoMeta } from "@/components/repo-meta";
+import { GitHubReadme } from "@/components/github-readme";
 import { mcpServers, getMCPServerBySlug } from "@/data/mcp-servers";
 import { ArrowLeft, Server, User, Terminal, ExternalLink } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { getRepoMetadata } from "@/lib/github";
+import { getCurrentMonthYear } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,13 +31,14 @@ export async function generateMetadata(props: Props) {
   if (!server) return { title: "MCP Server Not Found" };
 
   const url = `${BASE_URL}/mcp-servers/${server.slug}`;
+  const month = getCurrentMonthYear();
 
   const title =
     server.seoTitle ??
-    `Add ${server.title} to Claude Code – MCP Setup Guide (2026)`;
+    `Best ${server.title} MCP Server for Claude Code (${month})`;
   const description =
     server.seoDescription ??
-    `${server.description} Copy-paste the JSON config into your Claude Code settings.`;
+    `${server.description} Copy-paste the JSON config into your Claude Code settings — works in seconds.`;
 
   return {
     title,
@@ -65,6 +70,7 @@ export default async function MCPServerDetailPage(props: Props) {
   }
 
   const pageUrl = `${BASE_URL}/mcp-servers/${server.slug}`;
+  const repoMeta = await getRepoMetadata(server.repoUrl);
 
   return (
     <div className="container py-8 max-w-4xl">
@@ -75,6 +81,13 @@ export default async function MCPServerDetailPage(props: Props) {
         url={pageUrl}
         author={server.author}
         tags={server.tags}
+        repoUrl={server.repoUrl}
+        installCommand={server.installCommand}
+        stars={repoMeta?.stars}
+        dateModified={repoMeta?.lastUpdated}
+        programmingLanguage={repoMeta?.language}
+        license={repoMeta?.license}
+        applicationSubCategory="MCP Server"
       />
       <BreadcrumbJsonLd
         items={[
@@ -109,9 +122,9 @@ export default async function MCPServerDetailPage(props: Props) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <User className="h-4 w-4" />
-          <span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5">
+            <User className="h-4 w-4" />
             By{" "}
             {server.author.url ? (
               <a
@@ -126,6 +139,7 @@ export default async function MCPServerDetailPage(props: Props) {
               server.author.name
             )}
           </span>
+          <RepoMeta meta={repoMeta} />
         </div>
 
         <Separator />
@@ -162,6 +176,8 @@ export default async function MCPServerDetailPage(props: Props) {
             <li>Restart Claude Code to apply changes</li>
           </ol>
         </div>
+
+        <GitHubReadme repoUrl={server.repoUrl} meta={repoMeta} />
 
         {server.repoUrl && (
           <div>

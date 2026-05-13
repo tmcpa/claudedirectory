@@ -9,6 +9,7 @@ import { getAllHowToTags, getHowTosByTag } from "@/data/how-to";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { topicTitle, topicDescription } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ tag: string }>;
@@ -25,13 +26,20 @@ export async function generateMetadata(props: Props) {
 
   const displayName = formatTagName(tag);
   const url = `${BASE_URL}/how-to/topic/${tag}`;
-  const title = `${displayName} Tutorials for Claude Code`;
-  const description = `Browse ${tagItems.length} Claude Code ${tagItems.length === 1 ? "tutorial" : "tutorials"} about ${displayName}. Step-by-step guides and how-to articles.`;
+  const title = topicTitle("how-to", displayName);
+  const description = topicDescription("how-to", displayName, tagItems.length);
 
   return {
     title,
     description,
-    keywords: [tag, `${tag} claude code tutorial`, `${tag} guide`, "claude code", "how to"],
+    keywords: [
+      tag,
+      `best ${tag} claude code tutorial`,
+      `${tag} guide`,
+      `claude code ${tag} how to`,
+      "claude code",
+      "how to",
+    ],
     openGraph: {
       title,
       description,
@@ -79,7 +87,7 @@ export default async function HowToTopicPage(props: Props) {
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          {displayName} Tutorials for Claude Code
+          Best Claude Code Guides for {displayName}
         </h1>
         <p className="text-muted-foreground">
           {tagItems.length} {tagItems.length === 1 ? "guide" : "guides"} tagged
@@ -93,7 +101,7 @@ export default async function HowToTopicPage(props: Props) {
         ))}
       </div>
 
-      <RelatedUseCases tag={tag} />
+      <RelatedUseCases tag={tag} crossPath="/how-to" />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">

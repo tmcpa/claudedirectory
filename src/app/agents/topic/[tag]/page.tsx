@@ -9,6 +9,7 @@ import { getAllAgentTags, getAgentsByTag } from "@/data/agents";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { topicTitle, topicDescription } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ tag: string }>;
@@ -25,13 +26,20 @@ export async function generateMetadata(props: Props) {
 
   const displayName = formatTagName(tag);
   const url = `${BASE_URL}/agents/topic/${tag}`;
-  const title = `${displayName} Agents for Claude Code`;
-  const description = `Browse ${tagItems.length} Claude Code agents tagged with "${tag}". Specialized subagent configurations for ${displayName}.`;
+  const title = topicTitle("agent", displayName);
+  const description = topicDescription("agent", displayName, tagItems.length);
 
   return {
     title,
     description,
-    keywords: [tag, `${tag} claude code agents`, `${tag} subagents`, "claude code", "agents"],
+    keywords: [
+      tag,
+      `best ${tag} claude code agents`,
+      `${tag} subagents`,
+      `claude code agents ${tag}`,
+      "claude code",
+      "agents",
+    ],
     openGraph: {
       title,
       description,
@@ -79,7 +87,7 @@ export default async function AgentTopicPage(props: Props) {
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          {displayName} Agents for Claude Code
+          Best Claude Code Agents for {displayName}
         </h1>
         <p className="text-muted-foreground">
           {tagItems.length} {tagItems.length === 1 ? "agent" : "agents"} tagged
@@ -93,7 +101,7 @@ export default async function AgentTopicPage(props: Props) {
         ))}
       </div>
 
-      <RelatedUseCases tag={tag} />
+      <RelatedUseCases tag={tag} crossPath="/agents" />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">

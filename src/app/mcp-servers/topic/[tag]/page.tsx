@@ -9,6 +9,7 @@ import { getAllMCPServerTags, getMCPServersByTag } from "@/data/mcp-servers";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { topicTitle, topicDescription } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ tag: string }>;
@@ -25,13 +26,20 @@ export async function generateMetadata(props: Props) {
 
   const displayName = formatTagName(tag);
   const url = `${BASE_URL}/mcp-servers/topic/${tag}`;
-  const title = `${displayName} MCP Servers for Claude Code`;
-  const description = `Browse ${tagItems.length} Claude Code MCP servers tagged with "${tag}". Ready-to-use Model Context Protocol configurations for ${displayName}.`;
+  const title = topicTitle("mcp-server", displayName);
+  const description = topicDescription("mcp-server", displayName, tagItems.length);
 
   return {
     title,
     description,
-    keywords: [tag, `${tag} mcp server`, `${tag} claude code`, "mcp", "model context protocol"],
+    keywords: [
+      tag,
+      `best ${tag} mcp server`,
+      `${tag} claude code mcp`,
+      `claude code mcp ${tag}`,
+      "mcp",
+      "model context protocol",
+    ],
     openGraph: {
       title,
       description,
@@ -79,7 +87,7 @@ export default async function MCPServerTopicPage(props: Props) {
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          {displayName} MCP Servers for Claude Code
+          Best Claude Code MCP Servers for {displayName}
         </h1>
         <p className="text-muted-foreground">
           {tagItems.length} MCP {tagItems.length === 1 ? "server" : "servers"} tagged
@@ -93,7 +101,7 @@ export default async function MCPServerTopicPage(props: Props) {
         ))}
       </div>
 
-      <RelatedUseCases tag={tag} />
+      <RelatedUseCases tag={tag} crossPath="/mcp-servers" />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">

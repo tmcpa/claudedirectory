@@ -71,3 +71,76 @@ export function getUseCaseCounts(): Record<string, number> {
   }
   return counts;
 }
+
+type Tagged = { tags: string[] };
+
+function intersectByTagAndUseCase<T extends Tagged>(
+  items: T[],
+  tag: string,
+  useCase: UseCase,
+): T[] {
+  const ucSet = new Set(useCase.tags);
+  return items.filter(
+    (item) => item.tags.includes(tag) && item.tags.some((t) => ucSet.has(t)),
+  );
+}
+
+export function getSkillsForTagAndUseCase(tag: string, useCase: UseCase): Skill[] {
+  return intersectByTagAndUseCase(skills, tag, useCase);
+}
+export function getAgentsForTagAndUseCase(tag: string, useCase: UseCase): Agent[] {
+  return intersectByTagAndUseCase(agents, tag, useCase);
+}
+export function getPluginsForTagAndUseCase(tag: string, useCase: UseCase): Plugin[] {
+  return intersectByTagAndUseCase(plugins, tag, useCase);
+}
+export function getMcpServersForTagAndUseCase(tag: string, useCase: UseCase): MCPServer[] {
+  return intersectByTagAndUseCase(mcpServers, tag, useCase);
+}
+export function getPromptsForTagAndUseCase(tag: string, useCase: UseCase): Prompt[] {
+  return intersectByTagAndUseCase(prompts, tag, useCase);
+}
+export function getHooksForTagAndUseCase(tag: string, useCase: UseCase): Hook[] {
+  return intersectByTagAndUseCase(hooks, tag, useCase);
+}
+export function getHowTosForTagAndUseCase(tag: string, useCase: UseCase): HowTo[] {
+  return intersectByTagAndUseCase(howTos, tag, useCase);
+}
+
+export type CrossPageType =
+  | "skills"
+  | "agents"
+  | "plugins"
+  | "mcp-servers"
+  | "prompts"
+  | "hooks"
+  | "how-to";
+
+const collectionForType: Record<CrossPageType, Tagged[]> = {
+  skills,
+  agents,
+  plugins,
+  "mcp-servers": mcpServers,
+  prompts,
+  hooks,
+  "how-to": howTos,
+};
+
+export function getCrossPageParams(
+  type: CrossPageType,
+): Array<{ tag: string; useCase: string }> {
+  const collection = collectionForType[type];
+  const tags = new Set<string>();
+  for (const item of collection) for (const t of item.tags) tags.add(t);
+
+  const params: Array<{ tag: string; useCase: string }> = [];
+  for (const tag of tags) {
+    for (const uc of useCases) {
+      const matches = intersectByTagAndUseCase(collection, tag, uc);
+      if (matches.length > 0) {
+        params.push({ tag, useCase: uc.slug });
+      }
+    }
+  }
+  return params;
+}

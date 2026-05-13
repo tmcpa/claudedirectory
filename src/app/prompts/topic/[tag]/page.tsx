@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import { PromptCard } from "@/components/cards/prompt-card";
 import { BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedUseCases } from "@/components/related-use-cases";
-import { prompts, getAllPromptTags, getPromptsByTag } from "@/data/prompts";
+import { getAllPromptTags, getPromptsByTag } from "@/data/prompts";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { topicTitle, topicDescription } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ tag: string }>;
@@ -25,13 +26,20 @@ export async function generateMetadata(props: Props) {
 
   const displayName = formatTagName(tag);
   const url = `${BASE_URL}/prompts/topic/${tag}`;
-  const title = `${displayName} Prompts for Claude Code`;
-  const description = `Browse ${tagItems.length} Claude Code CLAUDE.md prompts tagged with "${tag}". Find ready-to-use prompt templates for ${displayName} development.`;
+  const title = topicTitle("prompt", displayName);
+  const description = topicDescription("prompt", displayName, tagItems.length);
 
   return {
     title,
     description,
-    keywords: [tag, `${tag} claude code`, `${tag} prompts`, "claude code", "CLAUDE.md"],
+    keywords: [
+      tag,
+      `best ${tag} claude code prompts`,
+      `${tag} CLAUDE.md`,
+      `claude code prompts ${tag}`,
+      "claude code",
+      "CLAUDE.md",
+    ],
     openGraph: {
       title,
       description,
@@ -79,7 +87,7 @@ export default async function PromptTopicPage(props: Props) {
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          {displayName} Prompts for Claude Code
+          Best Claude Code Prompts for {displayName}
         </h1>
         <p className="text-muted-foreground">
           {tagItems.length} CLAUDE.md {tagItems.length === 1 ? "template" : "templates"} tagged
@@ -93,7 +101,7 @@ export default async function PromptTopicPage(props: Props) {
         ))}
       </div>
 
-      <RelatedUseCases tag={tag} />
+      <RelatedUseCases tag={tag} crossPath="/prompts" />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">

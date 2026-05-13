@@ -1,0 +1,39 @@
+name: Refresh GitHub metadata
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Mondays 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Refresh github-metadata.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run refresh-metadata
+
+      - name: Open PR if changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh GitHub metadata"
+          title: "chore: refresh GitHub metadata"
+          body: |
+            Weekly automated refresh of `src/data/github-metadata.json`
+            (stars, last-updated, language, license, README content).
+          branch: chore/refresh-github-metadata
+          add-paths: src/data/github-metadata.json
+          delete-branch: true

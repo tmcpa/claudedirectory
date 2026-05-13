@@ -9,6 +9,7 @@ import { getAllSkillTags, getSkillsByTag } from "@/data/skills";
 import { formatTagName } from "@/lib/utils";
 import { ArrowLeft } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { topicTitle, topicDescription } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ tag: string }>;
@@ -25,13 +26,20 @@ export async function generateMetadata(props: Props) {
 
   const displayName = formatTagName(tag);
   const url = `${BASE_URL}/skills/topic/${tag}`;
-  const title = `${displayName} Skills for Claude Code`;
-  const description = `Browse ${tagItems.length} Claude Code skills tagged with "${tag}". Custom slash commands and workflows for ${displayName}.`;
+  const title = topicTitle("skill", displayName);
+  const description = topicDescription("skill", displayName, tagItems.length);
 
   return {
     title,
     description,
-    keywords: [tag, `${tag} claude code skills`, `${tag} slash commands`, "claude code", "skills"],
+    keywords: [
+      tag,
+      `best ${tag} claude code skills`,
+      `${tag} slash commands`,
+      `claude code skills ${tag}`,
+      "claude code",
+      "skills",
+    ],
     openGraph: {
       title,
       description,
@@ -79,7 +87,7 @@ export default async function SkillTopicPage(props: Props) {
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          {displayName} Skills for Claude Code
+          Best Claude Code Skills for {displayName}
         </h1>
         <p className="text-muted-foreground">
           {tagItems.length} {tagItems.length === 1 ? "skill" : "skills"} tagged
@@ -93,7 +101,7 @@ export default async function SkillTopicPage(props: Props) {
         ))}
       </div>
 
-      <RelatedUseCases tag={tag} />
+      <RelatedUseCases tag={tag} crossPath="/skills" />
 
       <div className="border-t pt-6">
         <h2 className="text-sm font-medium text-muted-foreground mb-3">
