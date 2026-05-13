@@ -7,9 +7,13 @@ import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
+import { RepoMeta } from "@/components/repo-meta";
+import { GitHubReadme } from "@/components/github-readme";
 import { prompts, getPromptBySlug } from "@/data/prompts";
 import { ArrowLeft, FileText, User, ExternalLink } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { getRepoMetadata } from "@/lib/github";
+import { getCurrentMonthYear } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,21 +31,24 @@ export async function generateMetadata(props: Props) {
   if (!prompt) return { title: "Prompt Not Found" };
 
   const url = `${BASE_URL}/prompts/${prompt.slug}`;
+  const month = getCurrentMonthYear();
+  const title = `Best ${prompt.title} CLAUDE.md Prompt for Claude Code (${month})`;
+  const description = `${prompt.description} Copy this CLAUDE.md prompt into your project root and Claude Code picks it up automatically.`;
 
   return {
-    title: `${prompt.title} - Claude Code Prompt`,
-    description: prompt.description,
+    title,
+    description,
     keywords: [...prompt.tags, "claude code", "prompt", "CLAUDE.md"],
     openGraph: {
-      title: `${prompt.title} - Claude Code Prompt`,
-      description: prompt.description,
+      title,
+      description,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${prompt.title} - Claude Code Prompt`,
-      description: prompt.description,
+      title,
+      description,
     },
     alternates: {
       canonical: url,
@@ -58,6 +65,7 @@ export default async function PromptDetailPage(props: Props) {
   }
 
   const pageUrl = `${BASE_URL}/prompts/${prompt.slug}`;
+  const repoMeta = await getRepoMetadata(prompt.repoUrl);
 
   return (
     <div className="container py-8 max-w-4xl">
@@ -68,6 +76,12 @@ export default async function PromptDetailPage(props: Props) {
         url={pageUrl}
         author={prompt.author}
         tags={prompt.tags}
+        repoUrl={prompt.repoUrl}
+        stars={repoMeta?.stars}
+        dateModified={repoMeta?.lastUpdated}
+        programmingLanguage={repoMeta?.language}
+        license={repoMeta?.license}
+        applicationSubCategory="CLAUDE.md Prompt"
       />
       <BreadcrumbJsonLd
         items={[
@@ -102,9 +116,9 @@ export default async function PromptDetailPage(props: Props) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <User className="h-4 w-4" />
-          <span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5">
+            <User className="h-4 w-4" />
             By{" "}
             {prompt.author.url ? (
               <a
@@ -119,6 +133,7 @@ export default async function PromptDetailPage(props: Props) {
               prompt.author.name
             )}
           </span>
+          <RepoMeta meta={repoMeta} />
         </div>
 
         <Separator />
@@ -140,6 +155,8 @@ export default async function PromptDetailPage(props: Props) {
             <li>Claude Code will automatically use this context</li>
           </ol>
         </div>
+
+        <GitHubReadme repoUrl={prompt.repoUrl} meta={repoMeta} />
 
         {prompt.repoUrl && (
           <div>

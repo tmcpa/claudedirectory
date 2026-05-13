@@ -7,10 +7,14 @@ import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
+import { RepoMeta } from "@/components/repo-meta";
+import { GitHubReadme } from "@/components/github-readme";
 import { agents, getAgentBySlug } from "@/data/agents";
 import { Agent } from "@/lib/types";
 import { ArrowLeft, Bot, User, ExternalLink } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { getRepoMetadata } from "@/lib/github";
+import { getCurrentMonthYear } from "@/lib/seo";
 
 const categoryLabels: Record<Agent["category"], string> = {
   development: "Development",
@@ -48,21 +52,24 @@ export async function generateMetadata(props: Props) {
   if (!agent) return { title: "Agent Not Found" };
 
   const url = `${BASE_URL}/agents/${agent.slug}`;
+  const month = getCurrentMonthYear();
+  const title = `Best ${agent.title} Subagent for Claude Code (${month})`;
+  const description = `${agent.description} Full subagent config ready to copy into your .claude/agents directory.`;
 
   return {
-    title: `${agent.title} - Claude Code Agent Configuration`,
-    description: `${agent.description} Full subagent config ready to copy into your project.`,
+    title,
+    description,
     keywords: [...agent.tags, "claude code", "agent", "subagent", agent.category, agent.title.toLowerCase()],
     openGraph: {
-      title: `${agent.title} - Claude Code Agent Configuration`,
-      description: `${agent.description} Full subagent config ready to copy into your project.`,
+      title,
+      description,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${agent.title} - Claude Code Agent Configuration`,
-      description: `${agent.description} Full subagent config ready to copy into your project.`,
+      title,
+      description,
     },
     alternates: {
       canonical: url,
@@ -79,6 +86,7 @@ export default async function AgentDetailPage(props: Props) {
   }
 
   const pageUrl = `${BASE_URL}/agents/${agent.slug}`;
+  const repoMeta = await getRepoMetadata(agent.repoUrl);
 
   return (
     <div className="container py-8 max-w-4xl">
@@ -89,6 +97,12 @@ export default async function AgentDetailPage(props: Props) {
         url={pageUrl}
         author={agent.author}
         tags={agent.tags}
+        repoUrl={agent.repoUrl}
+        stars={repoMeta?.stars}
+        dateModified={repoMeta?.lastUpdated}
+        programmingLanguage={repoMeta?.language}
+        license={repoMeta?.license}
+        applicationSubCategory={`Claude Code Subagent (${categoryLabels[agent.category]})`}
       />
       <BreadcrumbJsonLd
         items={[
@@ -126,9 +140,9 @@ export default async function AgentDetailPage(props: Props) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <User className="h-4 w-4" />
-          <span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5">
+            <User className="h-4 w-4" />
             By{" "}
             {agent.author.url ? (
               <a
@@ -143,6 +157,7 @@ export default async function AgentDetailPage(props: Props) {
               agent.author.name
             )}
           </span>
+          <RepoMeta meta={repoMeta} />
         </div>
 
         <Separator />
@@ -164,6 +179,8 @@ export default async function AgentDetailPage(props: Props) {
             <li>Reference the agent when delegating specialized tasks</li>
           </ol>
         </div>
+
+        <GitHubReadme repoUrl={agent.repoUrl} meta={repoMeta} />
 
         {agent.repoUrl && (
           <div>

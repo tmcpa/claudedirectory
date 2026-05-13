@@ -7,9 +7,13 @@ import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
+import { RepoMeta } from "@/components/repo-meta";
+import { GitHubReadme } from "@/components/github-readme";
 import { plugins, getPluginBySlug } from "@/data/plugins";
 import { ArrowLeft, Puzzle, User, Terminal, ExternalLink } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { getRepoMetadata } from "@/lib/github";
+import { getCurrentMonthYear } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,13 +31,14 @@ export async function generateMetadata(props: Props) {
   if (!plugin) return { title: "Plugin Not Found" };
 
   const url = `${BASE_URL}/plugins/${plugin.slug}`;
+  const month = getCurrentMonthYear();
 
   const title =
     plugin.seoTitle ??
-    `Install ${plugin.title} – Claude Code Plugin Setup Guide (2026)`;
+    `Install ${plugin.title} – Best Claude Code Plugin Setup (${month})`;
   const description =
     plugin.seoDescription ??
-    `Install with \`${plugin.installCommand}\`. ${plugin.description}`;
+    `Install with \`${plugin.installCommand}\`. ${plugin.description} Free, copy-paste setup for Claude Code.`;
 
   return {
     title,
@@ -65,6 +70,7 @@ export default async function PluginDetailPage(props: Props) {
   }
 
   const pageUrl = `${BASE_URL}/plugins/${plugin.slug}`;
+  const repoMeta = await getRepoMetadata(plugin.repoUrl);
 
   return (
     <div className="container py-8 max-w-4xl">
@@ -75,6 +81,13 @@ export default async function PluginDetailPage(props: Props) {
         url={pageUrl}
         author={plugin.author}
         tags={plugin.tags}
+        repoUrl={plugin.repoUrl}
+        installCommand={plugin.installCommand}
+        stars={repoMeta?.stars}
+        dateModified={repoMeta?.lastUpdated}
+        programmingLanguage={repoMeta?.language}
+        license={repoMeta?.license}
+        applicationSubCategory="Claude Code Plugin"
       />
       <BreadcrumbJsonLd
         items={[
@@ -109,9 +122,9 @@ export default async function PluginDetailPage(props: Props) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <User className="h-4 w-4" />
-          <span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5">
+            <User className="h-4 w-4" />
             By{" "}
             {plugin.author.url ? (
               <a
@@ -126,6 +139,7 @@ export default async function PluginDetailPage(props: Props) {
               plugin.author.name
             )}
           </span>
+          <RepoMeta meta={repoMeta} />
         </div>
 
         <Separator />
@@ -181,6 +195,8 @@ export default async function PluginDetailPage(props: Props) {
             <li>Use the plugin&apos;s features in your Claude Code sessions</li>
           </ol>
         </div>
+
+        <GitHubReadme repoUrl={plugin.repoUrl} meta={repoMeta} />
 
         {plugin.repoUrl && (
           <div>

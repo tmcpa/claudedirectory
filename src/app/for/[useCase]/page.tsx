@@ -19,6 +19,7 @@ import {
 import { getMatchesForUseCase } from "@/lib/use-cases";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { buildUseCaseTitle, getCurrentMonthYear } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ useCase: string }>;
@@ -34,8 +35,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   if (!useCase) return { title: "Use Case Not Found" };
 
   const url = `${BASE_URL}/for/${useCase.slug}`;
-  const title = `${useCase.title} - Claude Code Skills, Agents, Plugins & More`;
-  const description = useCase.description;
+  const title = buildUseCaseTitle(useCase.title);
+  const description = `${useCase.description} Updated ${getCurrentMonthYear()}.`;
 
   return {
     title,

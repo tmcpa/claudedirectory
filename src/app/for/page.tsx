@@ -10,9 +10,10 @@ import { CollectionPageJsonLd } from "@/components/json-ld";
 import { useCases } from "@/data/use-cases";
 import { getUseCaseCounts } from "@/lib/use-cases";
 import { BASE_URL } from "@/lib/constants";
+import { getCurrentMonthYear } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Claude Code by Use Case - Skills, Agents, Plugins, MCP Servers",
+  title: `Best Claude Code setups by use case (${getCurrentMonthYear()})`,
   description:
     "Browse Claude Code configurations by what you're trying to do: code review, testing, security, deployment, debugging, databases, APIs, and more. Curated directories of skills, agents, plugins, MCP servers, and hooks for each use case.",
   keywords: [

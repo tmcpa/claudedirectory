@@ -7,9 +7,13 @@ import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
+import { RepoMeta } from "@/components/repo-meta";
+import { GitHubReadme } from "@/components/github-readme";
 import { skills, getSkillBySlug } from "@/data/skills";
 import { ArrowLeft, Zap, User, ExternalLink } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { getRepoMetadata } from "@/lib/github";
+import { getCurrentMonthYear } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,13 +31,14 @@ export async function generateMetadata(props: Props) {
   if (!skill) return { title: "Skill Not Found" };
 
   const url = `${BASE_URL}/skills/${skill.slug}`;
+  const month = getCurrentMonthYear();
 
   const title =
     skill.seoTitle ??
-    `${skill.title} – Claude Code Skill & Slash Command (2026)`;
+    `Best ${skill.title} Skill for Claude Code (${month})`;
   const description =
     skill.seoDescription ??
-    `${skill.description} Copy this skill into .claude/commands/ and use it instantly.`;
+    `${skill.description} Drop the slash command into .claude/skills and run it from Claude Code in seconds.`;
 
   return {
     title,
@@ -65,6 +70,7 @@ export default async function SkillDetailPage(props: Props) {
   }
 
   const pageUrl = `${BASE_URL}/skills/${skill.slug}`;
+  const repoMeta = await getRepoMetadata(skill.repoUrl);
 
   return (
     <div className="container py-8 max-w-4xl">
@@ -75,6 +81,12 @@ export default async function SkillDetailPage(props: Props) {
         url={pageUrl}
         author={skill.author}
         tags={skill.tags}
+        repoUrl={skill.repoUrl}
+        stars={repoMeta?.stars}
+        dateModified={repoMeta?.lastUpdated}
+        programmingLanguage={repoMeta?.language}
+        license={repoMeta?.license}
+        applicationSubCategory="Claude Code Skill"
       />
       <BreadcrumbJsonLd
         items={[
@@ -109,9 +121,9 @@ export default async function SkillDetailPage(props: Props) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <User className="h-4 w-4" />
-          <span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5">
+            <User className="h-4 w-4" />
             By{" "}
             {skill.author.url ? (
               <a
@@ -126,6 +138,7 @@ export default async function SkillDetailPage(props: Props) {
               skill.author.name
             )}
           </span>
+          <RepoMeta meta={repoMeta} />
         </div>
 
         <Separator />
@@ -147,6 +160,8 @@ export default async function SkillDetailPage(props: Props) {
             <li>Use /{skill.slug} in Claude Code to invoke this skill</li>
           </ol>
         </div>
+
+        <GitHubReadme repoUrl={skill.repoUrl} meta={repoMeta} />
 
         {skill.repoUrl && (
           <div>

@@ -7,9 +7,13 @@ import { CodeBlock } from "@/components/code-block";
 import { CopyButton } from "@/components/copy-button";
 import { ItemJsonLd, BreadcrumbJsonLd } from "@/components/json-ld";
 import { RelatedItems, SuggestedItems } from "@/components/related-items";
+import { RepoMeta } from "@/components/repo-meta";
+import { GitHubReadme } from "@/components/github-readme";
 import { hooks, getHookBySlug } from "@/data/hooks";
 import { ArrowLeft, Webhook, User, ExternalLink } from "lucide-react";
 import { BASE_URL } from "@/lib/constants";
+import { getRepoMetadata } from "@/lib/github";
+import { getCurrentMonthYear } from "@/lib/seo";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,21 +31,24 @@ export async function generateMetadata(props: Props) {
   if (!hook) return { title: "Hook Not Found" };
 
   const url = `${BASE_URL}/hooks/${hook.slug}`;
+  const month = getCurrentMonthYear();
+  const title = `${hook.title} Hook for Claude Code – ${hook.event} script (${month})`;
+  const description = `${hook.description} Runs on ${hook.event} events. Copy the script and settings.json snippet to start using it today.`;
 
   return {
-    title: `${hook.title} Hook for Claude Code | Script & Config`,
-    description: `${hook.description} Runs on ${hook.event} events. Copy the script and config to start using it.`,
+    title,
+    description,
     keywords: [...hook.tags, "claude code", "hook", "automation", hook.event, hook.title.toLowerCase()],
     openGraph: {
-      title: `${hook.title} Hook for Claude Code | Script & Config`,
-      description: `${hook.description} Runs on ${hook.event} events. Copy the script and config to start using it.`,
+      title,
+      description,
       url,
       type: "article",
     },
     twitter: {
       card: "summary",
-      title: `${hook.title} Hook for Claude Code | Script & Config`,
-      description: `${hook.description} Runs on ${hook.event} events. Copy the script and config to start using it.`,
+      title,
+      description,
     },
     alternates: {
       canonical: url,
@@ -58,6 +65,7 @@ export default async function HookDetailPage(props: Props) {
   }
 
   const pageUrl = `${BASE_URL}/hooks/${hook.slug}`;
+  const repoMeta = await getRepoMetadata(hook.repoUrl);
 
   const hookConfig = JSON.stringify(
     {
@@ -83,6 +91,12 @@ export default async function HookDetailPage(props: Props) {
         url={pageUrl}
         author={hook.author}
         tags={hook.tags}
+        repoUrl={hook.repoUrl}
+        stars={repoMeta?.stars}
+        dateModified={repoMeta?.lastUpdated}
+        programmingLanguage={repoMeta?.language ?? "Shell"}
+        license={repoMeta?.license}
+        applicationSubCategory={`Claude Code Hook (${hook.event})`}
       />
       <BreadcrumbJsonLd
         items={[
@@ -120,9 +134,9 @@ export default async function HookDetailPage(props: Props) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <User className="h-4 w-4" />
-          <span>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1.5">
+            <User className="h-4 w-4" />
             By{" "}
             {hook.author.url ? (
               <a
@@ -137,6 +151,7 @@ export default async function HookDetailPage(props: Props) {
               hook.author.name
             )}
           </span>
+          <RepoMeta meta={repoMeta} />
         </div>
 
         <Separator />
@@ -167,6 +182,8 @@ export default async function HookDetailPage(props: Props) {
             <li>Restart Claude Code to apply changes</li>
           </ol>
         </div>
+
+        <GitHubReadme repoUrl={hook.repoUrl} meta={repoMeta} />
 
         {hook.repoUrl && (
           <div>
