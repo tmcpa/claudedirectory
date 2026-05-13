@@ -116,13 +116,6 @@ export function ItemJsonLd({
       jsonLd.license = license;
     }
     if (typeof stars === "number" && stars > 0) {
-      jsonLd.aggregateRating = {
-        "@type": "AggregateRating",
-        ratingValue: "5",
-        ratingCount: stars,
-        bestRating: "5",
-        worstRating: "1",
-      };
       jsonLd.interactionStatistic = {
         "@type": "InteractionCounter",
         interactionType: "https://schema.org/LikeAction",

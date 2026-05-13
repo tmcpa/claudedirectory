@@ -1,4 +1,4 @@
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { defaultUrlTransform } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { ExternalLink, BookOpen } from "lucide-react";
 import { CodeBlock } from "@/components/code-block";
@@ -39,13 +39,25 @@ export async function GitHubReadme({ repoUrl, meta }: GitHubReadmeProps) {
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           urlTransform={(url) => {
-            if (!baseUrl) return url;
-            if (/^(https?:|mailto:|#|data:)/i.test(url)) return url;
-            try {
-              return new URL(url, baseUrl).toString();
-            } catch {
-              return url;
+            // Resolve relative paths against the repo's raw base before
+            // sanitising, so `./docs/foo.md` becomes an absolute
+            // raw.githubusercontent URL. Absolute URLs and fragments pass
+            // through untouched into defaultUrlTransform.
+            let resolved = url;
+            if (
+              baseUrl &&
+              url &&
+              !url.startsWith("#") &&
+              !/^[a-z][a-z0-9+.-]*:/i.test(url)
+            ) {
+              try {
+                resolved = new URL(url, baseUrl).toString();
+              } catch {
+                // fall through with original
+              }
             }
+            // defaultUrlTransform strips javascript:, vbscript:, data:, etc.
+            return defaultUrlTransform(resolved);
           }}
           components={{
             code({ className, children, ...props }) {
