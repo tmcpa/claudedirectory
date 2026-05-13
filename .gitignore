@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# ingest cache (regenerable; speeds up local dev runs)
+scripts/ingest/.cache/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
