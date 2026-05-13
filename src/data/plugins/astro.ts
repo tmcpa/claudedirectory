@@ -12,7 +12,7 @@ export const astroPlugin: Plugin = {
     url: "https://astro.build",
   },
   repoUrl: "https://github.com/withastro/astro",
-  installCommand: "claude plugins add astro@community",
+  installCommand: "/plugin install astro@community",
   commands: [
     { name: "/astro add", description: "Add an official Astro integration to the project" },
     { name: "/astro collection", description: "Scaffold a new content collection with schema" },

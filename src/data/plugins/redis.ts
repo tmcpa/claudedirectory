@@ -10,7 +10,7 @@ export const redisPlugin: Plugin = {
     name: "Redis",
     url: "https://github.com/redis",
   },
-  installCommand: "claude plugins add @redis/claude-plugin",
+  installCommand: "/plugin install @redis/claude-plugin",
   commands: [
     { name: "/redis:keys", description: "Browse and inspect Redis keys by pattern" },
     { name: "/redis:monitor", description: "Monitor real-time Redis commands" },

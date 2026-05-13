@@ -11,7 +11,7 @@ export const claudeInChromePlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  installCommand: "claude plugins add claude-in-chrome@claude-plugins-official",
+  installCommand: "/plugin install claude-in-chrome@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "claude-in-chrome@claude-plugins-official": true

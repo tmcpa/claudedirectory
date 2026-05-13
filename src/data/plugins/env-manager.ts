@@ -10,7 +10,7 @@ export const envManagerPlugin: Plugin = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
-  installCommand: "claude plugins add env-manager",
+  installCommand: "/plugin install env-manager",
   commands: [
     { name: "/env:validate", description: "Validate .env files against .env.example" },
     { name: "/env:sync", description: "Sync environment variables across .env files" },

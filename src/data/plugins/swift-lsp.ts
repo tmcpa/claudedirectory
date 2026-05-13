@@ -11,7 +11,7 @@ export const swiftLspPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add swift-lsp@claude-plugins-official",
+  installCommand: "/plugin install swift-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "swift-lsp@claude-plugins-official": true

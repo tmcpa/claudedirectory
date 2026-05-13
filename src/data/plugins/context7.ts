@@ -10,7 +10,7 @@ export const context7Plugin: Plugin = {
     name: "Upstash",
     url: "https://upstash.com",
   },
-  installCommand: "claude plugins add context7@claude-plugins-official",
+  installCommand: "/plugin install context7@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "context7@claude-plugins-official": true

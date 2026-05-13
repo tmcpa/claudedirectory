@@ -11,7 +11,7 @@ export const rustAnalyzerLspPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add rust-analyzer-lsp@claude-plugins-official",
+  installCommand: "/plugin install rust-analyzer-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true

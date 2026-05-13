@@ -12,7 +12,7 @@ export const trailOfBitsSecurityPlugin: Plugin = {
     url: "https://github.com/trailofbits",
   },
   repoUrl: "https://github.com/trailofbits/claude-code-config",
-  installCommand: "claude plugins add trail-of-bits-security",
+  installCommand: "/plugin install trail-of-bits-security",
   commands: [
     {
       name: "/security:audit",

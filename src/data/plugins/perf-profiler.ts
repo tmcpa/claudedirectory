@@ -10,7 +10,7 @@ export const perfProfilerPlugin: Plugin = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
-  installCommand: "claude plugins add perf-profiler",
+  installCommand: "/plugin install perf-profiler",
   commands: [
     { name: "/perf:bundle", description: "Analyze bundle size and suggest tree-shaking opportunities" },
     { name: "/perf:bench", description: "Benchmark a function or code block" },

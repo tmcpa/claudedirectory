@@ -10,7 +10,7 @@ export const serenaPlugin: Plugin = {
     name: "Oraios",
     url: "https://github.com/oraios",
   },
-  installCommand: "claude plugins add serena@claude-plugins-official",
+  installCommand: "/plugin install serena@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "serena@claude-plugins-official": true

@@ -11,5 +11,5 @@ export const testWriterFixerPlugin: Plugin = {
     url: "https://github.com/ccplugins/awesome-claude-code-plugins",
   },
   repoUrl: "https://github.com/ccplugins/awesome-claude-code-plugins/tree/main/plugins/test-writer-fixer",
-  installCommand: "claude plugins:add ccplugins/awesome-claude-code-plugins/plugins/test-writer-fixer",
+  installCommand: "/plugin marketplace add ccplugins/awesome-claude-code-plugins && /plugin install test-writer-fixer@awesome-claude-code-plugins",
 };

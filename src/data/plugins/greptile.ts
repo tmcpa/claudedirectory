@@ -10,7 +10,7 @@ export const greptilePlugin: Plugin = {
     name: "Greptile",
     url: "https://greptile.com",
   },
-  installCommand: "claude plugins add greptile@claude-plugins-official",
+  installCommand: "/plugin install greptile@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "greptile@claude-plugins-official": true

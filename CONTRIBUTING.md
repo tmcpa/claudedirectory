@@ -116,7 +116,7 @@ export const myPlugin: Plugin = {
   description: "What this plugin does",
   tags: ["tag1"],
   author: { name: "Your Name" },
-  installCommand: "claude plugin add my-plugin",
+  installCommand: "/plugin install my-plugin@my-marketplace",
   commands: [
     { name: "/command", description: "What it does" },
   ],

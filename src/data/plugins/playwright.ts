@@ -10,7 +10,7 @@ export const playwrightPlugin: Plugin = {
     name: "Microsoft",
     url: "https://playwright.dev",
   },
-  installCommand: "claude plugins add playwright@claude-plugins-official",
+  installCommand: "/plugin install playwright@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "playwright@claude-plugins-official": true

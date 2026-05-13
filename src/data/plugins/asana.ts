@@ -10,7 +10,7 @@ export const asanaPlugin: Plugin = {
     name: "Asana",
     url: "https://asana.com",
   },
-  installCommand: "claude plugins add asana@claude-plugins-official",
+  installCommand: "/plugin install asana@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "asana@claude-plugins-official": true

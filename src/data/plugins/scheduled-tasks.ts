@@ -11,7 +11,7 @@ export const scheduledTasksPlugin: Plugin = {
     name: "Anthropic",
     url: "https://github.com/anthropics",
   },
-  installCommand: "claude plugins add scheduled-tasks@claude-plugins-official",
+  installCommand: "/plugin install scheduled-tasks@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "scheduled-tasks@claude-plugins-official": true

@@ -10,7 +10,7 @@ export const laravelBoostPlugin: Plugin = {
     name: "Laravel",
     url: "https://laravel.com",
   },
-  installCommand: "claude plugins add laravel-boost@claude-plugins-official",
+  installCommand: "/plugin install laravel-boost@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "laravel-boost@claude-plugins-official": true

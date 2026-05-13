@@ -10,7 +10,7 @@ export const monorepoNavPlugin: Plugin = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
-  installCommand: "claude plugins add monorepo-nav",
+  installCommand: "/plugin install monorepo-nav",
   commands: [
     { name: "/mono", description: "List all packages in the monorepo" },
     { name: "/mono:focus", description: "Focus Claude's context on a specific package" },

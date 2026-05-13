@@ -93,7 +93,7 @@ Plugins extend Claude Code with new slash commands, workflows, and integrations.
 Install any plugin with a single command:
 
 \`\`\`bash
-claude plugins add plugin-name@source
+/plugin install plugin-name@marketplace
 \`\`\`
 
 Plugins live in your project's \`.claude/plugins/\` directory and can be shared across your team via version control.
@@ -107,7 +107,7 @@ These three plugins are useful regardless of what you're building. If you instal
 ### 1. Feature Dev (Anthropic)
 
 \`\`\`bash
-claude plugins add feature-dev@claude-plugins-official
+/plugin install feature-dev@claude-plugins-official
 \`\`\`
 
 This is the single best plugin for writing new code. Instead of dumping a vague prompt and hoping for the best, \`/feature-dev\` walks you through a structured 7-phase workflow: discovery, codebase exploration, clarifying questions, architecture design, implementation, quality review, and summary.
@@ -119,7 +119,7 @@ Use it when you're adding anything non-trivial — a new API endpoint, a UI comp
 ### 2. Code Review (Anthropic)
 
 \`\`\`bash
-claude plugins add code-review@claude-plugins-official
+/plugin install code-review@claude-plugins-official
 \`\`\`
 
 Multi-agent code review with confidence-based filtering. Run \`/code-review\` on your current changes or point it at a PR number. It analyzes security, performance, maintainability, and correctness — then ranks findings by confidence so you're not drowning in nitpicks.
@@ -129,7 +129,7 @@ The difference between this and just asking Claude "review my code" is the struc
 ### 3. Context7 (Upstash)
 
 \`\`\`bash
-claude plugins add context7@claude-plugins-official
+/plugin install context7@claude-plugins-official
 \`\`\`
 
 This one solves a real pain point. Claude's training data has a cutoff, which means it sometimes generates code against outdated API surfaces. Context7 pulls **current** documentation directly from source repositories.
@@ -145,7 +145,7 @@ Building UIs? These plugins turn Claude Code into a design-aware frontend engine
 ### Frontend Design (Claude Code Plugins)
 
 \`\`\`bash
-claude plugins add frontend-design@claude-code-plugins
+/plugin install frontend-design@claude-plugins-official
 \`\`\`
 
 The default Claude Code experience produces functional but generic-looking UIs. This plugin fixes that. \`/frontend-design\` generates production-grade components with actual design sensibility — proper spacing, color systems, typography scales, responsive behavior.
@@ -155,7 +155,7 @@ It supports React, Vue, Svelte, and vanilla HTML/CSS. The \`/ui\` command is the
 ### Figma (Figma)
 
 \`\`\`bash
-claude plugins add figma@claude-plugins-official
+/plugin install figma@claude-plugins-official
 \`\`\`
 
 If your team has a designer, this closes the design-to-code gap. \`/figma-inspect\` extracts specs from a Figma file — colors, spacing, typography, component structure. \`/figma-code\` generates code from a Figma component. \`/figma-tokens\` exports design tokens you can feed into your theme.
@@ -165,7 +165,7 @@ Not useful if you're a solo dev designing in code. Very useful if you have Figma
 ### Storybook (Storybook)
 
 \`\`\`bash
-claude plugins add @storybook/claude-plugin
+/plugin install <plugin>@claude-plugins-official
 \`\`\`
 
 \`/story:gen\` generates Storybook stories for your components. This is one of those tasks that's tedious enough that nobody does it consistently. Having Claude auto-generate stories with sensible variants and edge cases means your component library stays documented without the overhead.
@@ -173,7 +173,7 @@ claude plugins add @storybook/claude-plugin
 ### Playwright (Microsoft)
 
 \`\`\`bash
-claude plugins add playwright@claude-plugins-official
+/plugin install playwright@claude-plugins-official
 \`\`\`
 
 E2E testing across Chromium, Firefox, and WebKit. \`/playwright-test\` runs or creates tests. \`/playwright-screenshot\` takes screenshots for visual verification. The standout is \`/playwright-codegen\` — it records browser interactions and generates test code from them.
@@ -189,7 +189,7 @@ For API developers, database engineers, and anyone who spends more time in the t
 ### Supabase (Supabase)
 
 \`\`\`bash
-claude plugins add supabase@claude-plugins-official
+/plugin install supabase@claude-plugins-official
 \`\`\`
 
 Full backend management from Claude Code. \`/supabase-query\` runs SQL, \`/supabase-migrate\` handles schema changes, \`/supabase-auth\` manages users, \`/supabase-functions\` deploys edge functions. It's basically the Supabase dashboard in your terminal.
@@ -199,7 +199,7 @@ The migration workflow is where this really shines. Describe what you want ("add
 ### Firebase (Google)
 
 \`\`\`bash
-claude plugins add firebase@claude-plugins-official
+/plugin install firebase@claude-plugins-official
 \`\`\`
 
 Same idea as Supabase but for the Firebase ecosystem. Firestore queries, auth management, function deployment, and security rules — all from Claude Code. If you're on Firebase, you need this. If you're not, skip it.
@@ -207,7 +207,7 @@ Same idea as Supabase but for the Firebase ecosystem. Firestore queries, auth ma
 ### Prisma (Prisma)
 
 \`\`\`bash
-claude plugins add prisma@claude-plugins-official
+/plugin install prisma@claude-plugins-official
 \`\`\`
 
 ORM management. \`/prisma-migrate\` creates and runs migrations, \`/prisma-generate\` regenerates the client after schema changes. The real value is that Claude understands your Prisma schema as a first-class data model and can reason about relationships, indexes, and constraints when writing queries.
@@ -215,7 +215,7 @@ ORM management. \`/prisma-migrate\` creates and runs migrations, \`/prisma-gener
 ### Stripe (Stripe)
 
 \`\`\`bash
-claude plugins add stripe@claude-plugins-official
+/plugin install stripe@claude-plugins-official
 \`\`\`
 
 If you're integrating payments, this saves hours. \`/stripe-webhook\` sets up webhook handlers with proper signature verification. \`/stripe-test\` runs your integration against Stripe's test mode. No more context-switching between the Stripe dashboard, docs, and your editor.
@@ -229,7 +229,7 @@ For the people who keep things running.
 ### Vercel (Vercel)
 
 \`\`\`bash
-claude plugins add vercel@claude-plugins-official
+/plugin install vercel@claude-plugins-official
 \`\`\`
 
 Deploy without leaving your terminal. \`/vercel-deploy\` ships your current project, \`/vercel-env\` manages environment variables, \`/vercel-logs\` tails function logs. Straightforward and does exactly what you'd expect.
@@ -237,7 +237,7 @@ Deploy without leaving your terminal. \`/vercel-deploy\` ships your current proj
 ### Docker (Docker)
 
 \`\`\`bash
-claude plugins add docker@claude-plugins-official
+/plugin install docker@claude-plugins-official
 \`\`\`
 
 Container management. Build images, manage compose services, tail logs. The \`/docker-compose\` command is especially useful — Claude can read your \`docker-compose.yml\`, understand the service graph, and help you debug networking issues or add new services that fit the existing setup.
@@ -245,7 +245,7 @@ Container management. Build images, manage compose services, tail logs. The \`/d
 ### Cloudflare (Cloudflare)
 
 \`\`\`bash
-claude plugins add @cloudflare/claude-plugin
+/plugin install <plugin>@claude-plugins-official
 \`\`\`
 
 Edge-first development. Deploy Workers, manage KV stores, query D1 databases. \`/cf:logs\` gives you real-time tailing from Workers, which is a pain to set up through the dashboard. If you're building on Cloudflare's stack, this is essential.
@@ -253,7 +253,7 @@ Edge-first development. Deploy Workers, manage KV stores, query D1 databases. \`
 ### Kubernetes (Kubernetes)
 
 \`\`\`bash
-claude plugins add @kubernetes/claude-plugin
+/plugin install <plugin>@claude-plugins-official
 \`\`\`
 
 Cluster inspection and debugging. \`/k8s:debug\` is the highlight — point it at a failing deployment or a CrashLoopBackOff pod and Claude diagnoses the issue using pod events, logs, and resource limits. Faster than \`kubectl describe\` → \`kubectl logs\` → squinting at YAML.
@@ -267,7 +267,7 @@ Because shipping code is only half the job.
 ### Sentry (Sentry)
 
 \`\`\`bash
-claude plugins add sentry@claude-plugins-official
+/plugin install sentry@claude-plugins-official
 \`\`\`
 
 \`/sentry-issues\` pulls recent errors. \`/sentry-trace\` shows the stack trace. \`/sentry-fix\` is the interesting one — Claude analyzes the error, reads the relevant code in your repo, and suggests a fix with full context. Error triage that used to take 20 minutes takes 2.
@@ -275,7 +275,7 @@ claude plugins add sentry@claude-plugins-official
 ### Datadog (Datadog)
 
 \`\`\`bash
-claude plugins add datadog@claude-plugins-official
+/plugin install datadog@claude-plugins-official
 \`\`\`
 
 Observability from your terminal. Query metrics, search logs, view APM traces, check active alerts. Most useful during incident response — you can ask Claude to correlate a spike in error rates with recent deployments and get an answer without switching between six browser tabs.
@@ -289,7 +289,7 @@ Plugins that connect Claude Code to where your team communicates and tracks work
 ### GitHub (GitHub)
 
 \`\`\`bash
-claude plugins add github@claude-plugins-official
+/plugin install github@claude-plugins-official
 \`\`\`
 
 Issues, PRs, Actions, code search — the full GitHub API from Claude Code. \`/gh-pr\` creates pull requests with Claude-generated descriptions that actually make sense. \`/gh-actions\` lets you check why the build is failing without opening a browser. Pairs naturally with the code-review plugin.
@@ -297,7 +297,7 @@ Issues, PRs, Actions, code search — the full GitHub API from Claude Code. \`/g
 ### Linear (Linear)
 
 \`\`\`bash
-claude plugins add linear@claude-plugins-official
+/plugin install linear@claude-plugins-official
 \`\`\`
 
 Issue tracking integration. Create issues, update statuses, search across projects. The workflow that makes this worth installing: finish a feature, run \`/code-review\`, fix the findings, create a PR with \`/gh-pr\`, then close the Linear issue with \`/linear-status\` — all without leaving the terminal.
@@ -305,7 +305,7 @@ Issue tracking integration. Create issues, update statuses, search across projec
 ### Slack (Slack)
 
 \`\`\`bash
-claude plugins add slack@claude-plugins-official
+/plugin install slack@claude-plugins-official
 \`\`\`
 
 Search and read Slack messages from Claude Code. \`/slack-search\` finds relevant conversations. \`/slack-thread\` pulls full context from a discussion. Useful when you're implementing something that was discussed in a channel three weeks ago and you need to find the decision.
@@ -319,7 +319,7 @@ These are less mainstream but worth knowing about.
 ### Greptile (Greptile)
 
 \`\`\`bash
-claude plugins add greptile@claude-plugins-official
+/plugin install greptile@claude-plugins-official
 \`\`\`
 
 Natural language codebase search. \`/greptile-search\` lets you ask "where do we handle authentication?" or "find all the places we call the billing API" and get precise results. Technically Claude Code can already search your code, but Greptile uses pre-built indexes that handle large monorepos where Claude's native search would choke.
@@ -335,7 +335,7 @@ Autonomous overnight coding. Start a task before bed, \`ralph\` manages context 
 ### Hookify (Anthropic)
 
 \`\`\`bash
-claude plugins add hookify@claude-plugins-official
+/plugin install hookify@claude-plugins-official
 \`\`\`
 
 If you've read our [hooks guide](/blog/claude-code-hooks-guide), you know how powerful hooks are. Hookify makes them easier to create. \`/hookify\` walks you through setting up custom hooks without manually editing settings files. Good for teams that want guardrails without requiring everyone to understand hook internals.
@@ -357,12 +357,12 @@ Not sure where to start? Here are curated setups for common workflows.
 ### The Solo Full-Stack Developer
 
 \`\`\`bash
-claude plugins add feature-dev@claude-plugins-official
-claude plugins add code-review@claude-plugins-official
-claude plugins add context7@claude-plugins-official
-claude plugins add frontend-design@claude-code-plugins
-claude plugins add supabase@claude-plugins-official
-claude plugins add vercel@claude-plugins-official
+/plugin install feature-dev@claude-plugins-official
+/plugin install code-review@claude-plugins-official
+/plugin install context7@claude-plugins-official
+/plugin install frontend-design@claude-plugins-official
+/plugin install supabase@claude-plugins-official
+/plugin install vercel@claude-plugins-official
 \`\`\`
 
 Everything you need to build, review, and ship a full-stack app. Feature Dev for structured development, Context7 for up-to-date docs, Frontend Design for polished UIs, Supabase for the backend, Vercel for deployment, and Code Review before you merge.
@@ -370,11 +370,11 @@ Everything you need to build, review, and ship a full-stack app. Feature Dev for
 ### The Frontend Specialist
 
 \`\`\`bash
-claude plugins add frontend-design@claude-code-plugins
-claude plugins add figma@claude-plugins-official
-claude plugins add playwright@claude-plugins-official
-claude plugins add @storybook/claude-plugin
-claude plugins add context7@claude-plugins-official
+/plugin install frontend-design@claude-plugins-official
+/plugin install figma@claude-plugins-official
+/plugin install playwright@claude-plugins-official
+/plugin install <plugin>@claude-plugins-official
+/plugin install context7@claude-plugins-official
 \`\`\`
 
 Design-to-code with Figma, production-quality components with Frontend Design, stories with Storybook, E2E tests with Playwright, and current docs with Context7.
@@ -382,12 +382,12 @@ Design-to-code with Figma, production-quality components with Frontend Design, s
 ### The Backend / API Developer
 
 \`\`\`bash
-claude plugins add feature-dev@claude-plugins-official
-claude plugins add code-review@claude-plugins-official
-claude plugins add prisma@claude-plugins-official
-claude plugins add docker@claude-plugins-official
-claude plugins add sentry@claude-plugins-official
-claude plugins add context7@claude-plugins-official
+/plugin install feature-dev@claude-plugins-official
+/plugin install code-review@claude-plugins-official
+/plugin install prisma@claude-plugins-official
+/plugin install docker@claude-plugins-official
+/plugin install sentry@claude-plugins-official
+/plugin install context7@claude-plugins-official
 \`\`\`
 
 Structured feature development, ORM management, containerized environments, error monitoring, and code review. Swap Prisma for Supabase or Firebase depending on your database layer.
@@ -395,12 +395,12 @@ Structured feature development, ORM management, containerized environments, erro
 ### The DevOps / Platform Engineer
 
 \`\`\`bash
-claude plugins add @kubernetes/claude-plugin
-claude plugins add docker@claude-plugins-official
-claude plugins add @cloudflare/claude-plugin
-claude plugins add datadog@claude-plugins-official
-claude plugins add github@claude-plugins-official
-claude plugins add hookify@claude-plugins-official
+/plugin install <plugin>@claude-plugins-official
+/plugin install docker@claude-plugins-official
+/plugin install <plugin>@claude-plugins-official
+/plugin install datadog@claude-plugins-official
+/plugin install github@claude-plugins-official
+/plugin install hookify@claude-plugins-official
 \`\`\`
 
 Cluster management, container orchestration, edge deployment, observability, CI/CD integration, and automated guardrails with hooks.
@@ -408,11 +408,11 @@ Cluster management, container orchestration, edge deployment, observability, CI/
 ### The Team Lead
 
 \`\`\`bash
-claude plugins add code-review@claude-plugins-official
-claude plugins add github@claude-plugins-official
-claude plugins add linear@claude-plugins-official
-claude plugins add slack@claude-plugins-official
-claude plugins add feature-dev@claude-plugins-official
+/plugin install code-review@claude-plugins-official
+/plugin install github@claude-plugins-official
+/plugin install linear@claude-plugins-official
+/plugin install slack@claude-plugins-official
+/plugin install feature-dev@claude-plugins-official
 \`\`\`
 
 PR management, issue tracking, team communication, and structured feature development. The workflow: triage Linear issues, develop with Feature Dev, review with Code Review, manage PRs with GitHub, and stay connected with Slack.

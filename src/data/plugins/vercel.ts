@@ -11,7 +11,7 @@ export const vercelPlugin: Plugin = {
     url: "https://vercel.com",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add vercel@claude-plugins-official",
+  installCommand: "/plugin install vercel@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "vercel@claude-plugins-official": true

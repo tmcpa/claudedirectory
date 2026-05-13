@@ -12,7 +12,7 @@ export const bunPlugin: Plugin = {
     url: "https://bun.sh",
   },
   repoUrl: "https://github.com/oven-sh/bun",
-  installCommand: "claude plugins add bun@community",
+  installCommand: "/plugin install bun@community",
   commands: [
     { name: "/bun run", description: "Run a Bun script or package.json command" },
     { name: "/bun test", description: "Run the Bun test suite" },

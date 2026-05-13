@@ -10,7 +10,7 @@ export const i18nManagerPlugin: Plugin = {
     name: "Claude Directory",
     url: "https://github.com/tmcpa/claudedirectory",
   },
-  installCommand: "claude plugins add i18n-manager",
+  installCommand: "/plugin install i18n-manager",
   commands: [
     { name: "/i18n:extract", description: "Extract hardcoded strings into translation keys" },
     { name: "/i18n:sync", description: "Find missing translations across locale files" },

@@ -11,7 +11,7 @@ export const goplsLspPlugin: Plugin = {
     url: "https://github.com/anthropics",
   },
   repoUrl: "https://github.com/anthropics/claude-plugins-official",
-  installCommand: "claude plugins add gopls-lsp@claude-plugins-official",
+  installCommand: "/plugin install gopls-lsp@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true

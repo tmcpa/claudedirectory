@@ -10,7 +10,7 @@ export const githubPlugin: Plugin = {
     name: "GitHub",
     url: "https://github.com",
   },
-  installCommand: "claude plugins add github@claude-plugins-official",
+  installCommand: "/plugin install github@claude-plugins-official",
   config: `{
   "enabledPlugins": {
     "github@claude-plugins-official": true
