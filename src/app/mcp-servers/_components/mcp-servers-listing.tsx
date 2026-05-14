@@ -1,12 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { MCPCard } from "@/components/cards/mcp-card";
 import { Search } from "@/components/search";
-import { Badge } from "@/components/ui/badge";
+import { TopicTags } from "@/components/topic-tags";
 import { Button } from "@/components/ui/button";
-import { mcpServers, getAllMCPServerTags } from "@/data/mcp-servers";
+import { mcpServers } from "@/data/mcp-servers";
 import {
   INITIAL_DISPLAY_COUNT,
   SHOW_MORE_INCREMENT,
@@ -17,7 +16,6 @@ import {
 export function MCPServersListing() {
   const [search, setSearch] = useState("");
   const [displayCount, setDisplayCount] = useState(INITIAL_DISPLAY_COUNT);
-  const allTags = getAllMCPServerTags();
 
   const sortedServers = useMemo(() => sortListingItems(mcpServers), []);
 
@@ -57,18 +55,7 @@ export function MCPServersListing() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {allTags.map((tag) => (
-          <Link key={tag} href={`/mcp-servers/topic/${tag}`}>
-            <Badge
-              variant="secondary"
-              className="cursor-pointer hover:bg-accent"
-            >
-              {tag}
-            </Badge>
-          </Link>
-        ))}
-      </div>
+      <TopicTags items={mcpServers} hrefPrefix="/mcp-servers/topic" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {visibleServers.map((server) => (

@@ -1,12 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { PluginCard } from "@/components/cards/plugin-card";
 import { Search } from "@/components/search";
-import { Badge } from "@/components/ui/badge";
+import { TopicTags } from "@/components/topic-tags";
 import { Button } from "@/components/ui/button";
-import { plugins, getAllPluginTags } from "@/data/plugins";
+import { plugins } from "@/data/plugins";
 import {
   INITIAL_DISPLAY_COUNT,
   SHOW_MORE_INCREMENT,
@@ -17,7 +16,6 @@ import {
 export function PluginsListing() {
   const [search, setSearch] = useState("");
   const [displayCount, setDisplayCount] = useState(INITIAL_DISPLAY_COUNT);
-  const allTags = getAllPluginTags();
 
   const sortedPlugins = useMemo(() => sortListingItems(plugins), []);
 
@@ -57,18 +55,7 @@ export function PluginsListing() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {allTags.map((tag) => (
-          <Link key={tag} href={`/plugins/topic/${tag}`}>
-            <Badge
-              variant="secondary"
-              className="cursor-pointer hover:bg-accent"
-            >
-              {tag}
-            </Badge>
-          </Link>
-        ))}
-      </div>
+      <TopicTags items={plugins} hrefPrefix="/plugins/topic" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {visiblePlugins.map((plugin) => (

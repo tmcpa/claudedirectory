@@ -1,15 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { HookCard } from "@/components/cards/hook-card";
 import { Search } from "@/components/search";
-import { Badge } from "@/components/ui/badge";
-import { hooks, getAllHookTags } from "@/data/hooks";
+import { TopicTags } from "@/components/topic-tags";
+import { hooks } from "@/data/hooks";
 
 export function HooksListing() {
   const [search, setSearch] = useState("");
-  const allTags = getAllHookTags();
 
   const filteredHooks = hooks.filter((hook) => {
     return (
@@ -34,18 +32,7 @@ export function HooksListing() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {allTags.map((tag) => (
-          <Link key={tag} href={`/hooks/topic/${tag}`}>
-            <Badge
-              variant="secondary"
-              className="cursor-pointer hover:bg-accent"
-            >
-              {tag}
-            </Badge>
-          </Link>
-        ))}
-      </div>
+      <TopicTags items={hooks} hrefPrefix="/hooks/topic" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredHooks.map((hook) => (

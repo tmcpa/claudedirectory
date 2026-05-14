@@ -1,12 +1,11 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { SkillCard } from "@/components/cards/skill-card";
 import { Search } from "@/components/search";
-import { Badge } from "@/components/ui/badge";
+import { TopicTags } from "@/components/topic-tags";
 import { Button } from "@/components/ui/button";
-import { skills, getAllSkillTags } from "@/data/skills";
+import { skills } from "@/data/skills";
 import {
   INITIAL_DISPLAY_COUNT,
   SHOW_MORE_INCREMENT,
@@ -17,7 +16,6 @@ import {
 export function SkillsListing() {
   const [search, setSearch] = useState("");
   const [displayCount, setDisplayCount] = useState(INITIAL_DISPLAY_COUNT);
-  const allTags = getAllSkillTags();
 
   const sortedSkills = useMemo(() => sortListingItems(skills), []);
 
@@ -57,18 +55,7 @@ export function SkillsListing() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {allTags.map((tag) => (
-          <Link key={tag} href={`/skills/topic/${tag}`}>
-            <Badge
-              variant="secondary"
-              className="cursor-pointer hover:bg-accent"
-            >
-              {tag}
-            </Badge>
-          </Link>
-        ))}
-      </div>
+      <TopicTags items={skills} hrefPrefix="/skills/topic" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {visibleSkills.map((skill) => (
