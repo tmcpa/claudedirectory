@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { AgentCard } from "@/components/cards/agent-card";
 import { Search } from "@/components/search";
+import { TopicTags } from "@/components/topic-tags";
 import { Badge } from "@/components/ui/badge";
-import { agents, getAllAgentTags, getAllAgentCategories } from "@/data/agents";
+import { agents, getAllAgentCategories } from "@/data/agents";
 import { Agent } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -22,7 +22,6 @@ const categoryLabels: Record<Agent["category"], string> = {
 export function AgentsListing() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<Agent["category"] | null>(null);
-  const allTags = getAllAgentTags();
   const allCategories = getAllAgentCategories();
 
   const filteredAgents = agents.filter((agent) => {
@@ -81,21 +80,7 @@ export function AgentsListing() {
           </div>
         </div>
 
-        <div>
-          <p className="text-sm text-muted-foreground mb-2">Tags</p>
-          <div className="flex flex-wrap gap-2">
-            {allTags.map((tag) => (
-              <Link key={tag} href={`/agents/topic/${tag}`}>
-                <Badge
-                  variant="secondary"
-                  className="cursor-pointer hover:bg-accent"
-                >
-                  {tag}
-                </Badge>
-              </Link>
-            ))}
-          </div>
-        </div>
+        <TopicTags items={agents} hrefPrefix="/agents/topic" label="Tags" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -1,15 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { PromptCard } from "@/components/cards/prompt-card";
 import { Search } from "@/components/search";
-import { Badge } from "@/components/ui/badge";
-import { prompts, getAllPromptTags } from "@/data/prompts";
+import { TopicTags } from "@/components/topic-tags";
+import { prompts } from "@/data/prompts";
 
 export function PromptsListing() {
   const [search, setSearch] = useState("");
-  const allTags = getAllPromptTags();
 
   const filteredPrompts = prompts.filter((prompt) => {
     return (
@@ -34,18 +32,7 @@ export function PromptsListing() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        {allTags.map((tag) => (
-          <Link key={tag} href={`/prompts/topic/${tag}`}>
-            <Badge
-              variant="secondary"
-              className="cursor-pointer hover:bg-accent"
-            >
-              {tag}
-            </Badge>
-          </Link>
-        ))}
-      </div>
+      <TopicTags items={prompts} hrefPrefix="/prompts/topic" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredPrompts.map((prompt) => (

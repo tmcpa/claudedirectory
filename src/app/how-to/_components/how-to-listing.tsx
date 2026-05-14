@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { HowToCard } from "@/components/cards/how-to-card";
 import { Search } from "@/components/search";
+import { TopicTags } from "@/components/topic-tags";
 import { Badge } from "@/components/ui/badge";
-import { howTos, getAllHowToTags } from "@/data/how-to";
+import { howTos } from "@/data/how-to";
 import { cn } from "@/lib/utils";
 
 const difficulties = ["beginner", "intermediate", "advanced"] as const;
@@ -13,7 +13,6 @@ const difficulties = ["beginner", "intermediate", "advanced"] as const;
 export function HowToListing() {
   const [search, setSearch] = useState("");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
-  const allTags = getAllHowToTags();
 
   const filteredHowTos = howTos.filter((howTo) => {
     const matchesSearch =
@@ -69,19 +68,7 @@ export function HowToListing() {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          <span className="text-sm text-muted-foreground mr-2">Topic:</span>
-          {allTags.map((tag) => (
-            <Link key={tag} href={`/how-to/topic/${tag}`}>
-              <Badge
-                variant="secondary"
-                className="cursor-pointer hover:bg-accent"
-              >
-                {tag}
-              </Badge>
-            </Link>
-          ))}
-        </div>
+        <TopicTags items={howTos} hrefPrefix="/how-to/topic" label="Topic" />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
