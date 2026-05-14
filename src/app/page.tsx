@@ -65,7 +65,7 @@ const categories = [
   },
   {
     name: "Skills",
-    description: "Custom slash commands and workflows",
+    description: "Model-invoked capabilities with bundled context",
     href: "/skills",
     icon: Zap,
   },
