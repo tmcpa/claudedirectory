@@ -29,8 +29,10 @@ import { claudeCodeWorktreesGuide } from "./claude-code-worktrees-guide";
 import { claudeCodePlanModeGuide } from "./claude-code-plan-mode-guide";
 import { claudeCodeStatuslineGuide } from "./claude-code-statusline-guide";
 import { claudeCodeRoutinesGuide } from "./claude-code-routines-guide";
+import { claudeCodeSlashCommandsGuide } from "./claude-code-slash-commands-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeSlashCommandsGuide,
   claudeCodeRoutinesGuide,
   claudeCodeStatuslineGuide,
   claudeCodePlanModeGuide,
