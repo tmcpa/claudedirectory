@@ -182,6 +182,75 @@ export const useCases: UseCase[] = [
     tags: ["api", "rest", "graphql", "openapi", "swagger", "sdk"],
     primaryTopic: "api",
   },
+  {
+    slug: "refactoring",
+    title: "Refactoring",
+    headline: "Claude Code setups for refactoring and modernization",
+    description:
+      "Cut technical debt without breaking what works. Skills, agents, plugins, and how-tos that help Claude Code untangle legacy code, extract modules, and migrate across framework versions with tests in the loop.",
+    keywords: [
+      "claude code refactoring",
+      "legacy code refactor ai",
+      "code modernization claude",
+      "technical debt ai",
+    ],
+    tags: [
+      "refactoring",
+      "migration",
+      "migrations",
+      "code-quality",
+      "optimization",
+      "monorepo",
+      "architecture",
+    ],
+    primaryTopic: "refactoring",
+  },
+  {
+    slug: "frontend",
+    title: "Frontend Development",
+    headline: "Claude Code setups for frontend and UI development",
+    description:
+      "Build React, Vue, and Svelte interfaces with Claude Code in the loop. Skills, agents, plugins, and MCP servers for components, design systems, accessibility, and the browser side of the stack.",
+    keywords: [
+      "claude code frontend",
+      "claude code react",
+      "claude code ui",
+      "claude code design system",
+    ],
+    tags: [
+      "frontend",
+      "ui",
+      "design",
+      "design-system",
+      "components",
+      "react",
+      "accessibility",
+    ],
+    primaryTopic: "frontend",
+  },
+  {
+    slug: "codebase-onboarding",
+    title: "Codebase Onboarding",
+    headline: "Claude Code setups for learning a new codebase",
+    description:
+      "Land in an unfamiliar repo and ship in a week. Agents, skills, MCP servers, and how-tos that help Claude Code map architecture, surface conventions, and build the mental model you need to be useful fast.",
+    keywords: [
+      "claude code onboarding",
+      "learn codebase ai",
+      "codebase exploration claude",
+      "code archaeology ai",
+    ],
+    tags: [
+      "onboarding",
+      "exploration",
+      "architecture",
+      "claude-md",
+      "memory",
+      "context",
+      "search",
+    ],
+    primaryTopic: "onboarding",
+  },
 ];
 
 export function getUseCaseBySlug(slug: string): UseCase | undefined {

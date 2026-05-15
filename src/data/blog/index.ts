@@ -30,8 +30,10 @@ import { claudeCodePlanModeGuide } from "./claude-code-plan-mode-guide";
 import { claudeCodeStatuslineGuide } from "./claude-code-statusline-guide";
 import { claudeCodeRoutinesGuide } from "./claude-code-routines-guide";
 import { claudeCodeSlashCommandsGuide } from "./claude-code-slash-commands-guide";
+import { claudeCodePermissionsGuide } from "./claude-code-permissions-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodePermissionsGuide,
   claudeCodeSlashCommandsGuide,
   claudeCodeRoutinesGuide,
   claudeCodeStatuslineGuide,
