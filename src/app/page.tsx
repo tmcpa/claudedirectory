@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { PromptCard } from "@/components/cards/prompt-card";
 import { MCPCard } from "@/components/cards/mcp-card";
 import { HookCard } from "@/components/cards/hook-card";
@@ -12,87 +13,44 @@ import { AgentCard } from "@/components/cards/agent-card";
 import { BlogCard } from "@/components/cards/blog-card";
 import { UniversalSearch } from "@/components/universal-search";
 import { NewsletterSignup } from "@/components/newsletter-signup";
-import { getFeaturedPrompts } from "@/data/prompts";
-import { getFeaturedMCPServers } from "@/data/mcp-servers";
-import { getFeaturedHooks } from "@/data/hooks";
-import { getFeaturedSkills } from "@/data/skills";
-import { getFeaturedPlugins } from "@/data/plugins";
+import { getFeaturedPrompts, prompts } from "@/data/prompts";
+import { getFeaturedMCPServers, mcpServers } from "@/data/mcp-servers";
+import { getFeaturedHooks, hooks } from "@/data/hooks";
+import { getFeaturedSkills, skills } from "@/data/skills";
+import { getFeaturedPlugins, plugins } from "@/data/plugins";
 import { getFeaturedHowTos } from "@/data/how-to";
-import { getFeaturedAgents } from "@/data/agents";
+import { getFeaturedAgents, agents } from "@/data/agents";
 import { getFeaturedBlogPosts } from "@/data/blog";
 import { getRecentlyAdded } from "@/data/recently-added";
 import { RecentItemCard } from "@/components/cards/recent-item-card";
 import { useCases } from "@/data/use-cases";
 import { getUseCaseCounts } from "@/lib/use-cases";
-import { Terminal, FileText, Server, Webhook, Zap, Puzzle, BookOpen, Bot, Newspaper, ArrowRight, Github, Clock, Mail, Compass } from "lucide-react";
+import { Terminal, ArrowRight, Clock, Compass, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
   title: {
     absolute: "Claude Directory – Community Alternative to claude.ai/directory",
   },
   description:
-    "The community-curated Claude AI directory. Browse 100+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
+    "The community-curated Claude AI directory. Browse 300+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
   openGraph: {
     title: "Claude Directory – Community Alternative to claude.ai/directory",
     description:
-      "The community-curated Claude AI directory. Browse 100+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
+      "The community-curated Claude AI directory. Browse 300+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
   },
   twitter: {
     title: "Claude Directory – Community Alternative to claude.ai/directory",
     description:
-      "The community-curated Claude AI directory. Browse 100+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
+      "The community-curated Claude AI directory. Browse 300+ prompts, MCP servers, hooks, skills, plugins, and agents for Claude Code. Copy-paste setup in seconds.",
   },
 };
 
-const categories = [
-  {
-    name: "Prompts",
-    description: "CLAUDE.md templates for your projects",
-    href: "/prompts",
-    icon: FileText,
-  },
-  {
-    name: "MCP Servers",
-    description: "Model Context Protocol integrations",
-    href: "/mcp-servers",
-    icon: Server,
-  },
-  {
-    name: "Hooks",
-    description: "Pre and post tool-use automation",
-    href: "/hooks",
-    icon: Webhook,
-  },
-  {
-    name: "Skills",
-    description: "Model-invoked capabilities with bundled context",
-    href: "/skills",
-    icon: Zap,
-  },
-  {
-    name: "Plugins",
-    description: "Extend Claude Code functionality",
-    href: "/plugins",
-    icon: Puzzle,
-  },
-  {
-    name: "Agents",
-    description: "Specialized Claude Code subagents",
-    href: "/agents",
-    icon: Bot,
-  },
-  {
-    name: "How To",
-    description: "Step-by-step tutorials and guides",
-    href: "/how-to",
-    icon: BookOpen,
-  },
-  {
-    name: "Blog",
-    description: "News and insights on AI development",
-    href: "/blog",
-    icon: Newspaper,
-  },
+const exampleSearches = [
+  { label: "code review", href: "/agents" },
+  { label: "PR automation", href: "/skills" },
+  { label: "test runner", href: "/hooks" },
+  { label: "CLAUDE.md template", href: "/prompts" },
+  { label: "GitHub MCP", href: "/mcp-servers" },
 ];
 
 export default function Home() {
@@ -107,14 +65,31 @@ export default function Home() {
   const recentlyAdded = getRecentlyAdded(6);
   const useCaseCounts = getUseCaseCounts();
 
+  const totalConfigs =
+    prompts.length +
+    mcpServers.length +
+    hooks.length +
+    skills.length +
+    plugins.length +
+    agents.length;
+
+  const stats = [
+    { label: "MCP servers", value: mcpServers.length },
+    { label: "Plugins", value: plugins.length },
+    { label: "Agents", value: agents.length },
+    { label: "Skills", value: skills.length },
+    { label: "Prompts", value: prompts.length },
+    { label: "Hooks", value: hooks.length },
+  ];
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="container py-24 md:py-32">
+      <section className="container py-20 md:py-28">
         <div className="mx-auto flex max-w-[980px] flex-col items-center gap-4 text-center">
           <div className="flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm">
             <Terminal className="h-4 w-4" />
-            <span>Community-driven configurations</span>
+            <span>{totalConfigs}+ community-curated configurations</span>
           </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
             Claude Code
@@ -128,36 +103,63 @@ export default function Home() {
 
           <div className="w-full mt-8">
             <UniversalSearch />
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-xs text-muted-foreground">
+              <span className="text-muted-foreground/70">Try:</span>
+              {exampleSearches.map((s) => (
+                <Link
+                  key={s.label}
+                  href={s.href}
+                  className="rounded-full border bg-background/60 px-2.5 py-1 hover:bg-accent hover:text-foreground transition-colors"
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
           </div>
 
-          <div className="flex gap-4 mt-6">
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
             <Button asChild size="lg">
-              <Link href="/how-to">
-                Get Started
+              <Link href="/skills">
+                Browse Skills
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a
-                href="https://github.com/tmcpa/claudedirectory/blob/main/CONTRIBUTING.md"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="mr-2 h-4 w-4" />
-                Contribute
-              </a>
+              <Link href="/how-to">
+                <Sparkles className="mr-2 h-4 w-4" />
+                Get Started Guide
+              </Link>
             </Button>
           </div>
 
-          <div className="mt-10 w-full max-w-xl rounded-lg border bg-card/40 p-4 text-left">
-            <div className="mb-2 flex items-center gap-2 text-sm font-medium">
-              <Mail className="h-4 w-4 text-muted-foreground" />
-              <span>The Claude Code weekly</span>
+          {/* Stat strip — social proof */}
+          <div className="mt-12 w-full">
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-6 sm:gap-6">
+              {stats.map((s) => (
+                <div key={s.label} className="text-center">
+                  <div className="text-2xl font-bold tracking-tight sm:text-3xl">
+                    {s.value}
+                  </div>
+                  <div className="text-xs text-muted-foreground sm:text-sm">
+                    {s.label}
+                  </div>
+                </div>
+              ))}
             </div>
-            <p className="mb-3 text-sm text-muted-foreground">
-              New prompts, MCP servers, and skills — one short email each week. No spam, unsubscribe anytime.
-            </p>
-            <NewsletterSignup source="home_hero" />
+          </div>
+
+          {/* Compact inline newsletter — one row, no card */}
+          <div className="mt-10 w-full max-w-2xl">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-muted-foreground text-center sm:text-left">
+                One short Claude Code email a week.{" "}
+                <span className="text-foreground">Join 1,000+ subscribers.</span>
+              </p>
+              <NewsletterSignup
+                source="home_hero_inline"
+                className="w-full sm:w-auto sm:min-w-[340px]"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -195,26 +197,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="container py-12 border-t">
-        <h2 className="text-2xl font-bold mb-8">Browse by Category</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {categories.map((category) => (
-            <Link key={category.href} href={category.href}>
-              <Card className="h-full hover:bg-accent/50 transition-colors cursor-pointer">
-                <CardHeader>
-                  <category.icon className="h-8 w-8 mb-2 text-muted-foreground" />
-                  <CardTitle className="text-lg">{category.name}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {category.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* Recently Added */}
       {recentlyAdded.length > 0 && (
         <section className="container py-12 border-t">
@@ -243,179 +225,105 @@ export default function Home() {
         </section>
       )}
 
-      {/* Featured Prompts */}
-      {featuredPrompts.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">Featured Prompts</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/prompts">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredPrompts.slice(0, 3).map((prompt) => (
-              <PromptCard key={prompt.slug} prompt={prompt} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Featured MCP Servers */}
-      {featuredMCPServers.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">Featured MCP Servers</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/mcp-servers">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredMCPServers.slice(0, 3).map((server) => (
-              <MCPCard key={server.slug} server={server} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Featured Hooks */}
-      {featuredHooks.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">Featured Hooks</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/hooks">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredHooks.slice(0, 3).map((hook) => (
-              <HookCard key={hook.slug} hook={hook} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Featured Skills */}
-      {featuredSkills.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">Featured Skills</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/skills">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredSkills.slice(0, 3).map((skill) => (
-              <SkillCard key={skill.slug} skill={skill} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Featured Plugins */}
-      {featuredPlugins.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">Featured Plugins</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/plugins">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredPlugins.slice(0, 3).map((plugin) => (
-              <PluginCard key={plugin.slug} plugin={plugin} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Featured Agents */}
-      {featuredAgents.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">Featured Agents</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/agents">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredAgents.slice(0, 3).map((agent) => (
-              <AgentCard key={agent.slug} agent={agent} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Featured How To Guides */}
-      {featuredHowTos.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">How To Guides</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/how-to">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredHowTos.slice(0, 3).map((howTo) => (
-              <HowToCard key={howTo.slug} howTo={howTo} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Featured Blog Posts */}
-      {featuredBlogPosts.length > 0 && (
-        <section className="container py-12 border-t">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold">From the Blog</h2>
-            <Button variant="ghost" asChild>
-              <Link href="/blog">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredBlogPosts.slice(0, 3).map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Newsletter CTA */}
-      <section className="container py-16 border-t">
-        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 rounded-xl border bg-card/50 p-8 text-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border bg-background">
-            <Mail className="h-5 w-5 text-muted-foreground" />
-          </div>
-          <h2 className="text-2xl font-bold tracking-tight">Stay ahead on Claude Code</h2>
-          <p className="max-w-md text-sm text-muted-foreground">
-            Get the best new prompts, MCP servers, hooks, and skills delivered every week. Free, short, no spam.
-          </p>
-          <NewsletterSignup source="home_footer_cta" className="max-w-md" />
+      {/* Featured — unified tabbed section */}
+      <section className="container py-12 border-t">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-2xl font-bold">Featured</h2>
         </div>
+        <Tabs defaultValue="skills" className="w-full">
+          <TabsList className="mb-6 flex h-auto w-full flex-wrap justify-start gap-1 bg-muted/50 p-1">
+            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="agents">Agents</TabsTrigger>
+            <TabsTrigger value="plugins">Plugins</TabsTrigger>
+            <TabsTrigger value="mcp">MCP Servers</TabsTrigger>
+            <TabsTrigger value="prompts">Prompts</TabsTrigger>
+            <TabsTrigger value="hooks">Hooks</TabsTrigger>
+            <TabsTrigger value="how-to">How-To</TabsTrigger>
+            <TabsTrigger value="blog">Blog</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="skills">
+            <FeaturedGrid viewAllHref="/skills">
+              {featuredSkills.slice(0, 3).map((skill) => (
+                <SkillCard key={skill.slug} skill={skill} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+          <TabsContent value="agents">
+            <FeaturedGrid viewAllHref="/agents">
+              {featuredAgents.slice(0, 3).map((agent) => (
+                <AgentCard key={agent.slug} agent={agent} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+          <TabsContent value="plugins">
+            <FeaturedGrid viewAllHref="/plugins">
+              {featuredPlugins.slice(0, 3).map((plugin) => (
+                <PluginCard key={plugin.slug} plugin={plugin} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+          <TabsContent value="mcp">
+            <FeaturedGrid viewAllHref="/mcp-servers">
+              {featuredMCPServers.slice(0, 3).map((server) => (
+                <MCPCard key={server.slug} server={server} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+          <TabsContent value="prompts">
+            <FeaturedGrid viewAllHref="/prompts">
+              {featuredPrompts.slice(0, 3).map((prompt) => (
+                <PromptCard key={prompt.slug} prompt={prompt} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+          <TabsContent value="hooks">
+            <FeaturedGrid viewAllHref="/hooks">
+              {featuredHooks.slice(0, 3).map((hook) => (
+                <HookCard key={hook.slug} hook={hook} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+          <TabsContent value="how-to">
+            <FeaturedGrid viewAllHref="/how-to">
+              {featuredHowTos.slice(0, 3).map((howTo) => (
+                <HowToCard key={howTo.slug} howTo={howTo} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+          <TabsContent value="blog">
+            <FeaturedGrid viewAllHref="/blog">
+              {featuredBlogPosts.slice(0, 3).map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </FeaturedGrid>
+          </TabsContent>
+        </Tabs>
       </section>
+    </div>
+  );
+}
+
+function FeaturedGrid({
+  children,
+  viewAllHref,
+}: {
+  children: React.ReactNode;
+  viewAllHref: string;
+}) {
+  return (
+    <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {children}
+      </div>
+      <div className="mt-6 flex justify-end">
+        <Button variant="ghost" asChild>
+          <Link href={viewAllHref}>
+            View all
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+      </div>
     </div>
   );
 }

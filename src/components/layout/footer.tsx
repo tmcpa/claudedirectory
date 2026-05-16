@@ -9,9 +9,9 @@ export function Footer() {
       <div className="container">
         <div className="mb-10 flex flex-col gap-3 rounded-lg border bg-card/40 p-5 md:flex-row md:items-center md:justify-between">
           <div className="md:max-w-sm">
-            <h3 className="text-sm font-semibold">Get the weekly digest</h3>
+            <h3 className="text-sm font-semibold">Join 1,000+ subscribers</h3>
             <p className="text-xs text-muted-foreground">
-              The best new Claude Code prompts, MCP servers, and skills — every week.
+              The best new Claude Code prompts, MCP servers, and skills — every week. Free, short, no spam.
             </p>
           </div>
           <NewsletterSignup
