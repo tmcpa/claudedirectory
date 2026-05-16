@@ -714,6 +714,18 @@ export const useCases: UseCase[] = [
       "architecture",
     ],
     primaryTopic: "refactoring",
+    examples: [
+      {
+        title: "Extract a tangled module behind a clean interface",
+        prompt:
+          "Identify the public surface of src/billing, propose a smaller interface, and refactor callers to use it without changing behavior. Keep tests green at every step.",
+      },
+      {
+        title: "Migrate to a new framework version with tests in the loop",
+        prompt:
+          "Migrate this app from Next.js 14 to Next.js 15. Work in small commits, run tests after each, and pause on any breaking change in the changelog.",
+      },
+    ],
   },
   {
     slug: "frontend",
@@ -737,6 +749,18 @@ export const useCases: UseCase[] = [
       "accessibility",
     ],
     primaryTopic: "frontend",
+    examples: [
+      {
+        title: "Build a polished component from a Figma spec",
+        prompt:
+          "Use the design-system-engineer agent and the frontend-design skill to scaffold a pricing table that matches the linked Figma frame, with our Tailwind tokens and accessible markup.",
+      },
+      {
+        title: "Audit a page for accessibility regressions",
+        prompt:
+          "Run the accessibility-expert agent across app/dashboard, list WCAG AA issues with line numbers, and propose minimal fixes that keep the visual design intact.",
+      },
+    ],
   },
   {
     slug: "codebase-onboarding",
@@ -760,6 +784,18 @@ export const useCases: UseCase[] = [
       "search",
     ],
     primaryTopic: "onboarding",
+    examples: [
+      {
+        title: "Map the architecture of an unfamiliar repo",
+        prompt:
+          "Walk the repo and produce a short architecture overview: top-level modules, how requests flow from API to DB, and which boundaries are stable vs. in flux. Save it as ARCHITECTURE.md.",
+      },
+      {
+        title: "Seed CLAUDE.md with the conventions that actually matter",
+        prompt:
+          "Read 20 recent PRs and the most-touched files, then draft a CLAUDE.md that captures the team's real conventions — naming, testing, error handling — not generic best practices.",
+      },
+    ],
   },
 ];
 
