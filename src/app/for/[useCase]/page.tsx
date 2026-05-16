@@ -93,6 +93,32 @@ export default async function UseCasePage(props: Props) {
         </p>
       </div>
 
+      {useCase.examples.length > 0 && (
+        <section className="mb-10">
+          <h2 className="text-xl font-semibold mb-4">Example prompts</h2>
+          <p className="text-sm text-muted-foreground mb-4 max-w-3xl">
+            Concrete things you can type into Claude Code for {useCase.title.toLowerCase()}.
+            Each example uses a real skill, agent, slash command, hook, or MCP
+            server listed below.
+          </p>
+          <ol className="space-y-4">
+            {useCase.examples.map((example, i) => (
+              <li
+                key={i}
+                className="rounded-lg border bg-card p-4"
+              >
+                <div className="text-sm font-medium mb-2">
+                  {example.title}
+                </div>
+                <pre className="text-sm bg-muted/60 rounded px-3 py-2 overflow-x-auto whitespace-pre-wrap break-words font-mono">
+                  {example.prompt}
+                </pre>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
       {matches.skills.length > 0 && (
         <UseCaseSection
           title="Skills"
