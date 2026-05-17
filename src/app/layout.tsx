@@ -17,14 +17,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_DESCRIPTION =
+  "Community-curated directory for Claude Code: prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Claude Directory - Best Prompts, MCP Servers, Skills & Plugins for Claude Code",
+    default: "Claude Directory – Prompts, MCP, Skills & Plugins for Claude Code",
     template: "%s | Claude Directory",
   },
-  description:
-    "The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds.",
+  description: SITE_DESCRIPTION,
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -59,15 +61,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BASE_URL,
     siteName: "Claude Directory",
-    title: "Claude Directory - Best Prompts, MCP Servers, Skills & Plugins for Claude Code",
-    description:
-      "The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds.",
+    title: "Claude Directory – Prompts, MCP, Skills & Plugins for Claude Code",
+    description: SITE_DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Claude Directory - Best Prompts, MCP Servers, Skills & Plugins for Claude Code",
-    description:
-      "The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds.",
+    title: "Claude Directory – Prompts, MCP, Skills & Plugins for Claude Code",
+    description: SITE_DESCRIPTION,
   },
   robots: {
     index: true,
@@ -115,7 +115,7 @@ export default function RootLayout({
         <WebsiteJsonLd
           url={BASE_URL}
           name="Claude Directory"
-          description="The #1 directory for Claude Code configurations. Browse 100+ community-curated prompts, MCP servers, hooks, skills, plugins, and agents. Copy-paste setup in seconds."
+          description={SITE_DESCRIPTION}
         />
         <Header />
         <main className="flex-1">{children}</main>
