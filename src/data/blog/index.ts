@@ -31,8 +31,10 @@ import { claudeCodeStatuslineGuide } from "./claude-code-statusline-guide";
 import { claudeCodeRoutinesGuide } from "./claude-code-routines-guide";
 import { claudeCodeSlashCommandsGuide } from "./claude-code-slash-commands-guide";
 import { claudeCodePermissionsGuide } from "./claude-code-permissions-guide";
+import { claudeCodeCompetitorsComparison } from "./claude-code-competitors-comparison";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeCompetitorsComparison,
   claudeCodePermissionsGuide,
   claudeCodeSlashCommandsGuide,
   claudeCodeRoutinesGuide,
