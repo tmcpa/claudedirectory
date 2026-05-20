@@ -56,6 +56,7 @@ export function buildCrossPageMetadata({
     openGraph: { title, description, url, type: "website" as const },
     twitter: { card: "summary" as const, title, description },
     alternates: { canonical: url },
+    robots: { index: false, follow: true },
   };
 }
 
