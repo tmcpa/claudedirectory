@@ -32,8 +32,10 @@ import { claudeCodeRoutinesGuide } from "./claude-code-routines-guide";
 import { claudeCodeSlashCommandsGuide } from "./claude-code-slash-commands-guide";
 import { claudeCodePermissionsGuide } from "./claude-code-permissions-guide";
 import { claudeCodeCompetitorsComparison } from "./claude-code-competitors-comparison";
+import { claudeOpus48Release } from "./claude-opus-4-8-release";
 
 export const blogPosts: BlogPost[] = [
+  claudeOpus48Release,
   claudeCodeCompetitorsComparison,
   claudeCodePermissionsGuide,
   claudeCodeSlashCommandsGuide,
