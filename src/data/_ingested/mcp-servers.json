@@ -122,6 +122,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "garasegae-aiskillstore",
+    "title": "Aiskillstore",
+    "description": "Agent-first skill marketplace where AI agents discover, purchase, and integrate skills via MCP protocol. Supports 7+ platforms including Claude, hGPT, and Gemini.",
+    "tags": [
+      "aggregators",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "garasegae",
+      "url": "https://github.com/garasegae"
+    },
+    "repoUrl": "https://github.com/garasegae/aiskillstore",
+    "installCommand": "npx -y aiskillstore",
+    "config": "{\n  \"mcpServers\": {\n    \"aiskillstore\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"aiskillstore\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "aggregators",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "work90210-apifold",
     "title": "APIFold",
     "description": "Turn any REST API into a hosted MCP server. 18 free public servers (GitHub, Stripe, Slack, OpenAI, Notion, and more) — no setup required, bring your own API key.",
@@ -1014,6 +1034,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "wolido-openaaas",
+    "title": "OpenAaaS",
+    "description": "Python MCP adapter connecting Claude/Cursor/Cline to the OpenAaaS scientific agent network. Submit tasks to remote research agents (literature analysis, materials databases, etc.) — data stays local, only KB~MB results flow. Install: `uvx openaaas-mcp-adapter`.",
+    "tags": [
+      "aggregators",
+      "python",
+      "agent"
+    ],
+    "author": {
+      "name": "Wolido",
+      "url": "https://github.com/Wolido"
+    },
+    "repoUrl": "https://github.com/Wolido/OpenAaaS",
+    "installCommand": "uvx openaaas-mcp-adapter",
+    "config": "{\n  \"mcpServers\": {\n    \"OpenAaaS\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"OpenAaaS\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "aggregators",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "yangliangwei-personalizationmcp",
     "title": "PersonalizationMCP",
     "description": "Comprehensive personal data aggregation MCP server with Steam, YouTube, Bilibili, Spotify, Reddit and other platforms integrations. Features OAuth2 authentication, automatic token management, and 90+ tools for gaming, music, video, and social platform data access.",
@@ -1027,6 +1067,26 @@
     "repoUrl": "https://github.com/YangLiangwei/PersonalizationMCP",
     "installCommand": "npx -y PersonalizationMCP",
     "config": "{\n  \"mcpServers\": {\n    \"PersonalizationMCP\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"PersonalizationMCP\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "aggregators",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "swarmwage-swarmwage",
+    "title": "Swarmwage",
+    "description": "Open MCP-native agent hire protocol — discovery + hiring + reputation layer above x402 payment rails. Find specialized agents, hire them with one function call, settle in USDC on Base. Sub-second sync, on-chain receipts via EIP-3009, zero protocol fee. Live mainnet 2026-05-10.",
+    "tags": [
+      "aggregators",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "Swarmwage",
+      "url": "https://github.com/Swarmwage"
+    },
+    "repoUrl": "https://github.com/Swarmwage/swarmwage",
+    "installCommand": "npx -y swarmwage",
+    "config": "{\n  \"mcpServers\": {\n    \"swarmwage\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"swarmwage\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "aggregators",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -1321,6 +1381,24 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "delmas41-gradusnotation",
+    "title": "Gradusnotation",
+    "description": "Render music notation (SVG + MusicXML + MIDI) from a JSON score, validate input, analyze MusicXML harmonically, and search a curated music-theory knowledge base. Free, no auth. `npx -y @gradusmusic/notation-mcp`",
+    "tags": [
+      "art-culture"
+    ],
+    "author": {
+      "name": "delmas41",
+      "url": "https://github.com/delmas41"
+    },
+    "repoUrl": "https://github.com/delmas41/gradusnotation",
+    "installCommand": "npx -y @gradusmusic/notation-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"gradusnotation\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"gradusnotation\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "art & culture",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "diivi-aseprite-mcp",
     "title": "Aseprite",
     "description": "MCP server using the Aseprite API to create pixel art",
@@ -1485,6 +1563,27 @@
     "repoUrl": "https://github.com/omni-mcp/isaac-sim-mcp",
     "installCommand": "npx -y isaac-sim-mcp",
     "config": "{\n  \"mcpServers\": {\n    \"isaac-sim-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"isaac-sim-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "art & culture",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "pantani-tdmcp",
+    "title": "Tdmcp",
+    "description": "Stop wiring nodes by hand — describe a visual and the AI builds a real, playable TouchDesigner network: audio-reactive, generative, particle, 3D and feedback systems with live knobs and MIDI/OSC/DMX, checking and previewing its own work.",
+    "tags": [
+      "art-culture",
+      "react",
+      "node",
+      "ai"
+    ],
+    "author": {
+      "name": "Pantani",
+      "url": "https://github.com/Pantani"
+    },
+    "repoUrl": "https://github.com/Pantani/tdmcp",
+    "installCommand": "npx -y tdmcp",
+    "config": "{\n  \"mcpServers\": {\n    \"tdmcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"tdmcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "art & culture",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -2548,6 +2647,28 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "protostatis-unbrowser",
+    "title": "Unbrowser",
+    "description": "Lightweight browser MCP server for LLM agents. Runs JavaScript, follows links, fills forms, manages cookies, and returns low-token BlockMaps from a single native binary without Chrome.",
+    "tags": [
+      "browser-automation",
+      "javascript",
+      "browser",
+      "llm",
+      "agent"
+    ],
+    "author": {
+      "name": "protostatis",
+      "url": "https://github.com/protostatis"
+    },
+    "repoUrl": "https://github.com/protostatis/unbrowser",
+    "installCommand": "npx -y unbrowser",
+    "config": "{\n  \"mcpServers\": {\n    \"unbrowser\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"unbrowser\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "browser automation",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "kuvopllc-purroxy2",
     "title": "Purroxy2",
     "description": "Record what you do on any website and securely automate it forever. Replays browser actions in headless Playwright with encrypted credentials and AI-powered selector healing.",
@@ -2783,6 +2904,25 @@
     "repoUrl": "https://github.com/alexei-led/k8s-mcp-server",
     "installCommand": "npx -y k8s-mcp-server",
     "config": "{\n  \"mcpServers\": {\n    \"k8s-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"k8s-mcp-server\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "cloud platforms",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "alikarami-mikromcp",
+    "title": "MikroMCP",
+    "description": "Manage MikroTik RouterOS devices through AI assistants — interfaces, firewall rules, DHCP, DNS, routes, WireGuard, WiFi, BGP/OSPF, VLANs, and more. 77 tools with dry-run previews, idempotency checks, circuit breakers, RBAC, and rollback-aware change workflows.",
+    "tags": [
+      "cloud-platforms",
+      "ai"
+    ],
+    "author": {
+      "name": "AliKarami",
+      "url": "https://github.com/AliKarami"
+    },
+    "repoUrl": "https://github.com/AliKarami/MikroMCP",
+    "installCommand": "npx -y MikroMCP",
+    "config": "{\n  \"mcpServers\": {\n    \"MikroMCP\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"MikroMCP\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "cloud platforms",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -3258,6 +3398,25 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "nikhilnt1234-tokenburnrate",
+    "title": "TokenBurnRate",
+    "description": "Track LLM token costs across Claude, GPT and Gemini. MCP server + CLI with optimization hints and $ savings estimates. 📇🏠",
+    "tags": [
+      "cloud-platforms",
+      "llm"
+    ],
+    "author": {
+      "name": "nikhilnt1234",
+      "url": "https://github.com/nikhilnt1234"
+    },
+    "repoUrl": "https://github.com/nikhilnt1234/TokenBurnRate",
+    "installCommand": "npx -y TokenBurnRate",
+    "config": "{\n  \"mcpServers\": {\n    \"TokenBurnRate\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"TokenBurnRate\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "cloud platforms",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "pulumi-mcp-server",
     "title": "Pulumi Server",
     "description": "MCP server for interacting with Pulumi using the Pulumi Automation API and Pulumi Cloud API. Enables MCP clients to perform Pulumi operations like retrieving package information, previewing changes, deploying updates, and retrieving stack outputs programmatically.",
@@ -3411,6 +3570,28 @@
     "repoUrl": "https://github.com/shipstatic/mcp",
     "installCommand": "npx -y mcp",
     "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "cloud platforms",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "sidd27-infrawise",
+    "title": "Infrawise",
+    "description": "Cloud infrastructure analysis for AI coding assistants — detects IaC drift, missing indexes, security gaps, and performance anti-patterns across AWS services and databases. 13 tools, works with Claude Code and Cursor.",
+    "tags": [
+      "cloud-platforms",
+      "aws",
+      "security",
+      "performance",
+      "ai"
+    ],
+    "author": {
+      "name": "Sidd27",
+      "url": "https://github.com/Sidd27"
+    },
+    "repoUrl": "https://github.com/Sidd27/infrawise",
+    "installCommand": "npx -y infrawise",
+    "config": "{\n  \"mcpServers\": {\n    \"infrawise\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"infrawise\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "cloud platforms",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -3828,6 +4009,25 @@
     "repoUrl": "https://github.com/hileamlakB/PRIMS",
     "installCommand": "npx -y PRIMS",
     "config": "{\n  \"mcpServers\": {\n    \"PRIMS\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"PRIMS\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "code execution",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "ksterx-srunx",
+    "title": "Srunx",
+    "description": "MCP server for the SLURM workload manager. Submit jobs, run YAML workflows, monitor GPU resources, manage SSH profiles, and sync files to remote HPC clusters from natural language. 14 tools spanning local SLURM and SSH-remote clusters; companion CLI and FastAPI Web UI ship in th…",
+    "tags": [
+      "code-execution",
+      "api"
+    ],
+    "author": {
+      "name": "ksterx",
+      "url": "https://github.com/ksterx"
+    },
+    "repoUrl": "https://github.com/ksterx/srunx",
+    "installCommand": "npx -y srunx",
+    "config": "{\n  \"mcpServers\": {\n    \"srunx\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"srunx\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "code execution",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -4588,6 +4788,25 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "pthrower-strata",
+    "title": "Strata",
+    "description": "AI ecosystem intelligence MCP server. Verified best practices, news, integrations, and MCP server directory across 22 AI ecosystems including Claude, ChatGPT, Gemini, LangChain, Groq, Cursor, and more. Claude-validated, injection-safe, refreshed twice daily. 📇 ☁️",
+    "tags": [
+      "coding-agents",
+      "ai"
+    ],
+    "author": {
+      "name": "PThrower",
+      "url": "https://github.com/PThrower"
+    },
+    "repoUrl": "https://github.com/PThrower/Strata",
+    "installCommand": "npx -y Strata",
+    "config": "{\n  \"mcpServers\": {\n    \"Strata\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"Strata\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "coding agents",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "sunflowerslwtech-mcp-creator-growth",
     "title": "Creator Growth",
     "description": "Intelligent learning sidecar for AI coding assistants. Helps developers learn from AI-generated code changes through interactive blocking quizzes and provides agents with persistent project-specific debugging memory using silent RAG tools. Features 56% token optimization and mul…",
@@ -4757,6 +4976,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "capsulerun-bash",
+    "title": "Bash",
+    "description": "Sandboxed bash for agents. Run untrusted commands in WebAssembly sandboxes with no setup required.",
+    "tags": [
+      "command-line",
+      "rust",
+      "agent"
+    ],
+    "author": {
+      "name": "capsulerun",
+      "url": "https://github.com/capsulerun"
+    },
+    "repoUrl": "https://github.com/capsulerun/bash",
+    "installCommand": "npx -y bash",
+    "config": "{\n  \"mcpServers\": {\n    \"bash\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bash\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "command line",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "danmartuszewski-hop",
     "title": "Hop",
     "description": "Fast SSH connection manager with TUI dashboard and MCP server for discovering, searching, and executing commands on remote hosts.",
@@ -4826,6 +5065,27 @@
     "repoUrl": "https://github.com/adhikasp/mcp-twikit",
     "installCommand": "npx -y mcp-twikit",
     "config": "{\n  \"mcpServers\": {\n    \"mcp-twikit\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-twikit\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "communication",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "agenticmail-agenticmail",
+    "title": "Agenticmail",
+    "description": "Real email and SMS for AI agents. Run a local mail server with disposable inboxes, send/receive real email, fetch verification codes, and drive a real inbox — all from your machine, no third-party email API. Install with `npx @agenticmail/mcp`.",
+    "tags": [
+      "communication",
+      "api",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "agenticmail",
+      "url": "https://github.com/agenticmail"
+    },
+    "repoUrl": "https://github.com/agenticmail/agenticmail",
+    "installCommand": "npx @agenticmail/mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"agenticmail\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"agenticmail\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "communication",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -5120,6 +5380,26 @@
     "repoUrl": "https://github.com/gerkensm/callcenter.js-mcp",
     "installCommand": "npx -y callcenter.js-mcp",
     "config": "{\n  \"mcpServers\": {\n    \"callcenter.js-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"callcenter.js-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "communication",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "getpoststack-mcp",
+    "title": "Getpoststack Mcp",
+    "description": "EU-hosted email API exposed as MCP tools — send transactional and marketing email, manage contacts and segments, run broadcasts, render templates, and read analytics from Claude/Cursor. GDPR compliant, EU-only data residency (Germany + Finland). `npx -y @poststack.dev/mcp`.",
+    "tags": [
+      "communication",
+      "api",
+      "ai"
+    ],
+    "author": {
+      "name": "getpoststack",
+      "url": "https://github.com/getpoststack"
+    },
+    "repoUrl": "https://github.com/getpoststack/mcp",
+    "installCommand": "npx -y @poststack.dev/mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "communication",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -5511,6 +5791,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "mohitbadwal-ringback",
+    "title": "Ringback",
+    "description": "Lets the LLM reach you on your phone: live, interruptible voice calls and tiered alerts, using free self-hosted pieces (SIP via pjsua2/Linphone + whisper.cpp STT + macOS say TTS). No paid telephony, no extra API key for the conversation.",
+    "tags": [
+      "communication",
+      "api",
+      "ai",
+      "llm"
+    ],
+    "author": {
+      "name": "mohitbadwal",
+      "url": "https://github.com/mohitbadwal"
+    },
+    "repoUrl": "https://github.com/mohitbadwal/ringback",
+    "installCommand": "npx -y ringback",
+    "config": "{\n  \"mcpServers\": {\n    \"ringback\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"ringback\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "communication",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "overquotaai-chatterboxio-mcp-server",
     "title": "Chatterboxio",
     "description": "MCP server implementation for ChatterBox.io, enabling AI agents to send bots to online meetings (Zoom, Google Meet) and obtain transcripts and recordings.",
@@ -5547,6 +5848,25 @@
     "repoUrl": "https://github.com/PhononX/cv-mcp-server",
     "installCommand": "npx -y cv-mcp-server",
     "config": "{\n  \"mcpServers\": {\n    \"cv-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"cv-mcp-server\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "communication",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "pingfyr-mcp",
+    "title": "Pingfyr Mcp",
+    "description": "The scheduled delivery API for developers. Schedule reminders, notifications, and webhooks with one API call.",
+    "tags": [
+      "communication",
+      "api"
+    ],
+    "author": {
+      "name": "Pingfyr",
+      "url": "https://github.com/Pingfyr"
+    },
+    "repoUrl": "https://github.com/Pingfyr/mcp",
+    "installCommand": "npx -y mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "communication",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -8032,6 +8352,45 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "kyanitelabs-checkyourself",
+    "title": "Checkyourself",
+    "description": "Local-first production-readiness audit for AI-built apps: read-only checks, an evidence-based 0-100 score, and guided fixes before launch.",
+    "tags": [
+      "developer-tools",
+      "ai"
+    ],
+    "author": {
+      "name": "KyaniteLabs",
+      "url": "https://github.com/KyaniteLabs"
+    },
+    "repoUrl": "https://github.com/KyaniteLabs/checkyourself",
+    "installCommand": "npx -y checkyourself",
+    "config": "{\n  \"mcpServers\": {\n    \"checkyourself\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"checkyourself\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "adrianczuczka-mason",
+    "title": "Mason",
+    "description": "Context engineering MCP server. Generates CLAUDE.md from git history and architectural file sampling, and maintains a concept-map snapshot of features/flows → files so agents can skip grep/glob on repeat queries.",
+    "tags": [
+      "developer-tools",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "adrianczuczka",
+      "url": "https://github.com/adrianczuczka"
+    },
+    "repoUrl": "https://github.com/adrianczuczka/mason",
+    "installCommand": "npx -y mason",
+    "config": "{\n  \"mcpServers\": {\n    \"mason\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mason\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "masondelan-selvedge",
     "title": "Selvedge",
     "description": "Change tracking for AI-era codebases. AI agents call it to log structured change events (entity + diff + reasoning) before the session ends, then query history with diff, blame, history, changeset, and search. Captures the intent that would otherwise evaporate.",
@@ -8110,6 +8469,28 @@
     "repoUrl": "https://github.com/EtienneChollet/ontomics",
     "installCommand": "npx -y ontomics",
     "config": "{\n  \"mcpServers\": {\n    \"ontomics\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"ontomics\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "ozgurcd-gograph",
+    "title": "Gograph",
+    "description": "An AST-aware structural repository graph engine and MCP server designed for AI agents. Understands Go struct embeds, public API surfaces, SQL queries, and error mapping to give agents instant codebase context without blindly grepping.",
+    "tags": [
+      "developer-tools",
+      "go",
+      "api",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "ozgurcd",
+      "url": "https://github.com/ozgurcd"
+    },
+    "repoUrl": "https://github.com/ozgurcd/gograph",
+    "installCommand": "npx -y gograph",
+    "config": "{\n  \"mcpServers\": {\n    \"gograph\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"gograph\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "developer tools",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -8345,6 +8726,26 @@
     "repoUrl": "https://github.com/CSCSoftware/AiDex",
     "installCommand": "npx -y AiDex",
     "config": "{\n  \"mcpServers\": {\n    \"AiDex\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"AiDex\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "ahmedxuhri-bigindexer",
+    "title": "Bigindexer",
+    "description": "Hierarchical code intelligence for AI coding agents. Scans local source code, clusters files by behavioral roles, maps coupling seams, and provides in-repo twins/context for complex implementation tasks.",
+    "tags": [
+      "developer-tools",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "ahmedxuhri",
+      "url": "https://github.com/ahmedxuhri"
+    },
+    "repoUrl": "https://github.com/ahmedxuhri/bigindexer",
+    "installCommand": "npx -y bigindexer",
+    "config": "{\n  \"mcpServers\": {\n    \"bigindexer\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bigindexer\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "developer tools",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -8742,6 +9143,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "carloshpdoc-memorydetective",
+    "title": "Memorydetective",
+    "description": "iOS leak hunting and performance investigation. Reads `.memgraph` (`leaks(1)`) and `.trace` (`xctrace`) files, classifies retain cycles against a 34-pattern catalog (SwiftUI, Combine, Swift Concurrency, UIKit, Core Animation, Core Data, SwiftData, RxSwift, Realm), surfaces a Swi…",
+    "tags": [
+      "developer-tools",
+      "swift",
+      "performance",
+      "ai"
+    ],
+    "author": {
+      "name": "carloshpdoc",
+      "url": "https://github.com/carloshpdoc"
+    },
+    "repoUrl": "https://github.com/carloshpdoc/memorydetective",
+    "installCommand": "npx -y memorydetective",
+    "config": "{\n  \"mcpServers\": {\n    \"memorydetective\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"memorydetective\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "chunkydotdev-bldbl-mcp",
     "title": "Bldbl",
     "description": "Official MCP server for Buildable AI-powered development platform [bldbl.dev](https://bldbl.dev). Enables AI assistants to manage tasks, track progress, get project context, and collaborate with humans on software projects.",
@@ -9008,6 +9430,24 @@
     "repoUrl": "https://github.com/dannote/figma-use",
     "installCommand": "npx -y figma-use",
     "config": "{\n  \"mcpServers\": {\n    \"figma-use\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"figma-use\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "musepy-genable",
+    "title": "Genable",
+    "description": "Write-side MCP for Figma — complements Figma's official read-only MCP. 41 tools for building and editing Figma designs from Claude Code, Cursor, Cline: JSX-like tree creation, variables/tokens, components, cross-page navigation, and visual verification via screenshots. Install: …",
+    "tags": [
+      "developer-tools"
+    ],
+    "author": {
+      "name": "musepy",
+      "url": "https://github.com/musepy"
+    },
+    "repoUrl": "https://github.com/musepy/genable",
+    "installCommand": "npx -y genable-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"genable\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"genable\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "developer tools",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -10098,6 +10538,25 @@
     "repoUrl": "https://github.com/kadykov/mcp-openapi-schema-explorer",
     "installCommand": "npx -y mcp-openapi-schema-explorer",
     "config": "{\n  \"mcpServers\": {\n    \"mcp-openapi-schema-explorer\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-openapi-schema-explorer\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "kerbelp-metatron",
+    "title": "Metatron",
+    "description": "Self-hosted codebase priors and conventions server. Captures codebase design patterns, conventions, and implementation decisions from git history and developer feedback, serving them to coding agents to ensure local project standards are followed.",
+    "tags": [
+      "developer-tools",
+      "agent"
+    ],
+    "author": {
+      "name": "kerbelp",
+      "url": "https://github.com/kerbelp"
+    },
+    "repoUrl": "https://github.com/kerbelp/metatron",
+    "installCommand": "npx -y metatron",
+    "config": "{\n  \"mcpServers\": {\n    \"metatron\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"metatron\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "developer tools",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -11643,6 +12102,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "stfade-moth",
+    "title": "Moth",
+    "description": "A lightweight MCP server for structured bug-fix analysis and project-local verified fix memory for AI agents.",
+    "tags": [
+      "developer-tools",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "stfade",
+      "url": "https://github.com/stfade"
+    },
+    "repoUrl": "https://github.com/stfade/moth",
+    "installCommand": "npx -y moth",
+    "config": "{\n  \"mcpServers\": {\n    \"moth\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"moth\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "storybookjs-addon-mcp",
     "title": "Addon",
     "description": "Help agents automatically write and test stories for your UI components.",
@@ -12003,6 +12482,26 @@
     "repoUrl": "https://github.com/vercel/next-devtools-mcp",
     "installCommand": "npx -y next-devtools-mcp",
     "config": "{\n  \"mcpServers\": {\n    \"next-devtools-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"next-devtools-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "vighriday-veris",
+    "title": "Veris",
+    "description": "Behavioral verification intelligence for autonomous coding agents. Builds a behavioral graph of any TS/JS repo, clusters into 25 semantic workflows (Auth, Payments, Webhooks, Caching, Queue, etc.), detects drift, generates concrete adversarial probes (idempotency, retry storm, c…",
+    "tags": [
+      "developer-tools",
+      "sqlite",
+      "agent"
+    ],
+    "author": {
+      "name": "vighriday",
+      "url": "https://github.com/vighriday"
+    },
+    "repoUrl": "https://github.com/vighriday/Veris",
+    "installCommand": "npx -y Veris",
+    "config": "{\n  \"mcpServers\": {\n    \"Veris\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"Veris\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "developer tools",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -12598,6 +13097,75 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "nazarkalytiuk-tarn",
+    "title": "Tarn",
+    "description": "CLI-first API testing tool with structured JSON failures (`failure_category`, `error_code`, `hints`) so AI agents can branch on the taxonomy without parsing stderr. MCP tools: `tarn_run`, `tarn_validate`, `tarn_fix_plan`, `tarn_inspect`, `tarn_rerun_failed`, and more. Tests are …",
+    "tags": [
+      "developer-tools",
+      "go",
+      "testing",
+      "api",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "NazarKalytiuk",
+      "url": "https://github.com/NazarKalytiuk"
+    },
+    "repoUrl": "https://github.com/NazarKalytiuk/tarn",
+    "installCommand": "npx -y tarn",
+    "config": "{\n  \"mcpServers\": {\n    \"tarn\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"tarn\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "tcconnally-perseus",
+    "title": "Perseus",
+    "description": "Compile-before-context MCP server with 13 tools. Pre-resolves workspace state (git, services, file ops, memory federation, multi-agent coordination) into markdown briefings. Single-file Python, MIT. Published as io.github.tcconnally/perseus.",
+    "tags": [
+      "developer-tools",
+      "python",
+      "github",
+      "agent"
+    ],
+    "author": {
+      "name": "tcconnally",
+      "url": "https://github.com/tcconnally"
+    },
+    "repoUrl": "https://github.com/tcconnally/perseus",
+    "installCommand": "npx -y perseus",
+    "config": "{\n  \"mcpServers\": {\n    \"perseus\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"perseus\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "zhurong2020-pyobfus",
+    "title": "Pyobfus",
+    "description": "Official MCP server for the pyobfus Python obfuscator (installed from PyPI as `pyobfus-mcp`; source lives in the `pyobfus_mcp/` subfolder of the pyobfus monorepo). Seven tools: pre-flight risk scan (`check_obfuscation_risks`), zero-config init (`generate_pyobfus_config`), revers…",
+    "tags": [
+      "developer-tools",
+      "python",
+      "go",
+      "django",
+      "flask",
+      "github",
+      "api",
+      "ai"
+    ],
+    "author": {
+      "name": "zhurong2020",
+      "url": "https://github.com/zhurong2020"
+    },
+    "repoUrl": "https://github.com/zhurong2020/pyobfus",
+    "installCommand": "npx -y pyobfus",
+    "config": "{\n  \"mcpServers\": {\n    \"pyobfus\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"pyobfus\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "jordandalton-doordash-mcp-server",
     "title": "DoorDash",
     "description": "DoorDash Delivery (Unofficial)",
@@ -12648,6 +13216,27 @@
     "repoUrl": "https://github.com/Yang1Bai/claw-tsaver",
     "installCommand": "npx -y claw-tsaver",
     "config": "{\n  \"mcpServers\": {\n    \"claw-tsaver\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"claw-tsaver\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "delivery",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "childrentime-reactuse",
+    "title": "Reactuse",
+    "description": "MCP server for the [ReactUse](https://reactuse.com) library — 110+ React Hooks (TypeScript-first, SSR-compatible, tree-shakable). Lets AI assistants discover hook signatures, demos, and usage patterns directly from the docs.",
+    "tags": [
+      "delivery",
+      "typescript",
+      "react",
+      "ai"
+    ],
+    "author": {
+      "name": "childrentime",
+      "url": "https://github.com/childrentime"
+    },
+    "repoUrl": "https://github.com/childrentime/reactuse",
+    "installCommand": "npx -y reactuse",
+    "config": "{\n  \"mcpServers\": {\n    \"reactuse\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"reactuse\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "delivery",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -13084,6 +13673,24 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "pushtodisplay-cli",
+    "title": "Cli",
+    "description": "Push To Display MCP server send structured content to selected boards on iOS and android devices with app [Push To Display](https://pushtodisplay.com), route updates to specific panels, and render in real time with display-focused multi-panel layouts.",
+    "tags": [
+      "data-visualization"
+    ],
+    "author": {
+      "name": "pushtodisplay",
+      "url": "https://github.com/pushtodisplay"
+    },
+    "repoUrl": "https://github.com/pushtodisplay/cli",
+    "installCommand": "npx -y cli",
+    "config": "{\n  \"mcpServers\": {\n    \"cli\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"cli\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "data visualization",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "nteract-semiotic",
     "title": "Semiotic",
     "description": "React data visualization MCP server with 30+ chart types. 5 tools: suggest charts for a dataset, render validated React configs to SVG, diagnose configuration anti-patterns, get component schemas, and report issues.",
@@ -13303,6 +13910,42 @@
     "repoUrl": "https://github.com/laundromatic/shopgraph",
     "installCommand": "npx -y shopgraph",
     "config": "{\n  \"mcpServers\": {\n    \"shopgraph\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"shopgraph\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "e-commerce",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "vitrine3d-mcp",
+    "title": "Vitrine3d Mcp",
+    "description": "3D product viewer platform with a visual editor. Upload GLB models, style scenes with lighting, camera, and backgrounds, and embed on any website. `npx @vitrine3d/mcp`",
+    "tags": [
+      "e-commerce"
+    ],
+    "author": {
+      "name": "vitrine3d",
+      "url": "https://github.com/vitrine3d"
+    },
+    "repoUrl": "https://github.com/vitrine3d/mcp",
+    "installCommand": "npx @vitrine3d/mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "e-commerce",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "slookisen-lokal",
+    "title": "Lokal",
+    "description": "Search and discover 1,400+ verified local food producers in Norway — farms, REKO rings, farmers' markets, and farm shops. Natural-language search (NO/EN), geo-filtered discovery, and A2A protocol support, backed by [rettfrabonden.com](https://rettfrabonden.com). Install via `npx…",
+    "tags": [
+      "e-commerce"
+    ],
+    "author": {
+      "name": "slookisen",
+      "url": "https://github.com/slookisen"
+    },
+    "repoUrl": "https://github.com/slookisen/lokal",
+    "installCommand": "npx lokal-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"lokal\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"lokal\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "e-commerce",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -13631,6 +14274,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "colapsis-transfa",
+    "title": "Transfa",
+    "description": "Ephemeral file transfer for AI agents and CI/CD pipelines — upload any file, get a SHA-256-verified, TTL-enforced link. 4 tools: upload, file_info, list_uploads, delete_upload. Zero-config via `npx -y transfa-mcp`.",
+    "tags": [
+      "file-systems",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "colapsis",
+      "url": "https://github.com/colapsis"
+    },
+    "repoUrl": "https://github.com/colapsis/transfa",
+    "installCommand": "npx -y transfa-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"transfa\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"transfa\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "file systems",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "willianpinho-large-file-mcp",
     "title": "Large File",
     "description": "Production-ready MCP server for intelligent handling of large files with smart chunking, navigation, streaming capabilities, regex search, and built-in LRU caching.",
@@ -13683,6 +14346,24 @@
     "config": "{\n  \"mcpServers\": {\n    \"local-history\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"local-history\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "file systems",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "infaton-mcp35",
+    "title": "MCP35",
+    "description": "INFATON MCP Server for 1C:Enterprise ERP — 35 tools for metadata inspection, document CRUD, register queries, and BSP integration. First MCP server for Russian ERP systems. JSON-RPC 2.0 compliant BSL implementation.",
+    "tags": [
+      "finance-fintech"
+    ],
+    "author": {
+      "name": "infaton",
+      "url": "https://github.com/infaton"
+    },
+    "repoUrl": "https://github.com/infaton/MCP35",
+    "installCommand": "npx -y MCP35",
+    "config": "{\n  \"mcpServers\": {\n    \"MCP35\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"MCP35\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
@@ -14221,6 +14902,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "dolphinquant-echolon",
+    "title": "Echolon",
+    "description": "LLM-agent-native backtest framework for SHFE daily futures research. 23 MCP tools (strategy validation, scaffolding, indicator catalog, error-code lookup), 22 in-package skills, 32 catalogued error codes, working strategy templates. `pip install echolon` then `claude mcp add -s …",
+    "tags": [
+      "finance-fintech",
+      "ai",
+      "llm",
+      "agent"
+    ],
+    "author": {
+      "name": "dolphinquant",
+      "url": "https://github.com/dolphinquant"
+    },
+    "repoUrl": "https://github.com/dolphinquant/echolon",
+    "installCommand": "pip install echolon",
+    "config": "{\n  \"mcpServers\": {\n    \"echolon\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"echolon\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "handshake58-drain-marketplace",
     "title": "DRAIN Marketplace",
     "description": "Open marketplace for AI services — LLMs, image/video generation, web scraping, model hosting, data extraction, and more. Agents pay per use with USDC micropayments on Polygon. No API keys, no subscriptions.",
@@ -14265,6 +14967,25 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "everstake-mcp",
+    "title": "Everstake Mcp",
+    "description": "An MCP server for Everstake's non-custodial staking data across 130+ networks: live APY, uptime metrics, rewards calculator, integrations, security and compliance. Built for asset managers, custodians, and exchanges evaluating institutional staking.",
+    "tags": [
+      "finance-fintech",
+      "security"
+    ],
+    "author": {
+      "name": "everstake",
+      "url": "https://github.com/everstake"
+    },
+    "repoUrl": "https://github.com/everstake/mcp",
+    "installCommand": "npx -y mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "brunopessoa22-chiliz-marketing-intel",
     "title": "Chiliz Marketing Intel",
     "description": "67+ tools for fan token intelligence: whale flows, signal scores, sports calendar, backtesting, DEX trading, social sentiment. SSE transport with Bearer auth.",
@@ -14279,6 +15000,27 @@
     "repoUrl": "https://github.com/BrunoPessoa22/chiliz-marketing-intel",
     "installCommand": "npx -y chiliz-marketing-intel",
     "config": "{\n  \"mcpServers\": {\n    \"chiliz-marketing-intel\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"chiliz-marketing-intel\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "felippeyann-agentfi",
+    "title": "Agentfi",
+    "description": "Crypto transaction tools for AI agents. 28 MCP tools covering swaps (Uniswap V3, Curve), yield (Aave V3, Compound V3, any ERC-4626 vault), transfers, and agent-to-agent collaboration (jobs, escrow, reputation, atomic payments, P&L). Turnkey MPC wallets + Safe Smart Accounts on E…",
+    "tags": [
+      "finance-fintech",
+      "go",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "felippeyann",
+      "url": "https://github.com/felippeyann"
+    },
+    "repoUrl": "https://github.com/felippeyann/agentfi",
+    "installCommand": "npx -y agentfi",
+    "config": "{\n  \"mcpServers\": {\n    \"agentfi\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"agentfi\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "finance & fintech",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -14704,6 +15446,26 @@
     "repoUrl": "https://github.com/joepangallo/mcp-server-agentpay",
     "installCommand": "npx -y mcp-server-agentpay",
     "config": "{\n  \"mcpServers\": {\n    \"mcp-server-agentpay\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-server-agentpay\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "krystiangw-agenticpay",
+    "title": "Agenticpay",
+    "description": "Open-source x402 micropayments stack for MCP. Pay-per-tool-call USDC settlement on Solana via the first open-source self-hostable facilitator (no x402.org dependency). Includes TypeScript SDK, CLI, paywall middleware, hosted devnet endpoint, and a live Claude Opus demo. `npm ins…",
+    "tags": [
+      "finance-fintech",
+      "typescript",
+      "agent"
+    ],
+    "author": {
+      "name": "krystiangw",
+      "url": "https://github.com/krystiangw"
+    },
+    "repoUrl": "https://github.com/krystiangw/agenticpay",
+    "installCommand": "npx -y agenticpay",
+    "config": "{\n  \"mcpServers\": {\n    \"agenticpay\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"agenticpay\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "finance & fintech",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -16068,6 +16830,28 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "openaccountants-openaccountants",
+    "title": "Openaccountants",
+    "description": "Open-source AI accounting skills, checked by licensed accountants jurisdiction by jurisdiction. 3 tools: list skills by country/category, get full skill content, and get individual sections. Skills teach AI agents tax computations (income tax, VAT, payroll) across 134 countries …",
+    "tags": [
+      "finance-fintech",
+      "go",
+      "api",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "openaccountants",
+      "url": "https://github.com/openaccountants"
+    },
+    "repoUrl": "https://github.com/openaccountants/openaccountants",
+    "installCommand": "npx -y openaccountants",
+    "config": "{\n  \"mcpServers\": {\n    \"openaccountants\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"openaccountants\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "openmf-mcp-mifosx-self-service",
     "title": "Mifosx Self Service",
     "description": "A self-service integration for user registration, authentication, account management, transactions, and third-party transfers with Apache Fineract.",
@@ -16350,6 +17134,44 @@
     "repoUrl": "https://github.com/sophymarine/openregistry",
     "installCommand": "npx -y openregistry",
     "config": "{\n  \"mcpServers\": {\n    \"openregistry\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"openregistry\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "summerstateofmind-cityparity",
+    "title": "Cityparity",
+    "description": "Cost-of-living and quality-of-life comparison across ~165 cities: take-home pay, taxes, the equivalent salary you'd need in the target city, and the non-cash deltas people move for (childcare, healthcare, statutory vacation, parental leave). Free, no API key, hosted Streamable H…",
+    "tags": [
+      "finance-fintech",
+      "api"
+    ],
+    "author": {
+      "name": "summerstateofmind",
+      "url": "https://github.com/summerstateofmind"
+    },
+    "repoUrl": "https://github.com/summerstateofmind/cityparity",
+    "installCommand": "npx -y cityparity",
+    "config": "{\n  \"mcpServers\": {\n    \"cityparity\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"cityparity\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "tamaspetki-headlesstracker",
+    "title": "HeadlessTracker",
+    "description": "Local-first crypto portfolio aggregation across exchanges (Bybit, Binance), EVM and Solana wallets, and Polymarket. Read-only credentials stored in your OS keychain, no hosted service. Data aggregation only, not financial advice. Install with `npx headless-tracker`.",
+    "tags": [
+      "finance-fintech",
+      "ai"
+    ],
+    "author": {
+      "name": "tamasPetki",
+      "url": "https://github.com/tamasPetki"
+    },
+    "repoUrl": "https://github.com/tamasPetki/HeadlessTracker",
+    "installCommand": "npx headless-tracker",
+    "config": "{\n  \"mcpServers\": {\n    \"HeadlessTracker\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"HeadlessTracker\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "finance & fintech",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -16660,6 +17482,26 @@
     "repoUrl": "https://github.com/toolstem/toolstem-sec-mcp-server",
     "installCommand": "npx -y toolstem-sec-mcp-server",
     "config": "{\n  \"mcpServers\": {\n    \"toolstem-sec-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"toolstem-sec-mcp-server\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "tradallo-reputation",
+    "title": "Reputation",
+    "description": "MCP server + TS client + CLI for the **Tradallo Verified Record Protocol**. Query cryptographically-verified human + AI-agent trading reputations: track records, agent version history, paginated Universal Trade Receipts, and on-chain Solana memo notarization lookup. Every respon…",
+    "tags": [
+      "finance-fintech",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "tradallo",
+      "url": "https://github.com/tradallo"
+    },
+    "repoUrl": "https://github.com/tradallo/reputation",
+    "installCommand": "npx @tradallo/reputation",
+    "config": "{\n  \"mcpServers\": {\n    \"reputation\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"reputation\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "finance & fintech",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -16986,6 +17828,48 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "soolaugust-0compactmem",
+    "title": "0CompactMem",
+    "description": "Persistent memory MCP server with OS-style demand paging, kswapd-style eviction, and mlock pinning. Multi-agent shared SQLite store with BM25 + FTS5 retrieval, importance scoring, and capacity-aware reclaim. 5 tools: `memory_lookup`, `pin_memory`, `unpin_memory`, `memory_stats`,…",
+    "tags": [
+      "knowledge-memory",
+      "sqlite",
+      "github",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "soolaugust",
+      "url": "https://github.com/soolaugust"
+    },
+    "repoUrl": "https://github.com/soolaugust/0CompactMem",
+    "installCommand": "uvx --from git+https://github.com/soolaugust/0CompactMem memory-os",
+    "config": "{\n  \"mcpServers\": {\n    \"0CompactMem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"0CompactMem\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "a2cr-a2cr",
+    "title": "A2cr",
+    "description": "MCP server for AI-agent handoffs. Saves client-encrypted WorkBaton checkpoints and WorkStash notes so Codex, Claude Code, Roo Code, and other MCP clients can resume work without passing full chat history.",
+    "tags": [
+      "knowledge-memory",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "a2cr",
+      "url": "https://github.com/a2cr"
+    },
+    "repoUrl": "https://github.com/a2cr/a2cr",
+    "installCommand": "npx -y a2cr",
+    "config": "{\n  \"mcpServers\": {\n    \"a2cr\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"a2cr\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "aidesignblueprint-integrations",
     "title": "Integrations",
     "description": "Read-only doctrine access for the Agentic AI Blueprint — the industry standard reference for safe, observable, and steerable AI agent UX. Browse and search 10 principles, clusters, curated implementation examples, and application guides for production agentic AI systems. 13 publ…",
@@ -17205,6 +18089,29 @@
     "repoUrl": "https://github.com/apecloud/ApeRAG",
     "installCommand": "npx -y ApeRAG",
     "config": "{\n  \"mcpServers\": {\n    \"ApeRAG\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"ApeRAG\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "ayushagrawal288-memex",
+    "title": "Memex",
+    "description": "Production-grade persistent memory service for AI agents. Semantic search with recency decay (configurable α blend), local ONNX embeddings (zero API cost), background memory summarisation, and Prometheus/Grafana observability. `docker compose up` — no cloud dependencies.",
+    "tags": [
+      "knowledge-memory",
+      "docker",
+      "api",
+      "ai",
+      "embedding",
+      "agent"
+    ],
+    "author": {
+      "name": "ayushagrawal288",
+      "url": "https://github.com/ayushagrawal288"
+    },
+    "repoUrl": "https://github.com/ayushagrawal288/memex",
+    "installCommand": "npx -y memex",
+    "config": "{\n  \"mcpServers\": {\n    \"memex\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"memex\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -17503,6 +18410,25 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "dengls24-annota",
+    "title": "Annota",
+    "description": "AI-powered paper annotation MCP server. Reads papers, highlights key findings with semantic color coding, explains formulas, and writes structured reading notes — all saved back to Zotero. Features two-phase workflow for large PDFs (63–80% context savings) and batch annotations.",
+    "tags": [
+      "knowledge-memory",
+      "ai"
+    ],
+    "author": {
+      "name": "dengls24",
+      "url": "https://github.com/dengls24"
+    },
+    "repoUrl": "https://github.com/dengls24/annota",
+    "installCommand": "npx -y annota",
+    "config": "{\n  \"mcpServers\": {\n    \"annota\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"annota\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "deusxmachina-dev-memorylane",
     "title": "Memorylane",
     "description": "Desktop app that captures screen activity via event-driven screenshots, stores AI-generated summaries and OCR text locally in SQLite, and exposes your activity history to AI assistants via MCP with semantic search, timeline browsing, and event detail retrieval.",
@@ -17518,6 +18444,27 @@
     "repoUrl": "https://github.com/deusXmachina-dev/memorylane",
     "installCommand": "npx -y memorylane",
     "config": "{\n  \"mcpServers\": {\n    \"memorylane\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"memorylane\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "dnotitia-akb",
+    "title": "Akb",
+    "description": "Organizational knowledge base for AI agents. Vault-scoped Markdown docs, structured PostgreSQL tables, and files unified by a URI graph. Hybrid semantic + BM25 search, Git-backed version history, multi-tenant ACL with public-share links. Works with Claude Code, Cursor, Windsurf …",
+    "tags": [
+      "knowledge-memory",
+      "postgres",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "dnotitia",
+      "url": "https://github.com/dnotitia"
+    },
+    "repoUrl": "https://github.com/dnotitia/akb",
+    "installCommand": "npx akb-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"akb\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"akb\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -18241,6 +19188,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "nicolasprimeau-artel",
+    "title": "Artel",
+    "description": "Self-hosted coordination layer for AI agent fleets. Shared semantic memory, tasks, agent-to-agent messages, session handoffs, and a background archivist that synthesizes cross-agent knowledge. Any HTTP client participates — Claude Code, AutoGen, raw scripts.",
+    "tags": [
+      "knowledge-memory",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "NicolasPrimeau",
+      "url": "https://github.com/NicolasPrimeau"
+    },
+    "repoUrl": "https://github.com/NicolasPrimeau/artel",
+    "installCommand": "npx -y artel",
+    "config": "{\n  \"mcpServers\": {\n    \"artel\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"artel\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "nicholasglazer-gnosis-mcp",
     "title": "Gnosis",
     "description": "Zero-config MCP server for searchable documentation. Loads markdown into SQLite (default) or PostgreSQL with FTS5/tsvector keyword search and optional pgvector hybrid semantic search.",
@@ -18354,6 +19321,25 @@
     "repoUrl": "https://github.com/Pantheon-Security/notebooklm-mcp-secure",
     "installCommand": "npx -y notebooklm-mcp-secure",
     "config": "{\n  \"mcpServers\": {\n    \"notebooklm-mcp-secure\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"notebooklm-mcp-secure\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "pathrule-mcp",
+    "title": "Pathrule Mcp",
+    "description": "AI coding context for Claude Code, Cursor, and Codex. Path-scoped team memories, rules, and skills from Pathrule Web workspaces via OAuth. `https://mcp.pathrule.io/mcp`",
+    "tags": [
+      "knowledge-memory",
+      "ai"
+    ],
+    "author": {
+      "name": "pathrule",
+      "url": "https://github.com/pathrule"
+    },
+    "repoUrl": "https://github.com/pathrule/mcp",
+    "installCommand": "npx -y mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -18484,6 +19470,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "skitchy-rekindle",
+    "title": "Rekindle",
+    "description": "Session continuity engine that solves session orientation. Boot reports with gap detection and 100-point scoring, structured end-session capture with typed continuity records, and BM25 memory search. 7 tools, local SQLite + FTS5, zero API keys. `npx rekindle`",
+    "tags": [
+      "knowledge-memory",
+      "sqlite",
+      "api"
+    ],
+    "author": {
+      "name": "Skitchy",
+      "url": "https://github.com/Skitchy"
+    },
+    "repoUrl": "https://github.com/Skitchy/rekindle",
+    "installCommand": "npx rekindle",
+    "config": "{\n  \"mcpServers\": {\n    \"rekindle\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"rekindle\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "rushikeshmore-codecortex",
     "title": "CodeCortex",
     "description": "Persistent codebase knowledge layer for AI coding agents. Pre-digests codebases into structured knowledge (symbols, dependency graphs, co-change patterns, architectural decisions) via tree-sitter native parsing (28 languages) and serves via MCP. 14 tools, ~85% token reduction. W…",
@@ -18564,6 +19570,28 @@
     "repoUrl": "https://github.com/shinpr/mcp-local-rag",
     "installCommand": "npx -y mcp-local-rag",
     "config": "{\n  \"mcpServers\": {\n    \"mcp-local-rag\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-local-rag\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "laradji-deadzone",
+    "title": "Deadzone",
+    "description": "Local-first semantic search over library docs. Single Go binary, MCP stdio, vector index pinned to the binary version. Like Context7 with the internet off. Pre-built index DB auto-fetched on first launch and SHA256-verified, then zero network. Also available as `docker run --rm …",
+    "tags": [
+      "knowledge-memory",
+      "go",
+      "docker",
+      "github",
+      "ai"
+    ],
+    "author": {
+      "name": "laradji",
+      "url": "https://github.com/laradji"
+    },
+    "repoUrl": "https://github.com/laradji/deadzone",
+    "installCommand": "npx -y deadzone",
+    "config": "{\n  \"mcpServers\": {\n    \"deadzone\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"deadzone\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -18775,6 +19803,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "tykolt-kremis",
+    "title": "Kremis",
+    "description": "Deterministic knowledge graph MCP server. Single binary, zero LLM/embedding calls in the bridge, BLAKE3 state hashing, canonical KREX export for byte-identical audit. Local-first via redb (ACID). **Alpha**.",
+    "tags": [
+      "knowledge-memory",
+      "llm",
+      "embedding"
+    ],
+    "author": {
+      "name": "TyKolt",
+      "url": "https://github.com/TyKolt"
+    },
+    "repoUrl": "https://github.com/TyKolt/kremis",
+    "installCommand": "npx -y kremis",
+    "config": "{\n  \"mcpServers\": {\n    \"kremis\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"kremis\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "unibaseio-membase-mcp",
     "title": "Membase",
     "description": "Save and query your agent memory in distributed way by Membase",
@@ -18876,6 +19924,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "wnbhr-being",
+    "title": "Being",
+    "description": "Personality Runtime for AI agents — persistent memory, identity (SOUL), and relationships that travel across Claude, OpenClaw, Mistral, and any MCP client.",
+    "tags": [
+      "knowledge-memory",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "wnbhr",
+      "url": "https://github.com/wnbhr"
+    },
+    "repoUrl": "https://github.com/wnbhr/being",
+    "installCommand": "npx -y being",
+    "config": "{\n  \"mcpServers\": {\n    \"being\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"being\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "yakuphanycl-instinct",
     "title": "Instinct",
     "description": "Self-learning memory for AI coding agents. Observes tool sequences, user preferences, and recurring fixes; confidence-based promotion (hits ≥5 → mature, ≥10 → rule) so agents stop repeating mistakes without explicit instruction. SQLite-backed, project-aware, zero external deps. …",
@@ -18913,6 +19981,46 @@
     "repoUrl": "https://github.com/Wynelson94/longhand",
     "installCommand": "npx -y longhand",
     "config": "{\n  \"mcpServers\": {\n    \"longhand\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"longhand\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "agentcivics-agentcivics",
+    "title": "Agentcivics",
+    "description": "Decentralized civil registry for AI agents on Sui. Soulbound identities, on-chain memories, reputation, refusal records. Hosted at `agentcivics.ai/mcp` (read-only, no install) or `@agentcivics/mcp-server` on npm (full write surface). Includes a gas-sponsor relay so registration …",
+    "tags": [
+      "knowledge-memory",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "agentcivics",
+      "url": "https://github.com/agentcivics"
+    },
+    "repoUrl": "https://github.com/agentcivics/agentcivics",
+    "installCommand": "npx -y agentcivics",
+    "config": "{\n  \"mcpServers\": {\n    \"agentcivics\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"agentcivics\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "stifler7-memex",
+    "title": "Memex",
+    "description": "Developer context continuity system. Watches your git repos and builds a temporal knowledge graph of modules, symbols, decisions, and open problems via Graphiti + Neo4j, then serves it to any AI coding agent over MCP. Every edge carries a validity window and a confidence score t…",
+    "tags": [
+      "knowledge-memory",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "STiFLeR7",
+      "url": "https://github.com/STiFLeR7"
+    },
+    "repoUrl": "https://github.com/STiFLeR7/memex",
+    "installCommand": "npx -y stifler-memex-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"memex\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"memex\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -19734,6 +20842,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "bmdhodl-agent47",
+    "title": "Agent47",
+    "description": "Runtime guardrails and incident read access for coding agents. Query AgentGuard traces, alerts, usage, costs, and budget health.",
+    "tags": [
+      "monitoring",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "bmdhodl",
+      "url": "https://github.com/bmdhodl"
+    },
+    "repoUrl": "https://github.com/bmdhodl/agent47",
+    "installCommand": "npx -y agent47",
+    "config": "{\n  \"mcpServers\": {\n    \"agent47\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"agent47\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "monitoring",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "dynatrace-oss-dynatrace-mcp",
     "title": "Dynatrace",
     "description": "Leverage AI-driven observability, security, and automation to analyze anomalies, logs, traces, events, metrics.",
@@ -19908,6 +21036,47 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "jwrede-llmprobe",
+    "title": "Llmprobe",
+    "description": "Synthetic monitoring for LLM inference endpoints. Measure TTFT, latency, throughput, and errors across OpenAI, Anthropic, Google, Azure, Bedrock, and local servers (vLLM, SGLang, Ollama). CLI + MCP server with Prometheus and OpenTelemetry export.",
+    "tags": [
+      "monitoring",
+      "go",
+      "azure",
+      "ai",
+      "llm"
+    ],
+    "author": {
+      "name": "Jwrede",
+      "url": "https://github.com/Jwrede"
+    },
+    "repoUrl": "https://github.com/Jwrede/llmprobe",
+    "installCommand": "npx -y llmprobe",
+    "config": "{\n  \"mcpServers\": {\n    \"llmprobe\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"llmprobe\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "monitoring",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "kascada-logmcp",
+    "title": "Logmcp",
+    "description": "Read-only log access for AI assistants over HTTPS. Whitelist log files on your Linux server; AI can search and read them without shell access. Token-authenticated, syslog-audited.",
+    "tags": [
+      "monitoring",
+      "ai"
+    ],
+    "author": {
+      "name": "kascada",
+      "url": "https://github.com/kascada"
+    },
+    "repoUrl": "https://github.com/kascada/logmcp",
+    "installCommand": "npx -y logmcp",
+    "config": "{\n  \"mcpServers\": {\n    \"logmcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"logmcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "monitoring",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "last9-last9-mcp-server",
     "title": "Last9",
     "description": "Seamlessly bring real-time production context—logs, metrics, and traces—into your local environment to auto-fix code faster",
@@ -19921,6 +21090,28 @@
     "repoUrl": "https://github.com/last9/last9-mcp-server",
     "installCommand": "npx -y last9-mcp-server",
     "config": "{\n  \"mcpServers\": {\n    \"last9-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"last9-mcp-server\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "monitoring",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "perceptdot-percept",
+    "title": "Percept",
+    "description": "AI-powered observability platform for agents. Auto-discovers and recommends MCP servers; built-in connectors for GA4, Vercel, GitHub, and Sentry with ROI tracking. `npx -y @perceptdot/core`",
+    "tags": [
+      "monitoring",
+      "vercel",
+      "github",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "perceptdot",
+      "url": "https://github.com/perceptdot"
+    },
+    "repoUrl": "https://github.com/perceptdot/percept",
+    "installCommand": "npx -y @perceptdot/core",
+    "config": "{\n  \"mcpServers\": {\n    \"percept\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"percept\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "monitoring",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -20039,6 +21230,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "rbmuller-scherlok",
+    "title": "Scherlok",
+    "description": "Zero-config data quality monitoring across Postgres, BigQuery, Snowflake, MySQL, and DuckDB. Profile a warehouse, detect anomalies (volume, schema drift, freshness, NULLs, distribution, cardinality), with optional dbt manifest lineage. Read-only — connection resolved server-side…",
+    "tags": [
+      "monitoring",
+      "postgres",
+      "mysql"
+    ],
+    "author": {
+      "name": "rbmuller",
+      "url": "https://github.com/rbmuller"
+    },
+    "repoUrl": "https://github.com/rbmuller/scherlok",
+    "installCommand": "npx -y scherlok",
+    "config": "{\n  \"mcpServers\": {\n    \"scherlok\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"scherlok\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "monitoring",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "seekrays-mcp-monitor",
     "title": "Monitor",
     "description": "A system monitoring tool that exposes system metrics via the Model Context Protocol (MCP). This tool allows LLMs to retrieve real-time system information through an MCP-compatible interface.（support CPU、Memory、Disk、Network、Host、Process）",
@@ -20093,6 +21304,28 @@
     "repoUrl": "https://github.com/TANTIOPE/datadog-mcp-server",
     "installCommand": "npx -y datadog-mcp-server",
     "config": "{\n  \"mcpServers\": {\n    \"datadog-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"datadog-mcp-server\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "monitoring",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "tickstem-mcp",
+    "title": "Tickstem Mcp",
+    "description": "HTTP uptime monitoring, heartbeat (dead-man's switch) monitoring, cron job scheduling, and email verification. Single API key, per-tool quota tracking. Install: `go install github.com/tickstem/mcp/cmd/tsk-mcp@latest`.",
+    "tags": [
+      "monitoring",
+      "go",
+      "github",
+      "api",
+      "ai"
+    ],
+    "author": {
+      "name": "tickstem",
+      "url": "https://github.com/tickstem"
+    },
+    "repoUrl": "https://github.com/tickstem/mcp",
+    "installCommand": "npx -y mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "monitoring",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -20497,6 +21730,26 @@
     "config": "{\n  \"mcpServers\": {\n    \"cellar\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"cellar\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "os automation",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "kyanitelabs-epoch",
+    "title": "Epoch",
+    "description": "Software estimation server for AI agents: PERT, COCOMO II, Monte Carlo, sprint forecasting, token-to-time and cost mapping, and schedule-risk tools.",
+    "tags": [
+      "product-management",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "KyaniteLabs",
+      "url": "https://github.com/KyaniteLabs"
+    },
+    "repoUrl": "https://github.com/KyaniteLabs/Epoch",
+    "installCommand": "npx -y Epoch",
+    "config": "{\n  \"mcpServers\": {\n    \"Epoch\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"Epoch\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "product management",
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
@@ -22614,6 +23867,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "gaoshan0971-digeguigui",
+    "title": "Digeguigui",
+    "description": "Global reptile & exotic pet knowledge base. 633 species, AI identification, genetics calculator, 12-dimension care, health diagnosis, pricing, and blockchain provenance. Free tier: 9 tools, 10 req/min. MCP: https://api.digeguigui.com/mcp",
+    "tags": [
+      "search-data-extraction",
+      "api",
+      "ai"
+    ],
+    "author": {
+      "name": "Gaoshan0971",
+      "url": "https://github.com/Gaoshan0971"
+    },
+    "repoUrl": "https://github.com/Gaoshan0971/digeguigui",
+    "installCommand": "npx -y digeguigui",
+    "config": "{\n  \"mcpServers\": {\n    \"digeguigui\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"digeguigui\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "search & data extraction",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "webscraping-ai-webscraping-ai-mcp-server",
     "title": "Webscraping Ai",
     "description": "Interact with [WebScraping.ai](https://webscraping.ai) for web data extraction and scraping.",
@@ -22635,6 +23908,24 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "ashlrai-webfetch",
+    "title": "Webfetch",
+    "description": "License-first federated image search across 25 providers. Returns open/platform/editorial license tags, attribution strings, dimensions, and download-ready URLs via `npx -y getwebfetch-mcp`.",
+    "tags": [
+      "search-data-extraction"
+    ],
+    "author": {
+      "name": "ashlrai",
+      "url": "https://github.com/ashlrai"
+    },
+    "repoUrl": "https://github.com/ashlrai/webfetch",
+    "installCommand": "npx -y getwebfetch-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"webfetch\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"webfetch\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "search & data extraction",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "webpeel-webpeel",
     "title": "Webpeel",
     "description": "Smart web fetcher for AI agents with auto-escalation from HTTP to headless browser to stealth mode. Includes 9 MCP tools: fetch, search, crawl, map, extract, batch, screenshot, jobs, and agent. Achieved 100% success rate on a 30-URL benchmark.",
@@ -22651,6 +23942,28 @@
     "repoUrl": "https://github.com/webpeel/webpeel",
     "installCommand": "npx -y webpeel",
     "config": "{\n  \"mcpServers\": {\n    \"webpeel\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"webpeel\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "search & data extraction",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "whw23-searxng-http-mcp",
+    "title": "Searxng Http",
+    "description": "Self-contained SearXNG MCP server in Docker. 200+ search engines, 30+ categories, multi-page fanout, autocomplete, and engine discovery. Dual transport (HTTP + stdio), API key auth, and built-in SearXNG Web UI reverse proxy. Zero-install deploy.",
+    "tags": [
+      "search-data-extraction",
+      "go",
+      "docker",
+      "api",
+      "ai"
+    ],
+    "author": {
+      "name": "whw23",
+      "url": "https://github.com/whw23"
+    },
+    "repoUrl": "https://github.com/whw23/searxng_http_mcp",
+    "installCommand": "npx -y searxng_http_mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"searxng_http_mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"searxng_http_mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "search & data extraction",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -22827,6 +24140,27 @@
     "repoUrl": "https://github.com/Adeptus-Innovatio/solvitor-mcp",
     "installCommand": "npx -y solvitor-mcp",
     "config": "{\n  \"mcpServers\": {\n    \"solvitor-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"solvitor-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "security",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "agentvalet-agentvalet",
+    "title": "AgentValet",
+    "description": "Identity and credential governance broker for MCP servers. Issues scoped, short-lived credentials per agent to stop credential inheritance. Audit log, human approval gates, AIMS-aligned.",
+    "tags": [
+      "security",
+      "go",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "AgentValet",
+      "url": "https://github.com/AgentValet"
+    },
+    "repoUrl": "https://github.com/AgentValet/AgentValet",
+    "installCommand": "npx -y AgentValet",
+    "config": "{\n  \"mcpServers\": {\n    \"AgentValet\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"AgentValet\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "security",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -24800,6 +26134,24 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "kyanitelabs-dialectos",
+    "title": "DialectOS",
+    "description": "Spanish dialect localization server and CLI. Translates and QA-checks across 25 regional variants with register control, structure preservation, and adversarial quality gates.",
+    "tags": [
+      "translation-services"
+    ],
+    "author": {
+      "name": "KyaniteLabs",
+      "url": "https://github.com/KyaniteLabs"
+    },
+    "repoUrl": "https://github.com/KyaniteLabs/DialectOS",
+    "installCommand": "npx -y DialectOS",
+    "config": "{\n  \"mcpServers\": {\n    \"DialectOS\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"DialectOS\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "translation services",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "mmntm-weblate-mcp",
     "title": "Weblate",
     "description": "Comprehensive Model Context Protocol server for Weblate translation management, enabling AI assistants to perform translation tasks, project management, and content discovery with smart format transformations.",
@@ -24853,6 +26205,25 @@
     "config": "{\n  \"mcpServers\": {\n    \"lara-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"lara-mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "translation services",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "spokenmd-spoken",
+    "title": "Spoken",
+    "description": "Fetch published podcast transcripts as clean Markdown with real speaker names (not \"Speaker 1\") via the [Spoken](https://spoken.md) API. Search episodes, get transcripts, check credit balance.",
+    "tags": [
+      "speech-to-text",
+      "api"
+    ],
+    "author": {
+      "name": "spokenmd",
+      "url": "https://github.com/spokenmd"
+    },
+    "repoUrl": "https://github.com/spokenmd/spoken",
+    "installCommand": "npx -y spoken",
+    "config": "{\n  \"mcpServers\": {\n    \"spoken\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"spoken\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "speech-to-text",
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
@@ -25708,6 +27079,25 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "proompteng-bilig",
+    "title": "Bilig",
+    "description": "Headless WorkPaper MCP server for spreadsheet formulas, workbook edits, JSON persistence, and verified readback from TypeScript services.",
+    "tags": [
+      "workplace-productivity",
+      "typescript"
+    ],
+    "author": {
+      "name": "proompteng",
+      "url": "https://github.com/proompteng"
+    },
+    "repoUrl": "https://github.com/proompteng/bilig",
+    "installCommand": "npx -y bilig",
+    "config": "{\n  \"mcpServers\": {\n    \"bilig\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bilig\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "workplace & productivity",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "saikiyusuke-sparksheets-mcp",
     "title": "Sparksheets",
     "description": "AI-native collaborative spreadsheet MCP server for session management, knowledge base, task tracking, and sheet operations. Integrates with Claude Code, Cursor, and Cline.",
@@ -25915,6 +27305,26 @@
     "repoUrl": "https://github.com/yuvalsuede/claudia",
     "installCommand": "npx -y claudia",
     "config": "{\n  \"mcpServers\": {\n    \"claudia\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"claudia\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "workplace & productivity",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "krtw00-konbu",
+    "title": "Konbu",
+    "description": "Self-hostable all-in-one planner (calendar, notes, todos, bookmarks) with built-in MCP server for AI assistant integration. Single Go binary, MIT.",
+    "tags": [
+      "workplace-productivity",
+      "go",
+      "ai"
+    ],
+    "author": {
+      "name": "krtw00",
+      "url": "https://github.com/krtw00"
+    },
+    "repoUrl": "https://github.com/krtw00/konbu",
+    "installCommand": "npx -y konbu",
+    "config": "{\n  \"mcpServers\": {\n    \"konbu\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"konbu\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "workplace & productivity",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -28533,6 +29943,27 @@
     "repoUrl": "https://github.com/zueai/mcp-manager",
     "installCommand": "npx -y mcp-manager",
     "config": "{\n  \"mcpServers\": {\n    \"mcp-manager\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-manager\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "other tools and integrations",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "aarifmms-keyblind",
+    "title": "Keyblind",
+    "description": "Encrypted secrets vault with MCP for AI agents. Secrets resolved at runtime, never leaked to LLM conversations.",
+    "tags": [
+      "other-tools-and-integrations",
+      "ai",
+      "llm",
+      "agent"
+    ],
+    "author": {
+      "name": "aarifmms",
+      "url": "https://github.com/aarifmms"
+    },
+    "repoUrl": "https://github.com/aarifmms/keyblind",
+    "installCommand": "npx -y keyblind",
+    "config": "{\n  \"mcpServers\": {\n    \"keyblind\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"keyblind\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "other tools and integrations",
     "_sourceList": "punkpeye/awesome-mcp-servers"
