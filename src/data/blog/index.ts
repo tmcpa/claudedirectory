@@ -33,8 +33,10 @@ import { claudeCodeSlashCommandsGuide } from "./claude-code-slash-commands-guide
 import { claudeCodePermissionsGuide } from "./claude-code-permissions-guide";
 import { claudeCodeCompetitorsComparison } from "./claude-code-competitors-comparison";
 import { claudeOpus48Release } from "./claude-opus-4-8-release";
+import { claudeFable5Guide } from "./claude-fable-5-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeFable5Guide,
   claudeOpus48Release,
   claudeCodeCompetitorsComparison,
   claudeCodePermissionsGuide,
