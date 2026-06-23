@@ -389,6 +389,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "jabbawocky-proposalcraft",
+    "title": "Proposalcraft",
+    "description": "MCP server that drafts client proposals in your own voice. Save 2-3 of your winning proposals, paste a new brief, and Claude generates a ready-to-send draft. No API key, no cloud — local storage only. `npx -y github:jabbawocky/proposalcraft`",
+    "tags": [
+      "aggregators",
+      "github",
+      "api",
+      "rag"
+    ],
+    "author": {
+      "name": "jabbawocky",
+      "url": "https://github.com/jabbawocky"
+    },
+    "repoUrl": "https://github.com/jabbawocky/proposalcraft",
+    "installCommand": "npx -y github:jabbawocky/proposalcraft",
+    "config": "{\n  \"mcpServers\": {\n    \"proposalcraft\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"proposalcraft\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "aggregators",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "jaspertvdm-mcp-server-gemini-bridge",
     "title": "Server Gemini Bridge",
     "description": "Bridge to Google Gemini API. Access Gemini Pro and Flash models through MCP.",
@@ -1813,6 +1834,25 @@
     "repoUrl": "https://github.com/Narasimhaponnada/mermaid-mcp",
     "installCommand": "npx -y mermaid-mcp",
     "config": "{\n  \"mcpServers\": {\n    \"mermaid-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mermaid-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "architecture & design",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "yenchieh-diagramzu-mcp",
+    "title": "Diagramzu",
+    "description": "Let your AI author Mermaid diagrams (flowchart, sequence, ER, mindmap) in a shared workspace, then read, comment on, embed, and present them at a clean URL — instead of pasting back hundreds of lines of prose. Hosted endpoint `https://mcp.diagramzu.ai/mcp` or local `npx -y @diag…",
+    "tags": [
+      "architecture-design",
+      "ai"
+    ],
+    "author": {
+      "name": "yenchieh",
+      "url": "https://github.com/yenchieh"
+    },
+    "repoUrl": "https://github.com/yenchieh/diagramzu-mcp",
+    "installCommand": "npx -y @diagramzu/mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"diagramzu-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"diagramzu-mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "architecture & design",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -5904,6 +5944,26 @@
     "repoUrl": "https://github.com/mohitbadwal/ringback",
     "installCommand": "npx -y ringback",
     "config": "{\n  \"mcpServers\": {\n    \"ringback\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"ringback\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "communication",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "sequenzy-mcp",
+    "title": "Sequenzy Mcp",
+    "description": "Email marketing automation MCP server for Sequenzy. Manage subscribers, lists, segments, templates, campaigns, sequences, transactional emails, analytics, and AI-generated email content. Install: `npx -y @sequenzy/mcp`.",
+    "tags": [
+      "communication",
+      "automation",
+      "ai"
+    ],
+    "author": {
+      "name": "Sequenzy",
+      "url": "https://github.com/Sequenzy"
+    },
+    "repoUrl": "https://github.com/Sequenzy/mcp",
+    "installCommand": "npx -y @sequenzy/mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "communication",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -11124,9 +11184,12 @@
   {
     "slug": "dinosaur24-mockhero",
     "title": "Mockhero",
-    "description": "Generate realistic synthetic test data via MCP. 156 field types, 22 locales, relational data, sub-50ms responses. Free tier: 1,000 records/day.",
+    "description": "Agent-first synthetic test data MCP server. Estimate usage, detect schemas from SQL or JSON, create loginless Polar checkout, claim API keys, and generate JSON, CSV, or SQL data through a hosted Streamable HTTP endpoint.",
     "tags": [
-      "developer-tools"
+      "developer-tools",
+      "api",
+      "ai",
+      "agent"
     ],
     "author": {
       "name": "dinosaur24",
@@ -13281,6 +13344,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "disentinel-grafema",
+    "title": "Grafema",
+    "description": "Semantic code graph MCP server for AI coding agents. Indexes your codebase into a typed graph (functions/types/modules as nodes; CALLS/IMPORTS/DATAFLOW/EFFECTS as typed edges) and exposes 40+ tools for call-chain tracing, data-flow analysis, semantic search, and invariant checki…",
+    "tags": [
+      "developer-tools",
+      "node",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "Disentinel",
+      "url": "https://github.com/Disentinel"
+    },
+    "repoUrl": "https://github.com/Disentinel/grafema",
+    "installCommand": "npx -y grafema",
+    "config": "{\n  \"mcpServers\": {\n    \"grafema\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"grafema\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "joaoh82-rustunnel",
     "title": "Rustunnel",
     "description": "MCP server that lets AI agents create and manage public tunnels to local services (webhooks, dev servers, sharing) — six tools covering HTTP/TCP/UDP tunnels, custom subdomains, regions, and load-balanced pools. Pairs with the rustunnel CLI; managed cloud or self-hosted (AGPL).",
@@ -13828,6 +13912,24 @@
     "config": "{\n  \"mcpServers\": {\n    \"markdownify-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"markdownify-mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "data science tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "marzukia-charted",
+    "title": "Charted",
+    "description": "Zero-dependency chart server that renders bar, line, pie, scatter, and more from JSON or CSV to SVG, HTML, PNG, or data URL. Built-in themes; PNG output renders inline in chat. Install via `uvx --from charted[mcp] charted-mcp`.",
+    "tags": [
+      "data-visualization"
+    ],
+    "author": {
+      "name": "marzukia",
+      "url": "https://github.com/marzukia"
+    },
+    "repoUrl": "https://github.com/marzukia/charted",
+    "installCommand": "uvx --from charted[mcp] charted-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"charted\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"charted\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "data visualization",
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
@@ -14542,6 +14644,24 @@
     "config": "{\n  \"mcpServers\": {\n    \"local-history\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"local-history\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "file systems",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "qinisolabs-bizdays",
+    "title": "Bizdays",
+    "description": "Business-day & public-holiday calculations for 200+ countries (add/count working days, next business day, country weekend rules).",
+    "tags": [
+      "finance-fintech"
+    ],
+    "author": {
+      "name": "qinisolabs",
+      "url": "https://github.com/qinisolabs"
+    },
+    "repoUrl": "https://github.com/qinisolabs/bizdays",
+    "installCommand": "npx -y bizdays",
+    "config": "{\n  \"mcpServers\": {\n    \"bizdays\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"bizdays\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
@@ -18352,6 +18472,24 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "baodq06-memocall",
+    "title": "Memocall",
+    "description": "Recall past Claude Code conversations from any project. Lists and searches your sessions, then loads one on demand as clean, compact Markdown — with outline, turn-range, and in-session search for large sessions. Read-only over local `~/.claude` transcripts; collapses tool calls …",
+    "tags": [
+      "knowledge-memory"
+    ],
+    "author": {
+      "name": "baodq06",
+      "url": "https://github.com/baodq06"
+    },
+    "repoUrl": "https://github.com/baodq06/memocall",
+    "installCommand": "npx -y memocall",
+    "config": "{\n  \"mcpServers\": {\n    \"memocall\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"memocall\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "battam1111-myco",
     "title": "Myco",
     "description": "Agent-first cognitive substrate with 18 manifest-driven verbs (germinate / eat / assimilate / sporulate / traverse / immune / molt / …) and 25 lint dimensions enforcing contract invariants mechanically (R1–R7). Cross-session / cross-project memory via a self-validating filesyste…",
@@ -18444,6 +18582,27 @@
     "repoUrl": "https://github.com/cameronrye/openzim-mcp",
     "installCommand": "npx -y openzim-mcp",
     "config": "{\n  \"mcpServers\": {\n    \"openzim-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"openzim-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "carrasquelalex1-hipocampo",
+    "title": "Hipocampo",
+    "description": "Dual-memory MCP system (PostgreSQL 17 + pgvector + NVIDIA NIM). 11 tools: search, save, profile, health, auto-repair, stats, tune, dedup, checkpoint, maintenance. Sparse Selective Caching (SSC) with 4-phase progressive retrieval. Bilingual EN/ES. `python scripts/hipocampo_mcp_se…",
+    "tags": [
+      "knowledge-memory",
+      "python",
+      "postgres",
+      "ai"
+    ],
+    "author": {
+      "name": "carrasquelalex1",
+      "url": "https://github.com/carrasquelalex1"
+    },
+    "repoUrl": "https://github.com/carrasquelalex1/hipocampo",
+    "installCommand": "npx -y hipocampo",
+    "config": "{\n  \"mcpServers\": {\n    \"hipocampo\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"hipocampo\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -18881,6 +19040,25 @@
     "repoUrl": "https://github.com/dl4rce/flaiwheel",
     "installCommand": "npx -y flaiwheel",
     "config": "{\n  \"mcpServers\": {\n    \"flaiwheel\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"flaiwheel\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "grooverlab-fable",
+    "title": "Fable",
+    "description": "MCP server over your Claude Code transcript history — full-text + semantic search, byte-identical thread recall, durable /remember facts. Local SQLite, stdlib-only.",
+    "tags": [
+      "knowledge-memory",
+      "sqlite"
+    ],
+    "author": {
+      "name": "grooverLab",
+      "url": "https://github.com/grooverLab"
+    },
+    "repoUrl": "https://github.com/grooverLab/fable",
+    "installCommand": "npx -y fable",
+    "config": "{\n  \"mcpServers\": {\n    \"fable\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"fable\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -19828,6 +20006,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "riponcm-projectmem",
+    "title": "Projectmem",
+    "description": "Local-first memory and judgment layer for AI coding agents. Captures issues, failed attempts, fixes, and decisions in readable Markdown + JSONL, re-injects them into future sessions, and warns at git commit before you repeat a mistake. 14 tools, works with Claude, Cursor, Antigr…",
+    "tags": [
+      "knowledge-memory",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "riponcm",
+      "url": "https://github.com/riponcm"
+    },
+    "repoUrl": "https://github.com/riponcm/projectmem",
+    "installCommand": "npx -y projectmem",
+    "config": "{\n  \"mcpServers\": {\n    \"projectmem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"projectmem\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "skitchy-rekindle",
     "title": "Rekindle",
     "description": "Session continuity engine that solves session orientation. Boot reports with gap detection and 100-point scoring, structured end-session capture with typed continuity records, and BM25 memory search. 7 tools, local SQLite + FTS5, zero API keys. `npx rekindle`",
@@ -19972,6 +20170,26 @@
     "repoUrl": "https://github.com/laradji/deadzone",
     "installCommand": "npx -y deadzone",
     "config": "{\n  \"mcpServers\": {\n    \"deadzone\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"deadzone\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "knowledge & memory",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "leonardsellem-hypermnesic",
+    "title": "Hypermnesic",
+    "description": "Git-first memory for AI agents: Markdown files are truth, the index is disposable, and writes are reviewable commits. Ships 7 MCP tools (hybrid search, read_note, build_context, resolve, think, list_folders, and a scope-gated commit_note write) over a Streamable HTTP endpoint, p…",
+    "tags": [
+      "knowledge-memory",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "leonardsellem",
+      "url": "https://github.com/leonardsellem"
+    },
+    "repoUrl": "https://github.com/leonardsellem/hypermnesic",
+    "installCommand": "npx -y hypermnesic",
+    "config": "{\n  \"mcpServers\": {\n    \"hypermnesic\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"hypermnesic\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "knowledge & memory",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -20481,6 +20699,24 @@
     "config": "{\n  \"mcpServers\": {\n    \"us-legal-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"us-legal-mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "legal",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "qinisolabs-floodwise",
+    "title": "Floodwise",
+    "description": "England flood-risk by postcode from official Environment Agency open data (OGL) — long-term risk band, or an honest \"not found\" outside England.",
+    "tags": [
+      "location-services"
+    ],
+    "author": {
+      "name": "qinisolabs",
+      "url": "https://github.com/qinisolabs"
+    },
+    "repoUrl": "https://github.com/qinisolabs/floodwise",
+    "installCommand": "npx -y floodwise",
+    "config": "{\n  \"mcpServers\": {\n    \"floodwise\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"floodwise\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "location services",
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
@@ -22312,6 +22548,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "tushariitr-19-patents-mcp",
+    "title": "Patents",
+    "description": "MCP server for patent search and prior art discovery powered by Google Patents public dataset on BigQuery. Tools: search patents, get full patent details with CPC codes and citations, fetch legal claims text. Free to use.",
+    "tags": [
+      "research",
+      "go",
+      "ai"
+    ],
+    "author": {
+      "name": "tushariitr-19",
+      "url": "https://github.com/tushariitr-19"
+    },
+    "repoUrl": "https://github.com/tushariitr-19/patents-mcp",
+    "installCommand": "npx -y patents-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"patents-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"patents-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "research",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "pminervini-deep-research-mcp",
     "title": "Deep Research",
     "description": "Deep research MCP server for OpenAI Responses API or Open Deep Research (smolagents), with web search and code interpreter support.",
@@ -22431,6 +22687,25 @@
     "config": "{\n  \"mcpServers\": {\n    \"vectara-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"vectara-mcp\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "end to end rag platforms",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "qinisolabs-icdwise",
+    "title": "Icdwise",
+    "description": "Verified ICD-10-CM medical code lookup, validation & reverse search — official descriptions, never guessed. [](https://glama.ai/mcp/servers/qinisolabs/icdwise)",
+    "tags": [
+      "search-data-extraction",
+      "ai"
+    ],
+    "author": {
+      "name": "qinisolabs",
+      "url": "https://github.com/qinisolabs"
+    },
+    "repoUrl": "https://github.com/qinisolabs/icdwise",
+    "installCommand": "npx -y icdwise",
+    "config": "{\n  \"mcpServers\": {\n    \"icdwise\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"icdwise\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "search & data extraction",
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
@@ -24525,6 +24800,26 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "qinisolabs-qiniso",
+    "title": "Qiniso",
+    "description": "56 deterministic fact-checkers in one server (IBAN, VAT, VIN, GTIN/barcodes, national & tax IDs, crypto addresses, phone, dates, holidays) — verify the structured facts an agent emits against checksums and curated data.",
+    "tags": [
+      "security",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "qinisolabs",
+      "url": "https://github.com/qinisolabs"
+    },
+    "repoUrl": "https://github.com/qinisolabs/qiniso",
+    "installCommand": "npx -y qiniso",
+    "config": "{\n  \"mcpServers\": {\n    \"qiniso\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"qiniso\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "security",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "13bm-ghidramcp",
     "title": "GhidraMCP",
     "description": "MCP server for integrating Ghidra with AI assistants. This plugin enables binary analysis, providing tools for function inspection, decompilation, memory exploration, and import/export analysis via the Model Context Protocol.",
@@ -26293,6 +26588,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "taisly-agent",
+    "title": "Taisly Agent",
+    "description": "Taisly Agent Kit MCP server for AI agent social media video publishing. Discover connected accounts, validate videos, publish or schedule posts to TikTok, Instagram Reels, YouTube Shorts, X, and Facebook through Taisly. Install: `npx -y @taisly/agent mcp`. Requires a Taisly API …",
+    "tags": [
+      "social-media",
+      "api",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "taisly",
+      "url": "https://github.com/taisly"
+    },
+    "repoUrl": "https://github.com/taisly/agent",
+    "installCommand": "npx -y @taisly/agent mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"agent\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"agent\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "social media",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "arturogarrido-claudinho",
     "title": "Claudinho",
     "description": "Live scores, fixtures, standings, and read-only prediction-market signals for the 2026 World Cup. No API keys.",
@@ -27090,6 +27406,48 @@
     "repoUrl": "https://github.com/srinath1510/alltrails-mcp-server",
     "installCommand": "npx -y alltrails-mcp-server",
     "config": "{\n  \"mcpServers\": {\n    \"alltrails-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"alltrails-mcp-server\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "travel & transportation",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "street1983nk-infranode",
+    "title": "Infranode",
+    "description": "Keyless remote MCP server for German public infrastructure open data: weather, air quality, traffic, public transit, parking and roadworks across 84+ German cities (DWD, Umweltbundesamt, Mobilithek, GovData). 38 read-only tools.",
+    "tags": [
+      "travel-transportation",
+      "go",
+      "node",
+      "ai"
+    ],
+    "author": {
+      "name": "street1983nk",
+      "url": "https://github.com/street1983nk"
+    },
+    "repoUrl": "https://github.com/street1983nk/infranode",
+    "installCommand": "npx -y infranode",
+    "config": "{\n  \"mcpServers\": {\n    \"infranode\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"infranode\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "travel & transportation",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "victorlane-flyan",
+    "title": "Flyan",
+    "description": "Unofficial Python SDK and MCP server for Ryanair flight search. Find one-way fares, explore destinations grouped by country or region, and discover the cheapest day to fly between any two airports. No API keys.",
+    "tags": [
+      "travel-transportation",
+      "python",
+      "api",
+      "ai"
+    ],
+    "author": {
+      "name": "victorlane",
+      "url": "https://github.com/victorlane"
+    },
+    "repoUrl": "https://github.com/victorlane/Flyan",
+    "installCommand": "npx -y Flyan",
+    "config": "{\n  \"mcpServers\": {\n    \"Flyan\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"Flyan\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "travel & transportation",
     "_sourceList": "punkpeye/awesome-mcp-servers"
