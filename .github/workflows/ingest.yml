@@ -2,8 +2,8 @@ name: Refresh ingested listings
 
 on:
   schedule:
-    # Daily at 06:30 UTC. Adjust if you don't want noise this often.
-    - cron: "30 6 * * *"
+    # Weekly on Mondays at 06:30 UTC. Adjust if you don't want noise this often.
+    - cron: "30 6 * * 1"
   workflow_dispatch:
 
 permissions:
