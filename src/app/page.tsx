@@ -73,15 +73,6 @@ export default function Home() {
     plugins.length +
     agents.length;
 
-  const stats = [
-    { label: "MCP servers", value: mcpServers.length },
-    { label: "Plugins", value: plugins.length },
-    { label: "Agents", value: agents.length },
-    { label: "Skills", value: skills.length },
-    { label: "Prompts", value: prompts.length },
-    { label: "Hooks", value: hooks.length },
-  ];
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -130,22 +121,6 @@ export default function Home() {
                 Get Started Guide
               </Link>
             </Button>
-          </div>
-
-          {/* Stat strip — social proof */}
-          <div className="mt-12 w-full">
-            <div className="grid grid-cols-3 gap-3 sm:grid-cols-6 sm:gap-6">
-              {stats.map((s) => (
-                <div key={s.label} className="text-center">
-                  <div className="text-2xl font-bold tracking-tight sm:text-3xl">
-                    {s.value}
-                  </div>
-                  <div className="text-xs text-muted-foreground sm:text-sm">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Compact inline newsletter — one row, no card */}
