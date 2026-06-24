@@ -7922,6 +7922,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "surajkgoyal-amnesic",
+    "title": "Amnesic",
+    "description": "The MCP server that remembers your database — persists table/column annotations, an FK relationship graph, and searchable notes across sessions, so the model stops re-discovering your schema every time. PostgreSQL, MySQL, MSSQL, SQLite; read-only-enforced.",
+    "tags": [
+      "databases",
+      "postgres",
+      "mysql",
+      "sqlite"
+    ],
+    "author": {
+      "name": "SurajKGoyal",
+      "url": "https://github.com/SurajKGoyal"
+    },
+    "repoUrl": "https://github.com/SurajKGoyal/amnesic",
+    "installCommand": "npx -y amnesic",
+    "config": "{\n  \"mcpServers\": {\n    \"amnesic\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"amnesic\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "databases",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "tradercjz-dolphindb-mcp-server",
     "title": "Dolphindb",
     "description": "TDolphinDB database integration with schema inspection and query capabilities",
@@ -11059,6 +11080,27 @@
     "repoUrl": "https://github.com/mhmzdev/Figma-Flutter-MCP",
     "installCommand": "npx -y Figma-Flutter-MCP",
     "config": "{\n  \"mcpServers\": {\n    \"Figma-Flutter-MCP\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"Figma-Flutter-MCP\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "michael-whitecapdata-ollama-handoff",
+    "title": "Ollama Handoff",
+    "description": "Offload cheap work from your cloud LLM agent to a local Ollama model — summaries, drafts, extractions, and first-pass code reviews via purpose-built handoff tools with baked-in prompts, at zero cloud cost. [](https://glama.ai/mcp/servers/Michael-WhiteCapData/ollama-handoff)",
+    "tags": [
+      "developer-tools",
+      "ai",
+      "llm",
+      "agent"
+    ],
+    "author": {
+      "name": "Michael-WhiteCapData",
+      "url": "https://github.com/Michael-WhiteCapData"
+    },
+    "repoUrl": "https://github.com/Michael-WhiteCapData/ollama-handoff",
+    "installCommand": "npx -y ollama-handoff",
+    "config": "{\n  \"mcpServers\": {\n    \"ollama-handoff\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"ollama-handoff\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "developer tools",
     "_sourceList": "punkpeye/awesome-mcp-servers"
@@ -17857,6 +17899,28 @@
     "repoUrl": "https://github.com/tradallo/reputation",
     "installCommand": "npx @tradallo/reputation",
     "config": "{\n  \"mcpServers\": {\n    \"reputation\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"reputation\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "finance & fintech",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "bevanding-signaldaemon",
+    "title": "Signaldaemon",
+    "description": "Narrative & signal intelligence for AI agents (crypto/AI/macro): cross-source narrative convergence and capital-vs-narrative divergence. Remote MCP server, self-serve keys, fails safe (says \"no coverage\" rather than hallucinating).",
+    "tags": [
+      "finance-fintech",
+      "api",
+      "ai",
+      "rag",
+      "agent"
+    ],
+    "author": {
+      "name": "bevanding",
+      "url": "https://github.com/bevanding"
+    },
+    "repoUrl": "https://github.com/bevanding/signaldaemon",
+    "installCommand": "npx -y signaldaemon",
+    "config": "{\n  \"mcpServers\": {\n    \"signaldaemon\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"signaldaemon\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "finance & fintech",
     "_sourceList": "punkpeye/awesome-mcp-servers"
