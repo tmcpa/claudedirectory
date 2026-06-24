@@ -35,8 +35,12 @@ import { claudeCodeCompetitorsComparison } from "./claude-code-competitors-compa
 import { claudeOpus48Release } from "./claude-opus-4-8-release";
 import { claudeFable5Guide } from "./claude-fable-5-guide";
 import { claudeCodeBestPractices } from "./claude-code-best-practices";
+import { claudeCodeSkillsVsSubagentsVsMcp } from "./claude-code-skills-vs-subagents-vs-mcp";
+import { claudeCodeLoopGuide } from "./claude-code-loop-guide";
 
 export const blogPosts: BlogPost[] = [
+  claudeCodeLoopGuide,
+  claudeCodeSkillsVsSubagentsVsMcp,
   claudeCodeBestPractices,
   claudeFable5Guide,
   claudeOpus48Release,
