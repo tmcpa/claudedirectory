@@ -103,7 +103,7 @@ export async function generateMetadata(props: Props) {
       publishedTime: new Date(post.publishedDate).toISOString(),
       images: [
         {
-          url: `${BASE_URL}/og/blog/${post.slug}.png`,
+          url: `${BASE_URL}/og/blog/${post.slug}`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -114,7 +114,7 @@ export async function generateMetadata(props: Props) {
       card: "summary_large_image",
       title,
       description,
-      images: [`${BASE_URL}/og/blog/${post.slug}.png`],
+      images: [`${BASE_URL}/og/blog/${post.slug}`],
     },
     alternates: {
       canonical: url,
@@ -152,7 +152,7 @@ export default async function BlogPostPage(props: Props) {
         author={post.author}
         tags={post.tags}
         datePublished={post.publishedDate}
-        image={`${BASE_URL}/og/blog/${post.slug}.png`}
+        image={`${BASE_URL}/og/blog/${post.slug}`}
       />
       <BreadcrumbJsonLd
         items={[
