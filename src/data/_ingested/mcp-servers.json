@@ -13428,6 +13428,29 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "eltortilla1-synapse-code-mcp",
+    "title": "Synapse Code",
+    "description": "Structural code context server for AI agents — compressed symbol indexes, dependency graphs, and git diffs via TypeScript AST analysis. Zero external dependencies, no vector database or embedding API required.",
+    "tags": [
+      "developer-tools",
+      "typescript",
+      "api",
+      "ai",
+      "embedding",
+      "agent"
+    ],
+    "author": {
+      "name": "Eltortilla1",
+      "url": "https://github.com/Eltortilla1"
+    },
+    "repoUrl": "https://github.com/Eltortilla1/synapse-code-mcp",
+    "installCommand": "npx -y synapse-code-mcp",
+    "config": "{\n  \"mcpServers\": {\n    \"synapse-code-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"synapse-code-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "developer tools",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "jordandalton-doordash-mcp-server",
     "title": "DoorDash",
     "description": "DoorDash Delivery (Unofficial)",
@@ -21779,6 +21802,27 @@
     "_sourceList": "punkpeye/awesome-mcp-servers"
   },
   {
+    "slug": "jabbawocky-statuscraft",
+    "title": "Statuscraft",
+    "description": "MCP server that checks the live status of 3831 software services in real time. Ask your AI agent \"is GitHub down?\" or \"what's wrong with Sentry?\" — and get a live answer pulled directly from official status pages, including full incident detail when something is broken. `npx -y …",
+    "tags": [
+      "monitoring",
+      "github",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "jabbawocky",
+      "url": "https://github.com/jabbawocky"
+    },
+    "repoUrl": "https://github.com/jabbawocky/statuscraft",
+    "installCommand": "npx -y github:jabbawocky/statuscraft",
+    "config": "{\n  \"mcpServers\": {\n    \"statuscraft\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"statuscraft\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "monitoring",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
     "slug": "jwrede-llmprobe",
     "title": "Llmprobe",
     "description": "Synthetic monitoring for LLM inference endpoints. Measure TTFT, latency, throughput, and errors across OpenAI, Anthropic, Google, Azure, Bedrock, and local servers (vLLM, SGLang, Ollama). CLI + MCP server with Prometheus and OpenTelemetry export.",
@@ -27807,6 +27851,46 @@
     "repoUrl": "https://github.com/bug-breeder/quip-mcp",
     "installCommand": "npx -y quip-mcp",
     "config": "{\n  \"mcpServers\": {\n    \"quip-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"quip-mcp\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "workplace & productivity",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "bzdos-hubd",
+    "title": "Hubd",
+    "description": "Files-first project hub for teams of humans and AI agents: shared journal, cross-project tasks, agent queues, and a read-only kanban. MCP server + CLI, zero dependencies.",
+    "tags": [
+      "workplace-productivity",
+      "ai",
+      "agent"
+    ],
+    "author": {
+      "name": "bzdOS",
+      "url": "https://github.com/bzdOS"
+    },
+    "repoUrl": "https://github.com/bzdOS/hubd",
+    "installCommand": "npx -y hubd",
+    "config": "{\n  \"mcpServers\": {\n    \"hubd\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"hubd\"]\n    }\n  }\n}",
+    "source": "ingested",
+    "_category": "workplace & productivity",
+    "_sourceList": "punkpeye/awesome-mcp-servers"
+  },
+  {
+    "slug": "donggyun112-keymem",
+    "title": "Keymem",
+    "description": "Associative key-graph memory for LLM agents — recall by association, not vector similarity.",
+    "tags": [
+      "workplace-productivity",
+      "llm",
+      "agent"
+    ],
+    "author": {
+      "name": "donggyun112",
+      "url": "https://github.com/donggyun112"
+    },
+    "repoUrl": "https://github.com/donggyun112/keymem",
+    "installCommand": "npx -y keymem",
+    "config": "{\n  \"mcpServers\": {\n    \"keymem\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"keymem\"]\n    }\n  }\n}",
     "source": "ingested",
     "_category": "workplace & productivity",
     "_sourceList": "punkpeye/awesome-mcp-servers"
