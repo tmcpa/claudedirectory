@@ -1,4 +1,6 @@
 import { Skill } from "@/lib/types";
+import { dataechoSkill } from "./dataecho";
+import { dataechoMemorySkill } from "./dataecho-memory";
 import { commitSkill } from "./commit";
 import { prSkill } from "./pr";
 import { reviewSkill } from "./review";
@@ -40,6 +42,8 @@ import { consolidateMemorySkill } from "./consolidate-memory";
 import { webappTestingSkill } from "./webapp-testing";
 
 const curatedSkills: Skill[] = [
+  dataechoSkill,
+  dataechoMemorySkill,
   sqlOptimizerSkill,
   commitSkill,
   prSkill,
