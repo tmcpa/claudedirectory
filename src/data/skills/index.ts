@@ -38,6 +38,7 @@ import { xlsxSkill } from "./xlsx";
 import { docxSkill } from "./docx";
 import { consolidateMemorySkill } from "./consolidate-memory";
 import { webappTestingSkill } from "./webapp-testing";
+import { pluribusEvidenceAttestationSkill } from "./pluribus-evidence-attestation";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -46,6 +47,7 @@ const curatedSkills: Skill[] = [
   reviewSkill,
   superpowersSkill,
   contextEngineeringSkill,
+  pluribusEvidenceAttestationSkill,
   webAssetGeneratorSkill,
   // New community skills
   playwrightSkill,
