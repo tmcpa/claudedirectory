@@ -1,4 +1,5 @@
 import { Plugin } from "@/lib/types";
+import { portaljsPlugin } from "./portaljs";
 import { agentSdkDevPlugin } from "./agent-sdk-dev";
 import { bugDetectivePlugin } from "./bug-detective";
 import { ccpmPlugin } from "./ccpm";
@@ -162,6 +163,7 @@ const curatedPlugins: Plugin[] = [
   cloudflarePlugin,
   storybookPlugin,
   // Community plugins
+  portaljsPlugin,
   perfProfilerPlugin,
   i18nManagerPlugin,
   depAuditPlugin,
