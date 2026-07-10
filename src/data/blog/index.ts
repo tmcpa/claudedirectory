@@ -37,9 +37,13 @@ import { claudeFable5Guide } from "./claude-fable-5-guide";
 import { claudeCodeBestPractices } from "./claude-code-best-practices";
 import { claudeCodeSkillsVsSubagentsVsMcp } from "./claude-code-skills-vs-subagents-vs-mcp";
 import { claudeCodeLoopGuide } from "./claude-code-loop-guide";
+import { claudeSonnet5Guide } from "./claude-sonnet-5-guide";
+import { claudeFable5ExportControls } from "./claude-fable-5-export-controls";
 import { whichClaudeModelToUse } from "./which-claude-model-to-use";
 
 export const blogPosts: BlogPost[] = [
+  claudeFable5ExportControls,
+  claudeSonnet5Guide,
   whichClaudeModelToUse,
   claudeCodeLoopGuide,
   claudeCodeSkillsVsSubagentsVsMcp,
