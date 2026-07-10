@@ -38,6 +38,8 @@ import { xlsxSkill } from "./xlsx";
 import { docxSkill } from "./docx";
 import { consolidateMemorySkill } from "./consolidate-memory";
 import { webappTestingSkill } from "./webapp-testing";
+// Community skills
+import { ansibleOpsSkill } from "./ansible-ops";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -81,6 +83,8 @@ const curatedSkills: Skill[] = [
   docxSkill,
   consolidateMemorySkill,
   webappTestingSkill,
+  // Community skills
+  ansibleOpsSkill,
 ];
 
 // Auto-ingested skills from repos containing SKILL.md files.
