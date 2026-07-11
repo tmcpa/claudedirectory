@@ -23,8 +23,10 @@ import { terraformPrompt } from "./terraform";
 import { haskellPrompt } from "./haskell";
 import { fastapiPrompt } from "./fastapi";
 import { bunHonoPrompt } from "./bun-hono";
+import { agentOsBusinessPrompt } from "./agent-os-business";
 
 export const prompts: Prompt[] = [
+  agentOsBusinessPrompt,
   bunHonoPrompt,
   nextjsPrompt,
   pythonPrompt,
