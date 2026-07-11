@@ -54,6 +54,7 @@ export const myServer: MCPServer = {
   tags: ["tag1", "tag2"],
   author: { name: "Your Name" },
   installCommand: "npm install -g my-server", // optional
+  docsUrl: "https://example.com/docs/mcp", // optional, setup docs
   config: `{
   "mcpServers": {
     "my-server": {
@@ -63,6 +64,22 @@ export const myServer: MCPServer = {
   }
 }`,
 };
+```
+
+For a hosted (remote) server, use a `url` instead of a `command`, and add `headers` if it
+needs authentication. `docsUrl` is handy here to show readers how to get an API key:
+
+```typescript
+config: `{
+  "mcpServers": {
+    "my-server": {
+      "url": "https://example.com/api/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_KEY"
+      }
+    }
+  }
+}`,
 ```
 
 ### Hooks (`src/data/hooks/`)

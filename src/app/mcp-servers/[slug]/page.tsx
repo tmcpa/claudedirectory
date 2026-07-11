@@ -193,6 +193,20 @@ export default async function MCPServerDetailPage(props: Props) {
           </div>
         )}
 
+        {server.docsUrl && (
+          <div>
+            <a
+              href={server.docsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <ExternalLink className="h-4 w-4" />
+              View setup documentation
+            </a>
+          </div>
+        )}
+
         {server.relatedItems && server.relatedItems.length > 0 && (
           <>
             <Separator />
