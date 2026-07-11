@@ -11,6 +11,7 @@ export const trackmysharesServer: MCPServer = {
     name: "TrackMyShares",
     url: "https://trackmyshares.com",
   },
+  docsUrl: "https://trackmyshares.com/help/mcp-integration",
   installCommand:
     'claude mcp add trackmyshares https://trackmyshares.com/api/mcp --transport http --header "Authorization: Bearer YOUR_API_KEY"',
   config: `{

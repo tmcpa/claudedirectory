@@ -47,6 +47,8 @@ export interface MCPServer {
   dateAdded?: string;
   relatedItems?: RelatedItem[];
   repoUrl?: string;
+  /** Setup/usage docs. Useful for hosted servers with no public repo. */
+  docsUrl?: string;
   seoTitle?: string;
   seoDescription?: string;
   stars?: number;
