@@ -55,7 +55,9 @@ function parseAwesomeReadme(markdown, sourceRepo, defaultCategory) {
     const repoTitle = titleize(repo);
     const isGeneric = /^(agent|server|servers|mcp|mcp-server|core|client|sdk|tool|tools|api)$/i.test(repo.replace(/[-_](mcp|server|servers)/gi, ""));
     const title = isGeneric ? `${titleize(owner)} ${repoTitle}`.trim() : repoTitle;
-    out.push({
+    const installCommand = guessInstallCommand(cleanDesc);
+    const config = defaultMcpConfig(installCommand);
+    const record = {
       slug,
       title,
       description: truncate(cleanDesc, 280),
@@ -65,12 +67,15 @@ function parseAwesomeReadme(markdown, sourceRepo, defaultCategory) {
         url: `https://github.com/${owner}`,
       },
       repoUrl: `https://github.com/${repoFull}`,
-      installCommand: guessInstallCommand(repoFull, cleanDesc),
-      config: defaultMcpConfig(repo),
       source: "ingested",
       _category: currentCategory,
       _sourceList: sourceRepo,
-    });
+    };
+    // Only attach an install command or config when there is a real one. We do
+    // not synthesise either from the repo name; see the functions below.
+    if (installCommand) record.installCommand = installCommand;
+    if (config) record.config = config;
+    out.push(record);
   }
   return out;
 }
@@ -105,20 +110,27 @@ function titleize(name) {
     .join(" ") || name;
 }
 
-function guessInstallCommand(repoFull, description) {
+function guessInstallCommand(description) {
   const m = description.match(/`(npx[^`]+|pip install[^`]+|uv[xa-z]?\s+[^`]+)`/i);
   if (m) return m[1].trim();
-  // Default to npx pattern using repo name
-  const repo = repoFull.split("/")[1];
-  return `npx -y ${repo}`;
+  // No install command in the source description. Do not build one from the repo
+  // name: the repo name is not the package name, and `npx -y <repo>` routinely
+  // resolves to an unrelated package or to nothing. Return null so the field is
+  // left off rather than published as a guess users would paste into a terminal.
+  return null;
 }
 
-function defaultMcpConfig(repo) {
+function defaultMcpConfig(installCommand) {
+  // Only build a config from a real npx command, and take the package name from
+  // that command, never from the repo name.
+  const m = installCommand && installCommand.match(/^npx\s+(?:-y\s+)?(\S+)/);
+  if (!m) return null;
+  const pkg = m[1];
   return `{
   "mcpServers": {
-    "${repo}": {
+    "${pkg}": {
       "command": "npx",
-      "args": ["-y", "${repo}"]
+      "args": ["-y", "${pkg}"]
     }
   }
 }`;

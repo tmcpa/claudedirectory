@@ -157,13 +157,15 @@ export default async function MCPServerDetailPage(props: Props) {
           </div>
         )}
 
-        <div>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Configuration</h2>
-            <CopyButton text={server.config} />
+        {server.config && (
+          <div>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold">Configuration</h2>
+              <CopyButton text={server.config} />
+            </div>
+            <CodeBlock code={server.config} language="json" />
           </div>
-          <CodeBlock code={server.config} language="json" />
-        </div>
+        )}
 
         <div className="bg-accent/50 rounded-lg p-4">
           <h3 className="font-semibold mb-2">How to use</h3>
