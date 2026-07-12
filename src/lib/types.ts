@@ -39,7 +39,7 @@ export interface MCPServer {
   slug: string;
   title: string;
   description: string;
-  config: string;
+  config?: string;
   installCommand?: string;
   tags: string[];
   author: Author;
