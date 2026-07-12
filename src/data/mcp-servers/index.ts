@@ -1,4 +1,5 @@
 import { MCPServer } from "@/lib/types";
+import { dataechoServer } from "./dataecho";
 import { airtableServer } from "./airtable";
 import { apidogServer } from "./apidog";
 import { atlassianServer } from "./atlassian";
@@ -98,6 +99,7 @@ import { publicGrantsServer } from "./public-grants";
 
 const curatedMcpServers: MCPServer[] = [
   // Featured servers first
+  dataechoServer,
   filesystemServer,
   githubServer,
   figmaServer,

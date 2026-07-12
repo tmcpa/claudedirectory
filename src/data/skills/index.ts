@@ -1,4 +1,6 @@
 import { Skill } from "@/lib/types";
+import { dataechoSkill } from "./dataecho";
+import { dataechoMemorySkill } from "./dataecho-memory";
 import { commitSkill } from "./commit";
 import { prSkill } from "./pr";
 import { reviewSkill } from "./review";
@@ -42,6 +44,8 @@ import { webappTestingSkill } from "./webapp-testing";
 import { ansibleOpsSkill } from "./ansible-ops";
 
 const curatedSkills: Skill[] = [
+  dataechoSkill,
+  dataechoMemorySkill,
   sqlOptimizerSkill,
   commitSkill,
   prSkill,
