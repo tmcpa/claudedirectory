@@ -40,6 +40,7 @@ import { consolidateMemorySkill } from "./consolidate-memory";
 import { webappTestingSkill } from "./webapp-testing";
 // Community skills
 import { ansibleOpsSkill } from "./ansible-ops";
+import { predeploySkill } from "./predeploy";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -85,6 +86,7 @@ const curatedSkills: Skill[] = [
   webappTestingSkill,
   // Community skills
   ansibleOpsSkill,
+  predeploySkill,
 ];
 
 // Auto-ingested skills from repos containing SKILL.md files.
