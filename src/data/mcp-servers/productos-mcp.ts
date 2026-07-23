@@ -12,7 +12,7 @@ export const productosMcp: MCPServer = {
   config: `{
   "mcpServers": {
     "productos": {
-      "url": "https://beta.productos.dev/api/mcp/cmod9f03x0000k0048xm74qxa"
+      "url": "https://beta.productos.dev/api/mcp/"
     }
   }
 }`,
