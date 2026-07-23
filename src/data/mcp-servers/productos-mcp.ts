@@ -8,7 +8,6 @@ export const productosMcp: MCPServer = {
   author: {
     name: "Shreyash Singh",
   },
-  repoUrl: "https://github.com/ShreyashSingh/ProductOS",
   featured: true,
   config: `{
   "mcpServers": {
