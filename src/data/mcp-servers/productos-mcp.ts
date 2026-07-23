@@ -9,6 +9,7 @@ export const productosMcp: MCPServer = {
     name: "Shreyash Singh",
   },
   featured: true,
+  logoUrl: "https://beta.productos.dev/logo.png",
   config: `{
   "mcpServers": {
     "productos": {
