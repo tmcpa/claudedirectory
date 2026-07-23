@@ -1,4 +1,5 @@
 import { MCPServer } from "@/lib/types";
+import { productosMcp } from "./productos-mcp";
 import { airtableServer } from "./airtable";
 import { apidogServer } from "./apidog";
 import { atlassianServer } from "./atlassian";
@@ -108,6 +109,7 @@ const curatedMcpServers: MCPServer[] = [
   linearServer,
   awsServer,
   e2bServer,
+  productosMcp,
   postgresServer,
   sqliteServer,
   puppeteerServer,
