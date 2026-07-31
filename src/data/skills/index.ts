@@ -1,4 +1,6 @@
 import { Skill } from "@/lib/types";
+import { dataechoSkill } from "./dataecho";
+import { dataechoMemorySkill } from "./dataecho-memory";
 import { commitSkill } from "./commit";
 import { prSkill } from "./pr";
 import { reviewSkill } from "./review";
@@ -47,6 +49,8 @@ import { incidentReportingNavigatorSkill } from "./incident-reporting-navigator"
 import { craVulnerabilityObligationsSkill } from "./cra-vulnerability-obligations";
 
 const curatedSkills: Skill[] = [
+  dataechoSkill,
+  dataechoMemorySkill,
   sqlOptimizerSkill,
   commitSkill,
   prSkill,
