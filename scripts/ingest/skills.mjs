@@ -20,6 +20,7 @@ const SOURCES = [
   { repo: "obra/superpowers",                               prefix: null,           cap: 100 },
   { repo: "jeremylongshore/claude-code-plugins-plus-skills", prefix: "skills/",     cap: 600 },
   { repo: "Houseofmvps/ultraship",                          prefix: null,           cap: 100 },
+  { repo: "Sting25/claude-code-handoff",                    prefix: "skills/",      cap: 100 },
 ];
 
 // Cap per-skill content to avoid 50KB+ markdown bodies.
