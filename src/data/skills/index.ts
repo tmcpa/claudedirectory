@@ -47,6 +47,7 @@ import { incidentReportingNavigatorSkill } from "./incident-reporting-navigator"
 import { craVulnerabilityObligationsSkill } from "./cra-vulnerability-obligations";
 import { feynmanItSkill } from "./feynman-it";
 import { layerbaseSkill } from "./layerbase";
+import { zillowPropertyDataSkill } from "./zillow-property-data";
 import { pluribusEvidenceAttestationSkill } from "./pluribus-evidence-attestation";
 
 const curatedSkills: Skill[] = [
@@ -101,6 +102,7 @@ const curatedSkills: Skill[] = [
   craVulnerabilityObligationsSkill,
   feynmanItSkill,
   layerbaseSkill,
+  zillowPropertyDataSkill,
 ];
 
 // Auto-ingested skills from repos containing SKILL.md files.
