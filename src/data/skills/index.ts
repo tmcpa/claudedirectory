@@ -27,6 +27,7 @@ import { vibeCodeSkill } from "./vibe-code";
 import { monorepoManagerSkill } from "./monorepo-manager";
 import { regexBuilderSkill } from "./regex-builder";
 import { envSetupSkill } from "./env-setup";
+import { easelSkill } from "./easel";
 import { codeWalkthroughSkill } from "./code-walkthrough";
 import { sqlOptimizerSkill } from "./sql-optimizer";
 import { skyvernSkill } from "./skyvern-skill";
@@ -90,6 +91,7 @@ const curatedSkills: Skill[] = [
   pptxSkill,
   xlsxSkill,
   docxSkill,
+  easelSkill,
   consolidateMemorySkill,
   webappTestingSkill,
   // Community skills
