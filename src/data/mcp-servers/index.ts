@@ -18,6 +18,7 @@ import { dockerServer } from "./docker";
 import { e2bServer } from "./e2b";
 import { elasticsearchServer } from "./elasticsearch";
 import { exaServer } from "./exa";
+import { parallelSearchServer } from "./parallel-search";
 import { fetchServer } from "./fetch";
 import { figmaServer } from "./figma";
 import { filesystemServer } from "./filesystem";
@@ -139,6 +140,7 @@ const curatedMcpServers: MCPServer[] = [
   jiraServer,
   tavilyServer,
   exaServer,
+  parallelSearchServer,
   neo4jServer,
   vercelServer,
   grafanaServer,
