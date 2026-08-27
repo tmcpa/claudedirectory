@@ -2,6 +2,8 @@
 
 A community-driven directory for Claude Code configurations. Find and share prompts, MCP servers, hooks, skills, and settings.
 
+
+- [ox402-utils](https://satisfaction-genetic-lightbox-buying.trycloudflare.com) — 88 paid tools for AI agents via x402 (USDC on Base), MCP server ready at /mcp402/. AI image gen, rewrite/translate, resume parser, PDF tools, research, security, media, speech.
 **[Live Site](https://claudedirectory.org)** · **[Contributing Guide](CONTRIBUTING.md)** · **[Claude Code Docs](https://code.claude.com/docs/en/overview)**
 
 ## What is Claude Code?
