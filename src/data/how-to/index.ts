@@ -16,9 +16,11 @@ import { multiPlatformSetupHowTo } from "./multi-platform-setup";
 import { backgroundAgentsWorktreesHowTo } from "./background-agents-worktrees";
 import { claudeFolderHowTo } from "./claude-folder";
 import { appversionReleaseHowTo } from "./appversion-release";
+import { claudeCertificationRegistrationHowTo } from "./claude-certification-registration";
 
 export const howTos: HowTo[] = [
   appversionReleaseHowTo,
+  claudeCertificationRegistrationHowTo,
   backgroundAgentsWorktreesHowTo,
   claudeFolderHowTo,
   gettingStartedHowTo,
