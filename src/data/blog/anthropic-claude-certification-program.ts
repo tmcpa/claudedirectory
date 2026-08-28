@@ -7,9 +7,9 @@ export const anthropicClaudeCertificationProgram: BlogPost = {
   description:
     "Anthropic just launched its first official certification — the Claude Certified Architect. Here's what it covers, who it's for, and how to prepare.",
   seoTitle:
-    "Claude Certified Architect (CCA) Exam – Anthropic's Proctored Skilljar Certification Guide",
+    "Claude Certified Architect (CCA/CCAR-F) Exam – Anthropic's Proctored Certification Guide",
   seoDescription:
-    "Complete guide to Anthropic's Claude Certification Program and the Claude Certified Architect (CCA) exam. Skilljar-proctored, 60 questions — topics, format, cost, and how to prepare.",
+    "Complete guide to Anthropic's Claude Certification Program and the Claude Certified Architect (CCAR-F) exam. Pearson VUE proctored, 60 questions — topics, format, cost, and how to prepare.",
   publishedDate: "2026-03-16",
   tags: [
     "claude-code",
@@ -51,7 +51,9 @@ export const anthropicClaudeCertificationProgram: BlogPost = {
   ],
   content: `# The Anthropic Claude Certification Program: Everything You Need to Know
 
-On March 12, 2026, Anthropic launched its first official technical certification: the **Claude Certified Architect (CCA) — Foundations**. It's a proctored, 60-question exam that tests whether you can design and ship production-grade Claude applications at enterprise scale.
+*Updated August 28, 2026: current exam fee, Pearson VUE delivery, the passing score, the three additional certifications, and how registration works today.*
+
+On March 12, 2026, Anthropic launched its first official technical certification: the **Claude Certified Architect (CCA) — Foundations**, now listed officially as **CCAR-F**. It's a proctored, 60-question exam that tests whether you can design and ship production-grade Claude applications at enterprise scale. The program has since grown to four certifications, covered below.
 
 This isn't a participation trophy. It's a closed-book, no-AI-assistance exam that covers agentic architecture, MCP integration, Claude Code workflows, prompt engineering, and context management. If you've been building with Claude professionally, this is the credential that proves it.
 
@@ -68,10 +70,12 @@ Think of it as the AWS Solutions Architect equivalent for the Claude ecosystem. 
 ### Key Facts
 
 - **Format**: 60 questions, 120 minutes, proctored
-- **Cost**: $99 (free for the first 5,000 Claude Partner Network employees)
+- **Cost**: $125 per attempt as of the mid-2026 exam guide (the $99 early-access pricing and the fee waiver for the first 5,000 partner employees have ended)
 - **Proctoring**: Strict — no Claude, no external tools, no documentation
-- **Scoring**: 1,000-point scale (official passing threshold not yet published)
-- **Platform**: Anthropic Academy on Skilljar
+- **Scoring**: passing score of 720 on a 100–1,000 scale
+- **Delivery**: Pearson VUE since July 2026, online proctored or at a test center; registration through the Anthropic Partner Academy
+- **Retakes**: up to 4 attempts per rolling 12 months, with waits of 14, 30, then 90 days
+- **Validity**: 12 months, with a free on-time renewal via a non-proctored assessment
 
 ---
 
@@ -190,21 +194,24 @@ It's Anthropic's program for organizations that deploy Claude commercially. Memb
 
 ### How to Join
 
-Apply at [claude.com/partners](https://claude.com/partners). There's no fee and no minimum company size. Once you're in the network, you can register for the certification through the Anthropic Academy portal.
+Apply at [claude.com/partners](https://claude.com/partners). There's no fee and no minimum company size. Once you're in the network, you register for certifications through the Anthropic Partner Academy, and exams are scheduled and delivered by Pearson VUE.
 
-The first 5,000 partner employees get the $99 exam fee waived entirely.
+Note that certification access runs through partner organizations, not individual sign-ups. If your employer isn't in the network and you don't operate a company that can join it, partner firms accept independent engineers as members: [YAID's registration guide](https://youraidept.com/network/claude-certification) walks through how that path works in practice.
+
+(The early-access fee waiver for the first 5,000 partner employees has ended.)
 
 ---
 
-## What's Coming Next
+## The Full Certification Stack
 
-Anthropic has confirmed that CCA Foundations is just the beginning. Additional certifications are planned for later in 2026:
+What was announced as "more coming" in March has arrived. The program now lists four certifications across three roles on [Pearson VUE's program page](https://www.pearsonvue.com/us/en/anthropic.html):
 
-- **Seller certifications** — for partner sales teams positioning Claude in enterprise deals
-- **Developer certifications** — likely targeting hands-on implementation rather than architecture
-- **Advanced Architect certifications** — deeper specializations beyond the Foundations level
+- **CCAR-F — Claude Certified Architect, Foundations**: the exam this article covers
+- **CCDV-F — Claude Certified Developer, Foundations**: hands-on application development, 53 questions across eight domains, with applications and integration alone worth a third of the marks
+- **CCAO-F — Claude Certified Associate, Foundations**: for professionals who use Claude daily without writing code, 60 questions across seven domains
+- **CCAR-P — Claude Certified Architect, Professional**: the senior tier, 63 questions, extending the Foundations blueprint with governance, stakeholder communication, and lifecycle management
 
-This mirrors the credential stacks from AWS, Google Cloud, and Azure — a foundation cert, then role-based and specialty certs that branch out from there. Getting the Foundations certification now positions you at the front of that curve.
+This mirrors the credential stacks from AWS, Google Cloud, and Azure — a foundation cert, then role-based and specialty certs that branch out from there.
 
 ---
 
@@ -226,11 +233,11 @@ If you're still in the "learning the API" phase, invest that time in the free An
 
 ## Getting Started Today
 
-1. **Join the Partner Network**: [claude.com/partners](https://claude.com/partners) — free, takes minutes
+1. **Get partner-network access**: through your employer, your own company at [claude.com/partners](https://claude.com/partners), or a partner firm that accepts independents
 2. **Start the courses**: [anthropic.skilljar.com](https://anthropic.skilljar.com/) — begin with "Building with the Claude API"
 3. **Build something**: Pick a project that touches at least three of the five competency domains
-4. **Register for the exam**: Available through the Anthropic Academy portal once you're in the Partner Network
-5. **Take the exam**: 60 questions, 120 minutes, and you walk out with Anthropic's first official credential
+4. **Register and schedule**: through the Anthropic Partner Academy, with the exam delivered by Pearson VUE online or at a test center
+5. **Take the exam**: 60 questions, 120 minutes, 720 to pass — and the credential is issued to you personally
 
-The window for being one of the first Claude Certified Architects is closing. Five thousand free seats won't last forever, and early credentials in a fast-growing ecosystem tend to pay off disproportionately. If you've been building with Claude, now's the time to make it official.`,
+Certified architects are still rare, and early credentials in a fast-growing ecosystem tend to pay off disproportionately. If you've been building with Claude, now's the time to make it official.`,
 };
