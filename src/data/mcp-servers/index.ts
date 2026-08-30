@@ -1,5 +1,6 @@
 import { MCPServer } from "@/lib/types";
 import { productosMcp } from "./productos-mcp";
+import { agentQaServer } from "./agent-qa";
 import { airtableServer } from "./airtable";
 import { churnsolutionServer } from "./churnsolution";
 import { apidogServer } from "./apidog";
@@ -165,6 +166,7 @@ const curatedMcpServers: MCPServer[] = [
   tursoServer,
   upstashServer,
   // Developer Tools
+  agentQaServer,
   context7Server,
   browserbaseServer,
   skyvernServer,
