@@ -97,6 +97,9 @@ import { appversionPlugin } from "./appversion";
 import { brothersbePlugin } from "./brothersbe";
 // iOS development plugins
 import { pragmaPlugin } from "./pragma";
+import { hushPlugin } from "./hush";
+import { razorPlugin } from "./razor";
+import { foremanPlugin } from "./foreman";
 
 const curatedPlugins: Plugin[] = [
   // Featured plugins first
@@ -202,6 +205,10 @@ const curatedPlugins: Plugin[] = [
   brothersbePlugin,
   // iOS development plugins
   pragmaPlugin,
+  // Output and session-noise plugins
+  hushPlugin,
+  razorPlugin,
+  foremanPlugin,
 ];
 
 // Auto-ingested plugins from `.claude-plugin/marketplace.json` files across
