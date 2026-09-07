@@ -102,6 +102,7 @@ import { findMcpServer } from "./find-mcp";
 import { dottedsignServer } from "./dottedsign";
 import { safeinstallServer } from "./safeinstall";
 import { vibekitServer } from "./vibekit";
+import { provenskillsServer } from "./provenskills";
 
 const curatedMcpServers: MCPServer[] = [
   // Featured servers first
@@ -225,6 +226,8 @@ const curatedMcpServers: MCPServer[] = [
   productosMcp,
   // Hosting & Deployment
   vibekitServer,
+  // Skill marketplaces
+  provenskillsServer,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
