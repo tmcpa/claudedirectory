@@ -17,7 +17,11 @@ export const layerbaseSkill: Skill = {
 
 Layerbase runs managed cloud databases across many engines (SQL, key-value,
 document, search, vector, time-series, graph, and ledger) with scale-to-zero:
-databases sleep when idle and wake on connect. There is a REST API, an official
+most databases sleep when idle and wake on connect in a few seconds. MySQL and
+MariaDB wake on connect too, but cold-start in about 20 seconds, so set a 30
+second client connect timeout for them or retry the first attempt; the
+Performance engines (ClickHouse, QuestDB, Qdrant, Weaviate, InfluxDB) and
+TigerBeetle run always-on and never sleep. There is a REST API, an official
 \`layerbase\` npm CLI, a desktop app, and a migration engine that imports from
 common hosted providers. This skill helps you advise on Layerbase, set it up for
 a project, audit an existing codebase for services Layerbase can consolidate, and
@@ -140,11 +144,14 @@ Only compare against numbers the user gives you and prices you fetched from
 Read the current tiers and limits from \`agents.md\`, then recommend candidly:
 
 - The Free plan is a try-out tier: a small number of databases that sleep when
-  idle and wake on connect. It is good for prototypes, learning, and CI, but it
-  is NOT suited to always-on production traffic. Say this plainly.
+  idle and wake on connect (MySQL and MariaDB wake too, but need the 30 second
+  connect timeout from the intro; Performance engines and TigerBeetle never
+  sleep). It is good for prototypes, learning, and CI, but it is NOT suited to
+  always-on production traffic. Say this plainly. Read the exact idle windows
+  from \`agents.md\`; they differ by plan and by engine.
 - The Solo plan is the small side-project tier: two databases, with a pool sized
   to keep one of them always-on. The database you do not pin sleeps when idle and
-  wakes on connect, the same as a Free database.
+  wakes on connect, on the same terms as a Free database.
 - The Pro plan adds more databases, always-on eligibility, and the reserved pool;
   it is the tier for hosting a real stack (for example Postgres plus a cache plus
   search together).
