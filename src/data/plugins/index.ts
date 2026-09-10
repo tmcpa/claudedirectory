@@ -28,6 +28,7 @@ import { swiftLspPlugin } from "./swift-lsp";
 import { testWriterFixerPlugin } from "./test-writer-fixer";
 import { flowNextPlugin } from "./flow-next";
 import { ralphPlugin } from "./ralph";
+import { meanwhilePlugin } from "./meanwhile";
 import { yapuiPlugin } from "./yapui";
 // LSP plugins
 import { typescriptLspPlugin } from "./typescript-lsp";
@@ -142,6 +143,7 @@ const curatedPlugins: Plugin[] = [
   flowNextPlugin,
   ralphPlugin,
   yapuiPlugin,
+  meanwhilePlugin,
   // External plugins
   asanaPlugin,
   awsPlugin,
