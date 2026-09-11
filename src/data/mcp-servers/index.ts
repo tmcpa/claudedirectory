@@ -102,6 +102,7 @@ import { findMcpServer } from "./find-mcp";
 import { dottedsignServer } from "./dottedsign";
 import { safeinstallServer } from "./safeinstall";
 import { vibekitServer } from "./vibekit";
+import { draxlrServer } from "./draxlr";
 
 const curatedMcpServers: MCPServer[] = [
   // Featured servers first
@@ -149,6 +150,7 @@ const curatedMcpServers: MCPServer[] = [
   snowflakeServer,
   bigqueryServer,
   datadogServer,
+  draxlrServer,
   // Social & Communication
   obsidianServer,
   blueskyServer,
