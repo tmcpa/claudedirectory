@@ -1,6 +1,7 @@
 import { MCPServer } from "@/lib/types";
 import { productosMcp } from "./productos-mcp";
 import { airtableServer } from "./airtable";
+import { mentionagentServer } from "./mentionagent";
 import { churnsolutionServer } from "./churnsolution";
 import { apidogServer } from "./apidog";
 import { atlassianServer } from "./atlassian";
@@ -225,6 +226,8 @@ const curatedMcpServers: MCPServer[] = [
   productosMcp,
   // Hosting & Deployment
   vibekitServer,
+  // Marketing & SEO
+  mentionagentServer,
 ];
 
 // Auto-ingested MCP servers from curated awesome-mcp-servers lists.
