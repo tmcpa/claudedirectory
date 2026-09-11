@@ -49,6 +49,7 @@ import { feynmanItSkill } from "./feynman-it";
 import { layerbaseSkill } from "./layerbase";
 import { projectRegistrySkill } from "./project-registry";
 import { pluribusEvidenceAttestationSkill } from "./pluribus-evidence-attestation";
+import { mentionagentLinkBuildingOutreachSkill } from "./mentionagent-link-building-outreach";
 
 const curatedSkills: Skill[] = [
   sqlOptimizerSkill,
@@ -103,6 +104,7 @@ const curatedSkills: Skill[] = [
   craVulnerabilityObligationsSkill,
   feynmanItSkill,
   layerbaseSkill,
+  mentionagentLinkBuildingOutreachSkill,
 ];
 
 // Auto-ingested skills from repos containing SKILL.md files.
