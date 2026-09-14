@@ -85,6 +85,7 @@ import { digitaloceanServer } from "./digitalocean";
 import { amplitudeServer } from "./amplitude";
 // New additions
 import { mysqlServer } from "./mysql";
+import { mysqlLegacyMcpServer } from "./mysql-legacy-mcp";
 import { gitlabServer } from "./gitlab";
 import { circleciServer } from "./circleci";
 import { qdrantServer } from "./qdrant";
@@ -203,6 +204,7 @@ const curatedMcpServers: MCPServer[] = [
   amplitudeServer,
   // New additions
   mysqlServer,
+  mysqlLegacyMcpServer,
   gitlabServer,
   circleciServer,
   qdrantServer,
