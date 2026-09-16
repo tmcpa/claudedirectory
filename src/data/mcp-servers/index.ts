@@ -9,6 +9,7 @@ import { bigqueryServer } from "./bigquery";
 import { blueskyServer } from "./bluesky";
 import { braveSearchServer } from "./brave-search";
 import { browserbaseServer } from "./browserbase";
+import { ceraphServer } from "./ceraph";
 import { skyvernServer } from "./skyvern";
 import { cloudflareServer } from "./cloudflare";
 import { context7Server } from "./context7";
@@ -165,6 +166,7 @@ const curatedMcpServers: MCPServer[] = [
   tursoServer,
   upstashServer,
   // Developer Tools
+  ceraphServer,
   context7Server,
   browserbaseServer,
   skyvernServer,
