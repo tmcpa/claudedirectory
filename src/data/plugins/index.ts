@@ -97,6 +97,7 @@ import { appversionPlugin } from "./appversion";
 import { brothersbePlugin } from "./brothersbe";
 // iOS development plugins
 import { pragmaPlugin } from "./pragma";
+import { dockoPlugin } from "./docko";
 
 const curatedPlugins: Plugin[] = [
   // Featured plugins first
@@ -142,6 +143,7 @@ const curatedPlugins: Plugin[] = [
   flowNextPlugin,
   ralphPlugin,
   yapuiPlugin,
+  dockoPlugin,
   // External plugins
   asanaPlugin,
   awsPlugin,
