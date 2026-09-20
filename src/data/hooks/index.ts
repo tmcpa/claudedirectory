@@ -22,6 +22,7 @@ import { autoPrDescriptionHook } from "./auto-pr-description";
 import { envLeakDetectorHook } from "./env-leak-detector";
 import { dependencyVulnCheckHook } from "./dependency-vuln-check";
 import { appversionDriftCheckHook } from "./appversion-drift-check";
+import { isitdoneHook } from "./isitdone";
 
 export const hooks: Hook[] = [
   dependencyVulnCheckHook,
@@ -47,6 +48,7 @@ export const hooks: Hook[] = [
   testCoverageGuardHook,
   autoPrDescriptionHook,
   envLeakDetectorHook,
+  isitdoneHook,
 ];
 
 export function getHookBySlug(slug: string): Hook | undefined {

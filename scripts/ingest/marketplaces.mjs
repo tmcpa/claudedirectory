@@ -20,6 +20,7 @@ const KNOWN_MARKETPLACES = [
   "claude-world/director-mode-lite",
   "Eliasjunit/vibestretch",
   "Sting25/claude-code-handoff",
+  "raimondasl/isitdone",
 ];
 
 const MARKETPLACE_PATHS = [
