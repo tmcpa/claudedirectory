@@ -77,6 +77,7 @@ import { i18nManagerPlugin } from "./i18n-manager";
 import { depAuditPlugin } from "./dep-audit";
 import { envManagerPlugin } from "./env-manager";
 import { claudeMemPlugin } from "./claude-mem";
+import { dejaVuPlugin } from "./deja-vu";
 import { claudeBrainPlugin } from "./claude-brain";
 import { claudeDiaryPlugin } from "./claude-diary";
 import { trailOfBitsSecurityPlugin } from "./trail-of-bits-security";
@@ -180,6 +181,7 @@ const curatedPlugins: Plugin[] = [
   envManagerPlugin,
   // Memory & learning plugins
   claudeMemPlugin,
+  dejaVuPlugin,
   claudeBrainPlugin,
   claudeDiaryPlugin,
   // Security plugins
