@@ -1,4 +1,5 @@
 import { MCPServer } from "@/lib/types";
+import { screenpipeServer } from "./screenpipe";
 import { productosMcp } from "./productos-mcp";
 import { airtableServer } from "./airtable";
 import { churnsolutionServer } from "./churnsolution";
@@ -124,6 +125,7 @@ const curatedMcpServers: MCPServer[] = [
   apidogServer,
   taskmasterServer,
   // Non-featured servers
+  screenpipeServer,
   fetchServer,
   gitServer,
   notionServer,
