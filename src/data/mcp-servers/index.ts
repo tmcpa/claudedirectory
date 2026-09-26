@@ -58,6 +58,7 @@ import { tursoServer } from "./turso";
 import { upstashServer } from "./upstash";
 import { vercelServer } from "./vercel";
 import { youtubeServer } from "./youtube";
+import { youtubeTranscriptServer } from "./youtube-transcript";
 import { soulSpec } from "./soul-spec";
 import { hubspotServer } from "./hubspot";
 import { clickhouseServer } from "./clickhouse";
@@ -154,6 +155,7 @@ const curatedMcpServers: MCPServer[] = [
   blueskyServer,
   discordServer,
   youtubeServer,
+  youtubeTranscriptServer,
   // Business Tools
   atlassianServer,
   airtableServer,
