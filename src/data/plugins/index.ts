@@ -97,6 +97,8 @@ import { appversionPlugin } from "./appversion";
 import { brothersbePlugin } from "./brothersbe";
 // iOS development plugins
 import { pragmaPlugin } from "./pragma";
+// Testing plugins
+import { proveItMiniPlugin } from "./prove-it-mini";
 
 const curatedPlugins: Plugin[] = [
   // Featured plugins first
@@ -202,6 +204,8 @@ const curatedPlugins: Plugin[] = [
   brothersbePlugin,
   // iOS development plugins
   pragmaPlugin,
+  // Testing plugins
+  proveItMiniPlugin,
 ];
 
 // Auto-ingested plugins from `.claude-plugin/marketplace.json` files across
